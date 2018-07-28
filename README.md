@@ -59,15 +59,17 @@ Please feel free to [pull requests](https://github.com/shunk031/awesome-ai-best-
 
 
 ### 2016
-- Danqi Chen, Jason Bolton and Christopher D. Manning: A Thorough Examination of the CNN/Daily Mail Reading Comprehension Task
-- Sida I. Wang, Percy Liang and Christopher D. Manning: Learning Language Games through Interaction
-- E.Dario Gutierrez, Roger Levy and Benjamin Bergen: Finding Non-Arbitrary Form-Meaning Systematicity Using String-Metric Learning for Kernel Regression
-- Vered Shwartz, Yoav Goldberg and Ido Dagan: Improving Hypernymy Detection with an Integrated Pathbased and Distributional Method
-- Julian Hitschler, Shigehiko Schamoni and Stefan Riezler: Multimodal Pivots for Image Caption Translation
-- Zhiting Hu, Xuezhe Ma, Zhengzhong Liu, Eduard Hovy and Eric Xing: Harnessing Deep Neural Networks with Logic Rules
-- Fermin Moscoso del Prado Martin and Christian Brendel: Case and Cause in Icelandic: Reconstructing Causal Networks of Cascaded Language Changes
-- Pei-Hao Su, Milica Gasic, Nikola Mrkšić, Lina M. Rojas Barahona, Stefan Ultes, David Vandyke, TsungHsien Wen and Steve Young: On-line Active Reward Learning for Policy Optimisation in Spoken Dialogue Systems
-- Daniel Andor, Chris Alberti, David Weiss, Aliaksei Severyn, Alessandro Presta, Kuzman Ganchev, Slav Petrov and Michael Collins: Globally Normalized Transition-Based Neural Networks
+- **A Thorough Examination of the CNN/Daily Mail Reading Comprehension Task.** Danqi Chen, Jason Bolton and Christopher D. Manning (**Outstanding Long Paper**) [[PDF]]()
+- **Learning Language Games through Interaction.** Sida I. Wang, Percy Liang and Christopher D. Manning (**Outstanding Long Paper**) [[PDF]]() 
+- **Finding Non-Arbitrary Form-Meaning Systematicity Using String-Metric Learning for Kernel Regression.** E.Dario Gutierrez, Roger Levy and Benjamin Bergen (**Best Paper**) [[PDF]]() 
+- **Improving Hypernymy Detection with an Integrated Pathbased and Distributional Method.** Vered Shwartz, Yoav Goldberg and Ido Dagan: (**Outstanding Long Paper**) [[PDF]]() 
+- **Multimodal Pivots for Image Caption Translation.** Julian Hitschler, Shigehiko Schamoni and Stefan Riezler (**Outstanding Long Paper**) [[PDF]]() 
+- **Harnessing Deep Neural Networks with Logic Rules.** Zhiting Hu, Xuezhe Ma, Zhengzhong Liu, Eduard Hovy and Eric Xing (**Outstanding Long Paper**) [[PDF]]() 
+- **Case and Cause in Icelandic: Reconstructing Causal Networks of Cascaded Language Changes.** Fermin Moscoso del Prado Martin and Christian Brendel (**Outstanding Long Paper**) [[PDF]]()
+- **On-line Active Reward Learning for Policy Optimisation in Spoken Dialogue Systems.** Pei-Hao Su, Milica Gasic, Nikola Mrkšić, Lina M. Rojas Barahona, Stefan Ultes, David Vandyke, TsungHsien Wen and Steve Young (**Best Student Paper**) [[PDF]]() 
+- **Globally Normalized Transition-Based Neural Networks** Daniel Andor, Chris Alberti, David Weiss, Aliaksei Severyn, Alessandro Presta, Kuzman Ganchev, Slav Petrov and Michael Collins (**Outstanding Long Paper**) [[PDF]]()
+- **Transition-based dependency parsing with topological fields.** Daniël de Kok and Erhard Hinrichs (**Outstanding Short Paper**) [[PDF]]() 
+- **Integrating Distributional Lexical Contrast into Word Embeddings for Antonym-Synonym Distinction.** Kim Anh Nguyen, Sabine Schulte im Walde and Ngoc Thang Vu (**Outstanding Short Paper**) [[PDF]]()
 
 ## AAAI
 ### 2018
