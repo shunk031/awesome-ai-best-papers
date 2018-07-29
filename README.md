@@ -21,7 +21,7 @@ Please feel free to [pull requests](https://github.com/shunk031/awesome-ai-best-
 ### 2018
 - **Finding syntax in human encephalography with beam search.** John Hale, Chris Dyer, Adhiguna Kuncoro and Jonathan Brennan. (**Best Long Paper**) [[PDF]](http://aclweb.org/anthology/P18-1254) 
 - **Learning to Ask Good Questions: Ranking Clarification Questions using Neural Expected Value of Perfect Information.** Sudha Rao and Hal Daumé III. (**Best Long Paper**) [[PDF]](http://aclweb.org/anthology/P18-1255)
-- **Let’s do it “again”: A First Computational Approach to Detecting Adverbial Presupposition Triggers.** Andre Cianflone,\* Yulan Feng,\* Jad Kabbara* and Jackie Chi Kit Cheung. (* equal contribution) *(**Best Long Paper**) [[PDF]](https://www.cs.mcgill.ca/~jkabba/acl2018paper.pdf)
+- **Let’s do it “again”: A First Computational Approach to Detecting Adverbial Presupposition Triggers.** Andre Cianflone,\* Yulan Feng,\* Jad Kabbara* and Jackie Chi Kit Cheung. (* equal contribution) (**Best Long Paper**) [[PDF]](https://www.cs.mcgill.ca/~jkabba/acl2018paper.pdf)
 - **Know What You Don’t Know: Unanswerable Questions for SQuAD.** Pranav Rajpurkar, Robin Jia and Percy Liang (**Best Short Paper**) [[PDF]](http://stanford.edu/~robinjia/pdf/acl2018-squad.pdf)
 - **‘Lighter’ Can Still Be Dark: Modeling Comparative Color Descriptions.** Olivia Winn and Smaranda Muresan (**Best Short Paper**) [[PDF]](http://aclweb.org/anthology/P18-2125)
 - **Coarse-to-Fine Decoding for Neural Semantic Parsing.** Li Dong and Mirella Lapata. **Long Paper Honorable Mention** [[PDF]](http://homepages.inf.ed.ac.uk/s1478528/acl18-coarse2fine.pdf)
