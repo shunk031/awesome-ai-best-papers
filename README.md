@@ -8,14 +8,14 @@ Please feel free to [pull requests](https://github.com/shunk031/awesome-ai-best-
 
 ## Contents
 
-- [ACL](#acl)
-- [AAAI](#aaai)
-- [CVPR](#cvpr)
-- [EMNLP](#emnlp)
-- [ICLR](#iclr)
-- [ICML](#icml)
-- [NAACL](#naacl)
-- [NIPS](#nips)
+- [ACL - The Association for Computational Linguistics](#acl)
+- [AAAI - Association for the Advancement of Artificial Intelligence](#aaai)
+- [CVPR - IEEE International Conference on Computer Vision and Pattern Recognition](#cvpr)
+- [EMNLP - Empirical Methods in Natural Language Processing](#emnlp)
+- [ICLR - International Conference on Learning Representations](#iclr)
+- [ICML - International Conference on Machine Learning](#icml)
+- [NAACL - The North American Chapter of the Association for Computational Linguistics](#naacl)
+- [NIPS - Neural Information Processing Systems](#nips)
 
 ## ACL
 ### 2018
