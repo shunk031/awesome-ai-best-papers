@@ -19,6 +19,8 @@ ipython = "*"
 
 [packages]
 beautifulsoup4 = "*"
+lxml = "*"
+requests = "*"
 
 [requires]
 python_version = "3.7"
