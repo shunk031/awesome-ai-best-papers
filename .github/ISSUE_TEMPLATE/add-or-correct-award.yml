@@ -1,0 +1,42 @@
+name: Add or correct an award
+description: Propose a paper-award addition or correction
+title: "[Award] "
+labels: []
+body:
+  - type: input
+    id: venue
+    attributes:
+      label: Venue and year
+      placeholder: "e.g. CVPR 2026"
+    validations:
+      required: true
+  - type: input
+    id: award
+    attributes:
+      label: Award
+      placeholder: "e.g. Best Paper"
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Paper title
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official award source
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: input
+    id: paper
+    attributes:
+      label: Paper URL
+      placeholder: "https://..."
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Add any correction details, award-tier context, or ambiguity here.
