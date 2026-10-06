@@ -140,3 +140,81 @@ NeurIPS,2017,Variance-based Regularization with Convex Objectives,ML Theory & Op
 NeurIPS,2017,A Linear-Time Kernel Goodness-of-Fit Test,ML Theory & Optimization,Optimization & Generalization,Kernel / NTK
 NeurIPS,2016,Value Iteration Networks,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
 NeurIPS,2016,Matrix Completion has No Spurious Local Minimum,ML Theory & Optimization,Optimization & Generalization,Theory / Analysis
+ACL,2018,Finding syntax in human encephalography with beam search.,NLP & Language,Language Understanding & Linguistics,Neural Model
+ACL,2018,Learning to Ask Good Questions: Ranking Clarification Questions using Neural Expected Value of Perfect Information.,NLP & Language,Reasoning & Knowledge,Probabilistic / Bayesian
+ACL,2018,Let’s do it “again”: A First Computational Approach to Detecting Adverbial Presupposition Triggers.,NLP & Language,Language Understanding & Linguistics,Neural Model
+ACL,2018,Know What You Don’t Know: Unanswerable Questions for SQuAD.,NLP & Language,Reasoning & Knowledge,Neural Model
+ACL,2018,‘Lighter’ Can Still Be Dark: Modeling Comparative Color Descriptions.,NLP & Language,Language Understanding & Linguistics,Neural Model
+ACL,2018,Coarse-to-Fine Decoding for Neural Semantic Parsing.,NLP & Language,Reasoning & Knowledge,Neural Model
+ACL,2018,NASH: Toward End-to-End Neural Architecture for Generative Semantic Hashing.,NLP & Language,Retrieval & Search,Neural Model
+ACL,2018,Backpropagating through Structured Argmax using a SPIGOT.,ML Theory & Optimization,Optimization & Generalization,Optimization
+ACL,2018,Hierarchical Neural Story Generation.,NLP & Language,Language Modeling & Generation,RNN
+ACL,2018,Semantically Equivalent Adversarial Rules for Debugging NLP models.,Responsible AI & Privacy,Robustness & Domain Adaptation,Neural Model
+ACL,2018,Large-Scale QA-SRL Parsing.,NLP & Language,Language Understanding & Linguistics,Neural Model
+ACL,2018,Jointly Predicting Predicates and Arguments in Neural Semantic Role Labeling.,NLP & Language,Language Understanding & Linguistics,Neural Model
+ACL,2018,Do Neural Network Cross-Modal Mappings Really Bridge Modalities?,Multimodal & Embodied AI,Multimodal & Vision-Language,Neural Model
+ACL,2017,Towards an Automatic Turing Test: Learning to Evaluate Dialogue Responses.,NLP & Language,LLM Analysis & Evaluation,RNN
+ACL,2017,A Transition-Based Directed Acyclic Graph Parser for UCCA.,NLP & Language,Language Understanding & Linguistics,Neural Model
+ACL,2017,Abstract Syntax Networks for Code Generation and Semantic Parsing.,NLP & Language,Reasoning & Knowledge,RNN
+ACL,2017,Visualizing and Understanding Neural Machine Translation.,NLP & Language,Interpretability & Explainability,RNN
+ACL,2017,Detecting annotation noise in automatically labelled data.,NLP & Language,Language Understanding & Linguistics,Classical / Optimization
+ACL,2017,Joint Extraction of Entities and Relations Based on a Novel Tagging Scheme.,NLP & Language,Language Understanding & Linguistics,RNN
+ACL,2017,A Local Detection Approach for Named Entity Recognition and Mention Detection.,NLP & Language,Language Understanding & Linguistics,Neural Model
+ACL,2017,Vancouver Welcomes You! Minimalist Location Metonymy Resolution.,NLP & Language,Language Understanding & Linguistics,Neural Model
+ACL,2017,"Unifying Text, Metadata, and User Network Representations with a Neural Network for Geolocation Prediction.",NLP & Language,Representation Learning,Neural Model
+ACL,2017,Multi-Task Video Captioning with Visual and Textual Entailment.,Multimodal & Embodied AI,Multimodal & Vision-Language,RNN
+ACL,2017,Abstractive Document Summarization with a Graph-Based Attentional Neural Model.,NLP & Language,Language Modeling & Generation,RNN
+ACL,2017,Probabilistic Typology: Deep Generative Models of Vowel Inventories.,NLP & Language,Language Understanding & Linguistics,Probabilistic / Bayesian
+ACL,2017,Adversarial Multi-Criteria Learning for Chinese Word Segmentation.,NLP & Language,Language Understanding & Linguistics,RNN
+ACL,2017,Neural Joint Model for Transition-based Chinese Syntactic Analysis.,NLP & Language,Language Understanding & Linguistics,RNN
+ACL,2017,Robust Incremental Neural Semantic Graph Parsing.,NLP & Language,Reasoning & Knowledge,Neural Model
+ACL,2017,The Role of Prosody and Speech Register in Word Segmentation: A Computational Modelling Perspective.,Speech & Audio,Speech & Audio,Probabilistic / Bayesian
+ACL,2017,A Two-stage Parsing Method for Text-level Discourse Analysis.,NLP & Language,Language Understanding & Linguistics,Neural Model
+ACL,2017,Error-repair Dependency Parsing for Ungrammatical Texts.,NLP & Language,Language Understanding & Linguistics,Neural Model
+ACL,2017,Attention Strategies for Multi-Source Sequence-to-Sequence Learning.,NLP & Language,Language Modeling & Generation,RNN
+ACL,2017,Understanding and Detecting Diverse Supporting Arguments on Controversial Issues.,NLP & Language,Language Understanding & Linguistics,Neural Model
+ACL,2017,A Neural Model for User Geolocation and Lexical Dialectology.,NLP & Language,Representation Learning,Neural Model
+ACL,2017,A Corpus of Compositional Language for Visual Reasoning.,Multimodal & Embodied AI,Multimodal & Vision-Language,Neural Model
+ACL,2016,A Thorough Examination of the CNN/Daily Mail Reading Comprehension Task.,NLP & Language,Reasoning & Knowledge,RNN
+ACL,2016,Learning Language Games through Interaction.,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL; RNN
+ACL,2016,Finding Non-Arbitrary Form-Meaning Systematicity Using String-Metric Learning for Kernel Regression.,NLP & Language,Language Understanding & Linguistics,Kernel / NTK
+ACL,2016,Improving Hypernymy Detection with an Integrated Pathbased and Distributional Method.,NLP & Language,Language Understanding & Linguistics,Classical / Optimization
+ACL,2016,Multimodal Pivots for Image Caption Translation.,Multimodal & Embodied AI,Multimodal & Vision-Language,Neural Model
+ACL,2016,Harnessing Deep Neural Networks with Logic Rules.,Graphs & Structured Learning,Reasoning & Knowledge,Neuro-Symbolic
+ACL,2016,Case and Cause in Icelandic: Reconstructing Causal Networks of Cascaded Language Changes.,NLP & Language,Causal Learning,Probabilistic / Bayesian
+ACL,2016,On-line Active Reward Learning for Policy Optimisation in Spoken Dialogue Systems.,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
+ACL,2016,Globally Normalized Transition-Based Neural Networks,NLP & Language,Language Understanding & Linguistics,Neural Model
+ACL,2016,Transition-based dependency parsing with topological fields.,NLP & Language,Language Understanding & Linguistics,Classical / Optimization
+ACL,2016,Integrating Distributional Lexical Contrast into Word Embeddings for Antonym-Synonym Distinction.,NLP & Language,Representation Learning,Representation Learning
+AAAI,2018,Generalized Adjustment under Confounding and Selection Biases.,Scientific ML & Applications,Causal Learning,Theory / Analysis
+AAAI,2018,Counterfactual Multi-Agent Policy Gradients.,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
+AAAI,2018,Adapting a Kidney Exchange Algorithm to Align with Human Values.,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Optimization
+AAAI,2017,The Option-Critic Architecture.,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
+AAAI,2016,Toward a Taxonomy and Computational Models of Abnormalities in Images.,Computer Vision,Visual Recognition & Representation,CNN
+CVPR,2017,Annotating Object Instances with a Polygon-RNN.,Computer Vision,Visual Recognition & Representation,RNN
+CVPR,2017,"YOLO9000: Better, Faster, Stronger.",Computer Vision,Visual Recognition & Representation,CNN
+CVPR,2017,Computational Imaging on the Electric Grid.,Computer Vision,3D Vision & Reconstruction,Classical / Optimization
+CVPR,2016,Structural-RNN: Deep Learning on Spatio-Temporal Graphs.,Computer Vision,Visual Recognition & Representation,RNN
+EMNLP,2017,Men Also Like Shopping: Reducing Gender Bias Amplification using Corpus-level Constraints.,Responsible AI & Privacy,"Safety, Fairness & Privacy",Optimization
+EMNLP,2017,Depression and Self-Harm Risk Assessment in Online Forums.,Responsible AI & Privacy,"Safety, Fairness & Privacy",Neural Model
+EMNLP,2017,Natural Language Does Not Emerge ‘Naturally’ in Multi-Agent Dialog.,Multimodal & Embodied AI,Multimodal & Vision-Language,RL; RNN
+EMNLP,2017,Bringing Structure into Summaries: Crowdsourcing a Benchmark Corpus of Concept Maps.,NLP & Language,Language Modeling & Generation,Classical / Optimization
+EMNLP,2016,Improving Information Extraction by Acquiring External Evidence with Reinforcement Learning.,NLP & Language,Language Understanding & Linguistics,RL
+EMNLP,2016,Global Neural CCG Parsing with Optimality Guarantees.,NLP & Language,Language Understanding & Linguistics,Neural Model
+EMNLP,2016,Span-Based Constituency Parsing with a Structure-Label System and Provably Optimal Dynamic Oracles.,NLP & Language,Language Understanding & Linguistics,Neural Model
+EMNLP,2016,Sequence-to-Sequence Learning as Beam-Search Optimization.,NLP & Language,Language Modeling & Generation,RNN; Optimization
+EMNLP,2016,Learning a Lexicon and Translation Model from Phoneme Lattices.,Speech & Audio,Speech & Audio,Probabilistic / Bayesian
+ICCV,2017,First Person Activity Forecasting with Online Inverse Reinforcement Learning.,Computer Vision,Visual Recognition & Representation,RL
+ICCV,2017,Open Set Domain Adaptation.,Computer Vision,Robustness & Domain Adaptation,CNN
+ICCV,2017,Globally-Optimal Inlier Set Maximisation for Simultaneous Camera Pose and Feature Correspondence.,Computer Vision,3D Vision & Reconstruction,Optimization
+ICCV,2017,Focal Loss for Dense Object Detection.,Computer Vision,Visual Recognition & Representation,CNN
+ICML,2018,The Mechanics of n-Player Differentiable Games.,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Theory / Analysis
+ICML,2018,Near Optimal Frequent Directions for Sketching Dense and Sparse Matrices.,ML Theory & Optimization,Optimization & Generalization,Optimization
+ICML,2018,Fairness Without Demographics in Repeated Loss Minimization.,Responsible AI & Privacy,"Safety, Fairness & Privacy",Optimization
+ICML,2017,Lost Relatives of the Gumbel Trick.,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian
+ICML,2017,Modular Multitask Reinforcement Learning with Policy Sketches.,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
+ICML,2017,A Unified Maximum Likelihood Approach for Estimating Symmetric Properties of Discrete Distributions.,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian
+NAACL,2018,Deep Contextualized Word Representations.,NLP & Language,Representation Learning,RNN; Representation Learning
+NAACL,2018,Learning to Map Context-Dependent Sentences to Executable Formal Queries.,NLP & Language,Reasoning & Knowledge,Neural Model
+NAACL,2018,Neural Text Generation in Stories using Entity Representations as Context.,NLP & Language,Language Modeling & Generation,RNN
+NAACL,2018,Recurrent Neural Networks as Weighted Language Recognizers.,ML Theory & Optimization,Optimization & Generalization,RNN; Theory / Analysis
