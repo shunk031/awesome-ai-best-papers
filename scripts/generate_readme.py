@@ -6,13 +6,14 @@ from __future__ import annotations
 import argparse
 import csv
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 VENUES_PATH = DATA_DIR / "venues.csv"
 PAPERS_PATH = DATA_DIR / "papers.csv"
+TAXONOMY_PATH = DATA_DIR / "paper_taxonomy.csv"
 README_PATH = ROOT / "README.md"
 TIER_ORDER = {"primary": 0, "secondary": 1, "special": 2}
 
@@ -22,15 +23,40 @@ def load_csv(path: Path) -> list[dict[str, str]]:
         return list(csv.DictReader(f))
 
 
+def family_counts(rows: list[dict[str, str]]) -> Counter[str]:
+    counts: Counter[str] = Counter()
+    for row in rows:
+        counts.update(value.strip() for value in row["model_family"].split(";") if value.strip())
+    return counts
+
+
+def render_count_table(lines: list[str], header: str, counts: Counter[str], limit: int | None = None) -> None:
+    lines.extend([f"### {header}", "", "| Label | Award records |", "| --- | ---: |"])
+    items = counts.most_common(limit)
+    for label, count in items:
+        lines.append(f"| {label} | {count} |")
+    lines.append("")
+
+
 def render() -> str:
     venues = load_csv(VENUES_PATH)
     papers = load_csv(PAPERS_PATH)
+    taxonomy = {
+        (row["venue"], row["year"], row["title"].casefold()): row
+        for row in load_csv(TAXONOMY_PATH)
+    }
+    papers = [
+        {**row, **taxonomy[(row["venue"], row["year"], row["title"].casefold())]}
+        for row in papers
+    ]
     by_venue: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in papers:
         by_venue[row["venue"]].append(row)
 
     years = [int(row["year"]) for row in papers]
     min_year, max_year = min(years), max(years)
+    recent_start = max_year - 2
+    recent = [row for row in papers if int(row["year"]) >= recent_start]
 
     lines: list[str] = [
         "# Awesome AI Best Papers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)",
@@ -45,9 +71,11 @@ def render() -> str:
         "",
         "A curated, source-backed catalog of paper awards from major AI, machine learning, computer vision, and natural language processing conferences.",
         "",
-        "The repository is **data-driven**: [`data/papers.csv`](data/papers.csv) is the canonical award catalog, [`data/venues.csv`](data/venues.csv) defines venue metadata, and this README is regenerated deterministically.",
+        "The repository is **data-driven**: [`data/papers.csv`](data/papers.csv) is the canonical award catalog, [`data/paper_taxonomy.csv`](data/paper_taxonomy.csv) stores research annotations, [`data/venues.csv`](data/venues.csv) defines venue metadata, and this README is regenerated deterministically.",
         "",
-        "> **Freshness:** a conference year is added only after awards are announced. Conferences without a 2026 award announcement intentionally stop at the latest completed edition.",
+        "Each paper is annotated with a maintainer-curated **research area**, **task**, and coarse **model / method family** (for example `LLM`, `VLM`, `Transformer`, `Diffusion`, `CNN`, `GNN`, `RL`, or `Theory / Analysis`). These tags are intended for navigation and trend inspection rather than as a formal taxonomy.",
+        "",
+        "> **Freshness:** a conference year is added only after awards are announced. Conferences without a current-year award announcement intentionally stop at the latest completed edition.",
         "",
         "## Scope",
         "",
@@ -55,11 +83,24 @@ def render() -> str:
         "",
         "The v2 catalog prioritizes official conference sources. Historical records from the original list remain accessible through the [pre-revamp snapshot](https://github.com/shunk031/awesome-ai-best-papers/blob/1d33f4f2c39c53b6cec85816c6b3383334b8e913/README.md) while they are normalized into structured data.",
         "",
+        "## Research landscape",
+        "",
+        f"The tables below summarize the **{len(recent)} award records from {recent_start}–{max_year} currently in this catalog**. They describe this curated award set, not publication volume or the field as a whole.",
+        "",
+    ]
+
+    area_counts = Counter(row["area"] for row in recent)
+    task_counts = Counter(row["task"] for row in recent)
+    render_count_table(lines, "Research areas", area_counts)
+    render_count_table(lines, "Model / method families", family_counts(recent))
+    render_count_table(lines, "Frequently awarded tasks", task_counts, limit=12)
+
+    lines.extend([
         "## Coverage",
         "",
         "| Venue | Area | Years in catalog | Records | Official awards |",
         "| --- | --- | ---: | ---: | --- |",
-    ]
+    ])
 
     for venue in venues:
         items = by_venue.get(venue["venue"], [])
@@ -110,14 +151,15 @@ def render() -> str:
             notes_suffix = f' — {row["notes"]}' if row["notes"] else ""
             lines.append(
                 f'- **{row["award"]}** — [{row["title"]}]({title_url})'
-                f'{source_suffix}{tier_suffix}{notes_suffix}'
+                f'{source_suffix}{tier_suffix}{notes_suffix}<br>'
+                f'  **Area:** {row["area"]} · **Task:** {row["task"]} · **Model:** {row["model_family"].replace(";", " /")}'
             )
         lines.append("")
 
     lines.extend([
         "## Data and contributions",
         "",
-        "To add or correct an award, edit the CSV data rather than this README. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for source requirements and tier definitions.",
+        "To add or correct an award, edit the CSV data rather than this README. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for source requirements, tier definitions, and taxonomy rules.",
         "",
         "```bash",
         "python scripts/validate_catalog.py",
