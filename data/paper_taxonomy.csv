@@ -1,0 +1,142 @@
+venue,year,title,area,task,model_family
+ACL,2026,The Imperfective Paradox in Large Language Models,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
+ACL,2026,Memory Efficiency and Resource-Rational Encoding in Sentence Processing,NLP & Language,Language Understanding & Linguistics,Theory / Analysis
+ACL,2026,Characterizing the Expressivity of Local Attention in Transformers,ML Theory & Optimization,Model Efficiency & Architecture,Transformer; Theory / Analysis
+ACL,2025,A Theory of Response Sampling in LLMs: Part Descriptive and Part Prescriptive,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer; Probabilistic / Bayesian
+ACL,2025,Fairness through Difference Awareness: Measuring Desired Group Discrimination in LLMs,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
+ACL,2025,Language Models Resist Alignment: Evidence From Data Compression,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
+ACL,2025,Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention,NLP & Language,Model Efficiency & Architecture,Transformer; LLM
+ACL,2024,Mission: Impossible Language Models,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
+ACL,2024,Semisupervised Neural Proto-Language Reconstruction,NLP & Language,Language Understanding & Linguistics,Neural Model
+ACL,2024,Why are Sensitive Functions Hard for Transformers?,ML Theory & Optimization,Optimization & Generalization,Transformer; Theory / Analysis
+ACL,2024,Natural Language Satisfiability,NLP & Language,Reasoning & Knowledge,Neuro-Symbolic
+ACL,2024,Deciphering Oracle Bone Language with Diffusion Models,NLP & Language,Language Understanding & Linguistics,Diffusion
+ACL,2024,Causal Estimation of Memorisation Profiles,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
+ACL,2024,Aya Model: An Instruction Finetuned Open-Access Multilingual Language Model,NLP & Language,Language Modeling & Generation,LLM; Transformer
+AAAI,2026,Model Change for Description Logic Concepts,Graphs & Structured Learning,Graph & Structured Learning,Neuro-Symbolic
+AAAI,2026,Causal Structure Learning for Dynamical Systems with Theoretical Score Analysis,Scientific ML & Applications,Causal Learning,Theory / Analysis
+AAAI,2026,ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver,Multimodal & Embodied AI,Multimodal & Vision-Language,VLM; Transformer
+AAAI,2026,High-Pass Matters: Theoretical Insights and Sheaflet-Based Design for Hypergraph Neural Networks,Graphs & Structured Learning,Graph & Structured Learning,GNN
+AAAI,2026,LLM2CLIP: Powerful Language Model Unlocks Richer Cross-Modality Representation,Multimodal & Embodied AI,Multimodal & Vision-Language,LLM; Transformer; VLM
+AAAI,2025,Every Bit Helps: Achieving the Optimal Distortion with a Few Queries,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
+AAAI,2025,Efficient Rectification of Neuro-Symbolic Reasoning Inconsistencies by Abductive Reflection,Graphs & Structured Learning,Reasoning & Knowledge,Optimization; Neuro-Symbolic
+AAAI,2025,Revelations: A Decidable Class of POMDPs with Omega-Regular Objectives,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
+AAAI,2024,GxVAEs: Two Joint VAEs Generate Hit Molecules from Gene Expression Profiles,Scientific ML & Applications,Scientific Discovery & Simulation,VAE
+AAAI,2024,Reliable Conflictive Multi-view Learning,General ML & Representation Learning,Representation Learning,Representation Learning
+AAAI,2024,Proportional Aggregation of Preferences for Sequential Decision Making,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
+AAAI,2023,Misspecification in Inverse Reinforcement Learning,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
+AAAI,2022,Online Certification of Preference-based Fairness for Personalized Recommender Systems,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
+AAAI,2021,Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting,General ML & Representation Learning,Model Efficiency & Architecture,Transformer
+AAAI,2021,Exploration-Exploitation in Multi-Agent Learning: Catastrophe Theory Meets Game Theory,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
+AAAI,2020,WinoGrande: An Adversarial Winograd Schema Challenge at Scale,NLP & Language,Reasoning & Knowledge,Transformer
+AAAI,2019,How to Combine Tree-Search Methods in Reinforcement Learning,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL; Search / Planning
+AAAI,2018,Memory-Augmented Monte Carlo Tree Search,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Search / Planning
+AAAI,2017,Label-Free Supervision of Neural Networks with Physics and Domain Knowledge,Scientific ML & Applications,Scientific Discovery & Simulation,Neural Model
+AAAI,2016,Bidirectional Search That Is Guaranteed to Meet in the Middle,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Search / Planning
+CVPR,2026,Efficiently Reconstructing Dynamic Scenes One D4RT at a Time,Computer Vision,3D Vision & Reconstruction,Transformer
+CVPR,2025,VGGT: Visual Geometry Grounded Transformer,Computer Vision,3D Vision & Reconstruction,Transformer
+CVPR,2024,Rich Human Feedback for Text-to-Image Generation,Computer Vision,Image & Video Generation,Diffusion; VLM
+CVPR,2024,Generative Image Dynamics,Computer Vision,Image & Video Generation,Diffusion
+CVPR,2023,Visual Programming: Compositional Visual Reasoning Without Training,Multimodal & Embodied AI,Multimodal & Vision-Language,VLM; Search / Planning
+CVPR,2023,Planning-Oriented Autonomous Driving,Multimodal & Embodied AI,Multimodal & Vision-Language,Search / Planning
+CVPR,2022,Learning to Solve Hard Minimal Problems,Computer Vision,Optimization & Generalization,Optimization
+CVPR,2021,GIRAFFE: Representing Scenes as Compositional Generative Neural Feature Fields,Computer Vision,Image & Video Generation,GAN
+CVPR,2020,Unsupervised Learning of Probably Symmetric Deformable 3D Objects from Images in the Wild,Computer Vision,3D Vision & Reconstruction,Neural Model
+CVPR,2019,A Theory of Fermat Paths for Non-Line-of-Sight Shape Reconstruction,Computer Vision,3D Vision & Reconstruction,Theory / Analysis
+CVPR,2018,Taskonomy: Disentangling Task Transfer Learning,Computer Vision,Representation Learning,Representation Learning
+CVPR,2017,Densely Connected Convolutional Networks,Computer Vision,Visual Recognition & Representation,CNN
+CVPR,2017,Learning from Simulated and Unsupervised Images through Adversarial Training,Computer Vision,Robustness & Domain Adaptation,GAN
+CVPR,2016,Deep Residual Learning for Image Recognition,Computer Vision,Visual Recognition & Representation,CNN
+CVPR,2016,Sublabel-Accurate Relaxation of Nonconvex Energies,Computer Vision,Optimization & Generalization,Optimization
+EMNLP,2025,Infini-gram mini: Exact n-gram Search at the Internet Scale with FM-Index,NLP & Language,Retrieval & Search,Classical / Optimization
+EMNLP,2024,"An image speaks a thousand words, but can everyone listen? On image transcreation for cultural relevance",Multimodal & Embodied AI,Multimodal & Vision-Language,VLM
+EMNLP,2024,Towards Robust Speech Representation Learning for Thousands of Languages,Speech & Audio,Speech & Audio,Representation Learning
+EMNLP,2024,Backward Lens: Projecting Language Model Gradients into the Vocabulary Space,NLP & Language,Interpretability & Explainability,LLM; Transformer; Optimization
+EMNLP,2024,Pretraining Data Detection for Large Language Models: A Divergence-based Calibration Method,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer; Representation Learning
+EMNLP,2024,CoGen: Learning from Feedback with Coupled Comprehension and Generation,NLP & Language,Language Modeling & Generation,LLM; Transformer
+ICCV,2025,Generating Physically Stable and Buildable Brick Structures from Text,Computer Vision,3D Vision & Reconstruction,Optimization
+ICCV,2023,Passive Ultra-Wideband Single-Photon Imaging,Computer Vision,3D Vision & Reconstruction,Neural Model
+ICCV,2023,Adding Conditional Control to Text-to-Image Diffusion Models,Computer Vision,Image & Video Generation,Diffusion
+ICCV,2021,Swin Transformer: Hierarchical Vision Transformer using Shifted Windows,Computer Vision,Visual Recognition & Representation,Transformer
+ICCV,2019,SinGAN: Learning a Generative Model from a Single Natural Image,Computer Vision,Image & Video Generation,GAN
+ICCV,2017,Mask R-CNN,Computer Vision,Visual Recognition & Representation,CNN
+ICLR,2026,Transformers are Inherently Succinct,ML Theory & Optimization,Optimization & Generalization,Transformer; Theory / Analysis
+ICLR,2026,LLMs Get Lost In Multi-Turn Conversation,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
+ICLR,2025,Safety Alignment Should be Made More Than Just a Few Tokens Deep,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
+ICLR,2025,Learning Dynamics of LLM Finetuning,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer; Representation Learning
+ICLR,2025,AlphaEdit: Null-Space Constrained Model Editing for Language Models,NLP & Language,Model Editing & Adaptation,LLM; Transformer
+ICLR,2024,Generalization in diffusion models arises from geometry-adaptive harmonic representations,ML Theory & Optimization,Optimization & Generalization,Diffusion
+ICLR,2024,Learning Interactive Real-World Simulators,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Neural Model; RL
+ICLR,2024,Never Train from Scratch: Fair Comparison of Long-Sequence Models Requires Data-Driven Priors,General ML & Representation Learning,Representation Learning,Neural Model; Representation Learning
+ICLR,2024,Protein Discovery with Discrete Walk-Jump Sampling,Scientific ML & Applications,Scientific Discovery & Simulation,Probabilistic / Bayesian
+ICLR,2024,Vision Transformers Need Registers,Computer Vision,Visual Recognition & Representation,Transformer
+ICLR,2023,Universal Few-shot Learning of Dense Prediction Tasks with Visual Token Matching,Computer Vision,Visual Recognition & Representation,VLM; CNN
+ICLR,2023,Rethinking the Expressive Power of GNNs via Graph Biconnectivity,Graphs & Structured Learning,Graph & Structured Learning,GNN
+ICLR,2023,DreamFusion: Text-to-3D using 2D Diffusion,Computer Vision,3D Vision & Reconstruction,Diffusion
+ICLR,2023,Emergence of Maps in the Memories of Blind Navigation Agents,Multimodal & Embodied AI,Multimodal & Vision-Language,Neural Model
+ICLR,2022,Analytic-DPM: an Analytic Estimate of the Optimal Reverse Variance in Diffusion Probabilistic Models,ML Theory & Optimization,Probabilistic Inference & Sampling,Diffusion; Probabilistic / Bayesian; Theory / Analysis
+ICLR,2022,Hyperparameter Tuning with Renyi Differential Privacy,Responsible AI & Privacy,"Safety, Fairness & Privacy",Optimization; Probabilistic / Bayesian
+ICLR,2022,Learning Strides in Convolutional Neural Networks,General ML & Representation Learning,Model Efficiency & Architecture,CNN; Optimization
+ICLR,2022,Expressiveness and Approximation Properties of Graph Neural Networks,ML Theory & Optimization,Graph & Structured Learning,GNN
+ICLR,2022,Comparing Distributions by Measuring Differences that Affect Decision Making,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian
+ICLR,2022,Neural Collapse Under MSE Loss: Proximity to and Dynamics on the Central Path,ML Theory & Optimization,Optimization & Generalization,Theory / Analysis
+ICLR,2022,Bootstrapped Meta-Learning,General ML & Representation Learning,Meta-Learning & Adaptation,Meta-Learning
+ICLR,2021,Beyond Fully-Connected Layers with Quaternions: Parameterization of Hypercomplex Multiplications with 1/n Parameters,General ML & Representation Learning,Model Efficiency & Architecture,Neural Model
+ICLR,2021,Complex Query Answering with Neural Link Predictors,Graphs & Structured Learning,Graph & Structured Learning,Neural Model
+ICLR,2021,EigenGame: PCA as a Nash Equilibrium,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
+ICLR,2021,Learning Mesh-Based Simulation with Graph Networks,Graphs & Structured Learning,Graph & Structured Learning,GNN
+ICLR,2021,Neural Synthesis of Binaural Speech from Mono Audio,Speech & Audio,Speech & Audio,Neural Model
+ICLR,2021,Optimal Rates for Averaged Stochastic Gradient Descent under Neural Tangent Kernel Regime,ML Theory & Optimization,Optimization & Generalization,Kernel / NTK; Optimization
+ICLR,2021,Rethinking Architecture Selection in Differentiable NAS,General ML & Representation Learning,Model Efficiency & Architecture,Optimization
+ICLR,2021,Score-Based Generative Modeling through Stochastic Differential Equations,General ML & Representation Learning,Generative Modeling,Diffusion; Probabilistic / Bayesian
+ICLR,2020,ALBERT: A Lite BERT for Self-supervised Learning of Language Representations,NLP & Language,Representation Learning,LLM; Transformer; Representation Learning
+ICLR,2020,Plug and Play Language Models: A Simple Approach to Controlled Text Generation,NLP & Language,Language Modeling & Generation,LLM; Transformer
+ICLR,2020,Meta-Learning without Memorization,General ML & Representation Learning,Meta-Learning & Adaptation,Meta-Learning
+ICLR,2020,Reformer: The Efficient Transformer,NLP & Language,Model Efficiency & Architecture,Transformer
+ICLR,2020,Rapid Learning or Feature Reuse? Towards Understanding the Effectiveness of MAML,General ML & Representation Learning,Meta-Learning & Adaptation,Meta-Learning; Theory / Analysis
+ICLR,2020,Your Classifier is Secretly an Energy Based Model and You Should Treat it Like One,General ML & Representation Learning,Representation Learning,Energy-Based
+ICLR,2020,Playing the Lottery with Rewards and Multiple Languages: Lottery Tickets in RL and NLP,General ML & Representation Learning,Model Efficiency & Architecture,Optimization
+ICLR,2020,On Identifiability in Transformers,ML Theory & Optimization,Optimization & Generalization,Transformer
+ICLR,2020,Neural Tangents: Fast and Easy Infinite Neural Networks in Python,ML Theory & Optimization,Optimization & Generalization,Kernel / NTK; Theory / Analysis
+ICLR,2020,Generalization through Memorization: Nearest Neighbor Language Models,NLP & Language,Retrieval & Search,LLM; Transformer
+ICLR,2019,Ordered Neurons: Integrating Tree Structures into Recurrent Neural Networks,NLP & Language,Language Modeling & Generation,RNN
+ICLR,2019,"The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks",General ML & Representation Learning,Model Efficiency & Architecture,Optimization
+ICLR,2018,On the Convergence of Adam and Beyond,ML Theory & Optimization,Optimization & Generalization,Optimization
+ICLR,2018,Spherical CNNs,Computer Vision,Visual Recognition & Representation,CNN
+ICLR,2018,Continuous Adaptation via Meta-Learning in Nonstationary and Competitive Environments,General ML & Representation Learning,Meta-Learning & Adaptation,Meta-Learning
+ICLR,2017,Understanding Deep Learning Requires Rethinking Generalization,ML Theory & Optimization,Optimization & Generalization,Theory / Analysis
+ICLR,2017,Making Neural Programming Architectures Generalize via Recursion,General ML & Representation Learning,Reasoning & Knowledge,Neural Model
+ICLR,2017,Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data,Responsible AI & Privacy,"Safety, Fairness & Privacy",Neural Model; Representation Learning
+ICLR,2016,Neural Programmer-Interpreters,General ML & Representation Learning,Reasoning & Knowledge,RNN; Neural Model
+ICLR,2016,"Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding",General ML & Representation Learning,Model Efficiency & Architecture,Optimization
+ICML,2026,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,ML Theory & Optimization,LLM Analysis & Evaluation,LLM; Transformer; Diffusion
+ICML,2026,High-Accuracy Sampling for Diffusion Models and Log-Concave Distributions,ML Theory & Optimization,Probabilistic Inference & Sampling,Diffusion; Probabilistic / Bayesian
+ICML,2025,CollabLLM: From Passive Responders to Active Collaborators,NLP & Language,Language Modeling & Generation,LLM; Transformer
+ICML,2025,"Train for the Worst, Plan for the Best: Understanding Token Ordering in Masked Diffusions",General ML & Representation Learning,Generative Modeling,Diffusion; Autoregressive
+ICML,2025,Score Matching with Missing Data,ML Theory & Optimization,Probabilistic Inference & Sampling,Diffusion; Probabilistic / Bayesian
+ICML,2025,Conformal Prediction as Bayesian Quadrature,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian
+ICML,2025,Roll the dice & look before you leap: Going beyond the creative limits of next-token prediction,NLP & Language,Language Modeling & Generation,Autoregressive; LLM
+ICML,2025,The Value of Prediction in Identifying the Worst-Off,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
+ICML,2018,Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples,Responsible AI & Privacy,Robustness & Domain Adaptation,Optimization; Theory / Analysis
+ICML,2018,Delayed Impact of Fair Machine Learning,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
+ICML,2017,Understanding Black-box Predictions via Influence Functions,Responsible AI & Privacy,Interpretability & Explainability,Optimization
+ICML,2016,Dueling Network Architectures for Deep Reinforcement Learning,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
+ICML,2016,Pixel Recurrent Neural Networks,Computer Vision,Image & Video Generation,Autoregressive; RNN
+ICML,2016,Ensuring Rapid Mixing and Low Bias for Asynchronous Gibbs Sampling,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian
+NAACL,2025,The BiGGen Bench: A Principled Benchmark for Fine-grained Evaluation of Language Models with Language Models,NLP & Language,Language Modeling & Generation,LLM; Transformer
+NeurIPS,2025,Artificial Hivemind: The Open-Ended Homogeneity of Language Models (and Beyond),NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
+NeurIPS,2025,"Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free",NLP & Language,Model Efficiency & Architecture,LLM; Transformer
+NeurIPS,2025,1000 Layer Networks for Self-Supervised RL: Scaling Depth Can Enable New Goal-Reaching Capabilities,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Representation Learning; RL
+NeurIPS,2025,Why Diffusion Models Don’t Memorize: The Role of Implicit Dynamical Regularization in Training,ML Theory & Optimization,Generative Modeling,Diffusion; Theory / Analysis
+NeurIPS,2024,Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction,Computer Vision,Image & Video Generation,Autoregressive; Transformer
+NeurIPS,2024,Stochastic Taylor Derivative Estimator: Efficient amortization for arbitrary differential operators,ML Theory & Optimization,Optimization & Generalization,Theory / Analysis
+NeurIPS,2023,Privacy Auditing with One (1) Training Run,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
+NeurIPS,2023,Are Emergent Abilities of Large Language Models a Mirage?,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
+NeurIPS,2020,Improved Guarantees and a Multiple-Descent Curve for Column Subset Selection and the Nyström Method,ML Theory & Optimization,Optimization & Generalization,Optimization
+NeurIPS,2020,Language Models are Few-Shot Learners,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
+NeurIPS,2020,No-Regret Learning Dynamics for Extensive-Form Correlated Equilibrium,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL; Theory / Analysis
+NeurIPS,2017,Safe and Nested Subgame Solving for Imperfect-Information Games,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
+NeurIPS,2017,Variance-based Regularization with Convex Objectives,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
+NeurIPS,2017,A Linear-Time Kernel Goodness-of-Fit Test,ML Theory & Optimization,Optimization & Generalization,Kernel / NTK
+NeurIPS,2016,Value Iteration Networks,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
+NeurIPS,2016,Matrix Completion has No Spurious Local Minimum,ML Theory & Optimization,Optimization & Generalization,Theory / Analysis
