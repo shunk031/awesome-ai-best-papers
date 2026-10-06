@@ -78,6 +78,15 @@ The tables below summarize the **61 award records from 2024–2026 currently in 
 | Probabilistic Inference & Sampling | 3 |
 | Reasoning & Knowledge | 2 |
 
+### Reading the recent slice
+
+- **Language-model work is the clearest cluster:** `NLP & Language` accounts for 20 recent award records, while `LLM` and `Transformer` appear in 21 and 28 records respectively.
+- **Evaluation, safety, and theory are prominent:** `LLM Analysis & Evaluation` has 7 records, `Safety, Fairness & Privacy` has 6, and `Optimization & Generalization` has 5.
+- **Generative and multimodal work remains broad rather than single-model:** `Diffusion` appears in 9 records, alongside `VLM` in 4, with recurring awards in image/video generation, 3D reconstruction, and multimodal vision-language tasks.
+- **RL and structured reasoning remain active:** `Reinforcement Learning & Planning` has 4 recent records, while graph / structured and neuro-symbolic work continues to appear across AAAI and ICLR.
+
+These are descriptive signals from the curated award set; they should not be interpreted as publication-volume or citation trends.
+
 ## Coverage
 
 | Venue | Area | Years in catalog | Records | Official awards |
