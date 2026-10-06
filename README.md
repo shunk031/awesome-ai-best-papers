@@ -2,7 +2,7 @@
 
 [![Catalog Check](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml/badge.svg)](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml)
 
-![Award records](https://img.shields.io/badge/award%20records-141-informational)
+![Award records](https://img.shields.io/badge/award%20records-219-informational)
 ![Venues](https://img.shields.io/badge/venues-9-informational)
 ![Coverage](https://img.shields.io/badge/coverage-2016%E2%80%932026-informational)
 
@@ -20,7 +20,7 @@ Each paper is annotated with a maintainer-curated **research area**, **task**, a
 
 The catalog tracks conference paper awards such as **Best Paper**, **Outstanding Paper**, **Marr Prize**, honorable mentions / runners-up, student-paper awards, and venue-specific paper-award categories. Award candidates, nominations, demos, workshops, dissertation awards, lifetime awards, and retrospective test-of-time awards are excluded by default.
 
-The v2 catalog prioritizes official conference sources. Historical records from the original list remain accessible through the [pre-revamp snapshot](https://github.com/shunk031/awesome-ai-best-papers/blob/1d33f4f2c39c53b6cec85816c6b3383334b8e913/README.md) while they are normalized into structured data.
+The v2 catalog prioritizes official conference sources. The complete 2016–2018 content of the original repository has been normalized into the structured catalog; the [pre-revamp snapshot](https://github.com/shunk031/awesome-ai-best-papers/blob/1d33f4f2c39c53b6cec85816c6b3383334b8e913/README.md) remains available for provenance and comparison.
 
 ## Research landscape
 
@@ -35,8 +35,8 @@ The tables below summarize the **61 award records from 2024–2026 currently in 
 | Computer Vision | 7 |
 | Responsible AI & Privacy | 6 |
 | Reinforcement Learning & Decision Making | 4 |
-| Graphs & Structured Learning | 3 |
 | Scientific ML & Applications | 3 |
+| Graphs & Structured Learning | 3 |
 | Multimodal & Embodied AI | 3 |
 | General ML & Representation Learning | 3 |
 | Speech & Audio | 1 |
@@ -54,8 +54,8 @@ The tables below summarize the **61 award records from 2024–2026 currently in 
 | VLM | 4 |
 | Optimization | 4 |
 | RL | 4 |
-| Neural Model | 3 |
 | Neuro-Symbolic | 3 |
+| Neural Model | 3 |
 | Autoregressive | 3 |
 | GNN | 1 |
 | VAE | 1 |
@@ -67,11 +67,11 @@ The tables below summarize the **61 award records from 2024–2026 currently in 
 | --- | ---: |
 | LLM Analysis & Evaluation | 7 |
 | Safety, Fairness & Privacy | 6 |
-| Optimization & Generalization | 5 |
 | Language Modeling & Generation | 5 |
+| Optimization & Generalization | 5 |
 | Reinforcement Learning & Planning | 4 |
-| Language Understanding & Linguistics | 3 |
 | Model Efficiency & Architecture | 3 |
+| Language Understanding & Linguistics | 3 |
 | Multimodal & Vision-Language | 3 |
 | 3D Vision & Reconstruction | 3 |
 | Image & Video Generation | 3 |
@@ -91,14 +91,14 @@ These are descriptive signals from the curated award set; they should not be int
 
 | Venue | Area | Years in catalog | Records | Official awards |
 | --- | --- | ---: | ---: | --- |
-| [ACL](https://aclweb.org/) | Natural Language Processing | 2024–2026 | 14 | [source](https://www.aclweb.org/aclwiki/Best_paper_awards) |
-| [AAAI](https://aaai.org/conference/aaai/) | Artificial Intelligence | 2016–2026 | 20 | [source](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/) |
-| [CVPR](https://cvpr.thecvf.com/) | Computer Vision | 2016–2026 | 15 | [source](https://www.thecvf.com/?page_id=413) |
-| [EMNLP](https://aclanthology.org/venues/emnlp/) | Natural Language Processing | 2024–2025 | 6 | [source](https://www.aclweb.org/aclwiki/Best_paper_awards) |
-| [ICCV](https://iccv.thecvf.com/) | Computer Vision | 2017–2025 | 6 | [source](https://www.thecvf.com/?page_id=413) |
+| [ACL](https://aclweb.org/) | Natural Language Processing | 2016–2026 | 60 | [source](https://www.aclweb.org/aclwiki/Best_paper_awards) |
+| [AAAI](https://aaai.org/conference/aaai/) | Artificial Intelligence | 2016–2026 | 25 | [source](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/) |
+| [CVPR](https://cvpr.thecvf.com/) | Computer Vision | 2016–2026 | 19 | [source](https://www.thecvf.com/?page_id=413) |
+| [EMNLP](https://aclanthology.org/venues/emnlp/) | Natural Language Processing | 2016–2025 | 15 | [source](https://www.aclweb.org/aclwiki/Best_paper_awards) |
+| [ICCV](https://iccv.thecvf.com/) | Computer Vision | 2017–2025 | 10 | [source](https://www.thecvf.com/?page_id=413) |
 | [ICLR](https://iclr.cc/) | Machine Learning | 2016–2026 | 49 | [source](https://blog.iclr.cc/) |
-| [ICML](https://icml.cc/) | Machine Learning | 2016–2026 | 14 | [source](https://blog.icml.cc/) |
-| [NAACL](https://naacl.org/) | Natural Language Processing | 2025 | 1 | [source](https://naacl.org/policies/best-paper.html) |
+| [ICML](https://icml.cc/) | Machine Learning | 2016–2026 | 20 | [source](https://blog.icml.cc/) |
+| [NAACL](https://naacl.org/) | Natural Language Processing | 2018–2025 | 5 | [source](https://naacl.org/policies/best-paper.html) |
 | [NeurIPS](https://neurips.cc/) | Machine Learning | 2016–2025 | 16 | [source](https://blog.neurips.cc/) |
 
 ## Latest awards
