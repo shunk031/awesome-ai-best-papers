@@ -24,6 +24,16 @@ By default, do not add award candidates / nominees, demos, workshop-only awards,
 
 Third-party catalogs such as Jeff Huang's Best Paper Awards are useful for discovery and cross-checking, but should not replace an available official source.
 
+## Research-area, task, and model-family tags
+
+Every paper also has a matching row in `data/paper_taxonomy.csv` with three navigation fields:
+
+- `area`: exactly one broad primary research area from the controlled vocabulary in [`data/README.md`](data/README.md).
+- `task`: exactly one controlled task category from [`data/README.md`](data/README.md).
+- `model_family`: one or more coarse model / method families separated by `; `, e.g. `LLM; Transformer` or `Diffusion; VLM`.
+
+Keep these tags intentionally coarse. They are meant to answer questions such as **which tasks are repeatedly receiving awards** and **which model families are prominent**, not to replace a full paper taxonomy. For theoretical work without a single architecture, `Theory / Analysis`, `Optimization`, or `Probabilistic / Bayesian` is preferable to inventing a model label.
+
 ## Workflow
 
 Edit the data, regenerate the README, and run validation:
