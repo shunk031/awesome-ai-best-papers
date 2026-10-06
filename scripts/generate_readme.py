@@ -95,7 +95,17 @@ def render() -> str:
     render_count_table(lines, "Model / method families", family_counts(recent))
     render_count_table(lines, "Frequently awarded tasks", task_counts, limit=12)
 
+    recent_families = family_counts(recent)
     lines.extend([
+        "### Reading the recent slice",
+        "",
+        f'- **Language-model work is the clearest cluster:** `NLP & Language` accounts for {area_counts["NLP & Language"]} recent award records, while `LLM` and `Transformer` appear in {recent_families["LLM"]} and {recent_families["Transformer"]} records respectively.',
+        f'- **Evaluation, safety, and theory are prominent:** `LLM Analysis & Evaluation` has {task_counts["LLM Analysis & Evaluation"]} records, `Safety, Fairness & Privacy` has {task_counts["Safety, Fairness & Privacy"]}, and `Optimization & Generalization` has {task_counts["Optimization & Generalization"]}.',
+        f'- **Generative and multimodal work remains broad rather than single-model:** `Diffusion` appears in {recent_families["Diffusion"]} records, alongside `VLM` in {recent_families["VLM"]}, with recurring awards in image/video generation, 3D reconstruction, and multimodal vision-language tasks.',
+        f'- **RL and structured reasoning remain active:** `Reinforcement Learning & Planning` has {task_counts["Reinforcement Learning & Planning"]} recent records, while graph / structured and neuro-symbolic work continues to appear across AAAI and ICLR.',
+        "",
+        "These are descriptive signals from the curated award set; they should not be interpreted as publication-volume or citation trends.",
+        "",
         "## Coverage",
         "",
         "| Venue | Area | Years in catalog | Records | Official awards |",
