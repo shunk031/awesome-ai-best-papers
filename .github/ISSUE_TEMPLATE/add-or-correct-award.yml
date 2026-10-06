@@ -35,8 +35,26 @@ body:
     attributes:
       label: Paper URL
       placeholder: "https://..."
+  - type: input
+    id: area
+    attributes:
+      label: Research area (optional)
+      description: Suggest one primary area from data/README.md.
+      placeholder: "e.g. Multimodal & Embodied AI"
+  - type: input
+    id: task
+    attributes:
+      label: Task category (optional)
+      description: Suggest one controlled task category from data/README.md.
+      placeholder: "e.g. Multimodal & Vision-Language"
+  - type: input
+    id: model_family
+    attributes:
+      label: Model / method family (optional)
+      description: Use semicolon-separated coarse tags when multiple families apply.
+      placeholder: "e.g. VLM; Transformer"
   - type: textarea
     id: notes
     attributes:
       label: Notes
-      description: Add any correction details, award-tier context, or ambiguity here.
+      description: Add any correction details, award-tier context, taxonomy ambiguity, or source caveats here.
