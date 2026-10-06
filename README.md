@@ -10,15 +10,73 @@
 
 A curated, source-backed catalog of paper awards from major AI, machine learning, computer vision, and natural language processing conferences.
 
-The repository is **data-driven**: [`data/papers.csv`](data/papers.csv) is the canonical award catalog, [`data/venues.csv`](data/venues.csv) defines venue metadata, and this README is regenerated deterministically.
+The repository is **data-driven**: [`data/papers.csv`](data/papers.csv) is the canonical award catalog, [`data/paper_taxonomy.csv`](data/paper_taxonomy.csv) stores research annotations, [`data/venues.csv`](data/venues.csv) defines venue metadata, and this README is regenerated deterministically.
 
-> **Freshness:** a conference year is added only after awards are announced. Conferences without a 2026 award announcement intentionally stop at the latest completed edition.
+Each paper is annotated with a maintainer-curated **research area**, **task**, and coarse **model / method family** (for example `LLM`, `VLM`, `Transformer`, `Diffusion`, `CNN`, `GNN`, `RL`, or `Theory / Analysis`). These tags are intended for navigation and trend inspection rather than as a formal taxonomy.
+
+> **Freshness:** a conference year is added only after awards are announced. Conferences without a current-year award announcement intentionally stop at the latest completed edition.
 
 ## Scope
 
 The catalog tracks conference paper awards such as **Best Paper**, **Outstanding Paper**, **Marr Prize**, honorable mentions / runners-up, student-paper awards, and venue-specific paper-award categories. Award candidates, nominations, demos, workshops, dissertation awards, lifetime awards, and retrospective test-of-time awards are excluded by default.
 
 The v2 catalog prioritizes official conference sources. Historical records from the original list remain accessible through the [pre-revamp snapshot](https://github.com/shunk031/awesome-ai-best-papers/blob/1d33f4f2c39c53b6cec85816c6b3383334b8e913/README.md) while they are normalized into structured data.
+
+## Research landscape
+
+The tables below summarize the **61 award records from 2024–2026 currently in this catalog**. They describe this curated award set, not publication volume or the field as a whole.
+
+### Research areas
+
+| Label | Award records |
+| --- | ---: |
+| NLP & Language | 20 |
+| ML Theory & Optimization | 11 |
+| Computer Vision | 7 |
+| Responsible AI & Privacy | 6 |
+| Reinforcement Learning & Decision Making | 4 |
+| Graphs & Structured Learning | 3 |
+| Scientific ML & Applications | 3 |
+| Multimodal & Embodied AI | 3 |
+| General ML & Representation Learning | 3 |
+| Speech & Audio | 1 |
+
+### Model / method families
+
+| Label | Award records |
+| --- | ---: |
+| Transformer | 28 |
+| LLM | 21 |
+| Theory / Analysis | 10 |
+| Diffusion | 9 |
+| Representation Learning | 6 |
+| Probabilistic / Bayesian | 5 |
+| VLM | 4 |
+| Optimization | 4 |
+| RL | 4 |
+| Neural Model | 3 |
+| Neuro-Symbolic | 3 |
+| Autoregressive | 3 |
+| GNN | 1 |
+| VAE | 1 |
+| Classical / Optimization | 1 |
+
+### Frequently awarded tasks
+
+| Label | Award records |
+| --- | ---: |
+| LLM Analysis & Evaluation | 7 |
+| Safety, Fairness & Privacy | 6 |
+| Optimization & Generalization | 5 |
+| Language Modeling & Generation | 5 |
+| Reinforcement Learning & Planning | 4 |
+| Language Understanding & Linguistics | 3 |
+| Model Efficiency & Architecture | 3 |
+| Multimodal & Vision-Language | 3 |
+| 3D Vision & Reconstruction | 3 |
+| Image & Video Generation | 3 |
+| Probabilistic Inference & Sampling | 3 |
+| Reasoning & Knowledge | 2 |
 
 ## Coverage
 
@@ -42,70 +100,70 @@ This section shows the latest completed award year for each venue. The full hist
 
 **Annual Meeting of the Association for Computational Linguistics** · [Natural Language Processing](https://aclweb.org/)
 
-- **Best Paper** — [Characterizing the Expressivity of Local Attention in Transformers](https://2026.aclweb.org/program/best_papers/)
-- **Best Paper** — [Memory Efficiency and Resource-Rational Encoding in Sentence Processing](https://2026.aclweb.org/program/best_papers/)
-- **Best Paper** — [The Imperfective Paradox in Large Language Models](https://2026.aclweb.org/program/best_papers/)
+- **Best Paper** — [Characterizing the Expressivity of Local Attention in Transformers](https://2026.aclweb.org/program/best_papers/)<br>  **Area:** ML Theory & Optimization · **Task:** Model Efficiency & Architecture · **Model:** Transformer / Theory / Analysis
+- **Best Paper** — [Memory Efficiency and Resource-Rational Encoding in Sentence Processing](https://2026.aclweb.org/program/best_papers/)<br>  **Area:** NLP & Language · **Task:** Language Understanding & Linguistics · **Model:** Theory / Analysis
+- **Best Paper** — [The Imperfective Paradox in Large Language Models](https://2026.aclweb.org/program/best_papers/)<br>  **Area:** NLP & Language · **Task:** LLM Analysis & Evaluation · **Model:** LLM / Transformer
 
 ### AAAI · 2026
 
 **AAAI Conference on Artificial Intelligence** · [Artificial Intelligence](https://aaai.org/conference/aaai/)
 
-- **Outstanding Paper Award** — [Causal Structure Learning for Dynamical Systems with Theoretical Score Analysis](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/)
-- **Outstanding Paper Award** — [High-Pass Matters: Theoretical Insights and Sheaflet-Based Design for Hypergraph Neural Networks](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/)
-- **Outstanding Paper Award** — [LLM2CLIP: Powerful Language Model Unlocks Richer Cross-Modality Representation](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/)
-- **Outstanding Paper Award** — [Model Change for Description Logic Concepts](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/)
-- **Outstanding Paper Award** — [ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/)
+- **Outstanding Paper Award** — [Causal Structure Learning for Dynamical Systems with Theoretical Score Analysis](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/)<br>  **Area:** Scientific ML & Applications · **Task:** Causal Learning · **Model:** Theory / Analysis
+- **Outstanding Paper Award** — [High-Pass Matters: Theoretical Insights and Sheaflet-Based Design for Hypergraph Neural Networks](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/)<br>  **Area:** Graphs & Structured Learning · **Task:** Graph & Structured Learning · **Model:** GNN
+- **Outstanding Paper Award** — [LLM2CLIP: Powerful Language Model Unlocks Richer Cross-Modality Representation](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/)<br>  **Area:** Multimodal & Embodied AI · **Task:** Multimodal & Vision-Language · **Model:** LLM / Transformer / VLM
+- **Outstanding Paper Award** — [Model Change for Description Logic Concepts](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/)<br>  **Area:** Graphs & Structured Learning · **Task:** Graph & Structured Learning · **Model:** Neuro-Symbolic
+- **Outstanding Paper Award** — [ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/)<br>  **Area:** Multimodal & Embodied AI · **Task:** Multimodal & Vision-Language · **Model:** VLM / Transformer
 
 ### CVPR · 2026
 
 **IEEE/CVF Conference on Computer Vision and Pattern Recognition** · [Computer Vision](https://cvpr.thecvf.com/)
 
-- **Best Paper** — [Efficiently Reconstructing Dynamic Scenes One D4RT at a Time](https://www.thecvf.com/?page_id=413)
+- **Best Paper** — [Efficiently Reconstructing Dynamic Scenes One D4RT at a Time](https://www.thecvf.com/?page_id=413)<br>  **Area:** Computer Vision · **Task:** 3D Vision & Reconstruction · **Model:** Transformer
 
 ### EMNLP · 2025
 
 **Conference on Empirical Methods in Natural Language Processing** · [Natural Language Processing](https://aclanthology.org/venues/emnlp/)
 
-- **Best Paper** — [Infini-gram mini: Exact n-gram Search at the Internet Scale with FM-Index](https://2025.emnlp.org/program/awards/)
+- **Best Paper** — [Infini-gram mini: Exact n-gram Search at the Internet Scale with FM-Index](https://2025.emnlp.org/program/awards/)<br>  **Area:** NLP & Language · **Task:** Retrieval & Search · **Model:** Classical / Optimization
 
 ### ICCV · 2025
 
 **IEEE/CVF International Conference on Computer Vision** · [Computer Vision](https://iccv.thecvf.com/)
 
-- **Marr Prize** — [Generating Physically Stable and Buildable Brick Structures from Text](https://www.thecvf.com/?page_id=413)
+- **Marr Prize** — [Generating Physically Stable and Buildable Brick Structures from Text](https://www.thecvf.com/?page_id=413)<br>  **Area:** Computer Vision · **Task:** 3D Vision & Reconstruction · **Model:** Optimization
 
 ### ICLR · 2026
 
 **International Conference on Learning Representations** · [Machine Learning](https://iclr.cc/)
 
-- **Outstanding Paper** — [LLMs Get Lost In Multi-Turn Conversation](https://blog.iclr.cc/2026/04/23/announcing-the-iclr-2026-outstanding-papers/)
-- **Outstanding Paper** — [Transformers are Inherently Succinct](https://blog.iclr.cc/2026/04/23/announcing-the-iclr-2026-outstanding-papers/)
+- **Outstanding Paper** — [LLMs Get Lost In Multi-Turn Conversation](https://blog.iclr.cc/2026/04/23/announcing-the-iclr-2026-outstanding-papers/)<br>  **Area:** NLP & Language · **Task:** LLM Analysis & Evaluation · **Model:** LLM / Transformer
+- **Outstanding Paper** — [Transformers are Inherently Succinct](https://blog.iclr.cc/2026/04/23/announcing-the-iclr-2026-outstanding-papers/)<br>  **Area:** ML Theory & Optimization · **Task:** Optimization & Generalization · **Model:** Transformer / Theory / Analysis
 
 ### ICML · 2026
 
 **International Conference on Machine Learning** · [Machine Learning](https://icml.cc/)
 
-- **Outstanding Paper** — [High-Accuracy Sampling for Diffusion Models and Log-Concave Distributions](https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/)
-- **Outstanding Paper** — [The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models](https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/)
+- **Outstanding Paper** — [High-Accuracy Sampling for Diffusion Models and Log-Concave Distributions](https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/)<br>  **Area:** ML Theory & Optimization · **Task:** Probabilistic Inference & Sampling · **Model:** Diffusion / Probabilistic / Bayesian
+- **Outstanding Paper** — [The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models](https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/)<br>  **Area:** ML Theory & Optimization · **Task:** LLM Analysis & Evaluation · **Model:** LLM / Transformer / Diffusion
 
 ### NAACL · 2025
 
 **Annual Conference of the Nations of the Americas Chapter of the ACL** · [Natural Language Processing](https://naacl.org/)
 
-- **Best Paper** — [The BiGGen Bench: A Principled Benchmark for Fine-grained Evaluation of Language Models with Language Models](https://2025.naacl.org/blog/best-papers/)
+- **Best Paper** — [The BiGGen Bench: A Principled Benchmark for Fine-grained Evaluation of Language Models with Language Models](https://2025.naacl.org/blog/best-papers/)<br>  **Area:** NLP & Language · **Task:** Language Modeling & Generation · **Model:** LLM / Transformer
 
 ### NeurIPS · 2025
 
 **Conference on Neural Information Processing Systems** · [Machine Learning](https://neurips.cc/)
 
-- **Best Paper** — [1000 Layer Networks for Self-Supervised RL: Scaling Depth Can Enable New Goal-Reaching Capabilities](https://blog.neurips.cc/2025/11/26/announcing-the-neurips-2025-best-paper-awards/)
-- **Best Paper** — [Artificial Hivemind: The Open-Ended Homogeneity of Language Models (and Beyond)](https://blog.neurips.cc/2025/11/26/announcing-the-neurips-2025-best-paper-awards/)
-- **Best Paper** — [Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free](https://blog.neurips.cc/2025/11/26/announcing-the-neurips-2025-best-paper-awards/)
-- **Best Paper** — [Why Diffusion Models Don’t Memorize: The Role of Implicit Dynamical Regularization in Training](https://blog.neurips.cc/2025/11/26/announcing-the-neurips-2025-best-paper-awards/)
+- **Best Paper** — [1000 Layer Networks for Self-Supervised RL: Scaling Depth Can Enable New Goal-Reaching Capabilities](https://blog.neurips.cc/2025/11/26/announcing-the-neurips-2025-best-paper-awards/)<br>  **Area:** Reinforcement Learning & Decision Making · **Task:** Reinforcement Learning & Planning · **Model:** Representation Learning / RL
+- **Best Paper** — [Artificial Hivemind: The Open-Ended Homogeneity of Language Models (and Beyond)](https://blog.neurips.cc/2025/11/26/announcing-the-neurips-2025-best-paper-awards/)<br>  **Area:** NLP & Language · **Task:** LLM Analysis & Evaluation · **Model:** LLM / Transformer
+- **Best Paper** — [Gated Attention for Large Language Models: Non-linearity, Sparsity, and Attention-Sink-Free](https://blog.neurips.cc/2025/11/26/announcing-the-neurips-2025-best-paper-awards/)<br>  **Area:** NLP & Language · **Task:** Model Efficiency & Architecture · **Model:** LLM / Transformer
+- **Best Paper** — [Why Diffusion Models Don’t Memorize: The Role of Implicit Dynamical Regularization in Training](https://blog.neurips.cc/2025/11/26/announcing-the-neurips-2025-best-paper-awards/)<br>  **Area:** ML Theory & Optimization · **Task:** Generative Modeling · **Model:** Diffusion / Theory / Analysis
 
 ## Data and contributions
 
-To add or correct an award, edit the CSV data rather than this README. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for source requirements and tier definitions.
+To add or correct an award, edit the CSV data rather than this README. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for source requirements, tier definitions, and taxonomy rules.
 
 ```bash
 python scripts/validate_catalog.py
