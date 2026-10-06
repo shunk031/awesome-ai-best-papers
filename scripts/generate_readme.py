@@ -25,9 +25,6 @@ def load_csv(path: Path) -> list[dict[str, str]]:
 def render() -> str:
     venues = load_csv(VENUES_PATH)
     papers = load_csv(PAPERS_PATH)
-    venue_by_name = {row["venue"]: row for row in venues}
-    venue_order = [row["venue"] for row in venues]
-
     by_venue: dict[str, list[dict[str, str]]] = defaultdict(list)
     for row in papers:
         by_venue[row["venue"]].append(row)
@@ -35,55 +32,35 @@ def render() -> str:
     years = [int(row["year"]) for row in papers]
     min_year, max_year = min(years), max(years)
 
-    lines: list[str] = []
-    lines.append("# Awesome AI Best Papers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)")
-    lines.append("")
-    lines.append("[![Catalog Check](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml/badge.svg)](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml)")
-    lines.append("")
-    lines.append(f"![Award records](https://img.shields.io/badge/award%20records-{len(papers)}-informational)")
-    lines.append(f"![Venues](https://img.shields.io/badge/venues-{len(venues)}-informational)")
-    lines.append(f"![Coverage](https://img.shields.io/badge/coverage-{min_year}%E2%80%93{max_year}-informational)")
-    lines.append("")
-    lines.append("<!-- This file is generated from data/*.csv by scripts/generate_readme.py. Do not edit it directly. -->")
-    lines.append("")
-    lines.append(
-        "A curated, source-backed catalog of paper awards from major AI, machine learning, "
-        "computer vision, and natural language processing conferences."
-    )
-    lines.append("")
-    lines.append(
-        "The repository is **data-driven**: [`data/papers.csv`](data/papers.csv) is the canonical "
-        "award catalog, [`data/venues.csv`](data/venues.csv) defines venue metadata, and this README "
-        "is regenerated deterministically. Award labels are preserved as announced by the venue and "
-        "normalized into `primary`, `secondary`, or `special` tiers for maintenance."
-    )
-    lines.append("")
-    lines.append(
-        "> **Freshness:** the catalog is checked against official award pages. "
-        "A year is only added after an award has been announced; conferences that have not yet "
-        "announced awards for the current year intentionally stop at the latest completed edition."
-    )
-    lines.append("")
-    lines.append("## Scope")
-    lines.append("")
-    lines.append(
-        "The core catalog tracks conference paper awards such as **Best Paper**, **Outstanding Paper**, "
-        "**Marr Prize**, honorable mentions / runners-up, student-paper awards, and venue-specific "
-        "paper-award categories. Award candidates, nominations, demos, workshops, dissertation awards, "
-        "lifetime awards, and retrospective test-of-time awards are excluded by default."
-    )
-    lines.append("")
-    lines.append(
-        "The v2 catalog prioritizes official conference sources. Some historical records from the "
-        "original 2018 list remain accessible through the "
-        "[pre-revamp snapshot](https://github.com/shunk031/awesome-ai-best-papers/blob/1d33f4f2c39c53b6cec85816c6b3383334b8e913/README.md) "
-        "while they are progressively normalized into the structured dataset."
-    )
-    lines.append("")
-    lines.append("## Coverage")
-    lines.append("")
-    lines.append("| Venue | Area | Years in catalog | Records | Official awards |")
-    lines.append("| --- | --- | ---: | ---: | --- |")
+    lines: list[str] = [
+        "# Awesome AI Best Papers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)",
+        "",
+        "[![Catalog Check](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml/badge.svg)](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml)",
+        "",
+        f"![Award records](https://img.shields.io/badge/award%20records-{len(papers)}-informational)",
+        f"![Venues](https://img.shields.io/badge/venues-{len(venues)}-informational)",
+        f"![Coverage](https://img.shields.io/badge/coverage-{min_year}%E2%80%93{max_year}-informational)",
+        "",
+        "<!-- This file is generated from data/*.csv by scripts/generate_readme.py. Do not edit it directly. -->",
+        "",
+        "A curated, source-backed catalog of paper awards from major AI, machine learning, computer vision, and natural language processing conferences.",
+        "",
+        "The repository is **data-driven**: [`data/papers.csv`](data/papers.csv) is the canonical award catalog, [`data/venues.csv`](data/venues.csv) defines venue metadata, and this README is regenerated deterministically.",
+        "",
+        "> **Freshness:** a conference year is added only after awards are announced. Conferences without a 2026 award announcement intentionally stop at the latest completed edition.",
+        "",
+        "## Scope",
+        "",
+        "The catalog tracks conference paper awards such as **Best Paper**, **Outstanding Paper**, **Marr Prize**, honorable mentions / runners-up, student-paper awards, and venue-specific paper-award categories. Award candidates, nominations, demos, workshops, dissertation awards, lifetime awards, and retrospective test-of-time awards are excluded by default.",
+        "",
+        "The v2 catalog prioritizes official conference sources. Historical records from the original list remain accessible through the [pre-revamp snapshot](https://github.com/shunk031/awesome-ai-best-papers/blob/1d33f4f2c39c53b6cec85816c6b3383334b8e913/README.md) while they are normalized into structured data.",
+        "",
+        "## Coverage",
+        "",
+        "| Venue | Area | Years in catalog | Records | Official awards |",
+        "| --- | --- | ---: | ---: | --- |",
+    ]
+
     for venue in venues:
         items = by_venue.get(venue["venue"], [])
         item_years = sorted({int(row["year"]) for row in items})
@@ -94,75 +71,71 @@ def render() -> str:
             f'| [{venue["venue"]}]({venue["official_url"]}) | {venue["area"]} | {year_label} | '
             f'{len(items)} | [source]({venue["award_url"]}) |'
         )
-    lines.append("")
-    lines.append("## Contents")
-    lines.append("")
+
+    lines.extend([
+        "",
+        "## Latest awards",
+        "",
+        "This section shows the latest completed award year for each venue. The full historical catalog is in [`data/papers.csv`](data/papers.csv).",
+        "",
+    ])
+
     for venue in venues:
-        lines.append(f'- [{venue["venue"]} — {venue["full_name"]}](#{venue["venue"].casefold()})')
-    lines.append("")
-    for venue_name in venue_order:
-        venue = venue_by_name[venue_name]
-        lines.append(f"## {venue_name}")
-        lines.append("")
-        lines.append(f'**{venue["full_name"]}** · [{venue["area"]}]({venue["official_url"]})')
-        lines.append("")
-        if venue["notes"]:
-            lines.append(venue["notes"])
-            lines.append("")
-        items = sorted(
-            by_venue.get(venue_name, []),
+        items = by_venue.get(venue["venue"], [])
+        if not items:
+            continue
+        latest_year = max(int(row["year"]) for row in items)
+        latest = sorted(
+            (row for row in items if int(row["year"]) == latest_year),
             key=lambda row: (
-                -int(row["year"]),
                 TIER_ORDER.get(row["tier"], 99),
                 row["award"].casefold(),
                 row["title"].casefold(),
             ),
         )
-        grouped: dict[int, list[dict[str, str]]] = defaultdict(list)
-        for row in items:
-            grouped[int(row["year"])].append(row)
-        for year in sorted(grouped, reverse=True):
-            lines.append(f"### {year}")
-            lines.append("")
-            for row in grouped[year]:
-                title_url = row["paper_url"] or row["source_url"]
-                source_suffix = ""
-                if row["paper_url"] and row["paper_url"] != row["source_url"]:
-                    source_suffix = f' · [award source]({row["source_url"]})'
-                tier_suffix = "" if row["tier"] == "primary" else f' · `{row["tier"]}`'
-                notes_suffix = f' — {row["notes"]}' if row["notes"] else ""
-                lines.append(
-                    f'- **{row["award"]}** — [{row["title"]}]({title_url})'
-                    f'{source_suffix}{tier_suffix}{notes_suffix}'
-                )
-            lines.append("")
-    lines.append("## Data and contributions")
-    lines.append("")
-    lines.append(
-        "To add or correct an award, edit the CSV data rather than this README. "
-        "See [`CONTRIBUTING.md`](CONTRIBUTING.md) for source requirements, tier definitions, "
-        "and local validation commands."
-    )
-    lines.append("")
-    lines.append("```bash")
-    lines.append("python scripts/validate_catalog.py")
-    lines.append("python scripts/generate_readme.py")
-    lines.append("python scripts/generate_readme.py --check")
-    lines.append("```")
-    lines.append("")
-    lines.append("## References")
-    lines.append("")
-    lines.append("- [Best Paper Awards in Computer Science (Jeff Huang)](https://jeffhuang.com/best_paper_awards.html)")
-    lines.append("- [ACL-family best paper awards](https://www.aclweb.org/aclwiki/Best_paper_awards)")
-    lines.append("- [CVF best paper archive](https://www.thecvf.com/?page_id=413)")
-    lines.append("")
-    lines.append("## License")
-    lines.append("")
-    lines.append(
-        "The catalog continues the original repository's "
-        "[CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) dedication."
-    )
-    lines.append("")
+        lines.extend([
+            f'### {venue["venue"]} · {latest_year}',
+            "",
+            f'**{venue["full_name"]}** · [{venue["area"]}]({venue["official_url"]})',
+            "",
+        ])
+        for row in latest:
+            title_url = row["paper_url"] or row["source_url"]
+            source_suffix = (
+                f' · [award source]({row["source_url"]})'
+                if row["paper_url"] and row["paper_url"] != row["source_url"]
+                else ""
+            )
+            tier_suffix = "" if row["tier"] == "primary" else f' · `{row["tier"]}`'
+            notes_suffix = f' — {row["notes"]}' if row["notes"] else ""
+            lines.append(
+                f'- **{row["award"]}** — [{row["title"]}]({title_url})'
+                f'{source_suffix}{tier_suffix}{notes_suffix}'
+            )
+        lines.append("")
+
+    lines.extend([
+        "## Data and contributions",
+        "",
+        "To add or correct an award, edit the CSV data rather than this README. See [`CONTRIBUTING.md`](CONTRIBUTING.md) for source requirements and tier definitions.",
+        "",
+        "```bash",
+        "python scripts/validate_catalog.py",
+        "python scripts/generate_readme.py",
+        "python scripts/generate_readme.py --check",
+        "```",
+        "",
+        "## References",
+        "",
+        "- [Best Paper Awards in Computer Science (Jeff Huang)](https://jeffhuang.com/best_paper_awards.html)",
+        "- [ACL-family best paper awards](https://www.aclweb.org/aclwiki/Best_paper_awards)",
+        "- [CVF best paper archive](https://www.thecvf.com/?page_id=413)",
+        "",
+        "## License",
+        "",
+        "The catalog continues the original repository's [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) dedication.",
+        "",
+    ])
     return "\n".join(lines)
 
 
