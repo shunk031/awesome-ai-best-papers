@@ -141,18 +141,68 @@ AAAI,2026,High-Pass Matters: Theoretical Insights and Sheaflet-Based Design for 
 AAAI,2026,LLM2CLIP: Powerful Language Model Unlocks Richer Cross-Modality Representation,Multimodal & Embodied AI,Multimodal & Vision-Language,LLM; Transformer; VLM
 AAAI,2026,Model Change for Description Logic Concepts,Graphs & Structured Learning,Graph & Structured Learning,Neuro-Symbolic
 AAAI,2026,ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver,Multimodal & Embodied AI,Multimodal & Vision-Language,VLM; Transformer
+AAAI,2026,On the Alignment of Large Language Models with Global Human Opinion,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
+AAAI,2026,PlantTraitNet: An Uncertainty-Aware Multimodal Framework for Global-Scale Plant Trait Inference from Citizen Science Data,Scientific ML & Applications,Scientific Discovery & Simulation,VLM; Transformer
+AAAI,2026,Generalizable Slum Detection from Satellite Imagery with Mixture-of-Experts,Scientific ML & Applications,Scientific Discovery & Simulation,Neural Model
 AAAI,2025,Efficient Rectification of Neuro-Symbolic Reasoning Inconsistencies by Abductive Reflection,Graphs & Structured Learning,Reasoning & Knowledge,Optimization; Neuro-Symbolic
 AAAI,2025,Every Bit Helps: Achieving the Optimal Distortion with a Few Queries,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
 AAAI,2025,Revelations: A Decidable Class of POMDPs with Omega-Regular Objectives,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
+AAAI,2025,"DivShift: Exploring Domain-Specific Distribution Shifts in Large-Scale, Volunteer-Collected Biodiversity Datasets",Scientific ML & Applications,Robustness & Domain Adaptation,Neural Model
 AAAI,2024,GxVAEs: Two Joint VAEs Generate Hit Molecules from Gene Expression Profiles,Scientific ML & Applications,Scientific Discovery & Simulation,VAE
 AAAI,2024,Proportional Aggregation of Preferences for Sequential Decision Making,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
 AAAI,2024,Reliable Conflictive Multi-view Learning,General ML & Representation Learning,Representation Learning,Representation Learning
+AAAI,2024,DISCount: Counting in Large Image Collections with Detector-Based Importance Sampling,Computer Vision,Visual Recognition & Representation,Neural Model
+AAAI,2024,Nowcasting Temporal Trends Using Indirect Surveys,Scientific ML & Applications,Probabilistic Inference & Sampling,Probabilistic / Bayesian
+AAAI,2024,Scaling Up Pareto Optimization for Tree Structures with Affine Transformations: Evaluating Hybrid Floating Solar-Hydropower Systems in the Amazon,Scientific ML & Applications,Optimization & Generalization,Optimization
+AAAI,2024,Is My Prediction Arbitrary? The Confounding Effects of Variance in Fair Classification Benchmarks,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
 AAAI,2023,Misspecification in Inverse Reinforcement Learning,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
+AAAI,2023,DropMessage: Unifying Random Dropping for Graph Neural Networks,Graphs & Structured Learning,Graph & Structured Learning,GNN
+AAAI,2023,Two Heads are Better than One: Image-Point Cloud Network for Depth-Based 3D Hand Pose Estimation,Computer Vision,3D Vision & Reconstruction,Neural Model
+AAAI,2023,Neural Architecture Search for Wide Spectrum Adversarial Robustness,General ML & Representation Learning,Robustness & Domain Adaptation,Neural Model; Optimization
+AAAI,2023,CowClip: Reducing CTR Prediction Model Training Time from 12 hours to 10 minutes on 1 GPU,General ML & Representation Learning,Model Efficiency & Architecture,Neural Model; Optimization
+AAAI,2023,DICNet: Deep Instance-Level Contrastive Network for Double Incomplete Multi-View Multi-Label Classification,General ML & Representation Learning,Representation Learning,Neural Model
+AAAI,2023,Exploring Tuning Characteristics of Ventral Stream’s Neurons for Few-Shot Image Classification,Computer Vision,Visual Recognition & Representation,Neural Model; Theory / Analysis
+AAAI,2023,MaskBooster: End-to-End Self-Training for Sparsely Supervised Instance Segmentation,Computer Vision,Visual Recognition & Representation,Neural Model
+AAAI,2023,SimFair: A Unified Framework for Fairness-Aware Multi-Label Classification,Responsible AI & Privacy,"Safety, Fairness & Privacy",Neural Model
+AAAI,2023,XRand: Differentially Private Defense against Explanation-Guided Attacks,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
+AAAI,2023,Clustering What Matters: Optimal Approximation for Clustering with Outliers,ML Theory & Optimization,Optimization & Generalization,Classical / Optimization; Theory / Analysis
+AAAI,2023,Robust Average-Reward Markov Decision Processes,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL; Theory / Analysis
+AAAI,2023,Efficient Answer Enumeration in Description Logics with Functional Roles,Graphs & Structured Learning,Reasoning & Knowledge,Neuro-Symbolic; Theory / Analysis
+AAAI,2023,Decorate the Newcomers: Visual Domain Prompt for Continual Test Time Adaptation,General ML & Representation Learning,Robustness & Domain Adaptation,Neural Model
 AAAI,2022,Online Certification of Preference-based Fairness for Personalized Recommender Systems,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
+AAAI,2022,Bayesian Persuasion in Sequential Decision-Making,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Search / Planning; Theory / Analysis
+AAAI,2022,Operator-Potential Heuristics for Symbolic Search,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Search / Planning; Theory / Analysis
+AAAI,2022,AlphaHoldem: High-Performance Artificial Intelligence for Heads-Up No-Limit Poker via End-to-End Reinforcement Learning,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
+AAAI,2022,Certified Symmetry and Dominance Breaking for Combinatorial Optimisation,ML Theory & Optimization,Optimization & Generalization,Classical / Optimization; Theory / Analysis
+AAAI,2022,Online Elicitation of Necessarily Optimal Matchings,ML Theory & Optimization,Optimization & Generalization,Theory / Analysis
+AAAI,2022,Sampling-Based Robust Control of Autonomous Systems with Non-Gaussian Noise,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Probabilistic / Bayesian; Search / Planning
+AAAI,2022,Subset approximation of Pareto Regions with Bi-objective A*,ML Theory & Optimization,Optimization & Generalization,Search / Planning; Optimization
+AAAI,2022,The SoftCumulative Constraint with Quadratic Penalty,ML Theory & Optimization,Optimization & Generalization,Classical / Optimization
+AAAI,2022,InfoLM: A New Metric to Evaluate Summarization & Data2Text Generation,NLP & Language,LLM Analysis & Evaluation,Theory / Analysis
+AAAI,2022,Compilation of Aggregates in ASP Systems,Graphs & Structured Learning,Reasoning & Knowledge,Neuro-Symbolic
+AAAI,2022,Entropy estimation via normalizing flow,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian; Neural Model
 AAAI,2021,Exploration-Exploitation in Multi-Agent Learning: Catastrophe Theory Meets Game Theory,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
 AAAI,2021,Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting,General ML & Representation Learning,Model Efficiency & Architecture,Transformer
+AAAI,2021,Learning from eXtreme Bandit Feedback,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL; Theory / Analysis
+AAAI,2021,Self-Attention Attribution: Interpreting Information Interactions Inside Transformer,NLP & Language,Interpretability & Explainability,Transformer
+AAAI,2021,Mitigating Political Bias in Language Models through Reinforced Calibration,Responsible AI & Privacy,"Safety, Fairness & Privacy",Transformer
+AAAI,2021,Dual-Mandate Patrols: Multi-Armed Bandits for Green Security,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
+AAAI,2021,IQ – Incremental Learning for Solving QSAT,Graphs & Structured Learning,Reasoning & Knowledge,Neuro-Symbolic; Search / Planning
+AAAI,2021,Ethically Compliant Sequential Decision Making,Responsible AI & Privacy,"Safety, Fairness & Privacy",Search / Planning; Theory / Analysis
+AAAI,2021,On the Tractability of SHAP Explanations,Responsible AI & Privacy,Interpretability & Explainability,Theory / Analysis
+AAAI,2021,Expected Eligibility Traces,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL; Theory / Analysis
+AAAI,2021,Polynomial-Time Algorithms for Counting and Sampling Markov Equivalent DAGs,Graphs & Structured Learning,Causal Learning,Probabilistic / Bayesian; Theory / Analysis
+AAAI,2021,Self-Supervised Multi-View Stereo via Effective Co-Segmentation and Data-Augmentation,Computer Vision,3D Vision & Reconstruction,Neural Model; Representation Learning
 AAAI,2020,WinoGrande: An Adversarial Winograd Schema Challenge at Scale,NLP & Language,Reasoning & Knowledge,Transformer
+AAAI,2020,A Unifying View on Individual Bounds and Heuristic Inaccuracies in Bidirectional Search,ML Theory & Optimization,Reinforcement Learning & Planning,Search / Planning; Theory / Analysis
+AAAI,2020,Fair Division of Mixed Divisible and Indivisible Goods,ML Theory & Optimization,Optimization & Generalization,Theory / Analysis
+AAAI,2020,Lifelong Learning with a Changing Action Set,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
+AAAI,2020,A Distributed Multi-Sensor Machine Learning Approach to Earthquake Early Warning,Scientific ML & Applications,Scientific Discovery & Simulation,Neural Model
+AAAI,2020,The Unreasonable Effectiveness of Inverse Reinforcement Learning in Advancing Cancer Research,Scientific ML & Applications,Scientific Discovery & Simulation,RL; Theory / Analysis
 AAAI,2019,How to Combine Tree-Search Methods in Reinforcement Learning,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL; Search / Planning
+AAAI,2019,Solving Imperfect-Information Games with Discounted Counterfactual Regret Minimization,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL; Search / Planning
+AAAI,2019,Zero Shot Learning for Code Education: Rubric Sampling with Deep Learning Inference,General ML & Representation Learning,Meta-Learning & Adaptation,Neural Model
+AAAI,2019,Learning to Teach in Cooperative Multiagent Reinforcement Learning,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL; Meta-Learning
 AAAI,2018,Adapting a Kidney Exchange Algorithm to Align with Human Values.,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Optimization
 AAAI,2018,Counterfactual Multi-Agent Policy Gradients.,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
 AAAI,2018,Generalized Adjustment under Confounding and Selection Biases.,Scientific ML & Applications,Causal Learning,Theory / Analysis
