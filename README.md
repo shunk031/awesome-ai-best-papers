@@ -33,11 +33,11 @@ Each paper is annotated with a maintainer-curated **research area**, **task**, a
 
 The **130 award records from 2024–2026** provide a compact view of the research themes represented in the recent award set. These counts describe this catalog, not publication volume or citation impact across the field.
 
-**Research areas:** `NLP & Language` (34), `Computer Vision` (30), `ML Theory & Optimization` (17), `Responsible AI & Privacy` (13), `Multimodal & Embodied AI` (10), `Scientific ML & Applications` (8), `General ML & Representation Learning` (8), `Reinforcement Learning & Decision Making` (5), `Graphs & Structured Learning` (4), `Speech & Audio` (1).
+**Research areas:** `NLP & Language` (34), `Computer Vision` (30), `ML Theory & Optimization` (17), `Responsible AI & Privacy` (13), `Multimodal & Embodied AI` (11), `Scientific ML & Applications` (8), `General ML & Representation Learning` (8), `Graphs & Structured Learning` (4), `Reinforcement Learning & Decision Making` (4), `Speech & Audio` (1).
 
-**Model / method families:** `Transformer` (57), `LLM` (41), `Theory / Analysis` (26), `Neural Model` (20), `Diffusion` (16), `Optimization` (12), `VLM` (9), `Probabilistic / Bayesian` (9), `RL` (8), `Representation Learning` (7), `Autoregressive` (6), `GNN` (3), `Neuro-Symbolic` (3), `CNN` (2), `Classical / Optimization` (2), `VAE` (1), `Meta-Learning` (1).
+**Model / method families:** `Transformer` (59), `LLM` (41), `Theory / Analysis` (27), `Neural Model` (19), `Diffusion` (17), `Optimization` (12), `VLM` (9), `Probabilistic / Bayesian` (9), `RL` (7), `Autoregressive` (6), `Representation Learning` (5), `GNN` (3), `Neuro-Symbolic` (3), `CNN` (3), `Classical / Optimization` (2), `VAE` (1), `Meta-Learning` (1).
 
-**Frequently awarded tasks:** `3D Vision & Reconstruction` (14), `LLM Analysis & Evaluation` (13), `Safety, Fairness & Privacy` (12), `Optimization & Generalization` (11), `Image & Video Generation` (8), `Model Efficiency & Architecture` (7), `Generative Modeling` (7), `Multimodal & Vision-Language` (6), `Reinforcement Learning & Planning` (6), `Probabilistic Inference & Sampling` (6), `Visual Recognition & Representation` (5), `Language Modeling & Generation` (5).
+**Frequently awarded tasks:** `3D Vision & Reconstruction` (14), `LLM Analysis & Evaluation` (13), `Safety, Fairness & Privacy` (12), `Optimization & Generalization` (11), `Image & Video Generation` (9), `Model Efficiency & Architecture` (7), `Generative Modeling` (7), `Multimodal & Vision-Language` (6), `Probabilistic Inference & Sampling` (6), `Reinforcement Learning & Planning` (5), `Visual Recognition & Representation` (5), `Language Modeling & Generation` (5).
 
 ## Papers
 
@@ -532,16 +532,16 @@ Papers are grouped by conference and award year. Title links use canonical paper
 #### 2025
 
 - [AlphaEdit: Null-Space Constrained Knowledge Editing for Language Models](https://openreview.net/forum?id=HvSytvg3Jh) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Model Editing & Adaptation. **Model:** LLM / Transformer.
-- [Learning Dynamics of LLM Finetuning](https://openreview.net/forum?id=tPNHOoZFl9) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer / Representation Learning.
+- [Learning Dynamics of LLM Finetuning](https://openreview.net/forum?id=tPNHOoZFl9) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer.
 - [Safety Alignment Should be Made More Than Just a Few Tokens Deep](https://openreview.net/forum?id=6Mxhg9PtDE) - **Award:** Outstanding Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** LLM / Transformer.
 - [Data Shapley in One Training Run](https://openreview.net/forum?id=HD6bWcj87Y) - **Award:** Outstanding Paper Honorable Mention. **Area:** General ML & Representation Learning. **Task:** Interpretability & Explainability. **Model:** Theory / Analysis.
 - [Faster Cascades via Speculative Decoding](https://openreview.net/forum?id=vo9t20wsmd) - **Award:** Outstanding Paper Honorable Mention. **Area:** NLP & Language. **Task:** Model Efficiency & Architecture. **Model:** LLM / Transformer / Autoregressive.
 - [SAM 2: Segment Anything in Images and Videos](https://openreview.net/forum?id=Ha6RTeWMd0) - **Award:** Outstanding Paper Honorable Mention. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Transformer.
 #### 2024
 
-- [Generalization in diffusion models arises from geometry-adaptive harmonic representations](https://openreview.net/forum?id=ANvmVS2Yr0) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Diffusion.
-- [Learning Interactive Real-World Simulators](https://openreview.net/forum?id=sFyTZEqmUY) - **Award:** Outstanding Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** Neural Model / RL.
-- [Never Train from Scratch: Fair Comparison of Long-Sequence Models Requires Data-Driven Priors](https://openreview.net/forum?id=PdaPky8MUn) - **Award:** Outstanding Paper. **Area:** General ML & Representation Learning. **Task:** Representation Learning. **Model:** Neural Model / Representation Learning.
+- [Generalization in diffusion models arises from geometry-adaptive harmonic representations](https://openreview.net/forum?id=ANvmVS2Yr0) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Diffusion / Theory / Analysis.
+- [Learning Interactive Real-World Simulators](https://openreview.net/forum?id=sFyTZEqmUY) - **Award:** Outstanding Paper. **Area:** Multimodal & Embodied AI. **Task:** Image & Video Generation. **Model:** Diffusion / CNN.
+- [Never Train from Scratch: Fair Comparison of Long-Sequence Models Requires Data-Driven Priors](https://openreview.net/forum?id=PdaPky8MUn) - **Award:** Outstanding Paper. **Area:** General ML & Representation Learning. **Task:** Evaluation & Benchmarking. **Model:** Transformer / Neural Model.
 - [Protein Discovery with Discrete Walk-Jump Sampling](https://openreview.net/forum?id=zMPHKOmQNb) - **Award:** Outstanding Paper. **Area:** Scientific ML & Applications. **Task:** Scientific Discovery & Simulation. **Model:** Probabilistic / Bayesian.
 - [Vision Transformers Need Registers](https://openreview.net/forum?id=2dnO3LLiJ1) - **Award:** Outstanding Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Transformer.
 - [Amortizing intractable inference in large language models](https://openreview.net/forum?id=Ouj6p4ca60) - **Award:** Outstanding Paper Honorable Mention. **Area:** NLP & Language. **Task:** Probabilistic Inference & Sampling. **Model:** LLM / Probabilistic / Bayesian.
@@ -553,7 +553,7 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs](https://openreview.net/forum?id=uNrFpDPMyo) - **Award:** Outstanding Paper Honorable Mention. **Area:** NLP & Language. **Task:** Model Efficiency & Architecture. **Model:** LLM / Transformer.
 - [Proving Test Set Contamination in Black-Box Language Models](https://openreview.net/forum?id=KS8mIvetg2) - **Award:** Outstanding Paper Honorable Mention. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Theory / Analysis.
 - [Robust agents learn causal world models](https://openreview.net/forum?id=pOoKI3ouv1) - **Award:** Outstanding Paper Honorable Mention. **Area:** Reinforcement Learning & Decision Making. **Task:** Causal Learning. **Model:** RL / Theory / Analysis.
-- [The mechanistic basis of data dependence and abrupt learning in an in-context classification task](https://openreview.net/forum?id=aN4Jf6Cx69) - **Award:** Outstanding Paper Honorable Mention. **Area:** General ML & Representation Learning. **Task:** Interpretability & Explainability. **Model:** Theory / Analysis.
+- [The mechanistic basis of data dependence and abrupt learning in an in-context classification task](https://openreview.net/forum?id=aN4Jf6Cx69) - **Award:** Outstanding Paper Honorable Mention. **Area:** General ML & Representation Learning. **Task:** Interpretability & Explainability. **Model:** Transformer / Theory / Analysis.
 - [Towards a statistical theory of data selection under weak supervision](https://openreview.net/forum?id=HhfcNgQn6p) - **Award:** Outstanding Paper Honorable Mention. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
 #### 2023
 
