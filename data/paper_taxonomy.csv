@@ -423,6 +423,11 @@ ICLR,2016,"Deep Compression: Compressing Deep Neural Networks with Pruning, Trai
 ICLR,2016,Neural Programmer-Interpreters,General ML & Representation Learning,Reasoning & Knowledge,RNN; Neural Model
 ICML,2026,High-Accuracy Sampling for Diffusion Models and Log-Concave Distributions,ML Theory & Optimization,Probabilistic Inference & Sampling,Diffusion; Probabilistic / Bayesian
 ICML,2026,The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models,ML Theory & Optimization,LLM Analysis & Evaluation,LLM; Transformer; Diffusion
+ICML,2026,The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; RL; Theory / Analysis
+ICML,2026,Motion Attribution for Video Generation,Computer Vision,Image & Video Generation,Diffusion; Neural Model
+ICML,2026,How much can language models memorize?,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer; Theory / Analysis
+ICML,2026,A Random Matrix Theory Perspective on the Consistency of Diffusion Models,ML Theory & Optimization,Generative Modeling,Diffusion; Theory / Analysis
+ICML,2026,To Grok Grokking: Provable Grokking in Ridge Regression,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
 ICML,2025,CollabLLM: From Passive Responders to Active Collaborators,NLP & Language,Language Modeling & Generation,LLM; Transformer
 ICML,2025,Conformal Prediction as Bayesian Quadrature,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian
 ICML,2025,Roll the dice & look before you leap: Going beyond the creative limits of next-token prediction,NLP & Language,Language Modeling & Generation,Autoregressive; LLM

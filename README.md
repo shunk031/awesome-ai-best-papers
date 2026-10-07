@@ -2,7 +2,7 @@
 
 [![Catalog Check](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml/badge.svg)](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml)
 
-![Award records](https://img.shields.io/badge/award%20records-564-informational)
+![Award records](https://img.shields.io/badge/award%20records-569-informational)
 ![Venues](https://img.shields.io/badge/venues-9-informational)
 ![Coverage](https://img.shields.io/badge/coverage-2016%E2%80%932026-informational)
 
@@ -24,16 +24,16 @@ The v2 catalog prioritizes official conference sources. The complete 2016–2018
 
 ## Research landscape
 
-The tables below summarize the **127 award records from 2024–2026 currently in this catalog**. They describe this curated award set, not publication volume or the field as a whole.
+The tables below summarize the **132 award records from 2024–2026 currently in this catalog**. They describe this curated award set, not publication volume or the field as a whole.
 
 ### Research areas
 
 | Label | Award records |
 | --- | ---: |
-| NLP & Language | 33 |
-| Computer Vision | 29 |
-| ML Theory & Optimization | 15 |
-| Responsible AI & Privacy | 14 |
+| NLP & Language | 34 |
+| Computer Vision | 30 |
+| ML Theory & Optimization | 17 |
+| Responsible AI & Privacy | 15 |
 | Multimodal & Embodied AI | 10 |
 | Scientific ML & Applications | 8 |
 | General ML & Representation Learning | 8 |
@@ -45,15 +45,15 @@ The tables below summarize the **127 award records from 2024–2026 currently in
 
 | Label | Award records |
 | --- | ---: |
-| Transformer | 56 |
-| LLM | 39 |
-| Theory / Analysis | 24 |
-| Neural Model | 19 |
-| Diffusion | 12 |
-| Optimization | 11 |
+| Transformer | 57 |
+| LLM | 41 |
+| Theory / Analysis | 28 |
+| Neural Model | 20 |
+| Diffusion | 14 |
+| Optimization | 12 |
 | Probabilistic / Bayesian | 9 |
 | VLM | 9 |
-| RL | 7 |
+| RL | 8 |
 | Representation Learning | 7 |
 | Autoregressive | 6 |
 | Neuro-Symbolic | 3 |
@@ -67,24 +67,24 @@ The tables below summarize the **127 award records from 2024–2026 currently in
 
 | Label | Award records |
 | --- | ---: |
+| Safety, Fairness & Privacy | 14 |
 | 3D Vision & Reconstruction | 14 |
-| Safety, Fairness & Privacy | 13 |
-| LLM Analysis & Evaluation | 11 |
-| Optimization & Generalization | 10 |
+| LLM Analysis & Evaluation | 12 |
+| Optimization & Generalization | 11 |
+| Image & Video Generation | 8 |
 | Model Efficiency & Architecture | 7 |
-| Image & Video Generation | 7 |
+| Generative Modeling | 7 |
 | Language Modeling & Generation | 6 |
 | Multimodal & Vision-Language | 6 |
 | Reinforcement Learning & Planning | 6 |
 | Probabilistic Inference & Sampling | 6 |
-| Generative Modeling | 6 |
 | Visual Recognition & Representation | 5 |
 
 ### Reading the recent slice
 
-- **Language-model work is the clearest cluster:** `NLP & Language` accounts for 33 recent award records, while `LLM` and `Transformer` appear in 39 and 56 records respectively.
-- **Evaluation, safety, and theory are prominent:** `LLM Analysis & Evaluation` has 11 records, `Safety, Fairness & Privacy` has 13, and `Optimization & Generalization` has 10.
-- **Generative and multimodal work remains broad rather than single-model:** `Diffusion` appears in 12 records, alongside `VLM` in 9, with recurring awards in image/video generation, 3D reconstruction, and multimodal vision-language tasks.
+- **Language-model work is the clearest cluster:** `NLP & Language` accounts for 34 recent award records, while `LLM` and `Transformer` appear in 41 and 57 records respectively.
+- **Evaluation, safety, and theory are prominent:** `LLM Analysis & Evaluation` has 12 records, `Safety, Fairness & Privacy` has 14, and `Optimization & Generalization` has 11.
+- **Generative and multimodal work remains broad rather than single-model:** `Diffusion` appears in 14 records, alongside `VLM` in 9, with recurring awards in image/video generation, 3D reconstruction, and multimodal vision-language tasks.
 - **RL and structured reasoning remain active:** `Reinforcement Learning & Planning` has 6 recent records, while graph / structured and neuro-symbolic work continues to appear across AAAI and ICLR.
 
 These are descriptive signals from the curated award set; they should not be interpreted as publication-volume or citation trends.
@@ -99,7 +99,7 @@ These are descriptive signals from the curated award set; they should not be int
 | [EMNLP](https://aclanthology.org/venues/emnlp/) | Natural Language Processing | 2016–2025 | 65 | [source](https://www.aclweb.org/aclwiki/Best_paper_awards) |
 | [ICCV](https://iccv.thecvf.com/) | Computer Vision | 2017, 2019, 2021, 2023, 2025 | 23 | [source](https://www.thecvf.com/?page_id=413) |
 | [ICLR](https://iclr.cc/) | Machine Learning | 2016–2019, 2021–2026 | 62 | [source](https://blog.iclr.cc/) |
-| [ICML](https://icml.cc/) | Machine Learning | 2016–2026 | 62 | [source](https://blog.icml.cc/) |
+| [ICML](https://icml.cc/) | Machine Learning | 2016–2026 | 67 | [source](https://blog.icml.cc/) |
 | [NAACL](https://naacl.org/) | Natural Language Processing | 2018–2019, 2021–2022, 2024–2025 | 35 | [source](https://naacl.org/policies/best-paper.html) |
 | [NeurIPS](https://neurips.cc/) | Machine Learning | 2016–2025 | 45 | [source](https://blog.neurips.cc/) |
 
@@ -168,8 +168,13 @@ This section shows the latest completed award year for each venue. The full hist
 
 **International Conference on Machine Learning** · [Machine Learning](https://icml.cc/)
 
-- **Outstanding Paper** — [High-Accuracy Sampling for Diffusion Models and Log-Concave Distributions](https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/)<br>  **Area:** ML Theory & Optimization · **Task:** Probabilistic Inference & Sampling · **Model:** Diffusion / Probabilistic / Bayesian
-- **Outstanding Paper** — [The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models](https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/)<br>  **Area:** ML Theory & Optimization · **Task:** LLM Analysis & Evaluation · **Model:** LLM / Transformer / Diffusion
+- **Outstanding Paper** — [High-Accuracy Sampling for Diffusion Models and Log-Concave Distributions](https://proceedings.mlr.press/v306/chen26p.html) · [award source](https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/)<br>  **Area:** ML Theory & Optimization · **Task:** Probabilistic Inference & Sampling · **Model:** Diffusion / Probabilistic / Bayesian
+- **Outstanding Paper** — [The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models](https://proceedings.mlr.press/v306/ni26e.html) · [award source](https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/)<br>  **Area:** ML Theory & Optimization · **Task:** LLM Analysis & Evaluation · **Model:** LLM / Transformer / Diffusion
+- **Outstanding Paper Honorable Mention** — [A Random Matrix Theory Perspective on the Consistency of Diffusion Models](https://proceedings.mlr.press/v306/wang26kf.html) · [award source](https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/) · `secondary`<br>  **Area:** ML Theory & Optimization · **Task:** Generative Modeling · **Model:** Diffusion / Theory / Analysis
+- **Outstanding Paper Honorable Mention** — [How much can language models memorize?](https://proceedings.mlr.press/v306/morris26a.html) · [award source](https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/) · `secondary`<br>  **Area:** NLP & Language · **Task:** LLM Analysis & Evaluation · **Model:** LLM / Transformer / Theory / Analysis
+- **Outstanding Paper Honorable Mention** — [Motion Attribution for Video Generation](https://proceedings.mlr.press/v306/wu26aq.html) · [award source](https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/) · `secondary`<br>  **Area:** Computer Vision · **Task:** Image & Video Generation · **Model:** Diffusion / Neural Model
+- **Outstanding Paper Honorable Mention** — [The Obfuscation Atlas: Mapping Where Honesty Emerges in RLVR with Deception Probes](https://proceedings.mlr.press/v306/taufeeque26a.html) · [award source](https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/) · `secondary`<br>  **Area:** Responsible AI & Privacy · **Task:** Safety, Fairness & Privacy · **Model:** LLM / RL / Theory / Analysis
+- **Outstanding Paper Honorable Mention** — [To Grok Grokking: Provable Grokking in Ridge Regression](https://proceedings.mlr.press/v306/xu26bd.html) · [award source](https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/) · `secondary`<br>  **Area:** ML Theory & Optimization · **Task:** Optimization & Generalization · **Model:** Optimization / Theory / Analysis
 
 ### NAACL · 2025
 
