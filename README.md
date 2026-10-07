@@ -113,9 +113,9 @@ This section shows the latest completed award year for each venue. The full hist
 
 **Annual Meeting of the Association for Computational Linguistics** · [Natural Language Processing](https://aclweb.org/)
 
-- **Best Paper** — [Characterizing the Expressivity of Local Attention in Transformers](https://2026.aclweb.org/program/best_papers/)<br>  **Area:** ML Theory & Optimization · **Task:** Model Efficiency & Architecture · **Model:** Transformer / Theory / Analysis
-- **Best Paper** — [Memory Efficiency and Resource-Rational Encoding in Sentence Processing](https://2026.aclweb.org/program/best_papers/)<br>  **Area:** NLP & Language · **Task:** Language Understanding & Linguistics · **Model:** Theory / Analysis
-- **Best Paper** — [The Imperfective Paradox in Large Language Models](https://2026.aclweb.org/program/best_papers/)<br>  **Area:** NLP & Language · **Task:** LLM Analysis & Evaluation · **Model:** LLM / Transformer
+- **Best Paper** — [Characterizing the Expressivity of Local Attention in Transformers](https://aclanthology.org/2026.acl-long.1739/) · [award source](https://2026.aclweb.org/program/best_papers/)<br>  **Area:** ML Theory & Optimization · **Task:** Model Efficiency & Architecture · **Model:** Transformer / Theory / Analysis
+- **Best Paper** — [Memory Efficiency and Resource-Rational Encoding in Sentence Processing](https://aclanthology.org/2026.acl-long.1550/) · [award source](https://2026.aclweb.org/program/best_papers/)<br>  **Area:** NLP & Language · **Task:** Language Understanding & Linguistics · **Model:** Theory / Analysis
+- **Best Paper** — [The Imperfective Paradox in Large Language Models](https://aclanthology.org/2026.acl-long.689/) · [award source](https://2026.aclweb.org/program/best_papers/)<br>  **Area:** NLP & Language · **Task:** LLM Analysis & Evaluation · **Model:** LLM / Transformer
 
 ### AAAI · 2026
 

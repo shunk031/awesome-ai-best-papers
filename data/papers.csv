@@ -1,7 +1,7 @@
 venue,year,award,tier,title,paper_url,source_url,checked_at,notes
-ACL,2026,Best Paper,primary,Characterizing the Expressivity of Local Attention in Transformers,,https://2026.aclweb.org/program/best_papers/,2026-10-07,
-ACL,2026,Best Paper,primary,Memory Efficiency and Resource-Rational Encoding in Sentence Processing,,https://2026.aclweb.org/program/best_papers/,2026-10-07,
-ACL,2026,Best Paper,primary,The Imperfective Paradox in Large Language Models,,https://2026.aclweb.org/program/best_papers/,2026-10-07,
+ACL,2026,Best Paper,primary,Characterizing the Expressivity of Local Attention in Transformers,https://aclanthology.org/2026.acl-long.1739/,https://2026.aclweb.org/program/best_papers/,2026-10-07,
+ACL,2026,Best Paper,primary,Memory Efficiency and Resource-Rational Encoding in Sentence Processing,https://aclanthology.org/2026.acl-long.1550/,https://2026.aclweb.org/program/best_papers/,2026-10-07,
+ACL,2026,Best Paper,primary,The Imperfective Paradox in Large Language Models,https://aclanthology.org/2026.acl-long.689/,https://2026.aclweb.org/program/best_papers/,2026-10-07,
 ACL,2025,Best Paper,primary,A Theory of Response Sampling in LLMs: Part Descriptive and Part Prescriptive,,https://2025.aclweb.org/program/awards/,2026-10-07,
 ACL,2025,Best Paper,primary,Fairness through Difference Awareness: Measuring Desired Group Discrimination in LLMs,,https://2025.aclweb.org/program/awards/,2026-10-07,
 ACL,2025,Best Paper,primary,Language Models Resist Alignment: Evidence From Data Compression,,https://2025.aclweb.org/program/awards/,2026-10-07,
