@@ -1,0 +1,91 @@
+name: One-off AAAI 2019 canonical URL and title audit
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-aaai-2019-urls.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync
+      - name: Fill AAAI 2019 canonical URLs and normalize one title
+        run: |
+          uv run python - <<'PY'
+          import csv
+          from pathlib import Path
+          import subprocess, sys
+
+          papers_path = Path('data/papers.csv')
+          tax_path = Path('data/paper_taxonomy.csv')
+          old_title = 'Solving Imperfect-Information Games with Discounted Counterfactual Regret Minimization'
+          new_title = 'Solving Imperfect-Information Games via Discounted Regret Minimization'
+          urls = {
+              'How to Combine Tree-Search Methods in Reinforcement Learning': 'https://ojs.aaai.org/index.php/AAAI/article/view/4227',
+              new_title: 'https://ojs.aaai.org/index.php/AAAI/article/view/4007',
+              'Zero Shot Learning for Code Education: Rubric Sampling with Deep Learning Inference': 'https://ojs.aaai.org/index.php/AAAI/article/view/3857',
+              'Learning to Teach in Cooperative Multiagent Reinforcement Learning': 'https://ojs.aaai.org/index.php/AAAI/article/view/4570',
+          }
+
+          with papers_path.open(newline='', encoding='utf-8') as f:
+              papers = list(csv.DictReader(f))
+          with tax_path.open(newline='', encoding='utf-8') as f:
+              tax = list(csv.DictReader(f))
+
+          paper_old = [r for r in papers if r['venue']=='AAAI' and r['year']=='2019' and r['title'].casefold()==old_title.casefold()]
+          tax_old = [r for r in tax if r['venue']=='AAAI' and r['year']=='2019' and r['title'].casefold()==old_title.casefold()]
+          if len(paper_old) != 1 or len(tax_old) != 1:
+              raise SystemExit(f'Expected one old-title paper/tax row; got {len(paper_old)}/{len(tax_old)}')
+          paper_old[0]['title'] = new_title
+          tax_old[0]['title'] = new_title
+
+          folded = {k.casefold(): v for k, v in urls.items()}
+          found = set()
+          for row in papers:
+              if row['venue'] != 'AAAI' or row['year'] != '2019':
+                  continue
+              key = row['title'].casefold()
+              if key not in folded:
+                  continue
+              canonical = folded[key]
+              if row['paper_url'] not in ('', canonical):
+                  raise SystemExit(f'Unexpected existing URL for {row["title"]}: {row["paper_url"]}')
+              row['paper_url'] = canonical
+              row['checked_at'] = '2026-10-07'
+              found.add(key)
+          missing = set(folded) - found
+          if missing:
+              raise SystemExit(f'Missing target rows: {sorted(missing)}')
+
+          with papers_path.open('w', newline='', encoding='utf-8') as f:
+              w = csv.DictWriter(f, fieldnames=['venue','year','award','tier','title','paper_url','source_url','checked_at','notes'], lineterminator='\n')
+              w.writeheader(); w.writerows(papers)
+          with tax_path.open('w', newline='', encoding='utf-8') as f:
+              w = csv.DictWriter(f, fieldnames=['venue','year','title','area','task','model_family'], lineterminator='\n')
+              w.writeheader(); w.writerows(tax)
+
+          subprocess.run([sys.executable, 'scripts/validate_catalog.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py', '--check'], check=True)
+          PY
+      - name: Commit canonical URLs and title correction
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers.csv data/paper_taxonomy.csv README.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Audit AAAI 2019 paper links and title'
+            git push
+          fi
