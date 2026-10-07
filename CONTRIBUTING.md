@@ -24,19 +24,19 @@ By default, do not add award candidates / nominees, oral or spotlight selections
 
 Third-party catalogs such as Jeff Huang's Best Paper Awards are useful for discovery and cross-checking, but should not replace an available official source.
 
-## Research-area, task, and model-family tags
+## Venue paper files and research tags
 
-Every paper also has a matching row in `data/paper_taxonomy.csv` with three navigation fields:
+Award records live in venue-scoped files under `data/papers/`, for example `data/papers/acl.csv` and `data/papers/icml.csv`. Each award row also carries three maintainer-curated navigation fields:
 
 - `area`: exactly one broad primary research area from the controlled vocabulary in [`data/README.md`](data/README.md).
 - `task`: exactly one controlled task category from [`data/README.md`](data/README.md).
 - `model_family`: one or more coarse model / method families separated by `; `, e.g. `LLM; Transformer` or `Diffusion; VLM`.
 
-Keep these tags intentionally coarse. They support navigation and descriptive trend summaries; they are not claims made by award committees.
+Keep these tags intentionally coarse. They support navigation and descriptive trend summaries; they are not claims made by award committees. If a paper has multiple award rows, repeat the same taxonomy values on each row; validation enforces consistency.
 
 ## Workflow
 
-Install the maintenance environment, edit the data, regenerate the README, and run the checks:
+Install the maintenance environment, edit the relevant venue CSV, regenerate the README, and run the checks:
 
 ```bash
 uv sync
@@ -50,7 +50,7 @@ Commit the CSV changes together with the regenerated `README.md`.
 
 ## Adding a new venue
 
-Add it to `data/venues.csv` first. Keep the venue identifier short and stable; changing it later rewrites every matching paper row.
+Add it to `data/venues.csv` first, then add `data/papers/<venue>.csv` using the lowercase venue identifier as the filename. Keep the venue identifier short and stable; changing it later rewrites every matching paper row and the filename.
 
 ## Corrections
 
