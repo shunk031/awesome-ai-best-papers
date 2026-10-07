@@ -239,8 +239,8 @@ CVPR,2023,Visual Programming: Compositional Visual Reasoning Without Training,Mu
 CVPR,2023,DynIBaR: Neural Dynamic Image-Based Rendering,Computer Vision,3D Vision & Reconstruction,Neural Model
 CVPR,2023,3D Registration With Maximal Cliques,Computer Vision,3D Vision & Reconstruction,Classical / Optimization
 CVPR,2023,DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation,Computer Vision,Image & Video Generation,Diffusion
-CVPR,2022,Learning to Solve Hard Minimal Problems,Computer Vision,Optimization & Generalization,Optimization
-CVPR,2022,EPro-PnP: Generalized End-to-End Probabilistic Perspective-n-Points for Monocular Object Pose Estimation,Computer Vision,3D Vision & Reconstruction,Neural Model; Probabilistic / Bayesian
+CVPR,2022,Learning To Solve Hard Minimal Problems,Computer Vision,Optimization & Generalization,Optimization
+CVPR,2022,EPro-PnP: Generalized End-to-End Probabilistic Perspective-N-Points for Monocular Object Pose Estimation,Computer Vision,3D Vision & Reconstruction,Neural Model; Probabilistic / Bayesian
 CVPR,2022,Dual-Shutter Optical Vibration Sensing,Computer Vision,Visual Recognition & Representation,Classical / Optimization
 CVPR,2022,Ref-NeRF: Structured View-Dependent Appearance for Neural Radiance Fields,Computer Vision,3D Vision & Reconstruction,Neural Model; Representation Learning
 CVPR,2021,GIRAFFE: Representing Scenes as Compositional Generative Neural Feature Fields,Computer Vision,Image & Video Generation,GAN
