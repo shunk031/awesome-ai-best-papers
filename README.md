@@ -621,12 +621,12 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [To Grok Grokking: Provable Grokking in Ridge Regression](https://proceedings.mlr.press/v306/xu26bd.html) - **Award:** Outstanding Paper Honorable Mention. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization / Theory / Analysis.
 #### 2025
 
-- [CollabLLM: From Passive Responders to Active Collaborators](https://icml.cc/Conferences/2025/Awards) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** LLM / Transformer.
-- [Conformal Prediction as Bayesian Quadrature](https://icml.cc/Conferences/2025/Awards) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
-- [Roll the dice & look before you leap: Going beyond the creative limits of next-token prediction](https://icml.cc/Conferences/2025/Awards) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** Autoregressive / LLM.
-- [Score Matching with Missing Data](https://icml.cc/Conferences/2025/Awards) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Diffusion / Probabilistic / Bayesian.
-- [The Value of Prediction in Identifying the Worst-Off](https://icml.cc/Conferences/2025/Awards) - **Award:** Outstanding Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Theory / Analysis.
-- [Train for the Worst, Plan for the Best: Understanding Token Ordering in Masked Diffusions](https://icml.cc/Conferences/2025/Awards) - **Award:** Outstanding Paper. **Area:** General ML & Representation Learning. **Task:** Generative Modeling. **Model:** Diffusion / Autoregressive.
+- [CollabLLM: From Passive Responders to Active Collaborators](https://proceedings.mlr.press/v267/wu25i.html) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** LLM / Transformer.
+- [Conformal Prediction as Bayesian Quadrature](https://proceedings.mlr.press/v267/snell25a.html) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
+- [Roll the dice & look before you leap: Going beyond the creative limits of next-token prediction](https://proceedings.mlr.press/v267/nagarajan25a.html) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** Autoregressive / LLM.
+- [Score Matching with Missing Data](https://proceedings.mlr.press/v267/givens25a.html) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Diffusion / Probabilistic / Bayesian.
+- [The Value of Prediction in Identifying the Worst-Off](https://proceedings.mlr.press/v267/fischer-abaigar25a.html) - **Award:** Outstanding Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Theory / Analysis.
+- [Train for the Worst, Plan for the Best: Understanding Token Ordering in Masked Diffusions](https://proceedings.mlr.press/v267/kim25ah.html) - **Award:** Outstanding Paper. **Area:** General ML & Representation Learning. **Task:** Generative Modeling. **Model:** Diffusion / Autoregressive.
 #### 2024
 
 - [Debating with More Persuasive LLMs Leads to More Truthful Answers](https://proceedings.mlr.press/v235/khan24a.html) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** LLM / Transformer.
@@ -681,22 +681,22 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Rates of Convergence for Sparse Variational Gaussian Process Regression](https://proceedings.mlr.press/v97/burt19a.html) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian / Theory / Analysis.
 #### 2018
 
-- [Delayed Impact of Fair Machine Learning](https://icml.cc/Conferences/2018/Awards) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Theory / Analysis.
-- [Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples](https://icml.cc/Conferences/2018/Awards) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Robustness & Domain Adaptation. **Model:** Optimization / Theory / Analysis.
-- [Fairness Without Demographics in Repeated Loss Minimization.](https://icml.cc/Conferences/2018/Awards) - **Award:** Best Paper Runner Up. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Optimization.
-- [Near Optimal Frequent Directions for Sketching Dense and Sparse Matrices.](https://icml.cc/Conferences/2018/Awards) - **Award:** Best Paper Runner Up. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization.
-- [The Mechanics of n-Player Differentiable Games.](https://icml.cc/Conferences/2018/Awards) - **Award:** Best Paper Runner Up. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** Theory / Analysis.
+- [Delayed Impact of Fair Machine Learning](https://proceedings.mlr.press/v80/liu18c.html) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Theory / Analysis.
+- [Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples](https://proceedings.mlr.press/v80/athalye18a.html) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Robustness & Domain Adaptation. **Model:** Optimization / Theory / Analysis.
+- [Fairness Without Demographics in Repeated Loss Minimization](https://proceedings.mlr.press/v80/hashimoto18a.html) - **Award:** Best Paper Runner Up. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Optimization.
+- [Near Optimal Frequent Directions for Sketching Dense and Sparse Matrices](https://proceedings.mlr.press/v80/huang18a.html) - **Award:** Best Paper Runner Up. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization.
+- [The Mechanics of n-Player Differentiable Games](https://proceedings.mlr.press/v80/balduzzi18a.html) - **Award:** Best Paper Runner Up. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** Theory / Analysis.
 #### 2017
 
-- [Understanding Black-box Predictions via Influence Functions](https://icml.cc/Conferences/2017/Awards) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Interpretability & Explainability. **Model:** Optimization.
-- [A Unified Maximum Likelihood Approach for Estimating Symmetric Properties of Discrete Distributions.](https://icml.cc/Conferences/2017/Awards) - **Award:** Best Paper Honorable Mention. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
-- [Lost Relatives of the Gumbel Trick.](https://icml.cc/Conferences/2017/Awards) - **Award:** Best Paper Honorable Mention. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
-- [Modular Multitask Reinforcement Learning with Policy Sketches.](https://icml.cc/Conferences/2017/Awards) - **Award:** Best Paper Honorable Mention. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
+- [Understanding Black-box Predictions via Influence Functions](https://proceedings.mlr.press/v70/koh17a.html) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Interpretability & Explainability. **Model:** Optimization.
+- [A Unified Maximum Likelihood Approach for Estimating Symmetric Properties of Discrete Distributions](https://proceedings.mlr.press/v70/acharya17a.html) - **Award:** Best Paper Honorable Mention. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
+- [Lost Relatives of the Gumbel Trick](https://proceedings.mlr.press/v70/balog17a.html) - **Award:** Best Paper Honorable Mention. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
+- [Modular Multitask Reinforcement Learning with Policy Sketches](https://proceedings.mlr.press/v70/andreas17a.html) - **Award:** Best Paper Honorable Mention. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
 #### 2016
 
-- [Dueling Network Architectures for Deep Reinforcement Learning](https://icml.cc/Conferences/2016/Awards) - **Award:** Best Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
-- [Ensuring Rapid Mixing and Low Bias for Asynchronous Gibbs Sampling](https://icml.cc/Conferences/2016/Awards) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
-- [Pixel Recurrent Neural Networks](https://icml.cc/Conferences/2016/Awards) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** Image & Video Generation. **Model:** Autoregressive / RNN.
+- [Dueling Network Architectures for Deep Reinforcement Learning](https://proceedings.mlr.press/v48/wangf16.html) - **Award:** Best Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
+- [Ensuring Rapid Mixing and Low Bias for Asynchronous Gibbs Sampling](https://proceedings.mlr.press/v48/sa16.html) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
+- [Pixel Recurrent Neural Networks](https://proceedings.mlr.press/v48/oord16.html) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** Image & Video Generation. **Model:** Autoregressive / RNN.
 ### NAACL
 
 **Annual Conference of the Nations of the Americas Chapter of the ACL** · [conference](https://naacl.org/)

@@ -475,13 +475,13 @@ ICML,2020,Tuning-free Plug-and-Play Proximal Algorithm for Inverse Imaging Probl
 ICML,2019,Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations,General ML & Representation Learning,Representation Learning,Representation Learning; Theory / Analysis
 ICML,2019,Rates of Convergence for Sparse Variational Gaussian Process Regression,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian; Theory / Analysis
 ICML,2018,Delayed Impact of Fair Machine Learning,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
-ICML,2018,Fairness Without Demographics in Repeated Loss Minimization.,Responsible AI & Privacy,"Safety, Fairness & Privacy",Optimization
-ICML,2018,Near Optimal Frequent Directions for Sketching Dense and Sparse Matrices.,ML Theory & Optimization,Optimization & Generalization,Optimization
+ICML,2018,Fairness Without Demographics in Repeated Loss Minimization,Responsible AI & Privacy,"Safety, Fairness & Privacy",Optimization
+ICML,2018,Near Optimal Frequent Directions for Sketching Dense and Sparse Matrices,ML Theory & Optimization,Optimization & Generalization,Optimization
 ICML,2018,Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples,Responsible AI & Privacy,Robustness & Domain Adaptation,Optimization; Theory / Analysis
-ICML,2018,The Mechanics of n-Player Differentiable Games.,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Theory / Analysis
-ICML,2017,A Unified Maximum Likelihood Approach for Estimating Symmetric Properties of Discrete Distributions.,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian
-ICML,2017,Lost Relatives of the Gumbel Trick.,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian
-ICML,2017,Modular Multitask Reinforcement Learning with Policy Sketches.,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
+ICML,2018,The Mechanics of n-Player Differentiable Games,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Theory / Analysis
+ICML,2017,A Unified Maximum Likelihood Approach for Estimating Symmetric Properties of Discrete Distributions,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian
+ICML,2017,Lost Relatives of the Gumbel Trick,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian
+ICML,2017,Modular Multitask Reinforcement Learning with Policy Sketches,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
 ICML,2017,Understanding Black-box Predictions via Influence Functions,Responsible AI & Privacy,Interpretability & Explainability,Optimization
 ICML,2016,Dueling Network Architectures for Deep Reinforcement Learning,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
 ICML,2016,Ensuring Rapid Mixing and Low Bias for Asynchronous Gibbs Sampling,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian
