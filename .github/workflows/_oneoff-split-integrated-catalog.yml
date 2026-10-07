@@ -1,0 +1,136 @@
+name: One-off split integrated catalog
+
+on:
+  push:
+    branches:
+      - refactor/venue-csv-catalog
+
+permissions:
+  contents: write
+
+jobs:
+  migrate-catalog:
+    if: ${{ !contains(github.event.head_commit.message, 'Split catalog into venue CSVs') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: refactor/venue-csv-catalog
+          fetch-depth: 0
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Join taxonomy and split by venue
+        run: |
+          python - <<'PY'
+          import csv
+          from collections import defaultdict
+          from pathlib import Path
+
+          data = Path('data')
+          papers_path = data / 'papers.csv'
+          taxonomy_path = data / 'paper_taxonomy.csv'
+          venues_path = data / 'venues.csv'
+          out_dir = data / 'papers'
+          fields = [
+              'venue', 'year', 'award', 'tier', 'title', 'paper_url', 'source_url',
+              'checked_at', 'area', 'task', 'model_family', 'notes',
+          ]
+
+          with papers_path.open(newline='', encoding='utf-8') as f:
+              papers = list(csv.DictReader(f))
+          with taxonomy_path.open(newline='', encoding='utf-8') as f:
+              taxonomy_rows = list(csv.DictReader(f))
+          with venues_path.open(newline='', encoding='utf-8') as f:
+              venues = list(csv.DictReader(f))
+
+          if len(papers) != 567:
+              raise RuntimeError(f'Expected 567 award records, found {len(papers)}')
+          if len(taxonomy_rows) != 566:
+              raise RuntimeError(f'Expected 566 taxonomy rows, found {len(taxonomy_rows)}')
+
+          def key(row):
+              return row['venue'], row['year'], row['title'].casefold()
+
+          taxonomy = {}
+          for row in taxonomy_rows:
+              k = key(row)
+              if k in taxonomy:
+                  raise RuntimeError(f'Duplicate taxonomy key: {k}')
+              taxonomy[k] = row
+
+          paper_keys = {key(row) for row in papers}
+          taxonomy_keys = set(taxonomy)
+          if paper_keys != taxonomy_keys:
+              raise RuntimeError(
+                  f'Paper/taxonomy key mismatch: missing={len(paper_keys-taxonomy_keys)} '
+                  f'orphaned={len(taxonomy_keys-paper_keys)}'
+              )
+
+          expected_venues = [row['venue'] for row in venues]
+          grouped = defaultdict(list)
+          for row in papers:
+              tag = taxonomy[key(row)]
+              merged = {
+                  'venue': row['venue'],
+                  'year': row['year'],
+                  'award': row['award'],
+                  'tier': row['tier'],
+                  'title': row['title'],
+                  'paper_url': row['paper_url'],
+                  'source_url': row['source_url'],
+                  'checked_at': row['checked_at'],
+                  'area': tag['area'],
+                  'task': tag['task'],
+                  'model_family': tag['model_family'],
+                  'notes': row['notes'],
+              }
+              grouped[row['venue']].append(merged)
+
+          if set(grouped) != set(expected_venues):
+              raise RuntimeError(
+                  f'Venue mismatch: data={sorted(grouped)}, metadata={sorted(expected_venues)}'
+              )
+
+          out_dir.mkdir(exist_ok=True)
+          for old in out_dir.glob('*.csv'):
+              old.unlink()
+
+          total = 0
+          for venue in expected_venues:
+              rows = grouped[venue]
+              path = out_dir / f'{venue.casefold()}.csv'
+              with path.open('w', newline='', encoding='utf-8') as f:
+                  writer = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
+                  writer.writeheader()
+                  writer.writerows(rows)
+              total += len(rows)
+              print(f'{path}: {len(rows)} rows')
+
+          if total != len(papers):
+              raise RuntimeError(f'Row count changed during split: {len(papers)} -> {total}')
+
+          papers_path.unlink()
+          taxonomy_path.unlink()
+          print(f'Migrated {total} award records across {len(expected_venues)} venue files')
+          PY
+
+      - name: Validate and regenerate
+        run: |
+          uv sync
+          uv run python scripts/validate_catalog.py
+          uv run python scripts/generate_readme.py
+          uv run python scripts/generate_readme.py --check
+          npx awesome-lint
+
+      - name: Commit migrated catalog
+        run: |
+          git diff --check
+          git status --short
+          test -n "$(git status --porcelain)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data README.md
+          git commit -m "Split catalog into venue CSVs"
+          git push origin HEAD:refactor/venue-csv-catalog
