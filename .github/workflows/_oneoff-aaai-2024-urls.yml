@@ -1,0 +1,72 @@
+name: One-off AAAI 2024 canonical URLs
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-aaai-2024-urls.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: astral-sh/setup-uv@v6
+      - name: Fill unambiguous AAAI 2024 canonical paper URLs
+        run: |
+          uv sync --frozen
+          uv run python - <<'PY'
+          import csv
+          from pathlib import Path
+          import subprocess, sys
+
+          path = Path('data/papers.csv')
+          urls = {
+              'GxVAEs: Two Joint VAEs Generate Hit Molecules from Gene Expression Profiles': 'https://ojs.aaai.org/index.php/AAAI/article/view/29248',
+              'Proportional Aggregation of Preferences for Sequential Decision Making': 'https://ojs.aaai.org/index.php/AAAI/article/view/28813',
+              'Reliable Conflictive Multi-view Learning': 'https://ojs.aaai.org/index.php/AAAI/article/view/29546',
+              'DISCount: Counting in Large Image Collections with Detector-Based Importance Sampling': 'https://ojs.aaai.org/index.php/AAAI/article/view/30235',
+              'Nowcasting Temporal Trends Using Indirect Surveys': 'https://ojs.aaai.org/index.php/AAAI/article/view/30242',
+              'Scaling Up Pareto Optimization for Tree Structures with Affine Transformations: Evaluating Hybrid Floating Solar-Hydropower Systems in the Amazon': 'https://ojs.aaai.org/index.php/AAAI/article/view/30210',
+          }
+
+          with path.open(newline='', encoding='utf-8') as f:
+              rows = list(csv.DictReader(f))
+          fields = ['venue','year','award','tier','title','paper_url','source_url','checked_at','notes']
+
+          seen = set()
+          for row in rows:
+              if row['venue'] == 'AAAI' and row['year'] == '2024' and row['title'] in urls:
+                  row['paper_url'] = urls[row['title']]
+                  row['checked_at'] = '2026-10-07'
+                  seen.add(row['title'])
+
+          missing = set(urls) - seen
+          if missing:
+              raise SystemExit(f'AAAI 2024 rows not found: {sorted(missing)}')
+
+          with path.open('w', newline='', encoding='utf-8') as f:
+              writer = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
+              writer.writeheader(); writer.writerows(rows)
+
+          subprocess.run([sys.executable, 'scripts/validate_catalog.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py', '--check'], check=True)
+          PY
+      - name: Commit canonical links
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers.csv README.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Add AAAI 2024 canonical paper URLs'
+            git push
+          fi
