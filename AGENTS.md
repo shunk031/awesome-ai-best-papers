@@ -5,10 +5,12 @@ This repository is a generated research catalog.
 ## Source of truth
 
 - `data/papers.csv` contains award records.
+- `data/paper_taxonomy.csv` contains maintainer-curated research tags.
 - `data/venues.csv` contains venue metadata.
-- `README.md` is generated. Do not edit catalog entries in it directly.
-- `scripts/generate_readme.py` owns ordering and rendering.
+- `templates/README.md.j2` owns README structure and prose.
+- `scripts/generate_readme.py` owns data loading, grouping, and rendering context.
 - `scripts/validate_catalog.py` owns structural validation.
+- `README.md` is generated. Do not edit catalog entries in it directly.
 
 ## Research rules
 
@@ -24,9 +26,11 @@ This repository is a generated research catalog.
 Before proposing a change:
 
 ```bash
-python scripts/validate_catalog.py
-python scripts/generate_readme.py
-python scripts/generate_readme.py --check
+uv sync
+uv run python scripts/validate_catalog.py
+uv run python scripts/generate_readme.py
+uv run python scripts/generate_readme.py --check
+npx awesome-lint
 ```
 
 A data change that leaves the generated README stale is incomplete.

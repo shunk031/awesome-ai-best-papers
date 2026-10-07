@@ -4,7 +4,7 @@ Thanks for helping keep **Awesome AI Best Papers** current.
 
 ## What belongs here
 
-The core catalog tracks paper awards from the conferences listed in `data/venues.csv`.
+The core catalog tracks research-paper awards from the conferences listed in `data/venues.csv`.
 
 Use the award label published by the conference. The normalized `tier` is:
 
@@ -12,7 +12,7 @@ Use the award label published by the conference. The normalized `tier` is:
 - `secondary`: honorable mentions, runners-up, best student paper, and comparable paper-level awards.
 - `special`: venue-specific research-paper awards such as theme, resource, social-impact, or research-track-specific awards.
 
-By default, do not add award candidates / nominees, demos, workshop-only awards, dissertations, lifetime awards, retrospective test-of-time awards, or awards from separately reviewed **position-paper tracks**. The latter are argumentative position papers rather than the technical research-paper awards summarized by this catalog; for example, ICML Position Paper Track awards are intentionally out of scope.
+By default, do not add award candidates / nominees, oral or spotlight selections, demos, workshop-only awards, dissertations, lifetime awards, retrospective test-of-time awards, or awards from separately reviewed **position-paper tracks**.
 
 ## Source requirements
 
@@ -32,19 +32,21 @@ Every paper also has a matching row in `data/paper_taxonomy.csv` with three navi
 - `task`: exactly one controlled task category from [`data/README.md`](data/README.md).
 - `model_family`: one or more coarse model / method families separated by `; `, e.g. `LLM; Transformer` or `Diffusion; VLM`.
 
-Keep these tags intentionally coarse. They are meant to answer questions such as **which tasks are repeatedly receiving awards** and **which model families are prominent**, not to replace a full paper taxonomy. For theoretical work without a single architecture, `Theory / Analysis`, `Optimization`, or `Probabilistic / Bayesian` is preferable to inventing a model label.
+Keep these tags intentionally coarse. They support navigation and descriptive trend summaries; they are not claims made by award committees.
 
 ## Workflow
 
-Edit the data, regenerate the README, and run validation:
+Install the maintenance environment, edit the data, regenerate the README, and run the checks:
 
 ```bash
-python scripts/validate_catalog.py
-python scripts/generate_readme.py
-python scripts/generate_readme.py --check
+uv sync
+uv run python scripts/validate_catalog.py
+uv run python scripts/generate_readme.py
+uv run python scripts/generate_readme.py --check
+npx awesome-lint
 ```
 
-Commit both the CSV change and the regenerated `README.md`.
+Commit the CSV changes together with the regenerated `README.md`.
 
 ## Adding a new venue
 

@@ -1,18 +1,33 @@
 name: Catalog Check
 
 on:
-  push:
   pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: read
 
 jobs:
-  validate:
+  catalog-check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
         with:
-          python-version: "3.12"
+          enable-cache: true
+
+      - name: Sync generator environment
+        run: uv sync
+
       - name: Validate catalog
-        run: python scripts/validate_catalog.py
+        run: uv run python scripts/validate_catalog.py
+
       - name: Check generated README
-        run: python scripts/generate_readme.py --check
+        run: uv run python scripts/generate_readme.py --check
