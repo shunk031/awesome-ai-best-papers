@@ -344,12 +344,12 @@ ICCV,2023,Adding Conditional Control to Text-to-Image Diffusion Models,Computer 
 ICCV,2023,Passive Ultra-Wideband Single-Photon Imaging,Computer Vision,3D Vision & Reconstruction,Neural Model
 ICCV,2023,Tracking Everything Everywhere All at Once,Computer Vision,Visual Recognition & Representation,Neural Model
 ICCV,2023,Segment Anything,Computer Vision,Visual Recognition & Representation,Transformer
-ICCV,2021,Swin Transformer: Hierarchical Vision Transformer using Shifted Windows,Computer Vision,Visual Recognition & Representation,Transformer
-ICCV,2021,Pixel-Perfect Structure-from-Motion with Featuremetric Refinement,Computer Vision,3D Vision & Reconstruction,Optimization; Neural Model
+ICCV,2021,Swin Transformer: Hierarchical Vision Transformer Using Shifted Windows,Computer Vision,Visual Recognition & Representation,Transformer
+ICCV,2021,Pixel-Perfect Structure-From-Motion With Featuremetric Refinement,Computer Vision,3D Vision & Reconstruction,Optimization; Neural Model
 ICCV,2021,Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields,Computer Vision,3D Vision & Reconstruction,Neural Model
 ICCV,2021,OpenGAN: Open-Set Recognition via Open Data Generation,Computer Vision,Visual Recognition & Representation,GAN
 ICCV,2021,Viewing Graph Solvability via Cycle Consistency,Computer Vision,3D Vision & Reconstruction,Theory / Analysis
-ICCV,2021,Common Objects in 3D: LargeScale Learning and Evaluation of Real-life 3D Category Reconstruction,Computer Vision,3D Vision & Reconstruction,Neural Model
+ICCV,2021,Common Objects in 3D: Large-Scale Learning and Evaluation of Real-Life 3D Category Reconstruction,Computer Vision,3D Vision & Reconstruction,Neural Model
 ICCV,2019,SinGAN: Learning a Generative Model From a Single Natural Image,Computer Vision,Image & Video Generation,GAN
 ICCV,2019,PLMP - Point-Line Minimal Problems in Complete Multi-View Visibility,Computer Vision,3D Vision & Reconstruction,Theory / Analysis
 ICCV,2019,Asynchronous Single-Photon 3D Imaging,Computer Vision,3D Vision & Reconstruction,Classical / Optimization
