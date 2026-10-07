@@ -237,7 +237,7 @@ CVPR,2024,Comparing the Decision-Making Mechanisms by Transformers and CNNs via 
 CVPR,2023,Planning-Oriented Autonomous Driving,Multimodal & Embodied AI,Multimodal & Vision-Language,Search / Planning
 CVPR,2023,Visual Programming: Compositional Visual Reasoning Without Training,Multimodal & Embodied AI,Multimodal & Vision-Language,VLM; Search / Planning
 CVPR,2023,DynIBaR: Neural Dynamic Image-Based Rendering,Computer Vision,3D Vision & Reconstruction,Neural Model
-CVPR,2023,3D Registration with Maximal Cliques,Computer Vision,3D Vision & Reconstruction,Classical / Optimization
+CVPR,2023,3D Registration With Maximal Cliques,Computer Vision,3D Vision & Reconstruction,Classical / Optimization
 CVPR,2023,DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation,Computer Vision,Image & Video Generation,Diffusion
 CVPR,2022,Learning to Solve Hard Minimal Problems,Computer Vision,Optimization & Generalization,Optimization
 CVPR,2022,EPro-PnP: Generalized End-to-End Probabilistic Perspective-n-Points for Monocular Object Pose Estimation,Computer Vision,3D Vision & Reconstruction,Neural Model; Probabilistic / Bayesian
