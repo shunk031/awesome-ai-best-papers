@@ -31,3 +31,37 @@ jobs:
 
       - name: Check generated README
         run: uv run python scripts/generate_readme.py --check
+
+  sync-generated-readme:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out PR head
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Sync generator environment
+        run: uv sync
+
+      - name: Regenerate README
+        run: uv run python scripts/generate_readme.py
+
+      - name: Commit generated README when needed
+        shell: bash
+        run: |
+          if git diff --quiet -- README.md; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Sync generated README"
+          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
