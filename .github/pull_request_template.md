@@ -8,11 +8,12 @@
 
 ## Checklist
 
-- [ ] I edited `data/*.csv`, not generated catalog entries in `README.md`.
+- [ ] I edited the relevant `data/papers/<venue>.csv`, not generated catalog entries in `README.md`.
 - [ ] Award labels and paper titles match the cited source.
 - [ ] I used an official source when one is available.
-- [ ] New papers have a matching row in `data/paper_taxonomy.csv`.
+- [ ] New paper rows include `area`, `task`, and `model_family` metadata.
 - [ ] Area, task, and model-family tags use the controlled vocabulary in `data/README.md`.
+- [ ] Repeated award rows for the same paper use identical taxonomy values.
 - [ ] I ran `python scripts/validate_catalog.py`.
 - [ ] I regenerated `README.md`.
 - [ ] I ran `python scripts/generate_readme.py --check`.
