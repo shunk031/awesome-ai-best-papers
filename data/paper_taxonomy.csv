@@ -13,6 +13,51 @@ ACL,2024,Mission: Impossible Language Models,NLP & Language,LLM Analysis & Evalu
 ACL,2024,Natural Language Satisfiability,NLP & Language,Reasoning & Knowledge,Neuro-Symbolic
 ACL,2024,Semisupervised Neural Proto-Language Reconstruction,NLP & Language,Language Understanding & Linguistics,Neural Model
 ACL,2024,Why are Sensitive Functions Hard for Transformers?,ML Theory & Optimization,Optimization & Generalization,Transformer; Theory / Analysis
+ACL,2023,Backpack Language Models,NLP & Language,Language Modeling & Generation,LLM; Transformer
+ACL,2023,CAME: Confidence-guided Adaptive Memory Efficient Optimization,ML Theory & Optimization,Optimization & Generalization,Optimization
+ACL,2023,Causes and Cures for Interference in Multilingual Translation,NLP & Language,Robustness & Domain Adaptation,Transformer
+ACL,2023,Cognitive Reframing of Negative Thoughts through Human-Language Model Interaction,NLP & Language,Language Modeling & Generation,LLM; Transformer
+ACL,2023,Compositional Generalization without Trees using Multiset Tagging and Latent Permutations,NLP & Language,Language Understanding & Linguistics,Neural Model
+ACL,2023,Considerations for meaningful sign language machine translation based on glosses,Multimodal & Embodied AI,Multimodal & Vision-Language,Transformer
+ACL,2023,Dense-ATOMIC: Towards Densely-connected ATOMIC with High Knowledge Coverage and Massive Multi-hop Paths,NLP & Language,Reasoning & Knowledge,LLM; Transformer
+ACL,2023,Dissecting Transformer Length Extrapolation via the Lens of Receptive Field Analysis,ML Theory & Optimization,Model Efficiency & Architecture,Transformer; Theory / Analysis
+ACL,2023,Distilling Script Knowledge from Large Language Models for Constrained Language Planning,NLP & Language,Reasoning & Knowledge,LLM; Transformer
+ACL,2023,Do Androids Laugh at Electric Sheep? Humor “Understanding” Benchmarks from The New Yorker Caption Contest,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
+ACL,2023,Do CoNLL-2003 Named Entity Taggers Still Work Well in 2023?,NLP & Language,Robustness & Domain Adaptation,Neural Model
+ACL,2023,Do PLMs Know and Understand Ontological Knowledge?,NLP & Language,Reasoning & Knowledge,LLM; Transformer
+ACL,2023,"Don’t Generate, Discriminate: A Proposal for Grounding Language Models to Real-World Environments",Multimodal & Embodied AI,Multimodal & Vision-Language,VLM; Transformer
+ACL,2023,Extrinsic Evaluation of Machine Translation Metrics,NLP & Language,LLM Analysis & Evaluation,Theory / Analysis
+ACL,2023,Faithful Low-Resource Data-to-Text Generation through Cycle Training,NLP & Language,Language Modeling & Generation,Transformer
+ACL,2023,From Pretraining Data to Language Models to Downstream Tasks: Tracking the Trails of Political Biases Leading to Unfair NLP Models,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
+ACL,2023,Generalizing Backpropagation for Gradient-Based Interpretability,General ML & Representation Learning,Interpretability & Explainability,Theory / Analysis
+ACL,2023,Hexatagging: Projective Dependency Parsing as Tagging,NLP & Language,Language Understanding & Linguistics,Transformer
+ACL,2023,Hybrid Transducer and Attention based Encoder-Decoder Modeling for Speech-to-Text Tasks,Speech & Audio,Speech & Audio,Transformer; RNN
+ACL,2023,Improving Pretraining Techniques for Code-Switched NLP,NLP & Language,Language Modeling & Generation,Transformer
+ACL,2023,Knowledge Transfer in Incremental Learning for Multilingual Neural Machine Translation,NLP & Language,Model Editing & Adaptation,Transformer
+ACL,2023,Language model acceptability judgements are not always robust to context,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
+ACL,2023,Linear Classifier: An Often-Forgotten Baseline for Text Classification,NLP & Language,Language Understanding & Linguistics,Classical / Optimization
+ACL,2023,Marked Personas: Using Natural Language Prompts to Measure Stereotypes in Language Models,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
+ACL,2023,Minding Language Models’ (Lack of) Theory of Mind: A Plug-and-Play Multi-Character Belief Tracker,NLP & Language,Reasoning & Knowledge,LLM; Transformer
+ACL,2023,MultiInstruct: Improving Multi-Modal Zero-Shot Learning via Instruction Tuning,Multimodal & Embodied AI,Multimodal & Vision-Language,VLM; Transformer
+ACL,2023,Multilingual LLMs are Better Cross-lingual In-context Learners with Alignment,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
+ACL,2023,Neural Machine Translation Methods for Translating Text to Sign Language Glosses,Multimodal & Embodied AI,Multimodal & Vision-Language,Transformer
+ACL,2023,NLPositionality: Characterizing Design Biases of Datasets and Models,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
+ACL,2023,PeaCoK: Persona Commonsense Knowledge for Consistent and Engaging Narratives,NLP & Language,Reasoning & Knowledge,LLM; Transformer
+ACL,2023,QUEST: A Retrieval Dataset of Entity-Seeking Queries with Implicit Set Operations,NLP & Language,Retrieval & Search,Transformer
+ACL,2023,Question-Answering in a Low-resourced Language: Benchmark Dataset and Models for Tigrinya,NLP & Language,Reasoning & Knowledge,Transformer
+ACL,2023,Scaling in Cognitive Modelling: a Multilingual Approach to Human Reading Times,NLP & Language,Language Understanding & Linguistics,LLM; Transformer
+ACL,2023,SCOTT: Self-Consistent Chain-of-Thought Distillation,NLP & Language,Reasoning & Knowledge,LLM; Transformer
+ACL,2023,The Mechanical Bard: An Interpretable Machine Learning Approach to Shakespearean Sonnet Generation,NLP & Language,Language Modeling & Generation,Classical / Optimization
+ACL,2023,The Tail Wagging the Dog: Dataset Construction Biases of Social Bias Benchmarks,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
+ACL,2023,Towards Zero-Shot Multilingual Transfer for Code-Switched Responses,NLP & Language,Robustness & Domain Adaptation,Transformer
+ACL,2023,Transfer and Active Learning for Dissonance Detection: Addressing the Rare-Class Challenge,NLP & Language,Language Understanding & Linguistics,Transformer
+ACL,2023,VisText: A Benchmark for Semantically Rich Chart Captioning,Multimodal & Embodied AI,Multimodal & Vision-Language,VLM; Transformer
+ACL,2023,Weaker Than You Think: A Critical Look at Weakly Supervised Learning,General ML & Representation Learning,Robustness & Domain Adaptation,Theory / Analysis
+ACL,2023,What the DAAM: Interpreting Stable Diffusion Using Cross Attention,Computer Vision,Interpretability & Explainability,Diffusion; Transformer
+ACL,2023,What’s the Meaning of Superhuman Performance in Today’s NLU?,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
+ACL,2023,"When Does Translation Require Context? A Data-driven, Multilingual Exploration",NLP & Language,Language Understanding & Linguistics,Transformer
+ACL,2023,WikiBio: a Semantic Resource for the Intersectional Analysis of Biographical Events,NLP & Language,Language Understanding & Linguistics,Theory / Analysis
+ACL,2023,World-to-Words: Grounded Open Vocabulary Acquisition through Fast Mapping in Vision-Language Models,Multimodal & Embodied AI,Multimodal & Vision-Language,VLM; Transformer
 ACL,2022,Active Evaluation: Efficient NLG Evaluation with Few Pairwise Comparisons,NLP & Language,Evaluation & Benchmarking,Optimization
 ACL,2022,Compression of Generative Pre-trained Language Models via Quantization,NLP & Language,Model Efficiency & Architecture,LLM; Transformer; Optimization
 ACL,2022,DiBiMT: A Novel Benchmark for Measuring Word Sense Disambiguation Biases in Machine Translation,Responsible AI & Privacy,"Safety, Fairness & Privacy",Transformer
@@ -141,6 +186,36 @@ EMNLP,2024,Backward Lens: Projecting Language Model Gradients into the Vocabular
 EMNLP,2024,CoGen: Learning from Feedback with Coupled Comprehension and Generation,NLP & Language,Language Modeling & Generation,LLM; Transformer
 EMNLP,2024,Pretraining Data Detection for Large Language Models: A Divergence-based Calibration Method,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer; Representation Learning
 EMNLP,2024,Towards Robust Speech Representation Learning for Thousands of Languages,Speech & Audio,Speech & Audio,Representation Learning
+EMNLP,2023,Background Summarization of Event Timelines,NLP & Language,Language Modeling & Generation,Transformer
+EMNLP,2023,Bridging Continuous and Discrete Spaces: Interpretable Sentence Representation Learning via Compositional Operations,General ML & Representation Learning,Representation Learning,Representation Learning; Neuro-Symbolic
+EMNLP,2023,Counter Turing Test (CT2): AI-Generated Text Detection is Not as Easy as You May Think - Introducing AI Detectability Index (ADI),Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
+EMNLP,2023,Cross-Lingual Consistency of Factual Knowledge in Multilingual Language Models,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
+EMNLP,2023,Faster Minimum Bayes Risk Decoding with Confidence-based Pruning,NLP & Language,Language Modeling & Generation,Transformer; Optimization
+EMNLP,2023,FedID: Federated Interactive Distillation for Large-Scale Pretraining Language Models,General ML & Representation Learning,Model Efficiency & Architecture,Transformer
+EMNLP,2023,Homophone Disambiguation Reveals Patterns of Context Mixing in Speech Transformers,Speech & Audio,Speech & Audio,Transformer
+EMNLP,2023,IfQA: A Dataset for Open-domain Question Answering under Counterfactual Presuppositions,NLP & Language,Reasoning & Knowledge,LLM; Transformer
+EMNLP,2023,Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs Through a Global Prompt Hacking Competition,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
+EMNLP,2023,Incorporating Worker Perspectives into MTurk Annotation Practices for NLP,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
+EMNLP,2023,Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agents,NLP & Language,Retrieval & Search,LLM; Transformer
+EMNLP,2023,Joint Dialogue Topic Segmentation and Categorization: A Case Study on Clinical Spoken Conversations,NLP & Language,Language Understanding & Linguistics,Transformer
+EMNLP,2023,Label Words are Anchors: An Information Flow Perspective for Understanding In-Context Learning,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
+EMNLP,2023,Language Model Quality Correlates with Psychometric Predictive Power in Multiple Languages,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
+EMNLP,2023,LINC: A Neurosymbolic Approach for Logical Reasoning by Combining Language Models with First-Order Logic Provers,NLP & Language,Reasoning & Knowledge,LLM; Neuro-Symbolic
+EMNLP,2023,Linear-Time Modeling of Linguistic Structure: An Order-Theoretic Perspective,NLP & Language,Language Understanding & Linguistics,Theory / Analysis
+EMNLP,2023,Look-back Decoding for Open-Ended Text Generation,NLP & Language,Language Modeling & Generation,LLM; Transformer
+EMNLP,2023,"PaperMage: A Unified Toolkit for Processing, Representing, and Manipulating Visually-Rich Scientific Documents",Multimodal & Embodied AI,Multimodal & Vision-Language,VLM; Transformer
+EMNLP,2023,Personalized Dense Retrieval on Global Index for Voice-enabled Conversational Systems,NLP & Language,Retrieval & Search,Transformer
+EMNLP,2023,Physician Detection of Clinical Harm in Machine Translation: Quality Estimation Aids in Reliance and Backtranslation Identifies Critical Errors,Responsible AI & Privacy,"Safety, Fairness & Privacy",Transformer
+EMNLP,2023,Preserving Knowledge Invariance: Rethinking Robustness Evaluation of Open Information Extraction,NLP & Language,Robustness & Domain Adaptation,Transformer
+EMNLP,2023,Revisiting the Optimality of Word Lengths,NLP & Language,Language Understanding & Linguistics,Theory / Analysis
+EMNLP,2023,SODA: Million-scale Dialogue Distillation with Social Commonsense Contextualization,NLP & Language,Language Modeling & Generation,LLM; Transformer
+EMNLP,2023,Text Embeddings Reveal (Almost) As Much As Text,Responsible AI & Privacy,"Safety, Fairness & Privacy",Representation Learning; Transformer
+EMNLP,2023,The Sentiment Problem: A Critical Survey towards Deconstructing Sentiment Analysis,NLP & Language,Language Understanding & Linguistics,Theory / Analysis
+EMNLP,2023,Ties Matter: Meta-Evaluating Modern Metrics with Pairwise Accuracy and Tie Calibration,NLP & Language,LLM Analysis & Evaluation,Theory / Analysis
+EMNLP,2023,Toward a Critical Toponymy Framework for Named Entity Recognition: A Case Study of Airbnb in New York City,Responsible AI & Privacy,"Safety, Fairness & Privacy",Transformer
+EMNLP,2023,Understanding Compositional Data Augmentation in Typologically Diverse Morphological Inflection,NLP & Language,Robustness & Domain Adaptation,Transformer
+EMNLP,2023,Unraveling Feature Extraction Mechanisms in Neural Networks,General ML & Representation Learning,Interpretability & Explainability,Neural Model
+EMNLP,2023,ViPE: Visualise Pretty-much Everything,Multimodal & Embodied AI,Multimodal & Vision-Language,VLM; Transformer
 EMNLP,2017,Bringing Structure into Summaries: Crowdsourcing a Benchmark Corpus of Concept Maps.,NLP & Language,Language Modeling & Generation,Classical / Optimization
 EMNLP,2017,Depression and Self-Harm Risk Assessment in Online Forums.,Responsible AI & Privacy,"Safety, Fairness & Privacy",Neural Model
 EMNLP,2017,Men Also Like Shopping: Reducing Gender Bias Amplification using Corpus-level Constraints.,Responsible AI & Privacy,"Safety, Fairness & Privacy",Optimization

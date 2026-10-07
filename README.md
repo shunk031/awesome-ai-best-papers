@@ -2,7 +2,7 @@
 
 [![Catalog Check](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml/badge.svg)](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml)
 
-![Award records](https://img.shields.io/badge/award%20records-352-informational)
+![Award records](https://img.shields.io/badge/award%20records-427-informational)
 ![Venues](https://img.shields.io/badge/venues-9-informational)
 ![Coverage](https://img.shields.io/badge/coverage-2016%E2%80%932026-informational)
 
@@ -91,10 +91,10 @@ These are descriptive signals from the curated award set; they should not be int
 
 | Venue | Area | Years in catalog | Records | Official awards |
 | --- | --- | ---: | ---: | --- |
-| [ACL](https://aclweb.org/) | Natural Language Processing | 2016–2022, 2024–2026 | 92 | [source](https://www.aclweb.org/aclwiki/Best_paper_awards) |
+| [ACL](https://aclweb.org/) | Natural Language Processing | 2016–2026 | 137 | [source](https://www.aclweb.org/aclwiki/Best_paper_awards) |
 | [AAAI](https://aaai.org/conference/aaai/) | Artificial Intelligence | 2016–2026 | 25 | [source](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/) |
 | [CVPR](https://cvpr.thecvf.com/) | Computer Vision | 2016–2026 | 19 | [source](https://www.thecvf.com/?page_id=413) |
-| [EMNLP](https://aclanthology.org/venues/emnlp/) | Natural Language Processing | 2016–2017, 2024–2025 | 15 | [source](https://www.aclweb.org/aclwiki/Best_paper_awards) |
+| [EMNLP](https://aclanthology.org/venues/emnlp/) | Natural Language Processing | 2016–2017, 2023–2025 | 45 | [source](https://www.aclweb.org/aclwiki/Best_paper_awards) |
 | [ICCV](https://iccv.thecvf.com/) | Computer Vision | 2017, 2019, 2021, 2023, 2025 | 10 | [source](https://www.thecvf.com/?page_id=413) |
 | [ICLR](https://iclr.cc/) | Machine Learning | 2016–2026 | 49 | [source](https://blog.iclr.cc/) |
 | [ICML](https://icml.cc/) | Machine Learning | 2016–2026 | 62 | [source](https://blog.icml.cc/) |
