@@ -2,7 +2,7 @@
 
 [![Catalog Check](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml/badge.svg)](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml)
 
-![Award records](https://img.shields.io/badge/award%20records-470-informational)
+![Award records](https://img.shields.io/badge/award%20records-491-informational)
 ![Venues](https://img.shields.io/badge/venues-9-informational)
 ![Coverage](https://img.shields.io/badge/coverage-2016%E2%80%932026-informational)
 
@@ -24,18 +24,18 @@ The v2 catalog prioritizes official conference sources. The complete 2016–2018
 
 ## Research landscape
 
-The tables below summarize the **97 award records from 2024–2026 currently in this catalog**. They describe this curated award set, not publication volume or the field as a whole.
+The tables below summarize the **115 award records from 2024–2026 currently in this catalog**. They describe this curated award set, not publication volume or the field as a whole.
 
 ### Research areas
 
 | Label | Award records |
 | --- | ---: |
 | NLP & Language | 33 |
+| Computer Vision | 24 |
 | ML Theory & Optimization | 15 |
 | Responsible AI & Privacy | 12 |
-| Computer Vision | 10 |
+| Multimodal & Embodied AI | 10 |
 | General ML & Representation Learning | 8 |
-| Multimodal & Embodied AI | 6 |
 | Reinforcement Learning & Decision Making | 5 |
 | Graphs & Structured Learning | 4 |
 | Scientific ML & Applications | 3 |
@@ -45,20 +45,21 @@ The tables below summarize the **97 award records from 2024–2026 currently in 
 
 | Label | Award records |
 | --- | ---: |
-| Transformer | 47 |
+| Transformer | 53 |
 | LLM | 38 |
-| Theory / Analysis | 22 |
-| Diffusion | 11 |
-| Optimization | 8 |
-| Probabilistic / Bayesian | 7 |
+| Theory / Analysis | 23 |
+| Neural Model | 14 |
+| Diffusion | 12 |
+| Optimization | 10 |
+| Probabilistic / Bayesian | 8 |
+| VLM | 8 |
+| RL | 7 |
 | Representation Learning | 7 |
 | Autoregressive | 6 |
-| Neural Model | 5 |
-| VLM | 5 |
-| RL | 5 |
 | Neuro-Symbolic | 3 |
-| GNN | 2 |
+| GNN | 3 |
 | VAE | 1 |
+| CNN | 1 |
 | Classical / Optimization | 1 |
 | Meta-Learning | 1 |
 
@@ -66,25 +67,25 @@ The tables below summarize the **97 award records from 2024–2026 currently in 
 
 | Label | Award records |
 | --- | ---: |
+| 3D Vision & Reconstruction | 12 |
 | LLM Analysis & Evaluation | 11 |
 | Safety, Fairness & Privacy | 11 |
 | Optimization & Generalization | 9 |
 | Model Efficiency & Architecture | 7 |
 | Language Modeling & Generation | 6 |
-| Image & Video Generation | 5 |
+| Multimodal & Vision-Language | 6 |
+| Reinforcement Learning & Planning | 6 |
+| Generative Modeling | 6 |
+| Image & Video Generation | 6 |
 | Probabilistic Inference & Sampling | 5 |
-| Generative Modeling | 5 |
-| Multimodal & Vision-Language | 4 |
-| Reinforcement Learning & Planning | 4 |
-| Language Understanding & Linguistics | 3 |
-| Graph & Structured Learning | 3 |
+| Visual Recognition & Representation | 4 |
 
 ### Reading the recent slice
 
-- **Language-model work is the clearest cluster:** `NLP & Language` accounts for 33 recent award records, while `LLM` and `Transformer` appear in 38 and 47 records respectively.
+- **Language-model work is the clearest cluster:** `NLP & Language` accounts for 33 recent award records, while `LLM` and `Transformer` appear in 38 and 53 records respectively.
 - **Evaluation, safety, and theory are prominent:** `LLM Analysis & Evaluation` has 11 records, `Safety, Fairness & Privacy` has 11, and `Optimization & Generalization` has 9.
-- **Generative and multimodal work remains broad rather than single-model:** `Diffusion` appears in 11 records, alongside `VLM` in 5, with recurring awards in image/video generation, 3D reconstruction, and multimodal vision-language tasks.
-- **RL and structured reasoning remain active:** `Reinforcement Learning & Planning` has 4 recent records, while graph / structured and neuro-symbolic work continues to appear across AAAI and ICLR.
+- **Generative and multimodal work remains broad rather than single-model:** `Diffusion` appears in 12 records, alongside `VLM` in 8, with recurring awards in image/video generation, 3D reconstruction, and multimodal vision-language tasks.
+- **RL and structured reasoning remain active:** `Reinforcement Learning & Planning` has 6 recent records, while graph / structured and neuro-symbolic work continues to appear across AAAI and ICLR.
 
 These are descriptive signals from the curated award set; they should not be interpreted as publication-volume or citation trends.
 
@@ -94,7 +95,7 @@ These are descriptive signals from the curated award set; they should not be int
 | --- | --- | ---: | ---: | --- |
 | [ACL](https://aclweb.org/) | Natural Language Processing | 2016–2026 | 137 | [source](https://www.aclweb.org/aclwiki/Best_paper_awards) |
 | [AAAI](https://aaai.org/conference/aaai/) | Artificial Intelligence | 2016–2026 | 25 | [source](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/) |
-| [CVPR](https://cvpr.thecvf.com/) | Computer Vision | 2016–2026 | 19 | [source](https://www.thecvf.com/?page_id=413) |
+| [CVPR](https://cvpr.thecvf.com/) | Computer Vision | 2016–2026 | 40 | [source](https://www.thecvf.com/?page_id=413) |
 | [EMNLP](https://aclanthology.org/venues/emnlp/) | Natural Language Processing | 2016–2025 | 65 | [source](https://www.aclweb.org/aclwiki/Best_paper_awards) |
 | [ICCV](https://iccv.thecvf.com/) | Computer Vision | 2017, 2019, 2021, 2023, 2025 | 10 | [source](https://www.thecvf.com/?page_id=413) |
 | [ICLR](https://iclr.cc/) | Machine Learning | 2016–2026 | 72 | [source](https://blog.iclr.cc/) |
@@ -131,6 +132,10 @@ This section shows the latest completed award year for each venue. The full hist
 **IEEE/CVF Conference on Computer Vision and Pattern Recognition** · [Computer Vision](https://cvpr.thecvf.com/)
 
 - **Best Paper** — [Efficiently Reconstructing Dynamic Scenes One D4RT at a Time](https://www.thecvf.com/?page_id=413)<br>  **Area:** Computer Vision · **Task:** 3D Vision & Reconstruction · **Model:** Transformer
+- **Best Paper Honorable Mention** — [NitroGen: An Open Foundation Model for Generalist Gaming Agents](https://cvpr.thecvf.com/Conferences/2026/News/Best_Papers) · `secondary`<br>  **Area:** Multimodal & Embodied AI · **Task:** Reinforcement Learning & Planning · **Model:** Transformer / RL
+- **Best Paper Honorable Mention** — [SAM 3D: 3Dfy Anything in Images](https://cvpr.thecvf.com/Conferences/2026/News/Best_Papers) · `secondary`<br>  **Area:** Computer Vision · **Task:** 3D Vision & Reconstruction · **Model:** Transformer / Neural Model
+- **Best Student Paper** — [Native and Compact Structured Latents for 3D Generation](https://cvpr.thecvf.com/Conferences/2026/News/Best_Papers) · `secondary`<br>  **Area:** Computer Vision · **Task:** Generative Modeling · **Model:** Neural Model
+- **Best Student Paper Honorable Mention** — [ChordEdit: One-Step Low-Energy Transport for Image Editing](https://cvpr.thecvf.com/Conferences/2026/News/Best_Papers) · `secondary`<br>  **Area:** Computer Vision · **Task:** Image & Video Generation · **Model:** Optimization
 
 ### EMNLP · 2025
 

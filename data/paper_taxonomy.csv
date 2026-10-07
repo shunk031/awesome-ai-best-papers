@@ -162,11 +162,32 @@ AAAI,2017,The Option-Critic Architecture.,Reinforcement Learning & Decision Maki
 AAAI,2016,Bidirectional Search That Is Guaranteed to Meet in the Middle,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Search / Planning
 AAAI,2016,Toward a Taxonomy and Computational Models of Abnormalities in Images.,Computer Vision,Visual Recognition & Representation,CNN
 CVPR,2026,Efficiently Reconstructing Dynamic Scenes One D4RT at a Time,Computer Vision,3D Vision & Reconstruction,Transformer
+CVPR,2026,Native and Compact Structured Latents for 3D Generation,Computer Vision,Generative Modeling,Neural Model
+CVPR,2026,NitroGen: An Open Foundation Model for Generalist Gaming Agents,Multimodal & Embodied AI,Reinforcement Learning & Planning,Transformer; RL
+CVPR,2026,SAM 3D: 3Dfy Anything in Images,Computer Vision,3D Vision & Reconstruction,Transformer; Neural Model
+CVPR,2026,ChordEdit: One-Step Low-Energy Transport for Image Editing,Computer Vision,Image & Video Generation,Optimization
 CVPR,2025,VGGT: Visual Geometry Grounded Transformer,Computer Vision,3D Vision & Reconstruction,Transformer
+CVPR,2025,Neural Inverse Rendering from Propagating Light,Computer Vision,3D Vision & Reconstruction,Neural Model
+CVPR,2025,"MegaSaM: Accurate, Fast and Robust Structure and Motion from Casual Dynamic Videos",Computer Vision,3D Vision & Reconstruction,Neural Model
+CVPR,2025,Navigation World Models,Multimodal & Embodied AI,Reinforcement Learning & Planning,Neural Model; RL
+CVPR,2025,Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Vision-Language Models,Multimodal & Embodied AI,Multimodal & Vision-Language,VLM; Transformer
+CVPR,2025,3D Student Splatting and Scooping,Computer Vision,3D Vision & Reconstruction,Neural Model
+CVPR,2025,Generative Multimodal Pretraining with Discrete Diffusion Timestep Tokens,Multimodal & Embodied AI,Multimodal & Vision-Language,Diffusion; VLM; Transformer
 CVPR,2024,Generative Image Dynamics,Computer Vision,Image & Video Generation,Diffusion
 CVPR,2024,Rich Human Feedback for Text-to-Image Generation,Computer Vision,Image & Video Generation,Diffusion; VLM
+CVPR,2024,EventPS: Real-Time Photometric Stereo Using an Event Camera,Computer Vision,3D Vision & Reconstruction,Neural Model
+CVPR,2024,pixelSplat: 3D Gaussian Splats from Image Pairs for Scalable Generalizable 3D Reconstruction,Computer Vision,3D Vision & Reconstruction,Neural Model
+CVPR,2024,Mip-Splatting: Alias-free 3D Gaussian Splatting,Computer Vision,3D Vision & Reconstruction,Neural Model
+CVPR,2024,BioCLIP: A Vision Foundation Model for the Tree of Life,Computer Vision,Visual Recognition & Representation,VLM; Transformer
+CVPR,2024,SpiderMatch: 3D Shape Matching with Global Optimality and Geometric Consistency,Computer Vision,3D Vision & Reconstruction,Optimization
+CVPR,2024,Image Processing GNN: Breaking Rigidity in Super-Resolution,Computer Vision,Visual Recognition & Representation,GNN
+CVPR,2024,Objects as Volumes: A Stochastic Geometry View of Opaque Solids,Computer Vision,3D Vision & Reconstruction,Probabilistic / Bayesian; Theory / Analysis
+CVPR,2024,Comparing the Decision-Making Mechanisms by Transformers and CNNs via Explanation Methods,Computer Vision,Interpretability & Explainability,Transformer; CNN
 CVPR,2023,Planning-Oriented Autonomous Driving,Multimodal & Embodied AI,Multimodal & Vision-Language,Search / Planning
 CVPR,2023,Visual Programming: Compositional Visual Reasoning Without Training,Multimodal & Embodied AI,Multimodal & Vision-Language,VLM; Search / Planning
+CVPR,2023,DynIBaR: Neural Dynamic Image-Based Rendering,Computer Vision,3D Vision & Reconstruction,Neural Model
+CVPR,2023,3D Registration with Maximal Cliques,Computer Vision,3D Vision & Reconstruction,Classical / Optimization
+CVPR,2023,DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation,Computer Vision,Image & Video Generation,Diffusion
 CVPR,2022,Learning to Solve Hard Minimal Problems,Computer Vision,Optimization & Generalization,Optimization
 CVPR,2021,GIRAFFE: Representing Scenes as Compositional Generative Neural Feature Fields,Computer Vision,Image & Video Generation,GAN
 CVPR,2020,Unsupervised Learning of Probably Symmetric Deformable 3D Objects from Images in the Wild,Computer Vision,3D Vision & Reconstruction,Neural Model
