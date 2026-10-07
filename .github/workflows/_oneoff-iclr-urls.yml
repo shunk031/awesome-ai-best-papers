@@ -1,0 +1,206 @@
+name: One-off ICLR URL audit
+
+on:
+  push:
+    branches:
+      - audit/iclr-canonical-urls
+
+permissions:
+  contents: write
+
+jobs:
+  fill-iclr-urls:
+    if: ${{ !contains(github.event.head_commit.message, 'Fill canonical ICLR paper URLs') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: audit/iclr-canonical-urls
+          fetch-depth: 0
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Resolve missing ICLR URLs from OpenReview
+        run: |
+          python - <<'PY'
+          import csv
+          import json
+          import re
+          import time
+          import unicodedata
+          import urllib.parse
+          import urllib.request
+          from pathlib import Path
+
+          PAPERS = Path('data/papers.csv')
+          TAXONOMY = Path('data/paper_taxonomy.csv')
+          TITLE_FIXES = {
+              'AlphaEdit: Null-Space Constrained Model Editing for Language Models':
+                  'AlphaEdit: Null-Space Constrained Knowledge Editing for Language Models',
+          }
+
+          def norm(s):
+              s = unicodedata.normalize('NFKC', s or '')
+              s = s.replace('–', '-').replace('—', '-').replace('’', "'").replace('“', '"').replace('”', '"')
+              return re.sub(r'\s+', ' ', s).strip().casefold()
+
+          def cval(content, key):
+              v = (content or {}).get(key)
+              if isinstance(v, dict):
+                  return v.get('value')
+              return v
+
+          def fetch_json(base, params):
+              url = base + '?' + urllib.parse.urlencode(params)
+              req = urllib.request.Request(url, headers={'User-Agent': 'awesome-ai-best-papers-url-audit/1.0'})
+              last = None
+              for attempt in range(3):
+                  try:
+                      with urllib.request.urlopen(req, timeout=30) as r:
+                          return json.load(r)
+                  except Exception as e:
+                      last = e
+                      time.sleep(1 + attempt)
+              raise RuntimeError(f'OpenReview request failed: {url}: {last}')
+
+          def candidate_notes(title):
+              out = []
+              seen = set()
+              endpoints = [
+                  'https://api2.openreview.net/notes',
+                  'https://api.openreview.net/notes',
+              ]
+              for endpoint in endpoints:
+                  try:
+                      payload = fetch_json(endpoint, {'content.title': title, 'limit': 100})
+                  except Exception as e:
+                      print(f'WARN {endpoint}: {e}')
+                      continue
+                  for note in payload.get('notes', []):
+                      note_id = note.get('id')
+                      if note_id and note_id not in seen:
+                          seen.add(note_id)
+                          out.append(note)
+              return out
+
+          def is_iclr_year(note, year):
+              content = note.get('content') or {}
+              bits = []
+              for key in ('venue', 'venueid'):
+                  v = cval(content, key)
+                  if isinstance(v, str):
+                      bits.append(v)
+              inv = note.get('invitation')
+              if isinstance(inv, str):
+                  bits.append(inv)
+              invs = note.get('invitations')
+              if isinstance(invs, list):
+                  bits.extend(str(x) for x in invs)
+              hay = ' | '.join(bits)
+              return (
+                  f'ICLR.cc/{year}/Conference' in hay
+                  or (f'ICLR {year}' in hay and 'Conference' in hay)
+                  or (str(year) in hay and 'ICLR' in hay)
+              )
+
+          def resolve(title, year):
+              candidates = []
+              for note in candidate_notes(title):
+                  note_title = cval(note.get('content') or {}, 'title')
+                  if not isinstance(note_title, str) or norm(note_title) != norm(title):
+                      continue
+                  forum = note.get('forum') or note.get('id')
+                  if not forum:
+                      continue
+                  # Prefer actual forum/submission notes and the requested ICLR year.
+                  score = 0
+                  if note.get('id') == forum:
+                      score += 10
+                  if is_iclr_year(note, year):
+                      score += 100
+                  candidates.append((score, forum, note_title, note))
+
+              if not candidates:
+                  raise RuntimeError(f'No exact OpenReview candidate for ICLR {year}: {title}')
+              candidates.sort(key=lambda x: x[0], reverse=True)
+              best_score = candidates[0][0]
+              best = {(forum, note_title) for score, forum, note_title, _ in candidates if score == best_score}
+              if len(best) != 1:
+                  raise RuntimeError(f'Ambiguous OpenReview candidates for ICLR {year}: {title}: {sorted(best)}')
+              forum, canonical_title = next(iter(best))
+              if best_score < 100:
+                  raise RuntimeError(f'Could not verify ICLR year for {year}: {title}; candidate={forum}')
+              return canonical_title, f'https://openreview.net/forum?id={forum}'
+
+          with PAPERS.open(newline='', encoding='utf-8') as f:
+              rows = list(csv.DictReader(f))
+              fields = list(rows[0].keys())
+
+          targets = [r for r in rows if r['venue'] == 'ICLR' and not r['paper_url'].strip()]
+          print(f'ICLR missing before: {len(targets)}')
+          if len(targets) != 37:
+              raise RuntimeError(f'Expected 37 missing ICLR URLs on audited base, found {len(targets)}')
+
+          resolved = {}
+          for r in targets:
+              old_title = r['title']
+              query_title = TITLE_FIXES.get(old_title, old_title)
+              canonical_title, url = resolve(query_title, int(r['year']))
+              if norm(canonical_title) != norm(query_title):
+                  raise RuntimeError(f'Canonical title mismatch: {query_title!r} vs {canonical_title!r}')
+              resolved[(r['venue'], r['year'], old_title)] = (query_title, url)
+              print(f"{r['year']} | {old_title} -> {url}")
+
+          for r in rows:
+              key = (r['venue'], r['year'], r['title'])
+              if key in resolved:
+                  new_title, url = resolved[key]
+                  r['title'] = new_title
+                  r['paper_url'] = url
+
+          with PAPERS.open('w', newline='', encoding='utf-8') as f:
+              w = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
+              w.writeheader()
+              w.writerows(rows)
+
+          with TAXONOMY.open(newline='', encoding='utf-8') as f:
+              tax_rows = list(csv.DictReader(f))
+              tax_fields = list(tax_rows[0].keys())
+          changed_tax = 0
+          for r in tax_rows:
+              if r['venue'] == 'ICLR' and r['year'] == '2025' and r['title'] in TITLE_FIXES:
+                  r['title'] = TITLE_FIXES[r['title']]
+                  changed_tax += 1
+          if changed_tax != 1:
+              raise RuntimeError(f'Expected exactly one AlphaEdit taxonomy title update, got {changed_tax}')
+          with TAXONOMY.open('w', newline='', encoding='utf-8') as f:
+              w = csv.DictWriter(f, fieldnames=tax_fields, lineterminator='\n')
+              w.writeheader()
+              w.writerows(tax_rows)
+
+          with PAPERS.open(newline='', encoding='utf-8') as f:
+              after = list(csv.DictReader(f))
+          remaining = [r for r in after if r['venue'] == 'ICLR' and not r['paper_url'].strip()]
+          if remaining:
+              raise RuntimeError(f'ICLR missing URLs remain: {len(remaining)}')
+          print(f'ICLR missing after: {len(remaining)}')
+          PY
+
+      - name: Validate and regenerate
+        run: |
+          uv sync
+          uv run python scripts/validate_catalog.py
+          uv run python scripts/generate_readme.py
+          uv run python scripts/generate_readme.py --check
+
+      - name: Commit audited data
+        run: |
+          git diff --check
+          git status --short
+          test -n "$(git status --porcelain)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/papers.csv data/paper_taxonomy.csv README.md
+          git commit -m "Fill canonical ICLR paper URLs"
+          git push origin HEAD:audit/iclr-canonical-urls
