@@ -10,9 +10,9 @@ Use the award label published by the conference. The normalized `tier` is:
 
 - `primary`: the venue's top paper award, e.g. Best Paper, Outstanding Paper, or Marr Prize.
 - `secondary`: honorable mentions, runners-up, best student paper, and comparable paper-level awards.
-- `special`: venue-specific paper awards such as theme, resource, social-impact, or track-specific awards.
+- `special`: venue-specific research-paper awards such as theme, resource, social-impact, or research-track-specific awards.
 
-By default, do not add award candidates / nominees, demos, workshop-only awards, dissertations, lifetime awards, or retrospective test-of-time awards.
+By default, do not add award candidates / nominees, demos, workshop-only awards, dissertations, lifetime awards, retrospective test-of-time awards, or awards from separately reviewed **position-paper tracks**. The latter are argumentative position papers rather than the technical research-paper awards summarized by this catalog; for example, ICML Position Paper Track awards are intentionally out of scope.
 
 ## Source requirements
 

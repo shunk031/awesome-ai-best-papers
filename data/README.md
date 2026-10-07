@@ -28,6 +28,10 @@ One row per award-winning paper. This file stores award facts and source provena
 - `checked_at`: date the source was last checked (`YYYY-MM-DD`)
 - `notes`: optional clarification
 
+### Scope convention
+
+`papers.csv` covers research-paper awards from the tracked venues. Separately reviewed position-paper tracks, award candidates / nominees, demos, workshop-only awards, dissertations, lifetime awards, and retrospective test-of-time awards are out of scope by default. Research-track-specific awards such as theme, resource, or social-impact paper awards remain in scope and use the `special` tier where appropriate.
+
 ## `paper_taxonomy.csv`
 
 One row per unique paper in `papers.csv`. This file deliberately separates maintainer-curated research annotations from award facts.

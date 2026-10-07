@@ -18,7 +18,7 @@ Each paper is annotated with a maintainer-curated **research area**, **task**, a
 
 ## Scope
 
-The catalog tracks conference paper awards such as **Best Paper**, **Outstanding Paper**, **Marr Prize**, honorable mentions / runners-up, student-paper awards, and venue-specific paper-award categories. Award candidates, nominations, demos, workshops, dissertation awards, lifetime awards, and retrospective test-of-time awards are excluded by default.
+The catalog tracks research-paper awards such as **Best Paper**, **Outstanding Paper**, **Marr Prize**, honorable mentions / runners-up, student-paper awards, and venue-specific research-paper categories. Award candidates, nominations, demos, workshops, dissertations, lifetime awards, retrospective test-of-time awards, and separately reviewed **position-paper tracks** are excluded by default.
 
 The v2 catalog prioritizes official conference sources. The complete 2016–2018 content of the original repository has been normalized into the structured catalog; the [pre-revamp snapshot](https://github.com/shunk031/awesome-ai-best-papers/blob/1d33f4f2c39c53b6cec85816c6b3383334b8e913/README.md) remains available for provenance and comparison.
 
