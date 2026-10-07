@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import argparse
-import base64
 import csv
 import re
 import sys
@@ -192,11 +191,6 @@ def main() -> int:
                 "README.md is out of date. Run: uv run python scripts/generate_readme.py",
                 file=sys.stderr,
             )
-            encoded = base64.b64encode(generated.encode("utf-8")).decode("ascii")
-            print("GENERATED_README_BASE64_BEGIN", file=sys.stderr)
-            for offset in range(0, len(encoded), 8000):
-                print(encoded[offset : offset + 8000], file=sys.stderr)
-            print("GENERATED_README_BASE64_END", file=sys.stderr)
             return 1
         return 0
 
