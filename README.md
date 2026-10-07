@@ -300,7 +300,7 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Memory-Augmented Monte Carlo Tree Search](https://ojs.aaai.org/index.php/AAAI/article/view/11531) - **Award:** Outstanding Paper Award. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** Search / Planning.
 - [Counterfactual Multi-Agent Policy Gradients](https://ojs.aaai.org/index.php/AAAI/article/view/11794) - **Award:** Outstanding Student Paper Award. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
 - [Generalized Adjustment Under Confounding and Selection Biases](https://ojs.aaai.org/index.php/AAAI/article/view/12125) - **Award:** Paper Award Honorable Mention. **Area:** Scientific ML & Applications. **Task:** Causal Learning. **Model:** Theory / Analysis.
-- [Adapting a Kidney Exchange Algorithm to Align With Human Values](https://ojs.aaai.org/index.php/AAAI/article/view/11505) - **Award:** Student Paper Award Honorable Mention. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** Optimization.
+- [Adapting a Kidney Exchange Algorithm to Align With Human Values](https://ojs.aaai.org/index.php/AAAI/article/view/11505) - **Award:** Student Paper Award Honorable Mention. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Optimization.
 #### 2017
 
 - [Label-Free Supervision of Neural Networks with Physics and Domain Knowledge](https://ojs.aaai.org/index.php/AAAI/article/view/10934) - **Award:** Outstanding Paper Award. **Area:** Scientific ML & Applications. **Task:** Scientific Discovery & Simulation. **Model:** Neural Model.
