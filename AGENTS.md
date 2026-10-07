@@ -4,8 +4,7 @@ This repository is a generated research catalog.
 
 ## Source of truth
 
-- `data/papers.csv` contains award records.
-- `data/paper_taxonomy.csv` contains maintainer-curated research tags.
+- `data/papers/*.csv` contains venue-scoped award records, source provenance, and maintainer-curated research tags.
 - `data/venues.csv` contains venue metadata.
 - `templates/README.md.j2` owns README structure and prose.
 - `scripts/generate_readme.py` owns data loading, grouping, and rendering context.
@@ -19,6 +18,8 @@ This repository is a generated research catalog.
 - Do not treat award candidates, oral selections, acceptance status, or citation counts as paper awards.
 - Preserve exact award labels and paper titles.
 - Use `primary`, `secondary`, and `special` consistently with `CONTRIBUTING.md`.
+- Treat `area`, `task`, and `model_family` as maintainer-curated navigation metadata, not award-committee claims.
+- If the same paper has multiple award rows, keep its taxonomy fields identical across those rows.
 - Do not add awards for a conference year before they have been officially announced.
 
 ## Required checks
