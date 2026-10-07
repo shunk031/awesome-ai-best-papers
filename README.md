@@ -561,7 +561,7 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Emergence of Maps in the Memories of Blind Navigation Agents](https://openreview.net/forum?id=lTt4KjHSsyl) - **Award:** Outstanding Paper. **Area:** Multimodal & Embodied AI. **Task:** Multimodal & Vision-Language. **Model:** Neural Model.
 - [Rethinking the Expressive Power of GNNs via Graph Biconnectivity](https://openreview.net/forum?id=r9hNv76KoT3) - **Award:** Outstanding Paper. **Area:** Graphs & Structured Learning. **Task:** Graph & Structured Learning. **Model:** GNN.
 - [Universal Few-shot Learning of Dense Prediction Tasks with Visual Token Matching](https://openreview.net/forum?id=88nT0j5jAn) - **Award:** Outstanding Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** VLM / CNN.
-- [Conditional Antibody Design as 3D Equivariant Graph Translation](https://openreview.net/forum?id=LFHFQbjxIiP) - **Award:** Outstanding Paper Honorable Mention. **Area:** Scientific ML & Applications. **Task:** Scientific Discovery & Simulation. **Model:** GNN / Neural Model.
+- [Conditional Antibody Design as 3D Equivariant Graph Translation](https://openreview.net/forum?id=LFHFQbjxIiP) - **Award:** Outstanding Paper Honorable Mention. **Area:** Scientific ML & Applications. **Task:** Scientific Discovery & Simulation. **Model:** GNN.
 - [Disentanglement with Biological Constraints: A Theory of Functional Cell Types](https://openreview.net/forum?id=9Z_GfhZnGH) - **Award:** Outstanding Paper Honorable Mention. **Area:** Scientific ML & Applications. **Task:** Representation Learning. **Model:** Neural Model / Theory / Analysis.
 - [Mastering the Game of No-Press Diplomacy via Human-Regularized Reinforcement Learning and Planning](https://openreview.net/forum?id=F61FwJTZhb) - **Award:** Outstanding Paper Honorable Mention. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL / Search / Planning.
 - [On the duality between contrastive and non-contrastive self-supervised learning](https://openreview.net/forum?id=kDEL91Dufpa) - **Award:** Outstanding Paper Honorable Mention. **Area:** General ML & Representation Learning. **Task:** Representation Learning. **Model:** Representation Learning / Theory / Analysis.
@@ -600,12 +600,12 @@ Papers are grouped by conference and award year. Title links use canonical paper
 #### 2017
 
 - [Making Neural Programming Architectures Generalize via Recursion](https://openreview.net/forum?id=BkbY4psgg) - **Award:** Best Paper. **Area:** General ML & Representation Learning. **Task:** Reasoning & Knowledge. **Model:** Neural Model.
-- [Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data](https://openreview.net/forum?id=HkwoSDPgg) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Neural Model / Representation Learning.
+- [Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data](https://openreview.net/forum?id=HkwoSDPgg) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Neural Model / Theory / Analysis.
 - [Understanding Deep Learning Requires Rethinking Generalization](https://openreview.net/forum?id=Sy8gdB9xx) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
 #### 2016
 
 - [Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding](https://arxiv.org/abs/1510.00149) - **Award:** Best Paper. **Area:** General ML & Representation Learning. **Task:** Model Efficiency & Architecture. **Model:** Optimization.
-- [Neural Programmer-Interpreters](https://arxiv.org/abs/1511.06279) - **Award:** Best Paper. **Area:** General ML & Representation Learning. **Task:** Reasoning & Knowledge. **Model:** RNN / Neural Model.
+- [Neural Programmer-Interpreters](https://arxiv.org/abs/1511.06279) - **Award:** Best Paper. **Area:** General ML & Representation Learning. **Task:** Reasoning & Knowledge. **Model:** RNN.
 ### ICML
 
 **International Conference on Machine Learning** · [conference](https://icml.cc/)
