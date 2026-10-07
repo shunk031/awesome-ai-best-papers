@@ -20,6 +20,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install uv
+        run: python -m pip install uv
       - name: Fill ACL Anthology paper URLs
         run: |
           python - <<'PY'
@@ -35,7 +37,10 @@ jobs:
           from pathlib import Path
 
           PAPERS = Path('data/papers.csv')
+          TAXONOMY = Path('data/paper_taxonomy.csv')
           USER_AGENT = 'awesome-ai-best-papers catalog audit/1.0'
+          OLD_TITLE = 'Improving Hypernymy Detection with an Integrated Pathbased and Distributional Method.'
+          NEW_TITLE = 'Improving Hypernymy Detection with an Integrated Path-based and Distributional Method'
 
           def norm(text):
               text = unicodedata.normalize('NFKC', text).casefold()
@@ -69,10 +74,34 @@ jobs:
               with urllib.request.urlopen(req, timeout=30) as r:
                   return r.read().decode('utf-8')
 
-          with PAPERS.open(newline='', encoding='utf-8') as f:
-              rows = list(csv.DictReader(f))
+          def read(path):
+              with path.open(newline='', encoding='utf-8') as f:
+                  return list(csv.DictReader(f))
 
-          fields = ['venue','year','award','tier','title','paper_url','source_url','checked_at','notes']
+          def write(path, rows, fields):
+              with path.open('w', newline='', encoding='utf-8') as f:
+                  w = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
+                  w.writeheader(); w.writerows(rows)
+
+          rows = read(PAPERS)
+          taxonomy = read(TAXONOMY)
+
+          corrected_papers = 0
+          corrected_taxonomy = 0
+          for row in rows:
+              if row['venue'] == 'ACL' and row['year'] == '2016' and row['title'] == OLD_TITLE:
+                  row['title'] = NEW_TITLE
+                  row['checked_at'] = '2026-10-07'
+                  corrected_papers += 1
+          for row in taxonomy:
+              if row['venue'] == 'ACL' and row['year'] == '2016' and row['title'] == OLD_TITLE:
+                  row['title'] = NEW_TITLE
+                  corrected_taxonomy += 1
+          if corrected_papers != 1 or corrected_taxonomy != 1:
+              raise SystemExit(f'Expected one title correction in each CSV, got papers={corrected_papers}, taxonomy={corrected_taxonomy}')
+
+          paper_fields = ['venue','year','award','tier','title','paper_url','source_url','checked_at','notes']
+          tax_fields = ['venue','year','title','area','task','model_family']
           targets = [r for r in rows if r['venue'] == 'ACL' and not r['paper_url']]
           before = len(targets)
           by_year = defaultdict(list)
@@ -106,9 +135,8 @@ jobs:
                       ambiguous.append((year, row['title'], matches))
               time.sleep(0.2)
 
-          with PAPERS.open('w', newline='', encoding='utf-8') as f:
-              w = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
-              w.writeheader(); w.writerows(rows)
+          write(PAPERS, rows, paper_fields)
+          write(TAXONOMY, taxonomy, tax_fields)
 
           print(f'ACL blank paper_url before: {before}')
           print(f'ACL canonical URLs filled: {filled}')
@@ -118,7 +146,10 @@ jobs:
           print(f'ACL ambiguous: {len(ambiguous)}')
           for year, title, matches in ambiguous:
               print(f'AMBIGUOUS {year}: {title} -> {matches}')
+          if unmatched or ambiguous:
+              raise SystemExit('ACL canonical URL audit left unresolved rows')
 
+          subprocess.run(['uv', 'sync'], check=True)
           subprocess.run(['uv', 'run', 'python', 'scripts/validate_catalog.py'], check=True)
           subprocess.run(['uv', 'run', 'python', 'scripts/generate_readme.py'], check=True)
           subprocess.run(['uv', 'run', 'python', 'scripts/generate_readme.py', '--check'], check=True)
@@ -127,7 +158,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/papers.csv README.md
+          git add data/papers.csv data/paper_taxonomy.csv README.md
           if git diff --cached --quiet; then
             echo 'No changes to commit'
           else
