@@ -245,6 +245,35 @@ ICML,2016,Dueling Network Architectures for Deep Reinforcement Learning,Reinforc
 ICML,2016,Ensuring Rapid Mixing and Low Bias for Asynchronous Gibbs Sampling,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian
 ICML,2016,Pixel Recurrent Neural Networks,Computer Vision,Image & Video Generation,Autoregressive; RNN
 NAACL,2025,The BiGGen Bench: A Principled Benchmark for Fine-grained Evaluation of Language Models with Language Models,NLP & Language,Language Modeling & Generation,LLM; Transformer
+NAACL,2024,"A Pretrainer’s Guide to Training Data: Measuring the Effects of Data Age, Domain Coverage, Quality, & Toxicity",NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
+NAACL,2024,Defining and Detecting Vulnerability in Human Evaluation Guidelines: A Preliminary Study Towards Reliable NLG Evaluation,NLP & Language,Evaluation & Benchmarking,LLM; Transformer
+NAACL,2024,Evaluating the Deductive Competence of Large Language Models,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
+NAACL,2024,Exploring Cross-Cultural Differences in English Hate Speech Annotations: From Dataset Construction to Analysis,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
+NAACL,2024,Grammar-based Data Augmentation for Low-Resource Languages: The Case of Guarani-Spanish Neural Machine Translation,NLP & Language,Language Modeling & Generation,Transformer
+NAACL,2024,LM-Infinite: Zero-Shot Extreme Length Generalization for Large Language Models,NLP & Language,Model Efficiency & Architecture,LLM; Transformer
+NAACL,2024,R-Tuning: Instructing Large Language Models to Say ‘I Don’t Know’,NLP & Language,Model Editing & Adaptation,LLM; Transformer
+NAACL,2024,Teaching Language Models to Self-Improve through Interactive Demonstrations,NLP & Language,Model Editing & Adaptation,LLM; Transformer
+NAACL,2024,Understanding the Capabilities and Limitations of Large Language Models for Cultural Commonsense,Responsible AI & Privacy,LLM Analysis & Evaluation,LLM; Transformer
+NAACL,2024,Unlocking Emergent Modularity in Large Language Models,NLP & Language,Model Efficiency & Architecture,LLM; Transformer
+NAACL,2024,Visual Grounding Helps Learn Word Meanings in Low-Data Regimes,Multimodal & Embodied AI,Multimodal & Vision-Language,VLM; Transformer
+NAACL,2022,A Balanced Data Approach for Evaluating Cross-Lingual Transfer: Mapping the Linguistic Blood Bank,NLP & Language,Evaluation & Benchmarking,Transformer; Representation Learning
+NAACL,2022,Automatic Correction of Human Translations,NLP & Language,Model Editing & Adaptation,Transformer
+NAACL,2022,FNet: Mixing Tokens with Fourier Transforms,NLP & Language,Model Efficiency & Architecture,Transformer
+NAACL,2022,FRUIT: Faithfully Reflecting Updated Information in Text,NLP & Language,Model Editing & Adaptation,Transformer
+NAACL,2022,NeuroLogic A*esque Decoding: Constrained Text Generation with Lookahead Heuristics,NLP & Language,Language Modeling & Generation,Autoregressive; Search / Planning
+NAACL,2022,NewsEdits: A News Article Revision Dataset and a Novel Document-Level Reasoning Challenge,NLP & Language,Evaluation & Benchmarking,Representation Learning
+NAACL,2022,User-Driven Research of Medical Note Generation Software,NLP & Language,Language Modeling & Generation,Neural Model
+NAACL,2021,How many data points is a prompt worth?,NLP & Language,Evaluation & Benchmarking,Transformer
+NAACL,2021,It’s Not Just Size That Matters: Small Language Models Are Also Few-Shot Learners,NLP & Language,LLM Analysis & Evaluation,Transformer
+NAACL,2021,Learning How to Ask: Querying LMs with Mixtures of Soft Prompts,NLP & Language,Model Editing & Adaptation,Transformer
+NAACL,2021,Preregistering NLP research,NLP & Language,Evaluation & Benchmarking,Theory / Analysis
+NAACL,2021,Unifying Cross-Lingual Semantic Role Labeling with Heterogeneous Linguistic Resources,NLP & Language,Language Understanding & Linguistics,Neural Model
+NAACL,2021,Video-aided Unsupervised Grammar Induction,Multimodal & Embodied AI,Language Understanding & Linguistics,VLM; Neural Model
+NAACL,2019,BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding,NLP & Language,Representation Learning,Transformer; Representation Learning
+NAACL,2019,CNM: An Interpretable Complex-valued Network for Matching,NLP & Language,Interpretability & Explainability,Neural Model
+NAACL,2019,CommonsenseQA: A Question Answering Challenge Targeting Commonsense Knowledge,NLP & Language,Reasoning & Knowledge,Neural Model
+NAACL,2019,Probing the Need for Visual Context in Multimodal Machine Translation,Multimodal & Embodied AI,Multimodal & Vision-Language,VLM; RNN
+NAACL,2019,What’s in a Name? Reducing Bias in Bios Without Access to Protected Attributes,Responsible AI & Privacy,"Safety, Fairness & Privacy",Representation Learning
 NAACL,2018,Deep Contextualized Word Representations.,NLP & Language,Representation Learning,RNN; Representation Learning
 NAACL,2018,Learning to Map Context-Dependent Sentences to Executable Formal Queries.,NLP & Language,Reasoning & Knowledge,Neural Model
 NAACL,2018,Neural Text Generation in Stories using Entity Representations as Context.,NLP & Language,Language Modeling & Generation,RNN
@@ -257,6 +286,25 @@ NeurIPS,2024,Stochastic Taylor Derivative Estimator: Efficient amortization for 
 NeurIPS,2024,Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction,Computer Vision,Image & Video Generation,Autoregressive; Transformer
 NeurIPS,2023,Are Emergent Abilities of Large Language Models a Mirage?,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
 NeurIPS,2023,Privacy Auditing with One (1) Training Run,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
+NeurIPS,2022,A Neural Corpus Indexer for Document Retrieval,NLP & Language,Retrieval & Search,Transformer
+NeurIPS,2022,An empirical analysis of compute-optimal large language model training,NLP & Language,Model Efficiency & Architecture,LLM; Transformer
+NeurIPS,2022,Beyond neural scaling laws: beating power law scaling via data pruning,General ML & Representation Learning,Model Efficiency & Architecture,Theory / Analysis; Optimization
+NeurIPS,2022,Elucidating the Design Space of Diffusion-Based Generative Models,Computer Vision,Image & Video Generation,Diffusion; Theory / Analysis
+NeurIPS,2022,Gradient Descent: The Ultimate Optimizer,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
+NeurIPS,2022,Gradient Estimation with Discrete Stein Operators,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian; Optimization
+NeurIPS,2022,High-dimensional limit theorems for SGD: Effective dynamics and critical scaling,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
+NeurIPS,2022,Is Out-of-distribution Detection Learnable?,ML Theory & Optimization,Robustness & Domain Adaptation,Theory / Analysis
+NeurIPS,2022,On-Demand Sampling: Learning Optimally from Multiple Distributions,ML Theory & Optimization,Probabilistic Inference & Sampling,Theory / Analysis; Optimization
+NeurIPS,2022,Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding,Computer Vision,Image & Video Generation,Diffusion; Transformer
+NeurIPS,2022,ProcTHOR: Large-Scale Embodied AI Using Procedural Generation,Multimodal & Embodied AI,Reinforcement Learning & Planning,RL; Neural Model
+NeurIPS,2022,Riemannian Score-Based Generative Modelling,General ML & Representation Learning,Generative Modeling,Diffusion; Probabilistic / Bayesian
+NeurIPS,2022,Using natural language and program abstractions to instill human inductive biases in machines,NLP & Language,Reasoning & Knowledge,Neuro-Symbolic; Transformer
+NeurIPS,2021,A Universal Law of Robustness via Isoperimetry,ML Theory & Optimization,Optimization & Generalization,Theory / Analysis
+NeurIPS,2021,"Continuized Accelerations of Deterministic and Stochastic Gradient Descents, and of Gossip Algorithms",ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
+NeurIPS,2021,Deep Reinforcement Learning at the Edge of the Statistical Precipice,Reinforcement Learning & Decision Making,Evaluation & Benchmarking,RL; Theory / Analysis
+NeurIPS,2021,MAUVE: Measuring the Gap Between Neural Text and Human Text using Divergence Frontiers,NLP & Language,Evaluation & Benchmarking,LLM; Transformer
+NeurIPS,2021,Moser Flow: Divergence-based Generative Modeling on Manifolds,General ML & Representation Learning,Generative Modeling,Probabilistic / Bayesian; Neural Model
+NeurIPS,2021,On the Expressivity of Markov Reward,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL; Theory / Analysis
 NeurIPS,2020,Improved Guarantees and a Multiple-Descent Curve for Column Subset Selection and the Nyström Method,ML Theory & Optimization,Optimization & Generalization,Optimization
 NeurIPS,2020,Language Models are Few-Shot Learners,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
 NeurIPS,2020,No-Regret Learning Dynamics for Extensive-Form Correlated Equilibrium,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL; Theory / Analysis

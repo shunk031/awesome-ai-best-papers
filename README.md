@@ -2,7 +2,7 @@
 
 [![Catalog Check](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml/badge.svg)](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml)
 
-![Award records](https://img.shields.io/badge/award%20records-276-informational)
+![Award records](https://img.shields.io/badge/award%20records-325-informational)
 ![Venues](https://img.shields.io/badge/venues-9-informational)
 ![Coverage](https://img.shields.io/badge/coverage-2016%E2%80%932026-informational)
 
@@ -24,20 +24,20 @@ The v2 catalog prioritizes official conference sources. The complete 2016–2018
 
 ## Research landscape
 
-The tables below summarize the **61 award records from 2024–2026 currently in this catalog**. They describe this curated award set, not publication volume or the field as a whole.
+The tables below summarize the **72 award records from 2024–2026 currently in this catalog**. They describe this curated award set, not publication volume or the field as a whole.
 
 ### Research areas
 
 | Label | Award records |
 | --- | ---: |
-| NLP & Language | 20 |
+| NLP & Language | 28 |
 | ML Theory & Optimization | 11 |
+| Responsible AI & Privacy | 8 |
 | Computer Vision | 7 |
-| Responsible AI & Privacy | 6 |
+| Multimodal & Embodied AI | 4 |
 | Reinforcement Learning & Decision Making | 4 |
 | Scientific ML & Applications | 3 |
 | Graphs & Structured Learning | 3 |
-| Multimodal & Embodied AI | 3 |
 | General ML & Representation Learning | 3 |
 | Speech & Audio | 1 |
 
@@ -45,13 +45,13 @@ The tables below summarize the **61 award records from 2024–2026 currently in 
 
 | Label | Award records |
 | --- | ---: |
-| Transformer | 28 |
-| LLM | 21 |
+| Transformer | 39 |
+| LLM | 30 |
 | Theory / Analysis | 10 |
 | Diffusion | 9 |
 | Representation Learning | 6 |
 | Probabilistic / Bayesian | 5 |
-| VLM | 4 |
+| VLM | 5 |
 | Optimization | 4 |
 | RL | 4 |
 | Neuro-Symbolic | 3 |
@@ -65,24 +65,24 @@ The tables below summarize the **61 award records from 2024–2026 currently in 
 
 | Label | Award records |
 | --- | ---: |
-| LLM Analysis & Evaluation | 7 |
-| Safety, Fairness & Privacy | 6 |
-| Language Modeling & Generation | 5 |
+| LLM Analysis & Evaluation | 10 |
+| Safety, Fairness & Privacy | 7 |
+| Language Modeling & Generation | 6 |
+| Model Efficiency & Architecture | 5 |
 | Optimization & Generalization | 5 |
+| Multimodal & Vision-Language | 4 |
 | Reinforcement Learning & Planning | 4 |
-| Model Efficiency & Architecture | 3 |
 | Language Understanding & Linguistics | 3 |
-| Multimodal & Vision-Language | 3 |
 | 3D Vision & Reconstruction | 3 |
 | Image & Video Generation | 3 |
+| Model Editing & Adaptation | 3 |
 | Probabilistic Inference & Sampling | 3 |
-| Reasoning & Knowledge | 2 |
 
 ### Reading the recent slice
 
-- **Language-model work is the clearest cluster:** `NLP & Language` accounts for 20 recent award records, while `LLM` and `Transformer` appear in 21 and 28 records respectively.
-- **Evaluation, safety, and theory are prominent:** `LLM Analysis & Evaluation` has 7 records, `Safety, Fairness & Privacy` has 6, and `Optimization & Generalization` has 5.
-- **Generative and multimodal work remains broad rather than single-model:** `Diffusion` appears in 9 records, alongside `VLM` in 4, with recurring awards in image/video generation, 3D reconstruction, and multimodal vision-language tasks.
+- **Language-model work is the clearest cluster:** `NLP & Language` accounts for 28 recent award records, while `LLM` and `Transformer` appear in 30 and 39 records respectively.
+- **Evaluation, safety, and theory are prominent:** `LLM Analysis & Evaluation` has 10 records, `Safety, Fairness & Privacy` has 7, and `Optimization & Generalization` has 5.
+- **Generative and multimodal work remains broad rather than single-model:** `Diffusion` appears in 9 records, alongside `VLM` in 5, with recurring awards in image/video generation, 3D reconstruction, and multimodal vision-language tasks.
 - **RL and structured reasoning remain active:** `Reinforcement Learning & Planning` has 4 recent records, while graph / structured and neuro-symbolic work continues to appear across AAAI and ICLR.
 
 These are descriptive signals from the curated award set; they should not be interpreted as publication-volume or citation trends.
@@ -98,8 +98,8 @@ These are descriptive signals from the curated award set; they should not be int
 | [ICCV](https://iccv.thecvf.com/) | Computer Vision | 2017, 2019, 2021, 2023, 2025 | 10 | [source](https://www.thecvf.com/?page_id=413) |
 | [ICLR](https://iclr.cc/) | Machine Learning | 2016–2026 | 49 | [source](https://blog.iclr.cc/) |
 | [ICML](https://icml.cc/) | Machine Learning | 2016–2018, 2020–2021, 2023, 2025–2026 | 35 | [source](https://blog.icml.cc/) |
-| [NAACL](https://naacl.org/) | Natural Language Processing | 2018, 2025 | 5 | [source](https://naacl.org/policies/best-paper.html) |
-| [NeurIPS](https://neurips.cc/) | Machine Learning | 2016–2020, 2023–2025 | 26 | [source](https://blog.neurips.cc/) |
+| [NAACL](https://naacl.org/) | Natural Language Processing | 2018–2019, 2021–2022, 2024–2025 | 35 | [source](https://naacl.org/policies/best-paper.html) |
+| [NeurIPS](https://neurips.cc/) | Machine Learning | 2016–2025 | 45 | [source](https://blog.neurips.cc/) |
 
 ## Latest awards
 
