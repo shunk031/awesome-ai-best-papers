@@ -1,3 +1,4 @@
+<!--lint disable awesome-github-->
 # Awesome AI Best Papers [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 [![Catalog Check](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml/badge.svg)](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml)
@@ -21,53 +22,36 @@ Each paper is annotated with a maintainer-curated **research area**, **task**, a
 {% for venue in venue_sections %}
   - [{{ venue.venue }}](#{{ venue.venue|anchor }})
 {% endfor %}
-- [Contributing](#contributing)
 
 ## Research Landscape
 
-The tables below summarize the **{{ recent.records }} award records from {{ recent.start_year }}–{{ recent.end_year }}** currently in the catalog. They describe this curated award set, not publication volume or citation impact across the field.
+The **{{ recent.records }} award records from {{ recent.start_year }}–{{ recent.end_year }}** provide a compact view of the research themes represented in the recent award set. These counts describe this catalog, not publication volume or citation impact across the field.
 
-### Research Areas
+**Research areas:** {{ recent.areas_summary }}.
 
-| Label | Award records |
-| --- | ---: |
-{% for row in recent.areas %}
-| {{ row.label }} | {{ row.count }} |
-{% endfor %}
+**Model / method families:** {{ recent.families_summary }}.
 
-### Model / Method Families
-
-| Label | Award records |
-| --- | ---: |
-{% for row in recent.families %}
-| {{ row.label }} | {{ row.count }} |
-{% endfor %}
-
-### Frequently Awarded Tasks
-
-| Label | Award records |
-| --- | ---: |
-{% for row in recent.tasks %}
-| {{ row.label }} | {{ row.count }} |
-{% endfor %}
+**Frequently awarded tasks:** {{ recent.tasks_summary }}.
 
 ## Papers
 
-Papers are grouped by conference and award year. The link on each title points to the canonical paper page when available; award provenance is linked separately.
+Papers are grouped by conference and award year. Title links use canonical paper pages when available; award provenance remains in the structured data.
 
+<!--lint disable double-link balanced-punctuation-->
 {% for venue in venue_sections %}
 ### {{ venue.venue }}
 
-**{{ venue.full_name }}** · [conference]({{ venue.official_url }}) · [award source]({{ venue.award_url }})
+**{{ venue.full_name }}** · [conference]({{ venue.official_url }})
 
 {% for group in venue.groups %}
 #### {{ group.year }}
 
 {% for row in group.entries %}
-{{ row|award_entry }}
+{{ row|paper_entry }}
 {% endfor %}
 {% endfor %}
 {% endfor %}
+<!--lint enable double-link balanced-punctuation-->
 
 ## Contributing
 

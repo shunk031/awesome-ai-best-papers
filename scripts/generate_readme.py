@@ -52,17 +52,20 @@ def count_rows(counter: Counter[str], limit: int | None = None) -> list[dict[str
     ]
 
 
-def award_entry(row: dict[str, str]) -> str:
+def count_summary(rows: list[dict[str, Any]]) -> str:
+    return ", ".join(f'`{row["label"]}` ({row["count"]})' for row in rows)
+
+
+def paper_entry(row: dict[str, Any]) -> str:
     title_url = row["paper_url"] or row["source_url"]
+    title = f'[{row["title"]}]({title_url})'
+    award_label = "Award" if len(row["awards"]) == 1 else "Awards"
+    awards = " / ".join(row["awards"])
     line = (
-        f'- [{row["title"]}]({title_url}) - **Award:** {row["award"]}. '
+        f'- {title} - **{award_label}:** {awards}. '
         f'**Area:** {row["area"]}. **Task:** {row["task"]}. '
         f'**Model:** {row["model_family"].replace(";", " /")}.'
     )
-
-    source_url = row["source_url"]
-    if row["paper_url"] and source_url != row["paper_url"]:
-        line += f' [Award source]({source_url}).'
     if row["notes"]:
         line += f' {row["notes"]}'
     return line
@@ -70,24 +73,50 @@ def award_entry(row: dict[str, str]) -> str:
 
 def generate() -> str:
     venues = load_csv(VENUES_PATH)
-    papers = load_csv(PAPERS_PATH)
+    award_rows = load_csv(PAPERS_PATH)
     taxonomy_rows = load_csv(TAXONOMY_PATH)
     taxonomy = {
         (row["venue"], row["year"], row["title"].casefold()): row
         for row in taxonomy_rows
     }
 
-    enriched: list[dict[str, str]] = []
-    for row in papers:
+    enriched_awards: list[dict[str, str]] = []
+    grouped: dict[tuple[str, str, str], dict[str, Any]] = {}
+    for row in award_rows:
         key = (row["venue"], row["year"], row["title"].casefold())
         tag = taxonomy.get(key)
         if tag is None:
             raise ValueError(f"Missing taxonomy for {key}")
-        enriched.append({**row, **tag})
-    papers = enriched
+        enriched = {**row, **tag}
+        enriched_awards.append(enriched)
 
-    by_venue: dict[str, list[dict[str, str]]] = defaultdict(list)
-    for row in papers:
+        if key not in grouped:
+            grouped[key] = {
+                **enriched,
+                "awards": [],
+                "_award_sort": [],
+                "notes": row["notes"],
+            }
+        paper = grouped[key]
+        if row["paper_url"] and not paper["paper_url"]:
+            paper["paper_url"] = row["paper_url"]
+        if row["notes"] and row["notes"] not in paper["notes"]:
+            paper["notes"] = "; ".join(filter(None, [paper["notes"], row["notes"]]))
+        if row["award"] not in paper["awards"]:
+            paper["awards"].append(row["award"])
+            paper["_award_sort"].append(
+                (TIER_ORDER.get(row["tier"], 99), row["award"].casefold())
+            )
+
+    unique_papers = list(grouped.values())
+    for paper in unique_papers:
+        paired = sorted(zip(paper["_award_sort"], paper["awards"]), key=lambda item: item[0])
+        paper["awards"] = [award for _, award in paired]
+        paper["sort_tier"] = paired[0][0][0] if paired else 99
+        paper.pop("_award_sort", None)
+
+    by_venue: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for row in unique_papers:
         by_venue[row["venue"]].append(row)
 
     venue_sections: list[dict[str, Any]] = []
@@ -99,25 +128,26 @@ def generate() -> str:
             entries = sorted(
                 (row for row in venue_papers if int(row["year"]) == year),
                 key=lambda row: (
-                    TIER_ORDER.get(row["tier"], 99),
-                    row["award"].casefold(),
+                    row["sort_tier"],
+                    row["awards"][0].casefold(),
                     row["title"].casefold(),
                 ),
             )
             groups.append({"year": year, "entries": entries})
-        venue_sections.append({**venue, "groups": groups, "records": len(venue_papers)})
+        venue_sections.append({**venue, "groups": groups, "papers": len(venue_papers)})
 
-    years = [int(row["year"]) for row in papers]
+    years = [int(row["year"]) for row in award_rows]
     min_year, max_year = min(years), max(years)
     recent_start = max_year - 2
-    recent = [row for row in papers if int(row["year"]) >= recent_start]
-    unique_papers = {
-        (row["venue"], row["year"], row["title"].casefold()) for row in papers
-    }
+    recent = [row for row in enriched_awards if int(row["year"]) >= recent_start]
+
+    recent_areas = count_rows(Counter(row["area"] for row in recent))
+    recent_families = count_rows(family_counts(recent))
+    recent_tasks = count_rows(Counter(row["task"] for row in recent), limit=12)
 
     context = {
         "stats": {
-            "award_records": len(papers),
+            "award_records": len(award_rows),
             "papers": len(unique_papers),
             "venues": len(venues),
             "annotated_papers": len(taxonomy_rows),
@@ -128,9 +158,9 @@ def generate() -> str:
             "start_year": recent_start,
             "end_year": max_year,
             "records": len(recent),
-            "areas": count_rows(Counter(row["area"] for row in recent)),
-            "families": count_rows(family_counts(recent)),
-            "tasks": count_rows(Counter(row["task"] for row in recent), limit=12),
+            "areas_summary": count_summary(recent_areas),
+            "families_summary": count_summary(recent_families),
+            "tasks_summary": count_summary(recent_tasks),
         },
         "venue_sections": venue_sections,
     }
@@ -144,7 +174,7 @@ def generate() -> str:
         lstrip_blocks=True,
     )
     environment.filters["anchor"] = anchor
-    environment.filters["award_entry"] = award_entry
+    environment.filters["paper_entry"] = paper_entry
     template = environment.get_template("README.md.j2")
     return template.render(**context).rstrip() + "\n"
 
