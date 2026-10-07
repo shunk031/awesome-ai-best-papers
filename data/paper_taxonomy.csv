@@ -279,7 +279,7 @@ EMNLP,2024,Pretraining Data Detection for Large Language Models: A Divergence-ba
 EMNLP,2024,Towards Robust Speech Representation Learning for Thousands of Languages,Speech & Audio,Speech & Audio,Representation Learning
 EMNLP,2023,Background Summarization of Event Timelines,NLP & Language,Language Modeling & Generation,Transformer
 EMNLP,2023,Bridging Continuous and Discrete Spaces: Interpretable Sentence Representation Learning via Compositional Operations,General ML & Representation Learning,Representation Learning,Representation Learning; Neuro-Symbolic
-EMNLP,2023,Counter Turing Test (CT2): AI-Generated Text Detection is Not as Easy as You May Think - Introducing AI Detectability Index (ADI),Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
+EMNLP,2023,Counter Turing Test (CT²): AI-Generated Text Detection is Not as Easy as You May Think - Introducing AI Detectability Index,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
 EMNLP,2023,Cross-Lingual Consistency of Factual Knowledge in Multilingual Language Models,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
 EMNLP,2023,Faster Minimum Bayes Risk Decoding with Confidence-based Pruning,NLP & Language,Language Modeling & Generation,Transformer; Optimization
 EMNLP,2023,FedID: Federated Interactive Distillation for Large-Scale Pretraining Language Models,General ML & Representation Learning,Model Efficiency & Architecture,Transformer
