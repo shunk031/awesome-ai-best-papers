@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/home/runner/work/awesome-ai-best-papers/awesome-ai-best-papers/scripts/_oneoff_fill_gaps.py", line 144, in <module>
+    main()
+  File "/home/runner/work/awesome-ai-best-papers/awesome-ai-best-papers/scripts/_oneoff_fill_gaps.py", line 135, in main
+    write(PAPERS,PAPER_FIELDS,papers)
+  File "/home/runner/work/awesome-ai-best-papers/awesome-ai-best-papers/scripts/_oneoff_fill_gaps.py", line 28, in write
+    w.writerows(rows)
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/csv.py", line 167, in writerows
+    return self.writer.writerows(map(self._dict_to_list, rowdicts))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/csv.py", line 159, in _dict_to_list
+    raise ValueError("dict contains fields not in fieldnames: "
+ValueError: dict contains fields not in fieldnames: None
