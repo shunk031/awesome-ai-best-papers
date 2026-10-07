@@ -29,24 +29,5 @@ jobs:
       - name: Validate catalog
         run: uv run python scripts/validate_catalog.py
 
-      - name: Preserve committed README
-        run: cp README.md /tmp/committed-readme.md
-
       - name: Check generated README
         run: uv run python scripts/generate_readme.py --check
-
-      - name: Generate expected README
-        if: failure()
-        run: uv run python scripts/generate_readme.py
-
-      - name: Show generated README diff
-        if: failure()
-        run: diff -u /tmp/committed-readme.md README.md || true
-
-      - name: Upload expected README
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: generated-readme
-          path: README.md
-          if-no-files-found: error
