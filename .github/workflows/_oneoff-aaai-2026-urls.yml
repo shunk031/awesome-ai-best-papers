@@ -1,0 +1,73 @@
+name: One-off AAAI 2026 canonical URLs
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-aaai-2026-urls.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fill AAAI-26 proceedings URLs
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          import subprocess, sys
+
+          path = Path('data/papers.csv')
+          urls = {
+              'Causal Structure Learning for Dynamical Systems with Theoretical Score Analysis': 'https://ojs.aaai.org/index.php/AAAI/article/view/40999',
+              'High-Pass Matters: Theoretical Insights and Sheaflet-Based Design for Hypergraph Neural Networks': 'https://ojs.aaai.org/index.php/AAAI/article/view/39469',
+              'LLM2CLIP: Powerful Language Model Unlocks Richer Cross-Modality Representation': 'https://ojs.aaai.org/index.php/AAAI/article/view/37427',
+              'Model Change for Description Logic Concepts': 'https://ojs.aaai.org/index.php/AAAI/article/view/39008',
+              'ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver': 'https://ojs.aaai.org/index.php/AAAI/article/view/38921',
+              'On the Alignment of Large Language Models with Global Human Opinion': 'https://ojs.aaai.org/index.php/AAAI/article/view/41102',
+              'Generalizable Slum Detection from Satellite Imagery with Mixture-of-Experts': 'https://ojs.aaai.org/index.php/AAAI/article/view/41227',
+              'PlantTraitNet: An Uncertainty-Aware Multimodal Framework for Global-Scale Plant Trait Inference from Citizen Science Data': 'https://ojs.aaai.org/index.php/AAAI/article/view/41272',
+              'Fractured Glass, Failing Cameras: Simulating Physics-Based Adversarial Samples for Autonomous Driving Systems': 'https://ojs.aaai.org/index.php/AAAI/article/view/37792',
+          }
+
+          with path.open(newline='', encoding='utf-8') as f:
+              rows = list(csv.DictReader(f))
+          found = set()
+          for row in rows:
+              if row['venue']=='AAAI' and row['year']=='2026' and row['title'] in urls:
+                  row['paper_url'] = urls[row['title']]
+                  row['checked_at'] = '2026-10-07'
+                  found.add(row['title'])
+          missing = set(urls) - found
+          if missing:
+              raise SystemExit(f'Missing AAAI-26 rows: {sorted(missing)}')
+
+          with path.open('w', newline='', encoding='utf-8') as f:
+              w = csv.DictWriter(f, fieldnames=['venue','year','award','tier','title','paper_url','source_url','checked_at','notes'], lineterminator='\n')
+              w.writeheader(); w.writerows(rows)
+
+          subprocess.run([sys.executable, 'scripts/validate_catalog.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py', '--check'], check=True)
+          PY
+      - name: Commit canonical URLs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers.csv README.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Add AAAI 2026 canonical paper URLs'
+            git push
+          fi
