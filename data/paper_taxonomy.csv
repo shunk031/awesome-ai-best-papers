@@ -216,6 +216,26 @@ EMNLP,2023,Toward a Critical Toponymy Framework for Named Entity Recognition: A 
 EMNLP,2023,Understanding Compositional Data Augmentation in Typologically Diverse Morphological Inflection,NLP & Language,Robustness & Domain Adaptation,Transformer
 EMNLP,2023,Unraveling Feature Extraction Mechanisms in Neural Networks,General ML & Representation Learning,Interpretability & Explainability,Neural Model
 EMNLP,2023,ViPE: Visualise Pretty-much Everything,Multimodal & Embodied AI,Multimodal & Vision-Language,VLM; Transformer
+EMNLP,2022,Abstract Visual Reasoning with Tangram Shapes,Multimodal & Embodied AI,Multimodal & Vision-Language,VLM; Transformer
+EMNLP,2022,Topic-Regularized Authorship Representation Learning,NLP & Language,Representation Learning,Representation Learning; Transformer
+EMNLP,2021,CHoRaL: Collecting Humor Reaction Labels from Millions of Social Media Users,NLP & Language,Language Understanding & Linguistics,Neural Model
+EMNLP,2021,MindCraft: Theory of Mind Modeling for Situated Dialogue in Collaborative Tasks,Multimodal & Embodied AI,Multimodal & Vision-Language,Neural Model
+EMNLP,2021,Shortcutted Commonsense: Data Spuriousness in Deep Learning of Commonsense Reasoning,NLP & Language,Robustness & Domain Adaptation,Transformer
+EMNLP,2021,SituatedQA: Incorporating Extra-Linguistic Contexts into QA,NLP & Language,Reasoning & Knowledge,Transformer
+EMNLP,2021,Visually Grounded Reasoning across Languages and Cultures,Multimodal & Embodied AI,Multimodal & Vision-Language,VLM; Transformer
+EMNLP,2021,When Attention Meets Fast Recurrence: Training Language Models with Reduced Compute,NLP & Language,Model Efficiency & Architecture,RNN; Transformer
+EMNLP,2020,Digital Voicing of Silent Speech,Speech & Audio,Speech & Audio,Neural Model
+EMNLP,2020,GLUCOSE: GeneraLized and COntextualized Story Explanations,NLP & Language,Reasoning & Knowledge,Transformer
+EMNLP,2020,"If beam search is the answer, what was the question?",NLP & Language,Language Modeling & Generation,Autoregressive; Theory / Analysis
+EMNLP,2020,Spot The Bot: A Robust and Efficient Framework for the Evaluation of Conversational Dialogue Systems,NLP & Language,Language Modeling & Generation,Neural Model
+EMNLP,2020,Visually Grounded Compound PCFGs,Multimodal & Embodied AI,Multimodal & Vision-Language,Probabilistic / Bayesian; Neural Model
+EMNLP,2019,Designing and Interpreting Probes with Control Tasks,NLP & Language,Interpretability & Explainability,Representation Learning
+EMNLP,2019,Specializing Word Embeddings (for Parsing) by Information Bottleneck,NLP & Language,Representation Learning,Probabilistic / Bayesian; Representation Learning
+EMNLP,2019,Two New Evaluation Datasets for Low-Resource Machine Translation: Nepali-English and Sinhala-English,NLP & Language,Robustness & Domain Adaptation,Neural Model
+EMNLP,2018,How Much Reading Does Reading Comprehension Require? A Critical Investigation of Popular Benchmarks,NLP & Language,Reasoning & Knowledge,Neural Model
+EMNLP,2018,Linguistically-Informed Self-Attention for Semantic Role Labeling,NLP & Language,Language Understanding & Linguistics,Transformer
+EMNLP,2018,MultiWOZ - A Large-Scale Multi-Domain Wizard-of-Oz Dataset for Task-Oriented Dialogue Modelling,NLP & Language,Language Modeling & Generation,Neural Model
+EMNLP,2018,Phrase-Based & Neural Unsupervised Machine Translation,NLP & Language,Language Modeling & Generation,Neural Model; Classical / Optimization
 EMNLP,2017,Bringing Structure into Summaries: Crowdsourcing a Benchmark Corpus of Concept Maps.,NLP & Language,Language Modeling & Generation,Classical / Optimization
 EMNLP,2017,Depression and Self-Harm Risk Assessment in Online Forums.,Responsible AI & Privacy,"Safety, Fairness & Privacy",Neural Model
 EMNLP,2017,Men Also Like Shopping: Reducing Gender Bias Amplification using Corpus-level Constraints.,Responsible AI & Privacy,"Safety, Fairness & Privacy",Optimization
