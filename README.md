@@ -101,6 +101,8 @@ These are descriptive signals from the curated award set; they should not be int
 | [NAACL](https://naacl.org/) | Natural Language Processing | 2018–2019, 2021–2022, 2024–2025 | 35 | [source](https://naacl.org/policies/best-paper.html) |
 | [NeurIPS](https://neurips.cc/) | Machine Learning | 2016–2025 | 45 | [source](https://blog.neurips.cc/) |
 
+> **Coverage note:** year ranges list the conference years currently represented in the catalog. Gaps are explicit; a displayed span should not be interpreted as complete coverage of every intervening year.
+
 ## Latest awards
 
 This section shows the latest completed award year for each venue. The full historical catalog is in [`data/papers.csv`](data/papers.csv).
