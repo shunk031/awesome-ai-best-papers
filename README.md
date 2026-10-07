@@ -145,7 +145,7 @@ This section shows the latest completed award year for each venue. The full hist
 
 **Conference on Empirical Methods in Natural Language Processing** · [Natural Language Processing](https://aclanthology.org/venues/emnlp/)
 
-- **Best Paper** — [Infini-gram mini: Exact n-gram Search at the Internet Scale with FM-Index](https://2025.emnlp.org/program/awards/)<br>  **Area:** NLP & Language · **Task:** Retrieval & Search · **Model:** Classical / Optimization
+- **Best Paper** — [Infini-gram mini: Exact n-gram Search at the Internet Scale with FM-Index](https://aclanthology.org/2025.emnlp-main.1268/) · [award source](https://2025.emnlp.org/program/awards/)<br>  **Area:** NLP & Language · **Task:** Retrieval & Search · **Model:** Classical / Optimization
 
 ### ICCV · 2025
 
