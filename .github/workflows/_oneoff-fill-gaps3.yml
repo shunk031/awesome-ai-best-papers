@@ -1,0 +1,37 @@
+name: One-off ICML gap fill
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - scripts/_oneoff_fill_gaps3.py
+      - data/_oneoff_gap_additions3.csv
+      - .github/workflows/_oneoff-fill-gaps3.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Apply catalog backfill
+        run: python scripts/_oneoff_fill_gaps3.py
+      - name: Commit generated catalog
+        run: |
+          if git diff --quiet; then
+            echo "No catalog changes."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/papers.csv data/paper_taxonomy.csv README.md
+          git commit -m "Fill ICML award gaps"
+          git push
