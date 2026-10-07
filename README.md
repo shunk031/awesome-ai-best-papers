@@ -531,19 +531,19 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [The Polar Express: Optimal Matrix Sign Methods and their Application to the Muon Algorithm](https://openreview.net/forum?id=yRtgZ1K8hO) - **Award:** Outstanding Paper Honorable Mention. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization / Theory / Analysis.
 #### 2025
 
-- [AlphaEdit: Null-Space Constrained Model Editing for Language Models](https://iclr.cc/Conferences/2025/Awards) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Model Editing & Adaptation. **Model:** LLM / Transformer.
-- [Learning Dynamics of LLM Finetuning](https://iclr.cc/Conferences/2025/Awards) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer / Representation Learning.
-- [Safety Alignment Should be Made More Than Just a Few Tokens Deep](https://iclr.cc/Conferences/2025/Awards) - **Award:** Outstanding Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** LLM / Transformer.
+- [AlphaEdit: Null-Space Constrained Knowledge Editing for Language Models](https://openreview.net/forum?id=HvSytvg3Jh) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Model Editing & Adaptation. **Model:** LLM / Transformer.
+- [Learning Dynamics of LLM Finetuning](https://openreview.net/forum?id=tPNHOoZFl9) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer / Representation Learning.
+- [Safety Alignment Should be Made More Than Just a Few Tokens Deep](https://openreview.net/forum?id=6Mxhg9PtDE) - **Award:** Outstanding Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** LLM / Transformer.
 - [Data Shapley in One Training Run](https://openreview.net/forum?id=HD6bWcj87Y) - **Award:** Outstanding Paper Honorable Mention. **Area:** General ML & Representation Learning. **Task:** Interpretability & Explainability. **Model:** Theory / Analysis.
 - [Faster Cascades via Speculative Decoding](https://openreview.net/forum?id=vo9t20wsmd) - **Award:** Outstanding Paper Honorable Mention. **Area:** NLP & Language. **Task:** Model Efficiency & Architecture. **Model:** LLM / Transformer / Autoregressive.
 - [SAM 2: Segment Anything in Images and Videos](https://openreview.net/forum?id=Ha6RTeWMd0) - **Award:** Outstanding Paper Honorable Mention. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Transformer.
 #### 2024
 
-- [Generalization in diffusion models arises from geometry-adaptive harmonic representations](https://iclr.cc/Conferences/2024/Awards) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Diffusion.
-- [Learning Interactive Real-World Simulators](https://iclr.cc/Conferences/2024/Awards) - **Award:** Outstanding Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** Neural Model / RL.
-- [Never Train from Scratch: Fair Comparison of Long-Sequence Models Requires Data-Driven Priors](https://iclr.cc/Conferences/2024/Awards) - **Award:** Outstanding Paper. **Area:** General ML & Representation Learning. **Task:** Representation Learning. **Model:** Neural Model / Representation Learning.
-- [Protein Discovery with Discrete Walk-Jump Sampling](https://iclr.cc/Conferences/2024/Awards) - **Award:** Outstanding Paper. **Area:** Scientific ML & Applications. **Task:** Scientific Discovery & Simulation. **Model:** Probabilistic / Bayesian.
-- [Vision Transformers Need Registers](https://iclr.cc/Conferences/2024/Awards) - **Award:** Outstanding Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Transformer.
+- [Generalization in diffusion models arises from geometry-adaptive harmonic representations](https://openreview.net/forum?id=ANvmVS2Yr0) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Diffusion.
+- [Learning Interactive Real-World Simulators](https://openreview.net/forum?id=sFyTZEqmUY) - **Award:** Outstanding Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** Neural Model / RL.
+- [Never Train from Scratch: Fair Comparison of Long-Sequence Models Requires Data-Driven Priors](https://openreview.net/forum?id=PdaPky8MUn) - **Award:** Outstanding Paper. **Area:** General ML & Representation Learning. **Task:** Representation Learning. **Model:** Neural Model / Representation Learning.
+- [Protein Discovery with Discrete Walk-Jump Sampling](https://openreview.net/forum?id=zMPHKOmQNb) - **Award:** Outstanding Paper. **Area:** Scientific ML & Applications. **Task:** Scientific Discovery & Simulation. **Model:** Probabilistic / Bayesian.
+- [Vision Transformers Need Registers](https://openreview.net/forum?id=2dnO3LLiJ1) - **Award:** Outstanding Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Transformer.
 - [Amortizing intractable inference in large language models](https://openreview.net/forum?id=Ouj6p4ca60) - **Award:** Outstanding Paper Honorable Mention. **Area:** NLP & Language. **Task:** Probabilistic Inference & Sampling. **Model:** LLM / Probabilistic / Bayesian.
 - [Approximating Nash Equilibria in Normal-Form Games via Stochastic Optimization](https://openreview.net/forum?id=cc8h3I3V4E) - **Award:** Outstanding Paper Honorable Mention. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization / Theory / Analysis.
 - [Beyond Weisfeiler-Lehman: A Quantitative Framework for GNN Expressiveness](https://openreview.net/forum?id=HSKaGOi7Ar) - **Award:** Outstanding Paper Honorable Mention. **Area:** Graphs & Structured Learning. **Task:** Graph & Structured Learning. **Model:** GNN / Theory / Analysis.
@@ -557,10 +557,10 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Towards a statistical theory of data selection under weak supervision](https://openreview.net/forum?id=HhfcNgQn6p) - **Award:** Outstanding Paper Honorable Mention. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
 #### 2023
 
-- [DreamFusion: Text-to-3D using 2D Diffusion](https://iclr.cc/Conferences/2023/Awards) - **Award:** Outstanding Paper. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Diffusion.
-- [Emergence of Maps in the Memories of Blind Navigation Agents](https://iclr.cc/Conferences/2023/Awards) - **Award:** Outstanding Paper. **Area:** Multimodal & Embodied AI. **Task:** Multimodal & Vision-Language. **Model:** Neural Model.
-- [Rethinking the Expressive Power of GNNs via Graph Biconnectivity](https://iclr.cc/Conferences/2023/Awards) - **Award:** Outstanding Paper. **Area:** Graphs & Structured Learning. **Task:** Graph & Structured Learning. **Model:** GNN.
-- [Universal Few-shot Learning of Dense Prediction Tasks with Visual Token Matching](https://iclr.cc/Conferences/2023/Awards) - **Award:** Outstanding Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** VLM / CNN.
+- [DreamFusion: Text-to-3D using 2D Diffusion](https://openreview.net/forum?id=FjNys5c7VyY) - **Award:** Outstanding Paper. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Diffusion.
+- [Emergence of Maps in the Memories of Blind Navigation Agents](https://openreview.net/forum?id=lTt4KjHSsyl) - **Award:** Outstanding Paper. **Area:** Multimodal & Embodied AI. **Task:** Multimodal & Vision-Language. **Model:** Neural Model.
+- [Rethinking the Expressive Power of GNNs via Graph Biconnectivity](https://openreview.net/forum?id=r9hNv76KoT3) - **Award:** Outstanding Paper. **Area:** Graphs & Structured Learning. **Task:** Graph & Structured Learning. **Model:** GNN.
+- [Universal Few-shot Learning of Dense Prediction Tasks with Visual Token Matching](https://openreview.net/forum?id=88nT0j5jAn) - **Award:** Outstanding Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** VLM / CNN.
 - [Conditional Antibody Design as 3D Equivariant Graph Translation](https://openreview.net/forum?id=LFHFQbjxIiP) - **Award:** Outstanding Paper Honorable Mention. **Area:** Scientific ML & Applications. **Task:** Scientific Discovery & Simulation. **Model:** GNN / Neural Model.
 - [Disentanglement with Biological Constraints: A Theory of Functional Cell Types](https://openreview.net/forum?id=9Z_GfhZnGH) - **Award:** Outstanding Paper Honorable Mention. **Area:** Scientific ML & Applications. **Task:** Representation Learning. **Model:** Neural Model / Theory / Analysis.
 - [Mastering the Game of No-Press Diplomacy via Human-Regularized Reinforcement Learning and Planning](https://openreview.net/forum?id=F61FwJTZhb) - **Award:** Outstanding Paper Honorable Mention. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL / Search / Planning.
@@ -568,44 +568,44 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Towards Understanding Ensemble, Knowledge Distillation and Self-Distillation in Deep Learning](https://openreview.net/forum?id=Uuf2q9TfXGA) - **Award:** Outstanding Paper Honorable Mention. **Area:** General ML & Representation Learning. **Task:** Model Efficiency & Architecture. **Model:** Neural Model / Theory / Analysis.
 #### 2022
 
-- [Analytic-DPM: an Analytic Estimate of the Optimal Reverse Variance in Diffusion Probabilistic Models](https://iclr.cc/Conferences/2022/Awards) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Diffusion / Probabilistic / Bayesian / Theory / Analysis.
-- [Bootstrapped Meta-Learning](https://iclr.cc/Conferences/2022/Awards) - **Award:** Outstanding Paper. **Area:** General ML & Representation Learning. **Task:** Meta-Learning & Adaptation. **Model:** Meta-Learning.
-- [Comparing Distributions by Measuring Differences that Affect Decision Making](https://iclr.cc/Conferences/2022/Awards) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
-- [Expressiveness and Approximation Properties of Graph Neural Networks](https://iclr.cc/Conferences/2022/Awards) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Graph & Structured Learning. **Model:** GNN.
-- [Hyperparameter Tuning with Renyi Differential Privacy](https://iclr.cc/Conferences/2022/Awards) - **Award:** Outstanding Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Optimization / Probabilistic / Bayesian.
-- [Learning Strides in Convolutional Neural Networks](https://iclr.cc/Conferences/2022/Awards) - **Award:** Outstanding Paper. **Area:** General ML & Representation Learning. **Task:** Model Efficiency & Architecture. **Model:** CNN / Optimization.
-- [Neural Collapse Under MSE Loss: Proximity to and Dynamics on the Central Path](https://iclr.cc/Conferences/2022/Awards) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
+- [Analytic-DPM: an Analytic Estimate of the Optimal Reverse Variance in Diffusion Probabilistic Models](https://openreview.net/forum?id=0xiJLKH-ufZ) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Diffusion / Probabilistic / Bayesian / Theory / Analysis.
+- [Bootstrapped Meta-Learning](https://openreview.net/forum?id=b-ny3x071E5) - **Award:** Outstanding Paper. **Area:** General ML & Representation Learning. **Task:** Meta-Learning & Adaptation. **Model:** Meta-Learning.
+- [Comparing Distributions by Measuring Differences that Affect Decision Making](https://openreview.net/forum?id=KB5onONJIAU) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
+- [Expressiveness and Approximation Properties of Graph Neural Networks](https://openreview.net/forum?id=wIzUeM3TAU) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Graph & Structured Learning. **Model:** GNN.
+- [Hyperparameter Tuning with Renyi Differential Privacy](https://openreview.net/forum?id=-70L8lpp9DF) - **Award:** Outstanding Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Optimization / Probabilistic / Bayesian.
+- [Learning Strides in Convolutional Neural Networks](https://openreview.net/forum?id=M752z9FKJP) - **Award:** Outstanding Paper. **Area:** General ML & Representation Learning. **Task:** Model Efficiency & Architecture. **Model:** CNN / Optimization.
+- [Neural Collapse Under MSE Loss: Proximity to and Dynamics on the Central Path](https://openreview.net/forum?id=w1UbdvWH_R3) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
 - [Efficiently Modeling Long Sequences with Structured State Spaces](https://openreview.net/forum?id=uYLFoz1vlAC) - **Award:** Outstanding Paper Honorable Mention. **Area:** General ML & Representation Learning. **Task:** Model Efficiency & Architecture. **Model:** Neural Model / Theory / Analysis.
 - [PiCO: Contrastive Label Disambiguation for Partial Label Learning](https://openreview.net/forum?id=EhYjZy6e1gJ) - **Award:** Outstanding Paper Honorable Mention. **Area:** General ML & Representation Learning. **Task:** Representation Learning. **Model:** Representation Learning / Neural Model.
 - [Understanding over-squashing and bottlenecks on graphs via curvature](https://openreview.net/forum?id=7UmjRGzp-A) - **Award:** Outstanding Paper Honorable Mention. **Area:** Graphs & Structured Learning. **Task:** Graph & Structured Learning. **Model:** GNN / Theory / Analysis.
 #### 2021
 
-- [Beyond Fully-Connected Layers with Quaternions: Parameterization of Hypercomplex Multiplications with 1/n Parameters](https://iclr.cc/Conferences/2021/Awards) - **Award:** Outstanding Paper. **Area:** General ML & Representation Learning. **Task:** Model Efficiency & Architecture. **Model:** Neural Model.
-- [Complex Query Answering with Neural Link Predictors](https://iclr.cc/Conferences/2021/Awards) - **Award:** Outstanding Paper. **Area:** Graphs & Structured Learning. **Task:** Graph & Structured Learning. **Model:** Neural Model.
-- [EigenGame: PCA as a Nash Equilibrium](https://iclr.cc/Conferences/2021/Awards) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization / Theory / Analysis.
-- [Learning Mesh-Based Simulation with Graph Networks](https://iclr.cc/Conferences/2021/Awards) - **Award:** Outstanding Paper. **Area:** Graphs & Structured Learning. **Task:** Graph & Structured Learning. **Model:** GNN.
-- [Neural Synthesis of Binaural Speech from Mono Audio](https://iclr.cc/Conferences/2021/Awards) - **Award:** Outstanding Paper. **Area:** Speech & Audio. **Task:** Speech & Audio. **Model:** Neural Model.
-- [Optimal Rates for Averaged Stochastic Gradient Descent under Neural Tangent Kernel Regime](https://iclr.cc/Conferences/2021/Awards) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Kernel / NTK / Optimization.
-- [Rethinking Architecture Selection in Differentiable NAS](https://iclr.cc/Conferences/2021/Awards) - **Award:** Outstanding Paper. **Area:** General ML & Representation Learning. **Task:** Model Efficiency & Architecture. **Model:** Optimization.
-- [Score-Based Generative Modeling through Stochastic Differential Equations](https://iclr.cc/Conferences/2021/Awards) - **Award:** Outstanding Paper. **Area:** General ML & Representation Learning. **Task:** Generative Modeling. **Model:** Diffusion / Probabilistic / Bayesian.
+- [Beyond Fully-Connected Layers with Quaternions: Parameterization of Hypercomplex Multiplications with 1/n Parameters](https://openreview.net/forum?id=hfqKk2GM81) - **Award:** Outstanding Paper. **Area:** General ML & Representation Learning. **Task:** Model Efficiency & Architecture. **Model:** Neural Model.
+- [Complex Query Answering with Neural Link Predictors](https://openreview.net/forum?id=Mos9F9kDwkz) - **Award:** Outstanding Paper. **Area:** Graphs & Structured Learning. **Task:** Graph & Structured Learning. **Model:** Neural Model.
+- [EigenGame: PCA as a Nash Equilibrium](https://openreview.net/forum?id=NzTU59SYbNq) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization / Theory / Analysis.
+- [Learning Mesh-Based Simulation with Graph Networks](https://openreview.net/forum?id=roNqYL0_XP) - **Award:** Outstanding Paper. **Area:** Graphs & Structured Learning. **Task:** Graph & Structured Learning. **Model:** GNN.
+- [Neural Synthesis of Binaural Speech from Mono Audio](https://openreview.net/forum?id=uAX8q61EVRu) - **Award:** Outstanding Paper. **Area:** Speech & Audio. **Task:** Speech & Audio. **Model:** Neural Model.
+- [Optimal Rates for Averaged Stochastic Gradient Descent under Neural Tangent Kernel Regime](https://openreview.net/forum?id=PULSD5qI2N1) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Kernel / NTK / Optimization.
+- [Rethinking Architecture Selection in Differentiable NAS](https://openreview.net/forum?id=PKubaeJkw3) - **Award:** Outstanding Paper. **Area:** General ML & Representation Learning. **Task:** Model Efficiency & Architecture. **Model:** Optimization.
+- [Score-Based Generative Modeling through Stochastic Differential Equations](https://openreview.net/forum?id=PxTIG12RRHS) - **Award:** Outstanding Paper. **Area:** General ML & Representation Learning. **Task:** Generative Modeling. **Model:** Diffusion / Probabilistic / Bayesian.
 #### 2019
 
-- [Ordered Neurons: Integrating Tree Structures into Recurrent Neural Networks](https://iclr.cc/Conferences/2019/Awards) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** RNN.
-- [The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks](https://iclr.cc/Conferences/2019/Awards) - **Award:** Best Paper. **Area:** General ML & Representation Learning. **Task:** Model Efficiency & Architecture. **Model:** Optimization.
+- [Ordered Neurons: Integrating Tree Structures into Recurrent Neural Networks](https://openreview.net/forum?id=B116qiR5F7) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** RNN.
+- [The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks](https://openreview.net/forum?id=rJl-b3RcF7) - **Award:** Best Paper. **Area:** General ML & Representation Learning. **Task:** Model Efficiency & Architecture. **Model:** Optimization.
 #### 2018
 
-- [Continuous Adaptation via Meta-Learning in Nonstationary and Competitive Environments](https://iclr.cc/Conferences/2018/Awards) - **Award:** Best Paper. **Area:** General ML & Representation Learning. **Task:** Meta-Learning & Adaptation. **Model:** Meta-Learning.
-- [On the Convergence of Adam and Beyond](https://iclr.cc/Conferences/2018/Awards) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization.
-- [Spherical CNNs](https://iclr.cc/Conferences/2018/Awards) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** CNN.
+- [Continuous Adaptation via Meta-Learning in Nonstationary and Competitive Environments](https://openreview.net/forum?id=Sk2u1g-0-) - **Award:** Best Paper. **Area:** General ML & Representation Learning. **Task:** Meta-Learning & Adaptation. **Model:** Meta-Learning.
+- [On the Convergence of Adam and Beyond](https://openreview.net/forum?id=ryQu7f-RZ) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization.
+- [Spherical CNNs](https://openreview.net/forum?id=Hkbd5xZRb) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** CNN.
 #### 2017
 
-- [Making Neural Programming Architectures Generalize via Recursion](https://iclr.cc/Conferences/2017/Awards) - **Award:** Best Paper. **Area:** General ML & Representation Learning. **Task:** Reasoning & Knowledge. **Model:** Neural Model.
-- [Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data](https://iclr.cc/Conferences/2017/Awards) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Neural Model / Representation Learning.
-- [Understanding Deep Learning Requires Rethinking Generalization](https://iclr.cc/Conferences/2017/Awards) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
+- [Making Neural Programming Architectures Generalize via Recursion](https://openreview.net/forum?id=BkbY4psgg) - **Award:** Best Paper. **Area:** General ML & Representation Learning. **Task:** Reasoning & Knowledge. **Model:** Neural Model.
+- [Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data](https://openreview.net/forum?id=HkwoSDPgg) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Neural Model / Representation Learning.
+- [Understanding Deep Learning Requires Rethinking Generalization](https://openreview.net/forum?id=Sy8gdB9xx) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
 #### 2016
 
-- [Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding](https://iclr.cc/Conferences/2016/Awards) - **Award:** Best Paper. **Area:** General ML & Representation Learning. **Task:** Model Efficiency & Architecture. **Model:** Optimization.
-- [Neural Programmer-Interpreters](https://iclr.cc/Conferences/2016/Awards) - **Award:** Best Paper. **Area:** General ML & Representation Learning. **Task:** Reasoning & Knowledge. **Model:** RNN / Neural Model.
+- [Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding](https://arxiv.org/abs/1510.00149) - **Award:** Best Paper. **Area:** General ML & Representation Learning. **Task:** Model Efficiency & Architecture. **Model:** Optimization.
+- [Neural Programmer-Interpreters](https://arxiv.org/abs/1511.06279) - **Award:** Best Paper. **Area:** General ML & Representation Learning. **Task:** Reasoning & Knowledge. **Model:** RNN / Neural Model.
 ### ICML
 
 **International Conference on Machine Learning** · [conference](https://icml.cc/)
@@ -621,12 +621,12 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [To Grok Grokking: Provable Grokking in Ridge Regression](https://proceedings.mlr.press/v306/xu26bd.html) - **Award:** Outstanding Paper Honorable Mention. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization / Theory / Analysis.
 #### 2025
 
-- [CollabLLM: From Passive Responders to Active Collaborators](https://icml.cc/Conferences/2025/Awards) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** LLM / Transformer.
-- [Conformal Prediction as Bayesian Quadrature](https://icml.cc/Conferences/2025/Awards) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
-- [Roll the dice & look before you leap: Going beyond the creative limits of next-token prediction](https://icml.cc/Conferences/2025/Awards) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** Autoregressive / LLM.
-- [Score Matching with Missing Data](https://icml.cc/Conferences/2025/Awards) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Diffusion / Probabilistic / Bayesian.
-- [The Value of Prediction in Identifying the Worst-Off](https://icml.cc/Conferences/2025/Awards) - **Award:** Outstanding Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Theory / Analysis.
-- [Train for the Worst, Plan for the Best: Understanding Token Ordering in Masked Diffusions](https://icml.cc/Conferences/2025/Awards) - **Award:** Outstanding Paper. **Area:** General ML & Representation Learning. **Task:** Generative Modeling. **Model:** Diffusion / Autoregressive.
+- [CollabLLM: From Passive Responders to Active Collaborators](https://proceedings.mlr.press/v267/wu25i.html) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** LLM / Transformer.
+- [Conformal Prediction as Bayesian Quadrature](https://proceedings.mlr.press/v267/snell25a.html) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
+- [Roll the dice & look before you leap: Going beyond the creative limits of next-token prediction](https://proceedings.mlr.press/v267/nagarajan25a.html) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** Autoregressive / LLM.
+- [Score Matching with Missing Data](https://proceedings.mlr.press/v267/givens25a.html) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Diffusion / Probabilistic / Bayesian.
+- [The Value of Prediction in Identifying the Worst-Off](https://proceedings.mlr.press/v267/fischer-abaigar25a.html) - **Award:** Outstanding Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Theory / Analysis.
+- [Train for the Worst, Plan for the Best: Understanding Token Ordering in Masked Diffusions](https://proceedings.mlr.press/v267/kim25ah.html) - **Award:** Outstanding Paper. **Area:** General ML & Representation Learning. **Task:** Generative Modeling. **Model:** Diffusion / Autoregressive.
 #### 2024
 
 - [Debating with More Persuasive LLMs Leads to More Truthful Answers](https://proceedings.mlr.press/v235/khan24a.html) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** LLM / Transformer.
@@ -681,22 +681,22 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Rates of Convergence for Sparse Variational Gaussian Process Regression](https://proceedings.mlr.press/v97/burt19a.html) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian / Theory / Analysis.
 #### 2018
 
-- [Delayed Impact of Fair Machine Learning](https://icml.cc/Conferences/2018/Awards) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Theory / Analysis.
-- [Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples](https://icml.cc/Conferences/2018/Awards) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Robustness & Domain Adaptation. **Model:** Optimization / Theory / Analysis.
-- [Fairness Without Demographics in Repeated Loss Minimization.](https://icml.cc/Conferences/2018/Awards) - **Award:** Best Paper Runner Up. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Optimization.
-- [Near Optimal Frequent Directions for Sketching Dense and Sparse Matrices.](https://icml.cc/Conferences/2018/Awards) - **Award:** Best Paper Runner Up. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization.
-- [The Mechanics of n-Player Differentiable Games.](https://icml.cc/Conferences/2018/Awards) - **Award:** Best Paper Runner Up. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** Theory / Analysis.
+- [Delayed Impact of Fair Machine Learning](https://proceedings.mlr.press/v80/liu18c.html) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Theory / Analysis.
+- [Obfuscated Gradients Give a False Sense of Security: Circumventing Defenses to Adversarial Examples](https://proceedings.mlr.press/v80/athalye18a.html) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Robustness & Domain Adaptation. **Model:** Optimization / Theory / Analysis.
+- [Fairness Without Demographics in Repeated Loss Minimization](https://proceedings.mlr.press/v80/hashimoto18a.html) - **Award:** Best Paper Runner Up. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Optimization.
+- [Near Optimal Frequent Directions for Sketching Dense and Sparse Matrices](https://proceedings.mlr.press/v80/huang18a.html) - **Award:** Best Paper Runner Up. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization.
+- [The Mechanics of n-Player Differentiable Games](https://proceedings.mlr.press/v80/balduzzi18a.html) - **Award:** Best Paper Runner Up. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** Theory / Analysis.
 #### 2017
 
-- [Understanding Black-box Predictions via Influence Functions](https://icml.cc/Conferences/2017/Awards) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Interpretability & Explainability. **Model:** Optimization.
-- [A Unified Maximum Likelihood Approach for Estimating Symmetric Properties of Discrete Distributions.](https://icml.cc/Conferences/2017/Awards) - **Award:** Best Paper Honorable Mention. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
-- [Lost Relatives of the Gumbel Trick.](https://icml.cc/Conferences/2017/Awards) - **Award:** Best Paper Honorable Mention. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
-- [Modular Multitask Reinforcement Learning with Policy Sketches.](https://icml.cc/Conferences/2017/Awards) - **Award:** Best Paper Honorable Mention. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
+- [Understanding Black-box Predictions via Influence Functions](https://proceedings.mlr.press/v70/koh17a.html) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Interpretability & Explainability. **Model:** Optimization.
+- [A Unified Maximum Likelihood Approach for Estimating Symmetric Properties of Discrete Distributions](https://proceedings.mlr.press/v70/acharya17a.html) - **Award:** Best Paper Honorable Mention. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
+- [Lost Relatives of the Gumbel Trick](https://proceedings.mlr.press/v70/balog17a.html) - **Award:** Best Paper Honorable Mention. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
+- [Modular Multitask Reinforcement Learning with Policy Sketches](https://proceedings.mlr.press/v70/andreas17a.html) - **Award:** Best Paper Honorable Mention. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
 #### 2016
 
-- [Dueling Network Architectures for Deep Reinforcement Learning](https://icml.cc/Conferences/2016/Awards) - **Award:** Best Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
-- [Ensuring Rapid Mixing and Low Bias for Asynchronous Gibbs Sampling](https://icml.cc/Conferences/2016/Awards) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
-- [Pixel Recurrent Neural Networks](https://icml.cc/Conferences/2016/Awards) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** Image & Video Generation. **Model:** Autoregressive / RNN.
+- [Dueling Network Architectures for Deep Reinforcement Learning](https://proceedings.mlr.press/v48/wangf16.html) - **Award:** Best Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
+- [Ensuring Rapid Mixing and Low Bias for Asynchronous Gibbs Sampling](https://proceedings.mlr.press/v48/sa16.html) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
+- [Pixel Recurrent Neural Networks](https://proceedings.mlr.press/v48/oord16.html) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** Image & Video Generation. **Model:** Autoregressive / RNN.
 ### NAACL
 
 **Annual Conference of the Nations of the Americas Chapter of the ACL** · [conference](https://naacl.org/)
@@ -759,12 +759,12 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Why Diffusion Models Don’t Memorize: The Role of Implicit Dynamical Regularization in Training](https://proceedings.neurips.cc/paper_files/paper/2025/hash/ceb7f3cc876a6dcb15130a645b5a4507-Abstract-Conference.html) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Generative Modeling. **Model:** Diffusion / Theory / Analysis.
 #### 2024
 
-- [Stochastic Taylor Derivative Estimator: Efficient amortization for arbitrary differential operators](https://neurips.cc/Conferences/2024/Awards) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
-- [Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction](https://neurips.cc/Conferences/2024/Awards) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** Image & Video Generation. **Model:** Autoregressive / Transformer.
+- [Stochastic Taylor Derivative Estimator: Efficient amortization for arbitrary differential operators](https://proceedings.neurips.cc/paper_files/paper/2024/hash/dd2eb5250696753ea37141bbd89bb569-Abstract-Conference.html) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
+- [Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction](https://proceedings.neurips.cc/paper_files/paper/2024/hash/9a24e284b187f662681440ba15c416fb-Abstract-Conference.html) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** Image & Video Generation. **Model:** Autoregressive / Transformer.
 #### 2023
 
-- [Are Emergent Abilities of Large Language Models a Mirage?](https://neurips.cc/Conferences/2023/Awards) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer.
-- [Privacy Auditing with One (1) Training Run](https://neurips.cc/Conferences/2023/Awards) - **Award:** Outstanding Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Theory / Analysis.
+- [Are Emergent Abilities of Large Language Models a Mirage?](https://proceedings.neurips.cc/paper_files/paper/2023/hash/adc98a266f45005c403b8311ca7e8bd7-Abstract-Conference.html) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer.
+- [Privacy Auditing with One (1) Training Run](https://proceedings.neurips.cc/paper_files/paper/2023/hash/9a6f6e0d6781d1cb8689192408946d73-Abstract-Conference.html) - **Award:** Outstanding Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Theory / Analysis.
 #### 2022
 
 - [A Neural Corpus Indexer for Document Retrieval](https://openreview.net/forum?id=fSfcEYQP_qc) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Retrieval & Search. **Model:** Transformer.
@@ -790,9 +790,9 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [On the Expressivity of Markov Reward](https://proceedings.neurips.cc/paper_files/paper/2021/hash/4079016d940210b4ae9ae7d41c4a2065-Abstract.html) - **Award:** Outstanding Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL / Theory / Analysis.
 #### 2020
 
-- [Improved Guarantees and a Multiple-Descent Curve for Column Subset Selection and the Nyström Method](https://neurips.cc/Conferences/2020/Awards) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization.
-- [Language Models are Few-Shot Learners](https://neurips.cc/Conferences/2020/Awards) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer.
-- [No-Regret Learning Dynamics for Extensive-Form Correlated Equilibrium](https://neurips.cc/Conferences/2020/Awards) - **Award:** Outstanding Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL / Theory / Analysis.
+- [Improved guarantees and a multiple-descent curve for Column Subset Selection and the Nystrom method](https://proceedings.neurips.cc/paper/2020/hash/342c472b95d00421be10e9512b532866-Abstract.html) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization.
+- [Language Models are Few-Shot Learners](https://proceedings.neurips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer.
+- [No-Regret Learning Dynamics for Extensive-Form Correlated Equilibrium](https://proceedings.neurips.cc/paper_files/paper/2020/hash/5763abe87ed1938799203fb6e8650025-Abstract.html) - **Award:** Outstanding Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL / Theory / Analysis.
 #### 2019
 
 - [Distribution-Independent PAC Learning of Halfspaces with Massart Noise](https://proceedings.neurips.cc/paper_files/paper/2019/hash/358aee4cc897452c00244351e4d91f69-Abstract.html) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
@@ -809,13 +809,13 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Optimal Algorithms for Non-Smooth Distributed Optimization in Networks](https://proceedings.neurips.cc/paper_files/paper/2018/hash/8fb21ee7a2207526da55a679f0332de2-Abstract.html) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization / Theory / Analysis.
 #### 2017
 
-- [A Linear-Time Kernel Goodness-of-Fit Test](https://neurips.cc/Conferences/2017/Awards) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Kernel / NTK.
-- [Safe and Nested Subgame Solving for Imperfect-Information Games](https://neurips.cc/Conferences/2017/Awards) - **Award:** Best Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
-- [Variance-based Regularization with Convex Objectives](https://neurips.cc/Conferences/2017/Awards) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization / Theory / Analysis.
+- [A Linear-Time Kernel Goodness-of-Fit Test](https://proceedings.neurips.cc/paper/2017/hash/979d472a84804b9f647bc185a877a8b5-Abstract.html) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Kernel / NTK.
+- [Safe and Nested Subgame Solving for Imperfect-Information Games](https://proceedings.neurips.cc/paper_files/paper/2017/hash/7fe1f8abaad094e0b5cb1b01d712f708-Abstract.html) - **Award:** Best Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
+- [Variance-based Regularization with Convex Objectives](https://proceedings.neurips.cc/paper_files/paper/2017/hash/5a142a55461d5fef016acfb927fee0bd-Abstract.html) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization / Theory / Analysis.
 #### 2016
 
-- [Value Iteration Networks](https://neurips.cc/Conferences/2016/Awards) - **Award:** Best Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
-- [Matrix Completion has No Spurious Local Minimum](https://neurips.cc/Conferences/2016/Awards) - **Award:** Best Student Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
+- [Value Iteration Networks](https://proceedings.neurips.cc/paper/2016/hash/c21002f464c5fc5bee3b98ced83963b8-Abstract.html) - **Award:** Best Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
+- [Matrix Completion has No Spurious Local Minimum](https://proceedings.neurips.cc/paper_files/paper/2016/hash/7fb8ceb3bd59c7956b1df66729296a4c-Abstract.html) - **Award:** Best Student Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
 <!--lint enable double-link balanced-punctuation-->
 
 ## Contributing
