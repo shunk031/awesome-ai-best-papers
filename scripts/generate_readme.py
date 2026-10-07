@@ -49,12 +49,17 @@ def award_emoji(row: dict[str, Any]) -> str:
         return "🎓"
     if "honorable mention" in awards or "runner-up" in awards or "runner up" in awards:
         return "🥈"
-    if row["sort_tier"] == TIER_ORDER["primary"] and (
-        "best" in awards or "marr prize" in awards
-    ):
-        return "🏆"
     if "outstanding" in awards or "distinguished" in awards:
         return "⭐"
+    main_best_patterns = (
+        "best paper",
+        "best long paper",
+        "best short paper",
+        "best overall paper",
+        "marr prize",
+    )
+    if any(pattern in awards for pattern in main_best_patterns):
+        return "🏆"
     return "🏅"
 
 
