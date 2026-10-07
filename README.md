@@ -384,16 +384,16 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Total Capture: A 3D Deformation Model for Tracking Faces, Hands, and Bodies](https://openaccess.thecvf.com/content_cvpr_2018/html/Joo_Total_Capture_A_CVPR_2018_paper.html) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Neural Model.
 #### 2017
 
-- [Densely Connected Convolutional Networks](https://www.thecvf.com/?page_id=413) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** CNN.
-- [Learning from Simulated and Unsupervised Images through Adversarial Training](https://www.thecvf.com/?page_id=413) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** Robustness & Domain Adaptation. **Model:** GAN.
-- [Annotating Object Instances with a Polygon-RNN.](https://www.thecvf.com/?page_id=413) - **Award:** Best Paper Honorable Mention. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** RNN.
-- [YOLO9000: Better, Faster, Stronger.](https://www.thecvf.com/?page_id=413) - **Award:** Best Paper Honorable Mention. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** CNN.
-- [Computational Imaging on the Electric Grid.](https://www.thecvf.com/?page_id=413) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Classical / Optimization.
+- [Densely Connected Convolutional Networks](https://openaccess.thecvf.com/content_cvpr_2017/html/Huang_Densely_Connected_Convolutional_CVPR_2017_paper.html) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** CNN.
+- [Learning from Simulated and Unsupervised Images through Adversarial Training](https://openaccess.thecvf.com/content_cvpr_2017/html/Shrivastava_Learning_From_Simulated_CVPR_2017_paper.html) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** Robustness & Domain Adaptation. **Model:** GAN.
+- [Annotating Object Instances With a Polygon-RNN](https://openaccess.thecvf.com/content_cvpr_2017/html/Castrejon_Annotating_Object_Instances_CVPR_2017_paper.html) - **Award:** Best Paper Honorable Mention. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** RNN.
+- [YOLO9000: Better, Faster, Stronger](https://openaccess.thecvf.com/content_cvpr_2017/html/Redmon_YOLO9000_Better_Faster_CVPR_2017_paper.html) - **Award:** Best Paper Honorable Mention. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** CNN.
+- [Computational Imaging on the Electric Grid](https://openaccess.thecvf.com/content_cvpr_2017/html/Sheinin_Computational_Imaging_on_CVPR_2017_paper.html) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Classical / Optimization.
 #### 2016
 
-- [Deep Residual Learning for Image Recognition](https://www.thecvf.com/?page_id=413) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** CNN.
-- [Sublabel-Accurate Relaxation of Nonconvex Energies](https://www.thecvf.com/?page_id=413) - **Award:** Best Paper Honorable Mention. **Area:** Computer Vision. **Task:** Optimization & Generalization. **Model:** Optimization.
-- [Structural-RNN: Deep Learning on Spatio-Temporal Graphs.](https://www.thecvf.com/?page_id=413) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** RNN.
+- [Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** CNN.
+- [Sublabel-Accurate Relaxation of Nonconvex Energies](https://openaccess.thecvf.com/content_cvpr_2016/html/Mollenhoff_Sublabel-Accurate_Relaxation_of_CVPR_2016_paper.html) - **Award:** Best Paper Honorable Mention. **Area:** Computer Vision. **Task:** Optimization & Generalization. **Model:** Optimization.
+- [Structural-RNN: Deep Learning on Spatio-Temporal Graphs](https://openaccess.thecvf.com/content_cvpr_2016/papers/Jain_Structural-RNN_Deep_Learning_CVPR_2016_paper.pdf) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** RNN.
 ### EMNLP
 
 **Conference on Empirical Methods in Natural Language Processing** · [conference](https://aclanthology.org/venues/emnlp/)

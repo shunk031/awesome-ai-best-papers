@@ -263,13 +263,13 @@ CVPR,2018,Deep Learning of Graph Matching,Computer Vision,Graph & Structured Lea
 CVPR,2018,SPLATNet: Sparse Lattice Networks for Point Cloud Processing,Computer Vision,3D Vision & Reconstruction,Neural Model
 CVPR,2018,"CodeSLAM — Learning a Compact, Optimisable Representation for Dense Visual SLAM",Computer Vision,3D Vision & Reconstruction,Neural Model; Representation Learning
 CVPR,2018,Efficient Optimization for Rank-Based Loss Functions,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
-CVPR,2017,Annotating Object Instances with a Polygon-RNN.,Computer Vision,Visual Recognition & Representation,RNN
-CVPR,2017,Computational Imaging on the Electric Grid.,Computer Vision,3D Vision & Reconstruction,Classical / Optimization
+CVPR,2017,Annotating Object Instances With a Polygon-RNN,Computer Vision,Visual Recognition & Representation,RNN
+CVPR,2017,Computational Imaging on the Electric Grid,Computer Vision,3D Vision & Reconstruction,Classical / Optimization
 CVPR,2017,Densely Connected Convolutional Networks,Computer Vision,Visual Recognition & Representation,CNN
 CVPR,2017,Learning from Simulated and Unsupervised Images through Adversarial Training,Computer Vision,Robustness & Domain Adaptation,GAN
-CVPR,2017,"YOLO9000: Better, Faster, Stronger.",Computer Vision,Visual Recognition & Representation,CNN
+CVPR,2017,"YOLO9000: Better, Faster, Stronger",Computer Vision,Visual Recognition & Representation,CNN
 CVPR,2016,Deep Residual Learning for Image Recognition,Computer Vision,Visual Recognition & Representation,CNN
-CVPR,2016,Structural-RNN: Deep Learning on Spatio-Temporal Graphs.,Computer Vision,Visual Recognition & Representation,RNN
+CVPR,2016,Structural-RNN: Deep Learning on Spatio-Temporal Graphs,Computer Vision,Visual Recognition & Representation,RNN
 CVPR,2016,Sublabel-Accurate Relaxation of Nonconvex Energies,Computer Vision,Optimization & Generalization,Optimization
 EMNLP,2025,Infini-gram mini: Exact n-gram Search at the Internet Scale with FM-Index,NLP & Language,Retrieval & Search,Classical / Optimization
 EMNLP,2024,"An image speaks a thousand words, but can everyone listen? On image transcreation for cultural relevance",Multimodal & Embodied AI,Multimodal & Vision-Language,VLM
