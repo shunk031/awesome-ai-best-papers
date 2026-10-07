@@ -1,0 +1,65 @@
+name: One-off CVPR 2020 canonical URL and title audit
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-cvpr-2020-urls.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync
+      - name: Fill CVPR 2020 canonical URLs and normalize one title
+        run: |
+          uv run python - <<'PY'
+          import csv
+          from pathlib import Path
+          import subprocess, sys
+
+          papers_path=Path('data/papers.csv')
+          tax_path=Path('data/paper_taxonomy.csv')
+          old='Unsupervised Learning of Probably Symmetric Deformable 3D Objects from Images in the Wild'
+          new='Unsupervised Learning of Probably Symmetric Deformable 3D Objects From Images in the Wild'
+          urls={
+              new:'https://openaccess.thecvf.com/content_CVPR_2020/papers/Wu_Unsupervised_Learning_of_Probably_Symmetric_Deformable_3D_Objects_From_Images_in_CVPR_2020_paper.pdf',
+              'BSP-Net: Generating Compact Meshes via Binary Space Partitioning':'https://openaccess.thecvf.com/content_CVPR_2020/html/Chen_BSP-Net_Generating_Compact_Meshes_via_Binary_Space_Partitioning_CVPR_2020_paper.html',
+              'DeepCap: Monocular Human Performance Capture Using Weak Supervision':'https://openaccess.thecvf.com/content_CVPR_2020/papers/Habermann_DeepCap_Monocular_Human_Performance_Capture_Using_Weak_Supervision_CVPR_2020_paper.pdf',
+          }
+          def read(p):
+              with p.open(newline='',encoding='utf-8') as f:return list(csv.DictReader(f))
+          papers=read(papers_path); tax=read(tax_path)
+          p=[r for r in papers if r['venue']=='CVPR' and r['year']=='2020' and r['title']==old]
+          t=[r for r in tax if r['venue']=='CVPR' and r['year']=='2020' and r['title']==old]
+          if len(p)!=1 or len(t)!=1:raise SystemExit(f'Correction target mismatch: {len(p)}/{len(t)}')
+          p[0]['title']=new;t[0]['title']=new
+          folded={k.casefold():v for k,v in urls.items()};found=set()
+          for r in papers:
+              if r['venue']!='CVPR' or r['year']!='2020':continue
+              k=r['title'].casefold()
+              if k in folded:
+                  r['paper_url']=folded[k];r['checked_at']='2026-10-07';found.add(k)
+          if found!=set(folded):raise SystemExit(f'Missing targets: {sorted(set(folded)-found)}')
+          with papers_path.open('w',newline='',encoding='utf-8') as f:
+              w=csv.DictWriter(f,fieldnames=['venue','year','award','tier','title','paper_url','source_url','checked_at','notes'],lineterminator='\n');w.writeheader();w.writerows(papers)
+          with tax_path.open('w',newline='',encoding='utf-8') as f:
+              w=csv.DictWriter(f,fieldnames=['venue','year','title','area','task','model_family'],lineterminator='\n');w.writeheader();w.writerows(tax)
+          subprocess.run([sys.executable,'scripts/validate_catalog.py'],check=True)
+          subprocess.run([sys.executable,'scripts/generate_readme.py'],check=True)
+          subprocess.run([sys.executable,'scripts/generate_readme.py','--check'],check=True)
+          PY
+      - name: Commit canonical URLs and title correction
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers.csv data/paper_taxonomy.csv README.md
+          if git diff --cached --quiet; then echo 'No changes to commit'; else git commit -m 'Audit CVPR 2020 paper links and title'; git push; fi
