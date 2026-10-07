@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate README.md from structured award data and a Jinja template."""
+"""Generate README.md from structured venue-scoped award data and a Jinja template."""
 
 from __future__ import annotations
 
@@ -16,8 +16,7 @@ from jinja2 import Environment, FileSystemLoader, StrictUndefined
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / "data"
 VENUES_PATH = DATA_DIR / "venues.csv"
-PAPERS_PATH = DATA_DIR / "papers.csv"
-TAXONOMY_PATH = DATA_DIR / "paper_taxonomy.csv"
+PAPERS_DIR = DATA_DIR / "papers"
 TEMPLATE_DIR = ROOT / "templates"
 README_PATH = ROOT / "README.md"
 TIER_ORDER = {"primary": 0, "secondary": 1, "special": 2}
@@ -26,6 +25,16 @@ TIER_ORDER = {"primary": 0, "secondary": 1, "special": 2}
 def load_csv(path: Path) -> list[dict[str, str]]:
     with path.open(newline="", encoding="utf-8") as file:
         return list(csv.DictReader(file))
+
+
+def load_papers() -> list[dict[str, str]]:
+    paths = sorted(PAPERS_DIR.glob("*.csv"))
+    if not paths:
+        raise ValueError(f"No venue paper CSVs found in {PAPERS_DIR}")
+    rows: list[dict[str, str]] = []
+    for path in paths:
+        rows.extend(load_csv(path))
+    return rows
 
 
 def anchor(value: str) -> str:
@@ -73,26 +82,14 @@ def paper_entry(row: dict[str, Any]) -> str:
 
 def generate() -> str:
     venues = load_csv(VENUES_PATH)
-    award_rows = load_csv(PAPERS_PATH)
-    taxonomy_rows = load_csv(TAXONOMY_PATH)
-    taxonomy = {
-        (row["venue"], row["year"], row["title"].casefold()): row
-        for row in taxonomy_rows
-    }
+    award_rows = load_papers()
 
-    enriched_awards: list[dict[str, str]] = []
     grouped: dict[tuple[str, str, str], dict[str, Any]] = {}
     for row in award_rows:
         key = (row["venue"], row["year"], row["title"].casefold())
-        tag = taxonomy.get(key)
-        if tag is None:
-            raise ValueError(f"Missing taxonomy for {key}")
-        enriched = {**row, **tag}
-        enriched_awards.append(enriched)
-
         if key not in grouped:
             grouped[key] = {
-                **enriched,
+                **row,
                 "awards": [],
                 "_award_sort": [],
                 "notes": row["notes"],
@@ -139,7 +136,7 @@ def generate() -> str:
     years = [int(row["year"]) for row in award_rows]
     min_year, max_year = min(years), max(years)
     recent_start = max_year - 2
-    recent = [row for row in enriched_awards if int(row["year"]) >= recent_start]
+    recent = [row for row in award_rows if int(row["year"]) >= recent_start]
 
     recent_areas = count_rows(Counter(row["area"] for row in recent))
     recent_families = count_rows(family_counts(recent))
@@ -150,7 +147,7 @@ def generate() -> str:
             "award_records": len(award_rows),
             "papers": len(unique_papers),
             "venues": len(venues),
-            "annotated_papers": len(taxonomy_rows),
+            "annotated_papers": len(unique_papers),
             "min_year": min_year,
             "max_year": max_year,
         },
