@@ -2,7 +2,7 @@
 
 [![Catalog Check](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml/badge.svg)](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml)
 
-![Award records](https://img.shields.io/badge/award%20records-569-informational)
+![Award records](https://img.shields.io/badge/award%20records-567-informational)
 ![Venues](https://img.shields.io/badge/venues-9-informational)
 ![Coverage](https://img.shields.io/badge/coverage-2016%E2%80%932026-informational)
 
@@ -24,7 +24,7 @@ The v2 catalog prioritizes official conference sources. The complete 2016–2018
 
 ## Research landscape
 
-The tables below summarize the **132 award records from 2024–2026 currently in this catalog**. They describe this curated award set, not publication volume or the field as a whole.
+The tables below summarize the **130 award records from 2024–2026 currently in this catalog**. They describe this curated award set, not publication volume or the field as a whole.
 
 ### Research areas
 
@@ -33,7 +33,7 @@ The tables below summarize the **132 award records from 2024–2026 currently in
 | NLP & Language | 34 |
 | Computer Vision | 30 |
 | ML Theory & Optimization | 17 |
-| Responsible AI & Privacy | 15 |
+| Responsible AI & Privacy | 13 |
 | Multimodal & Embodied AI | 10 |
 | Scientific ML & Applications | 8 |
 | General ML & Representation Learning | 8 |
@@ -47,7 +47,7 @@ The tables below summarize the **132 award records from 2024–2026 currently in
 | --- | ---: |
 | Transformer | 57 |
 | LLM | 41 |
-| Theory / Analysis | 28 |
+| Theory / Analysis | 26 |
 | Neural Model | 20 |
 | Diffusion | 14 |
 | Optimization | 12 |
@@ -67,9 +67,9 @@ The tables below summarize the **132 award records from 2024–2026 currently in
 
 | Label | Award records |
 | --- | ---: |
-| Safety, Fairness & Privacy | 14 |
 | 3D Vision & Reconstruction | 14 |
 | LLM Analysis & Evaluation | 13 |
+| Safety, Fairness & Privacy | 12 |
 | Optimization & Generalization | 11 |
 | Image & Video Generation | 8 |
 | Model Efficiency & Architecture | 7 |
@@ -83,7 +83,7 @@ The tables below summarize the **132 award records from 2024–2026 currently in
 ### Reading the recent slice
 
 - **Language-model work is the clearest cluster:** `NLP & Language` accounts for 34 recent award records, while `LLM` and `Transformer` appear in 41 and 57 records respectively.
-- **Evaluation, safety, and theory are prominent:** `LLM Analysis & Evaluation` has 13 records, `Safety, Fairness & Privacy` has 14, and `Optimization & Generalization` has 11.
+- **Evaluation, safety, and theory are prominent:** `LLM Analysis & Evaluation` has 13 records, `Safety, Fairness & Privacy` has 12, and `Optimization & Generalization` has 11.
 - **Generative and multimodal work remains broad rather than single-model:** `Diffusion` appears in 14 records, alongside `VLM` in 9, with recurring awards in image/video generation, 3D reconstruction, and multimodal vision-language tasks.
 - **RL and structured reasoning remain active:** `Reinforcement Learning & Planning` has 6 recent records, while graph / structured and neuro-symbolic work continues to appear across AAAI and ICLR.
 
@@ -99,7 +99,7 @@ These are descriptive signals from the curated award set; they should not be int
 | [EMNLP](https://aclanthology.org/venues/emnlp/) | Natural Language Processing | 2016–2025 | 65 | [source](https://www.aclweb.org/aclwiki/Best_paper_awards) |
 | [ICCV](https://iccv.thecvf.com/) | Computer Vision | 2017, 2019, 2021, 2023, 2025 | 23 | [source](https://www.thecvf.com/?page_id=413) |
 | [ICLR](https://iclr.cc/) | Machine Learning | 2016–2019, 2021–2026 | 62 | [source](https://blog.iclr.cc/) |
-| [ICML](https://icml.cc/) | Machine Learning | 2016–2026 | 67 | [source](https://blog.icml.cc/) |
+| [ICML](https://icml.cc/) | Machine Learning | 2016–2026 | 65 | [source](https://blog.icml.cc/) |
 | [NAACL](https://naacl.org/) | Natural Language Processing | 2018–2019, 2021–2022, 2024–2025 | 35 | [source](https://naacl.org/policies/best-paper.html) |
 | [NeurIPS](https://neurips.cc/) | Machine Learning | 2016–2025 | 45 | [source](https://blog.neurips.cc/) |
 

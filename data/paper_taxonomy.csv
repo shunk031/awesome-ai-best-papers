@@ -438,8 +438,6 @@ ICML,2024,Debating with More Persuasive LLMs Leads to More Truthful Answers,Resp
 ICML,2024,Discrete Diffusion Modeling by Estimating the Ratios of the Data Distribution,General ML & Representation Learning,Generative Modeling,Diffusion
 ICML,2024,Genie: Generative Interactive Environments,Multimodal & Embodied AI,Generative Modeling,Autoregressive; Transformer; Neural Model
 ICML,2024,"Information Complexity of Stochastic Convex Optimization: Applications to Generalization, Memorization, and Tracing",ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
-ICML,2024,Position: Considerations for Differentially Private Learning with Large-Scale Public Pretraining,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
-ICML,2024,"Position: Measure Dataset Diversity, Don’t Just Claim It",Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
 ICML,2024,Probabilistic Inference in Language Models via Twisted Sequential Monte Carlo,NLP & Language,Probabilistic Inference & Sampling,LLM; Probabilistic / Bayesian
 ICML,2024,Scaling Rectified Flow Transformers for High-Resolution Image Synthesis,Computer Vision,Image & Video Generation,Diffusion; Transformer
 ICML,2024,Stealing part of a production language model,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
