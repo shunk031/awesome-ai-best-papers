@@ -21,117 +21,94 @@ jobs:
       - name: Set up uv
         uses: astral-sh/setup-uv@v6
 
-      - name: Resolve missing ICLR URLs from OpenReview
+      - name: Apply verified ICLR paper URLs
         run: |
           python - <<'PY'
           import csv
-          import json
-          import re
-          import time
-          import unicodedata
-          import urllib.parse
-          import urllib.request
           from pathlib import Path
 
           PAPERS = Path('data/papers.csv')
           TAXONOMY = Path('data/paper_taxonomy.csv')
-          TITLE_FIXES = {
-              'AlphaEdit: Null-Space Constrained Model Editing for Language Models':
-                  'AlphaEdit: Null-Space Constrained Knowledge Editing for Language Models',
+
+          # Verified against ICLR award/proceedings pages and OpenReview records.
+          # ICLR 2016 conference-track papers predate the current OpenReview proceedings
+          # convention, so their canonical arXiv records are used as stable fallbacks.
+          URLS = {
+              (2025, 'AlphaEdit: Null-Space Constrained Model Editing for Language Models'):
+                  ('AlphaEdit: Null-Space Constrained Knowledge Editing for Language Models', 'https://openreview.net/forum?id=HvSytvg3Jh'),
+              (2025, 'Learning Dynamics of LLM Finetuning'):
+                  ('Learning Dynamics of LLM Finetuning', 'https://openreview.net/forum?id=tPNHOoZFl9'),
+              (2025, 'Safety Alignment Should be Made More Than Just a Few Tokens Deep'):
+                  ('Safety Alignment Should be Made More Than Just a Few Tokens Deep', 'https://openreview.net/forum?id=6Mxhg9PtDE'),
+              (2024, 'Generalization in diffusion models arises from geometry-adaptive harmonic representations'):
+                  ('Generalization in diffusion models arises from geometry-adaptive harmonic representations', 'https://openreview.net/forum?id=ANvmVS2Yr0'),
+              (2024, 'Learning Interactive Real-World Simulators'):
+                  ('Learning Interactive Real-World Simulators', 'https://openreview.net/forum?id=sFyTZEqmUY'),
+              (2024, 'Never Train from Scratch: Fair Comparison of Long-Sequence Models Requires Data-Driven Priors'):
+                  ('Never Train from Scratch: Fair Comparison of Long-Sequence Models Requires Data-Driven Priors', 'https://openreview.net/forum?id=PdaPky8MUn'),
+              (2024, 'Protein Discovery with Discrete Walk-Jump Sampling'):
+                  ('Protein Discovery with Discrete Walk-Jump Sampling', 'https://openreview.net/forum?id=zMPHKOmQNb'),
+              (2024, 'Vision Transformers Need Registers'):
+                  ('Vision Transformers Need Registers', 'https://openreview.net/forum?id=2dnO3LLiJ1'),
+              (2023, 'DreamFusion: Text-to-3D using 2D Diffusion'):
+                  ('DreamFusion: Text-to-3D using 2D Diffusion', 'https://openreview.net/forum?id=FjNys5c7VyY'),
+              (2023, 'Emergence of Maps in the Memories of Blind Navigation Agents'):
+                  ('Emergence of Maps in the Memories of Blind Navigation Agents', 'https://openreview.net/forum?id=lTt4KjHSsyl'),
+              (2023, 'Rethinking the Expressive Power of GNNs via Graph Biconnectivity'):
+                  ('Rethinking the Expressive Power of GNNs via Graph Biconnectivity', 'https://openreview.net/forum?id=r9hNv76KoT3'),
+              (2023, 'Universal Few-shot Learning of Dense Prediction Tasks with Visual Token Matching'):
+                  ('Universal Few-shot Learning of Dense Prediction Tasks with Visual Token Matching', 'https://openreview.net/forum?id=88nT0j5jAn'),
+              (2022, 'Analytic-DPM: an Analytic Estimate of the Optimal Reverse Variance in Diffusion Probabilistic Models'):
+                  ('Analytic-DPM: an Analytic Estimate of the Optimal Reverse Variance in Diffusion Probabilistic Models', 'https://openreview.net/forum?id=0xiJLKH-ufZ'),
+              (2022, 'Bootstrapped Meta-Learning'):
+                  ('Bootstrapped Meta-Learning', 'https://openreview.net/forum?id=b-ny3x071E5'),
+              (2022, 'Comparing Distributions by Measuring Differences that Affect Decision Making'):
+                  ('Comparing Distributions by Measuring Differences that Affect Decision Making', 'https://openreview.net/forum?id=KB5onONJIAU'),
+              (2022, 'Expressiveness and Approximation Properties of Graph Neural Networks'):
+                  ('Expressiveness and Approximation Properties of Graph Neural Networks', 'https://openreview.net/forum?id=wIzUeM3TAU'),
+              (2022, 'Hyperparameter Tuning with Renyi Differential Privacy'):
+                  ('Hyperparameter Tuning with Renyi Differential Privacy', 'https://openreview.net/forum?id=-70L8lpp9DF'),
+              (2022, 'Learning Strides in Convolutional Neural Networks'):
+                  ('Learning Strides in Convolutional Neural Networks', 'https://openreview.net/forum?id=M752z9FKJP'),
+              (2022, 'Neural Collapse Under MSE Loss: Proximity to and Dynamics on the Central Path'):
+                  ('Neural Collapse Under MSE Loss: Proximity to and Dynamics on the Central Path', 'https://openreview.net/forum?id=w1UbdvWH_R3'),
+              (2021, 'Beyond Fully-Connected Layers with Quaternions: Parameterization of Hypercomplex Multiplications with 1/n Parameters'):
+                  ('Beyond Fully-Connected Layers with Quaternions: Parameterization of Hypercomplex Multiplications with 1/n Parameters', 'https://openreview.net/forum?id=hfqKk2GM81'),
+              (2021, 'Complex Query Answering with Neural Link Predictors'):
+                  ('Complex Query Answering with Neural Link Predictors', 'https://openreview.net/forum?id=Mos9F9kDwkz'),
+              (2021, 'EigenGame: PCA as a Nash Equilibrium'):
+                  ('EigenGame: PCA as a Nash Equilibrium', 'https://openreview.net/forum?id=NzTU59SYbNq'),
+              (2021, 'Learning Mesh-Based Simulation with Graph Networks'):
+                  ('Learning Mesh-Based Simulation with Graph Networks', 'https://openreview.net/forum?id=roNqYL0_XP'),
+              (2021, 'Neural Synthesis of Binaural Speech from Mono Audio'):
+                  ('Neural Synthesis of Binaural Speech from Mono Audio', 'https://openreview.net/forum?id=uAX8q61EVRu'),
+              (2021, 'Optimal Rates for Averaged Stochastic Gradient Descent under Neural Tangent Kernel Regime'):
+                  ('Optimal Rates for Averaged Stochastic Gradient Descent under Neural Tangent Kernel Regime', 'https://openreview.net/forum?id=PULSD5qI2N1'),
+              (2021, 'Rethinking Architecture Selection in Differentiable NAS'):
+                  ('Rethinking Architecture Selection in Differentiable NAS', 'https://openreview.net/forum?id=PKubaeJkw3'),
+              (2021, 'Score-Based Generative Modeling through Stochastic Differential Equations'):
+                  ('Score-Based Generative Modeling through Stochastic Differential Equations', 'https://openreview.net/forum?id=PxTIG12RRHS'),
+              (2019, 'Ordered Neurons: Integrating Tree Structures into Recurrent Neural Networks'):
+                  ('Ordered Neurons: Integrating Tree Structures into Recurrent Neural Networks', 'https://openreview.net/forum?id=B116qiR5F7'),
+              (2019, 'The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks'):
+                  ('The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks', 'https://openreview.net/forum?id=rJl-b3RcF7'),
+              (2018, 'Continuous Adaptation via Meta-Learning in Nonstationary and Competitive Environments'):
+                  ('Continuous Adaptation via Meta-Learning in Nonstationary and Competitive Environments', 'https://openreview.net/forum?id=Sk2u1g-0-'),
+              (2018, 'On the Convergence of Adam and Beyond'):
+                  ('On the Convergence of Adam and Beyond', 'https://openreview.net/forum?id=ryQu7f-RZ'),
+              (2018, 'Spherical CNNs'):
+                  ('Spherical CNNs', 'https://openreview.net/forum?id=Hkbd5xZRb'),
+              (2017, 'Making Neural Programming Architectures Generalize via Recursion'):
+                  ('Making Neural Programming Architectures Generalize via Recursion', 'https://openreview.net/forum?id=BkbY4psgg'),
+              (2017, 'Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data'):
+                  ('Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data', 'https://openreview.net/forum?id=HkwoSDPgg'),
+              (2017, 'Understanding Deep Learning Requires Rethinking Generalization'):
+                  ('Understanding Deep Learning Requires Rethinking Generalization', 'https://openreview.net/forum?id=Sy8gdB9xx'),
+              (2016, 'Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding'):
+                  ('Deep Compression: Compressing Deep Neural Networks with Pruning, Trained Quantization and Huffman Coding', 'https://arxiv.org/abs/1510.00149'),
+              (2016, 'Neural Programmer-Interpreters'):
+                  ('Neural Programmer-Interpreters', 'https://arxiv.org/abs/1511.06279'),
           }
-
-          def norm(s):
-              s = unicodedata.normalize('NFKC', s or '')
-              s = s.replace('–', '-').replace('—', '-').replace('’', "'").replace('“', '"').replace('”', '"')
-              return re.sub(r'\s+', ' ', s).strip().casefold()
-
-          def cval(content, key):
-              v = (content or {}).get(key)
-              if isinstance(v, dict):
-                  return v.get('value')
-              return v
-
-          def fetch_json(base, params):
-              url = base + '?' + urllib.parse.urlencode(params)
-              req = urllib.request.Request(url, headers={'User-Agent': 'awesome-ai-best-papers-url-audit/1.0'})
-              last = None
-              for attempt in range(3):
-                  try:
-                      with urllib.request.urlopen(req, timeout=30) as r:
-                          return json.load(r)
-                  except Exception as e:
-                      last = e
-                      time.sleep(1 + attempt)
-              raise RuntimeError(f'OpenReview request failed: {url}: {last}')
-
-          def candidate_notes(title):
-              out = []
-              seen = set()
-              endpoints = [
-                  'https://api2.openreview.net/notes',
-                  'https://api.openreview.net/notes',
-              ]
-              for endpoint in endpoints:
-                  try:
-                      payload = fetch_json(endpoint, {'content.title': title, 'limit': 100})
-                  except Exception as e:
-                      print(f'WARN {endpoint}: {e}')
-                      continue
-                  for note in payload.get('notes', []):
-                      note_id = note.get('id')
-                      if note_id and note_id not in seen:
-                          seen.add(note_id)
-                          out.append(note)
-              return out
-
-          def is_iclr_year(note, year):
-              content = note.get('content') or {}
-              bits = []
-              for key in ('venue', 'venueid'):
-                  v = cval(content, key)
-                  if isinstance(v, str):
-                      bits.append(v)
-              inv = note.get('invitation')
-              if isinstance(inv, str):
-                  bits.append(inv)
-              invs = note.get('invitations')
-              if isinstance(invs, list):
-                  bits.extend(str(x) for x in invs)
-              hay = ' | '.join(bits)
-              return (
-                  f'ICLR.cc/{year}/Conference' in hay
-                  or (f'ICLR {year}' in hay and 'Conference' in hay)
-                  or (str(year) in hay and 'ICLR' in hay)
-              )
-
-          def resolve(title, year):
-              candidates = []
-              for note in candidate_notes(title):
-                  note_title = cval(note.get('content') or {}, 'title')
-                  if not isinstance(note_title, str) or norm(note_title) != norm(title):
-                      continue
-                  forum = note.get('forum') or note.get('id')
-                  if not forum:
-                      continue
-                  # Prefer actual forum/submission notes and the requested ICLR year.
-                  score = 0
-                  if note.get('id') == forum:
-                      score += 10
-                  if is_iclr_year(note, year):
-                      score += 100
-                  candidates.append((score, forum, note_title, note))
-
-              if not candidates:
-                  raise RuntimeError(f'No exact OpenReview candidate for ICLR {year}: {title}')
-              candidates.sort(key=lambda x: x[0], reverse=True)
-              best_score = candidates[0][0]
-              best = {(forum, note_title) for score, forum, note_title, _ in candidates if score == best_score}
-              if len(best) != 1:
-                  raise RuntimeError(f'Ambiguous OpenReview candidates for ICLR {year}: {title}: {sorted(best)}')
-              forum, canonical_title = next(iter(best))
-              if best_score < 100:
-                  raise RuntimeError(f'Could not verify ICLR year for {year}: {title}; candidate={forum}')
-              return canonical_title, f'https://openreview.net/forum?id={forum}'
 
           with PAPERS.open(newline='', encoding='utf-8') as f:
               rows = list(csv.DictReader(f))
@@ -142,22 +119,26 @@ jobs:
           if len(targets) != 37:
               raise RuntimeError(f'Expected 37 missing ICLR URLs on audited base, found {len(targets)}')
 
-          resolved = {}
-          for r in targets:
-              old_title = r['title']
-              query_title = TITLE_FIXES.get(old_title, old_title)
-              canonical_title, url = resolve(query_title, int(r['year']))
-              if norm(canonical_title) != norm(query_title):
-                  raise RuntimeError(f'Canonical title mismatch: {query_title!r} vs {canonical_title!r}')
-              resolved[(r['venue'], r['year'], old_title)] = (query_title, url)
-              print(f"{r['year']} | {old_title} -> {url}")
+          observed = {(int(r['year']), r['title']) for r in targets}
+          expected = set(URLS)
+          if observed != expected:
+              missing_mapping = sorted(observed - expected)
+              stale_mapping = sorted(expected - observed)
+              raise RuntimeError(f'ICLR mapping mismatch; missing={missing_mapping}; stale={stale_mapping}')
 
-          for r in rows:
-              key = (r['venue'], r['year'], r['title'])
-              if key in resolved:
-                  new_title, url = resolved[key]
-                  r['title'] = new_title
-                  r['paper_url'] = url
+          title_changes = {}
+          for r in targets:
+              key = (int(r['year']), r['title'])
+              new_title, url = URLS[key]
+              if not url.startswith('https://'):
+                  raise RuntimeError(f'Non-HTTPS URL for {key}: {url}')
+              if int(r['year']) >= 2017 and not url.startswith('https://openreview.net/forum?id='):
+                  raise RuntimeError(f'Expected OpenReview URL for {key}: {url}')
+              if new_title != r['title']:
+                  title_changes[(r['venue'], r['year'], r['title'])] = new_title
+              r['title'] = new_title
+              r['paper_url'] = url
+              print(f"{r['year']} | {r['title']} -> {url}")
 
           with PAPERS.open('w', newline='', encoding='utf-8') as f:
               w = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
@@ -169,11 +150,12 @@ jobs:
               tax_fields = list(tax_rows[0].keys())
           changed_tax = 0
           for r in tax_rows:
-              if r['venue'] == 'ICLR' and r['year'] == '2025' and r['title'] in TITLE_FIXES:
-                  r['title'] = TITLE_FIXES[r['title']]
+              key = (r['venue'], r['year'], r['title'])
+              if key in title_changes:
+                  r['title'] = title_changes[key]
                   changed_tax += 1
-          if changed_tax != 1:
-              raise RuntimeError(f'Expected exactly one AlphaEdit taxonomy title update, got {changed_tax}')
+          if changed_tax != len(title_changes) or changed_tax != 1:
+              raise RuntimeError(f'Expected exactly one taxonomy title update, got {changed_tax}')
           with TAXONOMY.open('w', newline='', encoding='utf-8') as f:
               w = csv.DictWriter(f, fieldnames=tax_fields, lineterminator='\n')
               w.writeheader()
