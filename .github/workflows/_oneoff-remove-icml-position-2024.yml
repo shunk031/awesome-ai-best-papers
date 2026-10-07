@@ -1,0 +1,71 @@
+name: One-off remove ICML 2024 position-track awards
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-remove-icml-position-2024.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Remove out-of-scope ICML position-track awards
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          import subprocess, sys
+
+          papers_path = Path('data/papers.csv')
+          taxonomy_path = Path('data/paper_taxonomy.csv')
+          titles = {
+              'Position: Considerations for Differentially Private Learning with Large-Scale Public Pretraining',
+              'Position: Measure Dataset Diversity, Don’t Just Claim It',
+          }
+          folded = {t.casefold() for t in titles}
+
+          def read(path):
+              with path.open(newline='', encoding='utf-8') as f:
+                  return list(csv.DictReader(f))
+          def write(path, rows, fields):
+              with path.open('w', newline='', encoding='utf-8') as f:
+                  w = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
+                  w.writeheader(); w.writerows(rows)
+
+          papers = read(papers_path)
+          tax = read(taxonomy_path)
+          matched = [r for r in papers if r['venue']=='ICML' and r['year']=='2024' and r['title'].casefold() in folded]
+          if len(matched) != 2:
+              raise SystemExit(f'Expected two ICML 2024 position award rows, found {len(matched)}')
+
+          papers = [r for r in papers if not (r['venue']=='ICML' and r['year']=='2024' and r['title'].casefold() in folded)]
+          tax = [r for r in tax if not (r['venue']=='ICML' and r['year']=='2024' and r['title'].casefold() in folded)]
+
+          write(papers_path, papers, ['venue','year','award','tier','title','paper_url','source_url','checked_at','notes'])
+          write(taxonomy_path, tax, ['venue','year','title','area','task','model_family'])
+          subprocess.run([sys.executable, 'scripts/validate_catalog.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py', '--check'], check=True)
+          PY
+      - name: Commit scope cleanup
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers.csv data/paper_taxonomy.csv README.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Remove out-of-scope ICML position paper awards'
+            git push
+          fi
