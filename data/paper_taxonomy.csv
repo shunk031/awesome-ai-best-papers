@@ -217,12 +217,37 @@ ICML,2025,Roll the dice & look before you leap: Going beyond the creative limits
 ICML,2025,Score Matching with Missing Data,ML Theory & Optimization,Probabilistic Inference & Sampling,Diffusion; Probabilistic / Bayesian
 ICML,2025,The Value of Prediction in Identifying the Worst-Off,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
 ICML,2025,"Train for the Worst, Plan for the Best: Understanding Token Ordering in Masked Diffusions",General ML & Representation Learning,Generative Modeling,Diffusion; Autoregressive
+ICML,2024,Debating with More Persuasive LLMs Leads to More Truthful Answers,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
+ICML,2024,Discrete Diffusion Modeling by Estimating the Ratios of the Data Distribution,General ML & Representation Learning,Generative Modeling,Diffusion
+ICML,2024,Genie: Generative Interactive Environments,Multimodal & Embodied AI,Generative Modeling,Autoregressive; Transformer; Neural Model
+ICML,2024,"Information Complexity of Stochastic Convex Optimization: Applications to Generalization, Memorization, and Tracing",ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
+ICML,2024,Position: Considerations for Differentially Private Learning with Large-Scale Public Pretraining,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
+ICML,2024,"Position: Measure Dataset Diversity, Don’t Just Claim It",Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
+ICML,2024,Probabilistic Inference in Language Models via Twisted Sequential Monte Carlo,NLP & Language,Probabilistic Inference & Sampling,LLM; Probabilistic / Bayesian
+ICML,2024,Scaling Rectified Flow Transformers for High-Resolution Image Synthesis,Computer Vision,Image & Video Generation,Diffusion; Transformer
+ICML,2024,Stealing part of a production language model,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
+ICML,2024,VideoPoet: A Large Language Model for Zero-Shot Video Generation,Multimodal & Embodied AI,Image & Video Generation,LLM; Transformer; Autoregressive
 ICML,2023,A Watermark for Large Language Models,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
 ICML,2023,Adapting to game trees in zero-sum imperfect information games,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Search / Planning; Theory / Analysis
 ICML,2023,Bayesian Design Principles for Frequentist Sequential Learning,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian; Theory / Analysis
 ICML,2023,"Generalization on the Unseen, Logic Reasoning and Degree Curriculum",ML Theory & Optimization,Optimization & Generalization,Theory / Analysis
 ICML,2023,Learning-Rate-Free Learning by D-Adaptation,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
 ICML,2023,Self-Repellent Random Walks on General Graphs - Achieving Minimal Sampling Variance via Nonlinear Markov Chains,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian; Theory / Analysis
+ICML,2022,Active fairness auditing,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
+ICML,2022,Adversarially Trained Actor Critic for Offline Reinforcement Learning,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL; Optimization
+ICML,2022,"Bayesian Model Selection, the Marginal Likelihood, and Generalization",ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian; Theory / Analysis
+ICML,2022,Causal Conceptions of Fairness and their Consequences,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
+ICML,2022,Do Differentiable Simulators Give Better Policy Gradients?,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL; Optimization
+ICML,2022,G-Mixup: Graph Data Augmentation for Graph Classification,Graphs & Structured Learning,Graph & Structured Learning,GNN
+ICML,2022,Learning inverse folding from millions of predicted structures,Scientific ML & Applications,Scientific Discovery & Simulation,Transformer
+ICML,2022,Learning Mixtures of Linear Dynamical Systems,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian; Theory / Analysis
+ICML,2022,Minimum Cost Intervention Design for Causal Effect Identification,Scientific ML & Applications,Causal Learning,Optimization; Theory / Analysis
+ICML,2022,Monarch: Expressive Structured Matrices for Efficient and Accurate Training,General ML & Representation Learning,Model Efficiency & Architecture,Transformer; Optimization
+ICML,2022,Privacy for Free: How does Dataset Condensation Help Privacy?,Responsible AI & Privacy,"Safety, Fairness & Privacy",Optimization; Theory / Analysis
+ICML,2022,Solving Stackelberg Prediction Game with Least Squares Loss via Spherically Constrained Least Squares Reformulation,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
+ICML,2022,Stable Conformal Prediction Sets,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian; Theory / Analysis
+ICML,2022,The Importance of Non-Markovianity in Maximum State Entropy Exploration,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL; Theory / Analysis
+ICML,2022,Understanding Dataset Difficulty with V-Usable Information,NLP & Language,Evaluation & Benchmarking,Theory / Analysis; Representation Learning
 ICML,2021,Oops I Took A Gradient: Scalable Sampling for Discrete Distributions,ML Theory & Optimization,Probabilistic Inference & Sampling,Energy-Based; Probabilistic / Bayesian
 ICML,2021,Optimal Complexity in Decentralized Training,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
 ICML,2021,Solving high-dimensional parabolic PDEs using the tensor train format,Scientific ML & Applications,Scientific Discovery & Simulation,Classical / Optimization
@@ -232,6 +257,8 @@ ICML,2020,Efficiently sampling functions from Gaussian process posteriors,ML The
 ICML,2020,Generative Pretraining From Pixels,Computer Vision,Representation Learning,Transformer; Autoregressive; Representation Learning
 ICML,2020,On Learning Sets of Symmetric Elements,Graphs & Structured Learning,Graph & Structured Learning,GNN; Theory / Analysis
 ICML,2020,Tuning-free Plug-and-Play Proximal Algorithm for Inverse Imaging Problems,Computer Vision,Optimization & Generalization,RL; Optimization
+ICML,2019,Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations,General ML & Representation Learning,Representation Learning,Representation Learning; Theory / Analysis
+ICML,2019,Rates of Convergence for Sparse Variational Gaussian Process Regression,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian; Theory / Analysis
 ICML,2018,Delayed Impact of Fair Machine Learning,Responsible AI & Privacy,"Safety, Fairness & Privacy",Theory / Analysis
 ICML,2018,Fairness Without Demographics in Repeated Loss Minimization.,Responsible AI & Privacy,"Safety, Fairness & Privacy",Optimization
 ICML,2018,Near Optimal Frequent Directions for Sketching Dense and Sparse Matrices.,ML Theory & Optimization,Optimization & Generalization,Optimization
