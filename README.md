@@ -457,7 +457,7 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Digital Voicing of Silent Speech](https://aclanthology.org/2020.emnlp-main.445/) - **Award:** Best Paper. **Area:** Speech & Audio. **Task:** Speech & Audio. **Model:** Neural Model.
 - [GLUCOSE: GeneraLized and COntextualized Story Explanations](https://aclanthology.org/2020.emnlp-main.370/) - **Award:** Honorable Mention Paper. **Area:** NLP & Language. **Task:** Reasoning & Knowledge. **Model:** Transformer.
 - [If beam search is the answer, what was the question?](https://aclanthology.org/2020.emnlp-main.170/) - **Award:** Honorable Mention Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** Autoregressive / Theory / Analysis.
-- [Spot The Bot: A Robust and Efficient Framework for the Evaluation of Conversational Dialogue Systems](https://aclanthology.org/2020.emnlp-main.326/) - **Award:** Honorable Mention Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** Neural Model.
+- [Spot The Bot: A Robust and Efficient Framework for the Evaluation of Conversational Dialogue Systems](https://aclanthology.org/2020.emnlp-main.326/) - **Award:** Honorable Mention Paper. **Area:** NLP & Language. **Task:** Evaluation & Benchmarking. **Model:** Theory / Analysis.
 - [Visually Grounded Compound PCFGs](https://aclanthology.org/2020.emnlp-main.354/) - **Award:** Honorable Mention Paper. **Area:** Multimodal & Embodied AI. **Task:** Multimodal & Vision-Language. **Model:** Probabilistic / Bayesian / Neural Model.
 #### 2019
 
@@ -474,8 +474,8 @@ Papers are grouped by conference and award year. Title links use canonical paper
 
 - [Depression and Self-Harm Risk Assessment in Online Forums.](https://aclanthology.org/D17-1322/) - **Award:** Best Long Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Neural Model.
 - [Men Also Like Shopping: Reducing Gender Bias Amplification using Corpus-level Constraints.](https://aclanthology.org/D17-1323/) - **Award:** Best Long Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Optimization.
-- [Bringing Structure into Summaries: Crowdsourcing a Benchmark Corpus of Concept Maps.](https://aclanthology.org/D17-1320/) - **Award:** Best Short Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** Classical / Optimization.
-- [Natural Language Does Not Emerge ‘Naturally’ in Multi-Agent Dialog.](https://aclanthology.org/D17-1321/) - **Award:** Best Short Paper. **Area:** Multimodal & Embodied AI. **Task:** Multimodal & Vision-Language. **Model:** RL / RNN.
+- [Bringing Structure into Summaries: Crowdsourcing a Benchmark Corpus of Concept Maps](https://aclanthology.org/D17-1320/) - **Award:** Best Short Paper. **Area:** NLP & Language. **Task:** Evaluation & Benchmarking. **Model:** Classical / Optimization.
+- [Natural Language Does Not Emerge ‘Naturally’ in Multi-Agent Dialog](https://aclanthology.org/D17-1321/) - **Award:** Best Short Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL / RNN.
 #### 2016
 
 - [Global Neural CCG Parsing with Optimality Guarantees.](https://aclanthology.org/D16-1262/) - **Award:** Best Long Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Neural Model.
