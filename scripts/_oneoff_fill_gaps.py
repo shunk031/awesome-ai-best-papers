@@ -19,7 +19,11 @@ VENUE_ORDER = {v:i for i,v in enumerate(["ACL","AAAI","CVPR","EMNLP","ICCV","ICL
 
 def read(path):
     with path.open(newline="", encoding="utf-8") as f:
-        return list(csv.DictReader(f))
+        rows=list(csv.DictReader(f))
+    for index,row in enumerate(rows, start=2):
+        if None in row:
+            raise ValueError(f"Malformed CSV row in {path} at line {index}: {row}")
+    return rows
 
 def write(path, fields, rows):
     with path.open("w", newline="", encoding="utf-8") as f:
