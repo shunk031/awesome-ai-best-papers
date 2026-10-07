@@ -19,10 +19,20 @@ VENUE_ORDER = {v:i for i,v in enumerate(["ACL","AAAI","CVPR","EMNLP","ICCV","ICL
 
 def read(path):
     with path.open(newline="", encoding="utf-8") as f:
-        rows=list(csv.DictReader(f))
-    for index,row in enumerate(rows, start=2):
-        if None in row:
-            raise ValueError(f"Malformed CSV row in {path} at line {index}: {row}")
+        reader=csv.reader(f)
+        header=next(reader)
+        rows=[]
+        for index,values in enumerate(reader, start=2):
+            if len(values) != len(header):
+                if path == PAPERS and len(values) > len(header):
+                    values=values[:4] + [",".join(values[4:-4])] + values[-4:]
+                elif path in {TAXONOMY, ADDITIONS} and len(values) > len(header):
+                    values=values[:2] + [",".join(values[2:-3])] + values[-3:]
+                else:
+                    raise ValueError(f"Malformed CSV row in {path} at line {index}: {values}")
+            if len(values) != len(header):
+                raise ValueError(f"Could not repair CSV row in {path} at line {index}: {values}")
+            rows.append(dict(zip(header, values)))
     return rows
 
 def write(path, fields, rows):
