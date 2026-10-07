@@ -1,0 +1,135 @@
+name: One-off NeurIPS URL audit
+
+on:
+  push:
+    branches:
+      - audit/neurips-canonical-urls
+
+permissions:
+  contents: write
+
+jobs:
+  fill-neurips-urls:
+    if: ${{ !contains(github.event.head_commit.message, 'Fill canonical NeurIPS paper URLs') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: audit/neurips-canonical-urls
+          fetch-depth: 0
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Apply verified NeurIPS paper URLs
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+
+          PAPERS = Path('data/papers.csv')
+          TAXONOMY = Path('data/paper_taxonomy.csv')
+
+          mapping = {
+              ('2024', 'Stochastic Taylor Derivative Estimator: Efficient amortization for arbitrary differential operators'):
+                  ('Stochastic Taylor Derivative Estimator: Efficient amortization for arbitrary differential operators', 'https://proceedings.neurips.cc/paper_files/paper/2024/hash/dd2eb5250696753ea37141bbd89bb569-Abstract-Conference.html'),
+              ('2024', 'Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction'):
+                  ('Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction', 'https://proceedings.neurips.cc/paper_files/paper/2024/hash/9a24e284b187f662681440ba15c416fb-Abstract-Conference.html'),
+              ('2023', 'Are Emergent Abilities of Large Language Models a Mirage?'):
+                  ('Are Emergent Abilities of Large Language Models a Mirage?', 'https://proceedings.neurips.cc/paper_files/paper/2023/hash/adc98a266f45005c403b8311ca7e8bd7-Abstract-Conference.html'),
+              ('2023', 'Privacy Auditing with One (1) Training Run'):
+                  ('Privacy Auditing with One (1) Training Run', 'https://proceedings.neurips.cc/paper_files/paper/2023/hash/9a6f6e0d6781d1cb8689192408946d73-Abstract-Conference.html'),
+              ('2020', 'Improved Guarantees and a Multiple-Descent Curve for Column Subset Selection and the Nyström Method'):
+                  ('Improved guarantees and a multiple-descent curve for Column Subset Selection and the Nystrom method', 'https://proceedings.neurips.cc/paper/2020/hash/342c472b95d00421be10e9512b532866-Abstract.html'),
+              ('2020', 'Language Models are Few-Shot Learners'):
+                  ('Language Models are Few-Shot Learners', 'https://proceedings.neurips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html'),
+              ('2020', 'No-Regret Learning Dynamics for Extensive-Form Correlated Equilibrium'):
+                  ('No-Regret Learning Dynamics for Extensive-Form Correlated Equilibrium', 'https://proceedings.neurips.cc/paper_files/paper/2020/hash/5763abe87ed1938799203fb6e8650025-Abstract.html'),
+              ('2017', 'A Linear-Time Kernel Goodness-of-Fit Test'):
+                  ('A Linear-Time Kernel Goodness-of-Fit Test', 'https://proceedings.neurips.cc/paper/2017/hash/979d472a84804b9f647bc185a877a8b5-Abstract.html'),
+              ('2017', 'Safe and Nested Subgame Solving for Imperfect-Information Games'):
+                  ('Safe and Nested Subgame Solving for Imperfect-Information Games', 'https://proceedings.neurips.cc/paper_files/paper/2017/hash/7fe1f8abaad094e0b5cb1b01d712f708-Abstract.html'),
+              ('2017', 'Variance-based Regularization with Convex Objectives'):
+                  ('Variance-based Regularization with Convex Objectives', 'https://proceedings.neurips.cc/paper_files/paper/2017/hash/5a142a55461d5fef016acfb927fee0bd-Abstract.html'),
+              ('2016', 'Value Iteration Networks'):
+                  ('Value Iteration Networks', 'https://proceedings.neurips.cc/paper/2016/hash/c21002f464c5fc5bee3b98ced83963b8-Abstract.html'),
+              ('2016', 'Matrix Completion has No Spurious Local Minimum'):
+                  ('Matrix Completion has No Spurious Local Minimum', 'https://proceedings.neurips.cc/paper_files/paper/2016/hash/7fb8ceb3bd59c7956b1df66729296a4c-Abstract.html'),
+          }
+
+          with PAPERS.open(newline='', encoding='utf-8') as f:
+              rows = list(csv.DictReader(f))
+              fields = list(rows[0].keys())
+
+          missing = [r for r in rows if r['venue'] == 'NeurIPS' and not r['paper_url'].strip()]
+          print(f'NeurIPS missing before: {len(missing)}')
+          if len(missing) != 12:
+              raise RuntimeError(f'Expected 12 missing NeurIPS URLs, found {len(missing)}')
+
+          seen = set()
+          title_changes = {}
+          for r in rows:
+              if r['venue'] != 'NeurIPS' or r['paper_url'].strip():
+                  continue
+              key = (r['year'], r['title'])
+              if key not in mapping:
+                  raise RuntimeError(f'No verified mapping for {key}')
+              new_title, url = mapping[key]
+              seen.add(key)
+              if new_title != r['title']:
+                  title_changes[(r['year'], r['title'])] = new_title
+                  r['title'] = new_title
+              r['paper_url'] = url
+
+          if seen != set(mapping):
+              raise RuntimeError(f'Unused mappings: {set(mapping) - seen}')
+
+          with PAPERS.open('w', newline='', encoding='utf-8') as f:
+              w = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
+              w.writeheader()
+              w.writerows(rows)
+
+          with TAXONOMY.open(newline='', encoding='utf-8') as f:
+              tax_rows = list(csv.DictReader(f))
+              tax_fields = list(tax_rows[0].keys())
+
+          changed_tax = 0
+          for r in tax_rows:
+              key = (r['year'], r['title'])
+              if r['venue'] == 'NeurIPS' and key in title_changes:
+                  r['title'] = title_changes[key]
+                  changed_tax += 1
+          if changed_tax != len(title_changes):
+              raise RuntimeError(f'Expected {len(title_changes)} taxonomy title updates, got {changed_tax}')
+
+          with TAXONOMY.open('w', newline='', encoding='utf-8') as f:
+              w = csv.DictWriter(f, fieldnames=tax_fields, lineterminator='\n')
+              w.writeheader()
+              w.writerows(tax_rows)
+
+          with PAPERS.open(newline='', encoding='utf-8') as f:
+              after = list(csv.DictReader(f))
+          remaining = [r for r in after if r['venue'] == 'NeurIPS' and not r['paper_url'].strip()]
+          if remaining:
+              raise RuntimeError(f'NeurIPS missing URLs remain: {len(remaining)}')
+          print('NeurIPS missing after: 0')
+          print(f'Title changes: {len(title_changes)}')
+          PY
+
+      - name: Validate and regenerate
+        run: |
+          uv sync
+          uv run python scripts/validate_catalog.py
+          uv run python scripts/generate_readme.py
+          uv run python scripts/generate_readme.py --check
+
+      - name: Commit audited data
+        run: |
+          git diff --check
+          git status --short
+          test -n "$(git status --porcelain)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/papers.csv data/paper_taxonomy.csv README.md
+          git commit -m "Fill canonical NeurIPS paper URLs"
+          git push origin HEAD:audit/neurips-canonical-urls
