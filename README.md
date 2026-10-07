@@ -33,11 +33,11 @@ Each paper is annotated with a maintainer-curated **research area**, **task**, a
 
 The **130 award records from 2024–2026** provide a compact view of the research themes represented in the recent award set. These counts describe this catalog, not publication volume or citation impact across the field.
 
-**Research areas:** `NLP & Language` (35), `Computer Vision` (30), `ML Theory & Optimization` (16), `Responsible AI & Privacy` (13), `Multimodal & Embodied AI` (11), `Scientific ML & Applications` (8), `General ML & Representation Learning` (8), `Graphs & Structured Learning` (4), `Reinforcement Learning & Decision Making` (4), `Speech & Audio` (1).
+**Research areas:** `NLP & Language` (36), `Computer Vision` (30), `ML Theory & Optimization` (16), `Responsible AI & Privacy` (12), `Multimodal & Embodied AI` (11), `Scientific ML & Applications` (8), `General ML & Representation Learning` (8), `Graphs & Structured Learning` (4), `Reinforcement Learning & Decision Making` (4), `Speech & Audio` (1).
 
-**Model / method families:** `Transformer` (58), `LLM` (41), `Theory / Analysis` (29), `Diffusion` (18), `Neural Model` (17), `Optimization` (12), `VLM` (9), `RL` (9), `Probabilistic / Bayesian` (9), `Representation Learning` (5), `Autoregressive` (5), `GNN` (3), `Neuro-Symbolic` (3), `CNN` (3), `Classical / Optimization` (2), `VAE` (1), `Meta-Learning` (1).
+**Model / method families:** `Transformer` (60), `LLM` (42), `Theory / Analysis` (30), `Diffusion` (18), `Neural Model` (17), `Optimization` (12), `VLM` (9), `RL` (9), `Probabilistic / Bayesian` (9), `Representation Learning` (5), `Autoregressive` (5), `GNN` (3), `CNN` (3), `Neuro-Symbolic` (2), `Classical / Optimization` (2), `VAE` (1), `Meta-Learning` (1).
 
-**Frequently awarded tasks:** `LLM Analysis & Evaluation` (14), `3D Vision & Reconstruction` (14), `Safety, Fairness & Privacy` (12), `Optimization & Generalization` (12), `Image & Video Generation` (10), `Model Efficiency & Architecture` (7), `Multimodal & Vision-Language` (6), `Probabilistic Inference & Sampling` (6), `Reinforcement Learning & Planning` (5), `Visual Recognition & Representation` (5), `Generative Modeling` (5), `Scientific Discovery & Simulation` (4).
+**Frequently awarded tasks:** `LLM Analysis & Evaluation` (14), `3D Vision & Reconstruction` (14), `Optimization & Generalization` (12), `Safety, Fairness & Privacy` (11), `Image & Video Generation` (10), `Model Efficiency & Architecture` (7), `Multimodal & Vision-Language` (6), `Probabilistic Inference & Sampling` (6), `Reinforcement Learning & Planning` (5), `Visual Recognition & Representation` (5), `Generative Modeling` (5), `Scientific Discovery & Simulation` (4).
 
 ## Papers
 
@@ -62,10 +62,10 @@ Papers are grouped by conference and award year. Title links use canonical paper
 #### 2024
 
 - [Aya Model: An Instruction Finetuned Open-Access Multilingual Language Model](https://aclanthology.org/2024.acl-long.845/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** LLM / Transformer.
-- [Causal Estimation of Memorisation Profiles](https://aclanthology.org/2024.acl-long.834/) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Theory / Analysis.
+- [Causal Estimation of Memorisation Profiles](https://aclanthology.org/2024.acl-long.834/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Causal Learning. **Model:** LLM / Transformer / Theory / Analysis.
 - [Deciphering Oracle Bone Language with Diffusion Models](https://aclanthology.org/2024.acl-long.831/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Diffusion.
 - [Mission: Impossible Language Models](https://aclanthology.org/2024.acl-long.787/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer.
-- [Natural Language Satisfiability](https://aclanthology.org/2024.acl-long.815/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Reasoning & Knowledge. **Model:** Neuro-Symbolic.
+- [Natural Language Satisfiability: Exploring the Problem Distribution and Evaluating Transformer-based Language Models](https://aclanthology.org/2024.acl-long.815/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Reasoning & Knowledge. **Model:** Transformer / Theory / Analysis.
 - [Semisupervised Neural Proto-Language Reconstruction](https://aclanthology.org/2024.acl-long.788/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Neural Model.
 - [Why are Sensitive Functions Hard for Transformers?](https://aclanthology.org/2024.acl-long.800/) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Transformer / Theory / Analysis.
 #### 2023
