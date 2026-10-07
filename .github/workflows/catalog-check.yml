@@ -31,3 +31,66 @@ jobs:
 
       - name: Check generated README
         run: uv run python scripts/generate_readme.py --check
+
+  finalize-ml-audit:
+    if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out PR head
+        uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - name: Sync generator environment
+        run: uv sync
+
+      - name: Apply AAAI high-confidence corrections
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('data/papers/aaai.csv')
+          text = path.read_text()
+          replacements = {
+              'AAAI,2023,Distinguished Paper,special,DICNet: Deep Instance-Level Contrastive Network for Double Incomplete Multi-View Multi-Label Classification,https://ojs.aaai.org/index.php/AAAI/article/view/26059,https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/,2026-10-07,General ML & Representation Learning,Representation Learning,Neural Model,':
+              'AAAI,2023,Distinguished Paper,special,DICNet: Deep Instance-Level Contrastive Network for Double Incomplete Multi-View Multi-Label Classification,https://ojs.aaai.org/index.php/AAAI/article/view/26059,https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/,2026-10-07,General ML & Representation Learning,Representation Learning,Representation Learning,',
+              'AAAI,2022,Outstanding Student Paper,secondary,InfoLM: A New Metric to Evaluate Summarization & Data2Text Generation,https://ojs.aaai.org/index.php/AAAI/article/view/21299,https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/,2026-10-07,NLP & Language,LLM Analysis & Evaluation,Theory / Analysis,':
+              'AAAI,2022,Outstanding Student Paper,secondary,InfoLM: A New Metric to Evaluate Summarization & Data2Text Generation,https://ojs.aaai.org/index.php/AAAI/article/view/21299,https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/,2026-10-07,NLP & Language,Evaluation & Benchmarking,Transformer; Theory / Analysis,',
+              'AAAI,2021,Outstanding Paper Award – Special Track on AI for Social Impact,special,Mitigating Political Bias in Language Models through Reinforced Calibration,https://ojs.aaai.org/index.php/AAAI/article/view/17744,https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/,2026-10-07,Responsible AI & Privacy,"Safety, Fairness & Privacy",Transformer,':
+              'AAAI,2021,Outstanding Paper Award – Special Track on AI for Social Impact,special,Mitigating Political Bias in Language Models through Reinforced Calibration,https://ojs.aaai.org/index.php/AAAI/article/view/17744,https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/,2026-10-07,Responsible AI & Privacy,"Safety, Fairness & Privacy",Transformer; RL,',
+          }
+          for old, new in replacements.items():
+              count = text.count(old)
+              if count != 1:
+                  raise SystemExit(f'expected exactly one match, got {count}: {old[:80]}')
+              text = text.replace(old, new)
+          path.write_text(text)
+          PY
+
+      - name: Regenerate README
+        run: uv run python scripts/generate_readme.py
+
+      - name: Validate finalized catalog
+        run: |
+          uv run python scripts/validate_catalog.py
+          uv run python scripts/generate_readme.py --check
+
+      - name: Commit finalized audit
+        shell: bash
+        run: |
+          if git diff --quiet -- data/papers/aaai.csv README.md; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/papers/aaai.csv README.md
+          git commit -m "Finalize historical ML taxonomy audit"
+          git push origin "HEAD:${{ github.event.pull_request.head.ref }}"
