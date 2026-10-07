@@ -38,6 +38,22 @@ def render_count_table(lines: list[str], header: str, counts: Counter[str], limi
     lines.append("")
 
 
+
+def compact_years(years: list[int]) -> str:
+    if not years:
+        return "—"
+    unique=sorted(set(years))
+    groups=[]
+    start=prev=unique[0]
+    for year in unique[1:]:
+        if year == prev + 1:
+            prev=year
+            continue
+        groups.append((start,prev))
+        start=prev=year
+    groups.append((start,prev))
+    return ", ".join(str(a) if a == b else f"{a}–{b}" for a,b in groups)
+
 def render() -> str:
     venues = load_csv(VENUES_PATH)
     papers = load_csv(PAPERS_PATH)
@@ -115,9 +131,7 @@ def render() -> str:
     for venue in venues:
         items = by_venue.get(venue["venue"], [])
         item_years = sorted({int(row["year"]) for row in items})
-        year_label = "—"
-        if item_years:
-            year_label = str(item_years[0]) if len(item_years) == 1 else f"{item_years[0]}–{item_years[-1]}"
+        year_label = compact_years(item_years)
         lines.append(
             f'| [{venue["venue"]}]({venue["official_url"]}) | {venue["area"]} | {year_label} | '
             f'{len(items)} | [source]({venue["award_url"]}) |'

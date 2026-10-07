@@ -26,7 +26,7 @@ AREAS = {
     "General ML & Representation Learning",
 }
 TASKS = {
-    "LLM Analysis & Evaluation", "Language Modeling & Generation", "Language Understanding & Linguistics",
+    "LLM Analysis & Evaluation", "Evaluation & Benchmarking", "Language Modeling & Generation", "Language Understanding & Linguistics",
     "Reasoning & Knowledge", "Retrieval & Search", "Multimodal & Vision-Language", "Speech & Audio",
     "Visual Recognition & Representation", "3D Vision & Reconstruction", "Image & Video Generation",
     "Generative Modeling", "Reinforcement Learning & Planning", "Graph & Structured Learning",
