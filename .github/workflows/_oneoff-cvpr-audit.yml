@@ -1,0 +1,111 @@
+name: One-off CVPR award audit
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-cvpr-audit.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Add missing CVPR paper awards
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          import subprocess, sys
+
+          papers_path = Path('data/papers.csv')
+          taxonomy_path = Path('data/paper_taxonomy.csv')
+
+          def read(path):
+              with path.open(newline='', encoding='utf-8') as f:
+                  return list(csv.DictReader(f))
+
+          def write(path, rows, fields):
+              with path.open('w', newline='', encoding='utf-8') as f:
+                  w = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
+                  w.writeheader(); w.writerows(rows)
+
+          sources = {
+              '2023': 'https://cvpr.thecvf.com/Conferences/2023/Awards',
+              '2024': 'https://cvpr.thecvf.com/Conferences/2024/News/Awards',
+              '2025': 'https://cvpr.thecvf.com/Conferences/2025/BestPapersDemos',
+              '2026': 'https://cvpr.thecvf.com/Conferences/2026/News/Best_Papers',
+          }
+
+          additions = [
+              # year, award, title, area, task, model_family
+              ('2023','Best Paper Honorable Mention','DynIBaR: Neural Dynamic Image-Based Rendering','Computer Vision','3D Vision & Reconstruction','Neural Model'),
+              ('2023','Best Student Paper','3D Registration with Maximal Cliques','Computer Vision','3D Vision & Reconstruction','Classical / Optimization'),
+              ('2023','Best Student Paper Honorable Mention','DreamBooth: Fine Tuning Text-to-Image Diffusion Models for Subject-Driven Generation','Computer Vision','Image & Video Generation','Diffusion'),
+
+              ('2024','Best Paper Honorable Mention','EventPS: Real-Time Photometric Stereo Using an Event Camera','Computer Vision','3D Vision & Reconstruction','Neural Model'),
+              ('2024','Best Paper Honorable Mention','pixelSplat: 3D Gaussian Splats from Image Pairs for Scalable Generalizable 3D Reconstruction','Computer Vision','3D Vision & Reconstruction','Neural Model'),
+              ('2024','Best Student Paper','Mip-Splatting: Alias-free 3D Gaussian Splatting','Computer Vision','3D Vision & Reconstruction','Neural Model'),
+              ('2024','Best Student Paper','BioCLIP: A Vision Foundation Model for the Tree of Life','Computer Vision','Visual Recognition & Representation','VLM; Transformer'),
+              ('2024','Best Student Paper Honorable Mention','SpiderMatch: 3D Shape Matching with Global Optimality and Geometric Consistency','Computer Vision','3D Vision & Reconstruction','Optimization'),
+              ('2024','Best Student Paper Honorable Mention','Image Processing GNN: Breaking Rigidity in Super-Resolution','Computer Vision','Visual Recognition & Representation','GNN'),
+              ('2024','Best Student Paper Honorable Mention','Objects as Volumes: A Stochastic Geometry View of Opaque Solids','Computer Vision','3D Vision & Reconstruction','Probabilistic / Bayesian; Theory / Analysis'),
+              ('2024','Best Student Paper Honorable Mention','Comparing the Decision-Making Mechanisms by Transformers and CNNs via Explanation Methods','Computer Vision','Interpretability & Explainability','Transformer; CNN'),
+
+              ('2025','Best Student Paper','Neural Inverse Rendering from Propagating Light','Computer Vision','3D Vision & Reconstruction','Neural Model'),
+              ('2025','Best Paper Honorable Mention','MegaSaM: Accurate, Fast and Robust Structure and Motion from Casual Dynamic Videos','Computer Vision','3D Vision & Reconstruction','Neural Model'),
+              ('2025','Best Paper Honorable Mention','Navigation World Models','Multimodal & Embodied AI','Reinforcement Learning & Planning','Neural Model; RL'),
+              ('2025','Best Paper Honorable Mention','Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Vision-Language Models','Multimodal & Embodied AI','Multimodal & Vision-Language','VLM; Transformer'),
+              ('2025','Best Paper Honorable Mention','3D Student Splatting and Scooping','Computer Vision','3D Vision & Reconstruction','Neural Model'),
+              ('2025','Best Student Paper Honorable Mention','Generative Multimodal Pretraining with Discrete Diffusion Timestep Tokens','Multimodal & Embodied AI','Multimodal & Vision-Language','Diffusion; VLM; Transformer'),
+
+              ('2026','Best Student Paper','Native and Compact Structured Latents for 3D Generation','Computer Vision','Generative Modeling','Neural Model'),
+              ('2026','Best Paper Honorable Mention','NitroGen: An Open Foundation Model for Generalist Gaming Agents','Multimodal & Embodied AI','Reinforcement Learning & Planning','Transformer; RL'),
+              ('2026','Best Paper Honorable Mention','SAM 3D: 3Dfy Anything in Images','Computer Vision','3D Vision & Reconstruction','Transformer; Neural Model'),
+              ('2026','Best Student Paper Honorable Mention','ChordEdit: One-Step Low-Energy Transport for Image Editing','Computer Vision','Image & Video Generation','Optimization'),
+          ]
+
+          papers = read(papers_path)
+          tax = read(taxonomy_path)
+          paper_keys = {(r['venue'], r['year'], r['title'].casefold()) for r in papers}
+          tax_keys = {(r['venue'], r['year'], r['title'].casefold()) for r in tax}
+
+          for year, award, title, area, task, family in additions:
+              key = ('CVPR', year, title.casefold())
+              if key not in paper_keys:
+                  row = {'venue':'CVPR','year':year,'award':award,'tier':'secondary','title':title,'paper_url':'','source_url':sources[year],'checked_at':'2026-10-07','notes':''}
+                  insert_at = max(i for i,r in enumerate(papers) if r['venue']=='CVPR' and r['year']==year) + 1
+                  papers.insert(insert_at, row)
+                  paper_keys.add(key)
+              if key not in tax_keys:
+                  row = {'venue':'CVPR','year':year,'title':title,'area':area,'task':task,'model_family':family}
+                  insert_at = max(i for i,r in enumerate(tax) if r['venue']=='CVPR' and r['year']==year) + 1
+                  tax.insert(insert_at, row)
+                  tax_keys.add(key)
+
+          write(papers_path, papers, ['venue','year','award','tier','title','paper_url','source_url','checked_at','notes'])
+          write(taxonomy_path, tax, ['venue','year','title','area','task','model_family'])
+          subprocess.run([sys.executable, 'scripts/validate_catalog.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py', '--check'], check=True)
+          PY
+      - name: Commit audited catalog
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers.csv data/paper_taxonomy.csv README.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Complete recent CVPR paper awards'
+            git push
+          fi
