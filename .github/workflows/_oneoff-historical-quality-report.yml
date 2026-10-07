@@ -1,0 +1,52 @@
+name: One-off historical quality report
+
+on:
+  push:
+    branches:
+      - refactor/venue-csv-catalog
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: refactor/venue-csv-catalog
+      - name: Report remaining historical review candidates
+        run: |
+          python - <<'PY'
+          import csv, re
+          from pathlib import Path
+          rows=[]
+          for p in sorted(Path('data/papers').glob('*.csv')):
+            with p.open(newline='',encoding='utf-8') as f:
+              rows.extend(csv.DictReader(f))
+          hist=[r for r in rows if int(r['year']) <= 2023]
+
+          print('=== GENERIC FAMILY COMBINATIONS ===')
+          for r in hist:
+            fam=[x.strip() for x in r['model_family'].split(';') if x.strip()]
+            if 'Neural Model' in fam and len(fam)>1:
+              print('\t'.join(['GENERIC+',r['venue'],r['year'],r['title'],r['task'],r['model_family']]))
+
+          print('=== EVALUATION PAPERS WITH ARCHITECTURE FAMILY ===')
+          for r in hist:
+            fam=set(x.strip() for x in r['model_family'].split(';'))
+            if r['task'] in {'Evaluation & Benchmarking','LLM Analysis & Evaluation'} and fam & {'Transformer','LLM','VLM','CNN','RNN','GNN'}:
+              print('\t'.join(['EVAL-FAMILY',r['venue'],r['year'],r['title'],r['task'],r['model_family']]))
+
+          print('=== RL FAMILY WITHOUT EXPLICIT RL SIGNAL ===')
+          for r in hist:
+            fam=set(x.strip() for x in r['model_family'].split(';'))
+            t=r['title'].casefold()
+            if 'RL' in fam and not re.search(r'reinforcement|\brl\b|policy|reward|q-learning|value[- ]iteration|imitation|game|control|bandit|decision',t):
+              print('\t'.join(['RL?',r['venue'],r['year'],r['title'],r['task'],r['model_family']]))
+
+          print('=== TITLE PUNCTUATION ===')
+          for r in rows:
+            if r['title'].endswith('.') or '  ' in r['title']:
+              print('\t'.join(['TITLE',r['venue'],r['year'],r['title'],r['paper_url']]))
+          PY
