@@ -1,13 +1,9 @@
 Traceback (most recent call last):
-  File "/home/runner/work/awesome-ai-best-papers/awesome-ai-best-papers/scripts/_oneoff_fill_gaps.py", line 144, in <module>
+  File "/home/runner/work/awesome-ai-best-papers/awesome-ai-best-papers/scripts/_oneoff_fill_gaps.py", line 148, in <module>
     main()
-  File "/home/runner/work/awesome-ai-best-papers/awesome-ai-best-papers/scripts/_oneoff_fill_gaps.py", line 135, in main
-    write(PAPERS,PAPER_FIELDS,papers)
-  File "/home/runner/work/awesome-ai-best-papers/awesome-ai-best-papers/scripts/_oneoff_fill_gaps.py", line 28, in write
-    w.writerows(rows)
-  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/csv.py", line 167, in writerows
-    return self.writer.writerows(map(self._dict_to_list, rowdicts))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/csv.py", line 159, in _dict_to_list
-    raise ValueError("dict contains fields not in fieldnames: "
-ValueError: dict contains fields not in fieldnames: None
+  File "/home/runner/work/awesome-ai-best-papers/awesome-ai-best-papers/scripts/_oneoff_fill_gaps.py", line 99, in main
+    papers=read(PAPERS)
+           ^^^^^^^^^^^^
+  File "/home/runner/work/awesome-ai-best-papers/awesome-ai-best-papers/scripts/_oneoff_fill_gaps.py", line 25, in read
+    raise ValueError(f"Malformed CSV row in {path} at line {index}: {row}")
+ValueError: Malformed CSV row in /home/runner/work/awesome-ai-best-papers/awesome-ai-best-papers/data/papers.csv at line 42: {'venue': 'ACL', 'year': '2017', 'award': 'Outstanding Long Paper', 'tier': 'secondary', 'title': 'Unifying Text', 'paper_url': ' Metadata', 'source_url': ' and User Network Representations with a Neural Network for Geolocation Prediction.', 'checked_at': 'https://aclanthology.org/P17-1116/', 'notes': 'https://acl2017.wordpress.com/2017/08/03/outstanding-and-best-papers-and-the-decision-process/', None: ['2026-10-07', '']}
