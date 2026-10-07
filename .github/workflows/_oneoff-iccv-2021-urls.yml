@@ -1,0 +1,107 @@
+name: One-off ICCV 2021 canonical URL fill
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-iccv-2021-urls.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync
+      - name: Fill ICCV 2021 canonical paper URLs
+        run: |
+          uv run python - <<'PY'
+          import csv
+          from pathlib import Path
+          import subprocess, sys
+
+          papers_path = Path('data/papers.csv')
+          taxonomy_path = Path('data/paper_taxonomy.csv')
+
+          updates = {
+              'Swin Transformer: Hierarchical Vision Transformer using Shifted Windows': (
+                  'Swin Transformer: Hierarchical Vision Transformer Using Shifted Windows',
+                  'https://openaccess.thecvf.com/content/ICCV2021/html/Liu_Swin_Transformer_Hierarchical_Vision_Transformer_Using_Shifted_Windows_ICCV_2021_paper.html',
+              ),
+              'Pixel-Perfect Structure-from-Motion with Featuremetric Refinement': (
+                  'Pixel-Perfect Structure-From-Motion With Featuremetric Refinement',
+                  'https://openaccess.thecvf.com/content/ICCV2021/html/Lindenberger_Pixel-Perfect_Structure-From-Motion_With_Featuremetric_Refinement_ICCV_2021_paper.html',
+              ),
+              'Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields': (
+                  'Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields',
+                  'https://openaccess.thecvf.com/content/ICCV2021/html/Barron_Mip-NeRF_A_Multiscale_Representation_for_Anti-Aliasing_Neural_Radiance_Fields_ICCV_2021_paper.html',
+              ),
+              'OpenGAN: Open-Set Recognition via Open Data Generation': (
+                  'OpenGAN: Open-Set Recognition via Open Data Generation',
+                  'https://openaccess.thecvf.com/content/ICCV2021/html/Kong_OpenGAN_Open-Set_Recognition_via_Open_Data_Generation_ICCV_2021_paper.html',
+              ),
+              'Viewing Graph Solvability via Cycle Consistency': (
+                  'Viewing Graph Solvability via Cycle Consistency',
+                  'https://openaccess.thecvf.com/content/ICCV2021/html/Arrigoni_Viewing_Graph_Solvability_via_Cycle_Consistency_ICCV_2021_paper.html',
+              ),
+              'Common Objects in 3D: LargeScale Learning and Evaluation of Real-life 3D Category Reconstruction': (
+                  'Common Objects in 3D: Large-Scale Learning and Evaluation of Real-Life 3D Category Reconstruction',
+                  'https://openaccess.thecvf.com/content/ICCV2021/html/Reizenstein_Common_Objects_in_3D_Large-Scale_Learning_and_Evaluation_of_Real-Life_ICCV_2021_paper.html',
+              ),
+          }
+
+          def read(path):
+              with path.open(newline='', encoding='utf-8') as f:
+                  return list(csv.DictReader(f))
+
+          def write(path, rows, fields):
+              with path.open('w', newline='', encoding='utf-8') as f:
+                  w = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
+                  w.writeheader(); w.writerows(rows)
+
+          papers = read(papers_path)
+          taxonomy = read(taxonomy_path)
+          found = set()
+          for row in papers:
+              if row['venue'] != 'ICCV' or row['year'] != '2021' or row['title'] not in updates:
+                  continue
+              old = row['title']
+              row['title'], row['paper_url'] = updates[old]
+              row['checked_at'] = '2026-10-07'
+              found.add(old)
+          if found != set(updates):
+              raise SystemExit(f'Missing paper targets: {sorted(set(updates) - found)}')
+
+          tax_found = set()
+          for row in taxonomy:
+              if row['venue'] != 'ICCV' or row['year'] != '2021' or row['title'] not in updates:
+                  continue
+              old = row['title']
+              row['title'] = updates[old][0]
+              tax_found.add(old)
+          if tax_found != set(updates):
+              raise SystemExit(f'Missing taxonomy targets: {sorted(set(updates) - tax_found)}')
+
+          write(papers_path, papers, ['venue','year','award','tier','title','paper_url','source_url','checked_at','notes'])
+          write(taxonomy_path, taxonomy, ['venue','year','title','area','task','model_family'])
+          subprocess.run([sys.executable, 'scripts/validate_catalog.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py', '--check'], check=True)
+          PY
+      - name: Commit canonical URLs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers.csv data/paper_taxonomy.csv README.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Fill ICCV 2021 canonical paper URLs'
+            git push
+          fi
