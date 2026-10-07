@@ -1,0 +1,104 @@
+name: One-off ICLR 2020 award audit
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-iclr-2020-audit.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Remove non-award ICLR 2020 oral and spotlight records
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          import subprocess, sys
+
+          papers_path = Path('data/papers.csv')
+          taxonomy_path = Path('data/paper_taxonomy.csv')
+          venues_path = Path('data/venues.csv')
+          generator_path = Path('scripts/generate_readme.py')
+
+          def read(path):
+              with path.open(newline='', encoding='utf-8') as f:
+                  return list(csv.DictReader(f))
+
+          def write(path, rows, fields):
+              with path.open('w', newline='', encoding='utf-8') as f:
+                  w = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
+                  w.writeheader(); w.writerows(rows)
+
+          papers = read(papers_path)
+          tax = read(taxonomy_path)
+          venues = read(venues_path)
+
+          targets = {
+              'ALBERT: A Lite BERT for Self-supervised Learning of Language Representations',
+              'Generalization through Memorization: Nearest Neighbor Language Models',
+              'Meta-Learning without Memorization',
+              'Neural Tangents: Fast and Easy Infinite Neural Networks in Python',
+              'On Identifiability in Transformers',
+              'Playing the Lottery with Rewards and Multiple Languages: Lottery Tickets in RL and NLP',
+              'Plug and Play Language Models: A Simple Approach to Controlled Text Generation',
+              'Rapid Learning or Feature Reuse? Towards Understanding the Effectiveness of MAML',
+              'Reformer: The Efficient Transformer',
+              'Your Classifier is Secretly an Energy Based Model and You Should Treat it Like One',
+          }
+          folded = {title.casefold() for title in targets}
+
+          matched = [r for r in papers if r['venue']=='ICLR' and r['year']=='2020' and r['title'].casefold() in folded]
+          if len(matched) != 10:
+              raise SystemExit(f'Expected 10 ICLR 2020 rows, found {len(matched)}')
+          unexpected = [r for r in papers if r['venue']=='ICLR' and r['year']=='2020' and r['title'].casefold() not in folded]
+          if unexpected:
+              raise SystemExit(f'Unexpected ICLR 2020 rows remain: {[r["title"] for r in unexpected]}')
+
+          papers = [r for r in papers if not (r['venue']=='ICLR' and r['year']=='2020' and r['title'].casefold() in folded)]
+          tax = [r for r in tax if not (r['venue']=='ICLR' and r['year']=='2020' and r['title'].casefold() in folded)]
+
+          for row in venues:
+              if row['venue'] == 'ICLR':
+                  row['notes'] = 'Outstanding-paper awards; ICLR 2020 is intentionally absent because the program chairs decided not to give a paper award that year.'
+                  break
+          else:
+              raise SystemExit('ICLR venue metadata not found')
+
+          generator = generator_path.read_text(encoding='utf-8')
+          old = '> **Coverage note:** year ranges list the conference years currently represented in the catalog. Gaps are explicit; a displayed span should not be interpreted as complete coverage of every intervening year.'
+          new = '> **Coverage note:** year ranges list conference years with in-scope awards in the catalog. Gaps are explicit and can reflect a non-conference year or a confirmed no-award year; **ICLR 2020 is intentionally absent because no paper award was given that year.**'
+          if old not in generator:
+              raise SystemExit('Coverage note text not found in generator')
+          generator_path.write_text(generator.replace(old, new, 1), encoding='utf-8')
+
+          write(papers_path, papers, ['venue','year','award','tier','title','paper_url','source_url','checked_at','notes'])
+          write(taxonomy_path, tax, ['venue','year','title','area','task','model_family'])
+          write(venues_path, venues, ['venue','full_name','area','official_url','award_url','cadence','notes'])
+
+          subprocess.run([sys.executable, 'scripts/validate_catalog.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py', '--check'], check=True)
+          PY
+      - name: Commit audited catalog
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers.csv data/paper_taxonomy.csv data/venues.csv scripts/generate_readme.py README.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Correct ICLR 2020 non-award records'
+            git push
+          fi
