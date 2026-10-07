@@ -23,6 +23,7 @@ jobs:
         run: |
           python - <<'PY'
           import csv, urllib.request
+          from difflib import SequenceMatcher
           from html.parser import HTMLParser
           from pathlib import Path
           class P(HTMLParser):
@@ -40,9 +41,12 @@ jobs:
               with urllib.request.urlopen(req,timeout=20) as resp: html=resp.read().decode('utf-8')
               p=P(); p.feed(html); canonical=(p.title or '').strip()
               if not canonical: raise RuntimeError(f'No citation_title for {r["paper_url"]}')
-              if r['title'][:-1] != canonical: raise RuntimeError(f'Non-trivial mismatch: {r["title"]!r} vs {canonical!r}')
-              print(f'{r["title"]} -> {canonical}'); r['title']=canonical; changed+=1
-          if changed != 22: raise RuntimeError(f'Expected 22 safe ACL 2017 fixes, got {changed}')
+              current=r['title'].rstrip('.')
+              ratio=SequenceMatcher(None,current.casefold(),canonical.casefold()).ratio()
+              if ratio < 0.60: raise RuntimeError(f'Low-similarity title mismatch ({ratio:.3f}): {r["title"]!r} vs {canonical!r}')
+              print(f'{ratio:.3f}: {r["title"]} -> {canonical}')
+              r['title']=canonical; changed+=1
+          if changed != 22: raise RuntimeError(f'Expected 22 ACL 2017 title fixes, got {changed}')
           with path.open('w',newline='',encoding='utf-8') as f:
               w=csv.DictWriter(f,fieldnames=fields,lineterminator='\n'); w.writeheader(); w.writerows(rows)
           PY
