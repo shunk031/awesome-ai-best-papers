@@ -55,19 +55,19 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [The Imperfective Paradox in Large Language Models](https://aclanthology.org/2026.acl-long.689/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer.
 #### 2025
 
-- [A Theory of Response Sampling in LLMs: Part Descriptive and Part Prescriptive](https://2025.aclweb.org/program/awards/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer / Probabilistic / Bayesian.
-- [Fairness through Difference Awareness: Measuring Desired Group Discrimination in LLMs](https://2025.aclweb.org/program/awards/) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** LLM / Transformer.
-- [Language Models Resist Alignment: Evidence From Data Compression](https://2025.aclweb.org/program/awards/) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** LLM / Transformer.
-- [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](https://2025.aclweb.org/program/awards/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Model Efficiency & Architecture. **Model:** Transformer / LLM.
+- [A Theory of Response Sampling in LLMs: Part Descriptive and Part Prescriptive](https://aclanthology.org/2025.acl-long.1454/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer / Probabilistic / Bayesian.
+- [Fairness through Difference Awareness: Measuring Desired Group Discrimination in LLMs](https://aclanthology.org/2025.acl-long.341/) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** LLM / Transformer.
+- [Language Models Resist Alignment: Evidence From Data Compression](https://aclanthology.org/2025.acl-long.1141/) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** LLM / Transformer.
+- [Native Sparse Attention: Hardware-Aligned and Natively Trainable Sparse Attention](https://aclanthology.org/2025.acl-long.1126/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Model Efficiency & Architecture. **Model:** Transformer / LLM.
 #### 2024
 
-- [Aya Model: An Instruction Finetuned Open-Access Multilingual Language Model](https://2024.aclweb.org/program/best_papers/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** LLM / Transformer.
-- [Causal Estimation of Memorisation Profiles](https://2024.aclweb.org/program/best_papers/) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Theory / Analysis.
-- [Deciphering Oracle Bone Language with Diffusion Models](https://2024.aclweb.org/program/best_papers/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Diffusion.
-- [Mission: Impossible Language Models](https://2024.aclweb.org/program/best_papers/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer.
-- [Natural Language Satisfiability](https://2024.aclweb.org/program/best_papers/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Reasoning & Knowledge. **Model:** Neuro-Symbolic.
-- [Semisupervised Neural Proto-Language Reconstruction](https://2024.aclweb.org/program/best_papers/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Neural Model.
-- [Why are Sensitive Functions Hard for Transformers?](https://2024.aclweb.org/program/best_papers/) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Transformer / Theory / Analysis.
+- [Aya Model: An Instruction Finetuned Open-Access Multilingual Language Model](https://aclanthology.org/2024.acl-long.845/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** LLM / Transformer.
+- [Causal Estimation of Memorisation Profiles](https://aclanthology.org/2024.acl-long.834/) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Theory / Analysis.
+- [Deciphering Oracle Bone Language with Diffusion Models](https://aclanthology.org/2024.acl-long.831/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Diffusion.
+- [Mission: Impossible Language Models](https://aclanthology.org/2024.acl-long.787/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer.
+- [Natural Language Satisfiability](https://aclanthology.org/2024.acl-long.815/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Reasoning & Knowledge. **Model:** Neuro-Symbolic.
+- [Semisupervised Neural Proto-Language Reconstruction](https://aclanthology.org/2024.acl-long.788/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Neural Model.
+- [Why are Sensitive Functions Hard for Transformers?](https://aclanthology.org/2024.acl-long.800/) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Transformer / Theory / Analysis.
 #### 2023
 
 - [Do Androids Laugh at Electric Sheep? Humor “Understanding” Benchmarks from The New Yorker Caption Contest](https://2023.aclweb.org/program/best_papers/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer.
