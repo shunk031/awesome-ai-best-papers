@@ -1,0 +1,64 @@
+name: One-off ACL 2026 canonical URLs
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-acl-2026-urls.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fill ACL-26 Anthology URLs
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          import subprocess, sys
+
+          path = Path('data/papers.csv')
+          urls = {
+              'Characterizing the Expressivity of Local Attention in Transformers': 'https://aclanthology.org/2026.acl-long.1739/',
+              'Memory Efficiency and Resource-Rational Encoding in Sentence Processing': 'https://aclanthology.org/2026.acl-long.1550/',
+              'The Imperfective Paradox in Large Language Models': 'https://aclanthology.org/2026.acl-long.689/',
+          }
+          with path.open(newline='', encoding='utf-8') as f:
+              rows = list(csv.DictReader(f))
+          found = set()
+          for row in rows:
+              if row['venue']=='ACL' and row['year']=='2026' and row['title'] in urls:
+                  row['paper_url'] = urls[row['title']]
+                  row['checked_at'] = '2026-10-07'
+                  found.add(row['title'])
+          missing = set(urls) - found
+          if missing:
+              raise SystemExit(f'Missing ACL-26 rows: {sorted(missing)}')
+          with path.open('w', newline='', encoding='utf-8') as f:
+              w = csv.DictWriter(f, fieldnames=['venue','year','award','tier','title','paper_url','source_url','checked_at','notes'], lineterminator='\n')
+              w.writeheader(); w.writerows(rows)
+          subprocess.run([sys.executable, 'scripts/validate_catalog.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py', '--check'], check=True)
+          PY
+      - name: Commit canonical URLs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers.csv README.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Add ACL 2026 canonical paper URLs'
+            git push
+          fi
