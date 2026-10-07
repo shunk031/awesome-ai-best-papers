@@ -180,7 +180,7 @@ This section shows the latest completed award year for each venue. The full hist
 
 **Annual Conference of the Nations of the Americas Chapter of the ACL** · [Natural Language Processing](https://naacl.org/)
 
-- **Best Paper** — [The BiGGen Bench: A Principled Benchmark for Fine-grained Evaluation of Language Models with Language Models](https://2025.naacl.org/blog/best-papers/)<br>  **Area:** NLP & Language · **Task:** Language Modeling & Generation · **Model:** LLM / Transformer
+- **Best Paper** — [The BiGGen Bench: A Principled Benchmark for Fine-grained Evaluation of Language Models with Language Models](https://aclanthology.org/2025.naacl-long.303/) · [award source](https://2025.naacl.org/blog/best-papers/)<br>  **Area:** NLP & Language · **Task:** Language Modeling & Generation · **Model:** LLM / Transformer
 
 ### NeurIPS · 2025
 

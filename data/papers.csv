@@ -488,7 +488,7 @@ ICML,2017,Best Paper Honorable Mention,secondary,Modular Multitask Reinforcement
 ICML,2016,Best Paper,primary,Dueling Network Architectures for Deep Reinforcement Learning,,https://icml.cc/Conferences/2016/Awards,2026-10-07,
 ICML,2016,Best Paper,primary,Ensuring Rapid Mixing and Low Bias for Asynchronous Gibbs Sampling,,https://icml.cc/Conferences/2016/Awards,2026-10-07,
 ICML,2016,Best Paper,primary,Pixel Recurrent Neural Networks,,https://icml.cc/Conferences/2016/Awards,2026-10-07,
-NAACL,2025,Best Paper,primary,The BiGGen Bench: A Principled Benchmark for Fine-grained Evaluation of Language Models with Language Models,,https://2025.naacl.org/blog/best-papers/,2026-10-07,
+NAACL,2025,Best Paper,primary,The BiGGen Bench: A Principled Benchmark for Fine-grained Evaluation of Language Models with Language Models,https://aclanthology.org/2025.naacl-long.303/,https://2025.naacl.org/blog/best-papers/,2026-10-07,
 NAACL,2024,Best Paper,primary,Evaluating the Deductive Competence of Large Language Models,https://aclanthology.org/2024.naacl-long.476/,https://docs.google.com/presentation/d/1TVDooAZqkNObz5ysVhDFtqnnVHR-u8wqYvgix-gzPMs/htmlpresent,2026-10-07,
 NAACL,2024,Best Paper,primary,Visual Grounding Helps Learn Word Meanings in Low-Data Regimes,https://aclanthology.org/2024.naacl-long.71/,https://docs.google.com/presentation/d/1TVDooAZqkNObz5ysVhDFtqnnVHR-u8wqYvgix-gzPMs/htmlpresent,2026-10-07,
 NAACL,2024,Outstanding Paper,secondary,"A Pretrainer’s Guide to Training Data: Measuring the Effects of Data Age, Domain Coverage, Quality, & Toxicity",https://aclanthology.org/2024.naacl-long.179/,https://docs.google.com/presentation/d/1TVDooAZqkNObz5ysVhDFtqnnVHR-u8wqYvgix-gzPMs/htmlpresent,2026-10-07,
