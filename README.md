@@ -35,9 +35,9 @@ The **130 award records from 2024–2026** provide a compact view of the researc
 
 **Research areas:** `NLP & Language` (36), `Computer Vision` (30), `ML Theory & Optimization` (16), `Responsible AI & Privacy` (12), `Multimodal & Embodied AI` (11), `Scientific ML & Applications` (8), `General ML & Representation Learning` (8), `Graphs & Structured Learning` (4), `Reinforcement Learning & Decision Making` (4), `Speech & Audio` (1).
 
-**Model / method families:** `Transformer` (61), `LLM` (42), `Theory / Analysis` (30), `Diffusion` (19), `Neural Model` (16), `Optimization` (12), `VLM` (9), `Probabilistic / Bayesian` (9), `RL` (7), `Autoregressive` (5), `Representation Learning` (4), `GNN` (3), `CNN` (3), `Neuro-Symbolic` (2), `Classical / Optimization` (2), `VAE` (1), `Search / Planning` (1), `Meta-Learning` (1).
+**Model / method families:** `Transformer` (61), `LLM` (43), `Theory / Analysis` (30), `Diffusion` (19), `Neural Model` (15), `Optimization` (11), `VLM` (9), `Probabilistic / Bayesian` (9), `RL` (7), `Autoregressive` (6), `Representation Learning` (4), `GNN` (3), `CNN` (3), `Neuro-Symbolic` (2), `Search / Planning` (2), `Classical / Optimization` (2), `VAE` (1), `Meta-Learning` (1).
 
-**Frequently awarded tasks:** `LLM Analysis & Evaluation` (14), `3D Vision & Reconstruction` (14), `Optimization & Generalization` (12), `Safety, Fairness & Privacy` (11), `Image & Video Generation` (11), `Model Efficiency & Architecture` (7), `Multimodal & Vision-Language` (6), `Probabilistic Inference & Sampling` (6), `Reinforcement Learning & Planning` (5), `Generative Modeling` (5), `Scientific Discovery & Simulation` (4), `Visual Recognition & Representation` (4).
+**Frequently awarded tasks:** `LLM Analysis & Evaluation` (14), `3D Vision & Reconstruction` (13), `Optimization & Generalization` (12), `Safety, Fairness & Privacy` (11), `Image & Video Generation` (11), `Model Efficiency & Architecture` (7), `Multimodal & Vision-Language` (6), `Probabilistic Inference & Sampling` (6), `Generative Modeling` (6), `Reinforcement Learning & Planning` (5), `Scientific Discovery & Simulation` (4), `Visual Recognition & Representation` (4).
 
 ## Papers
 
@@ -489,8 +489,8 @@ Papers are grouped by conference and award year. Title links use canonical paper
 
 #### 2025
 
-- [Generating Physically Stable and Buildable Brick Structures from Text](https://openaccess.thecvf.com/content/ICCV2025/html/Pun_Generating_Physically_Stable_and_Buildable_Brick_Structures_from_Text_ICCV_2025_paper.html) - **Award:** Marr Prize. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Optimization.
-- [FlowEdit: Inversion-Free Text-Based Editing Using Pre-Trained Flow Models](https://openaccess.thecvf.com/content/ICCV2025/html/Kulikov_FlowEdit_Inversion-Free_Text-Based_Editing_Using_Pre-Trained_Flow_Models_ICCV_2025_paper.html) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** Image & Video Generation. **Model:** Diffusion / Neural Model.
+- [Generating Physically Stable and Buildable Brick Structures from Text](https://openaccess.thecvf.com/content/ICCV2025/html/Pun_Generating_Physically_Stable_and_Buildable_Brick_Structures_from_Text_ICCV_2025_paper.html) - **Award:** Marr Prize. **Area:** Computer Vision. **Task:** Generative Modeling. **Model:** LLM / Autoregressive / Search / Planning.
+- [FlowEdit: Inversion-Free Text-Based Editing Using Pre-Trained Flow Models](https://openaccess.thecvf.com/content/ICCV2025/html/Kulikov_FlowEdit_Inversion-Free_Text-Based_Editing_Using_Pre-Trained_Flow_Models_ICCV_2025_paper.html) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** Image & Video Generation. **Model:** Diffusion.
 - [RayZer: A Self-supervised Large View Synthesis Model](https://openaccess.thecvf.com/content/ICCV2025/html/Jiang_RayZer_A_Self-supervised_Large_View_Synthesis_Model_ICCV_2025_paper.html) - **Award:** Marr Prize Paper Honorable Mention. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Neural Model.
 - [Spatially-Varying Autofocus](https://openaccess.thecvf.com/content/ICCV2025/html/Qin_Spatially-Varying_Autofocus_ICCV_2025_paper.html) - **Award:** Marr Prize Paper Honorable Mention. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Classical / Optimization.
 #### 2023
