@@ -1,0 +1,60 @@
+name: Add or correct an award
+description: Propose a paper-award addition or correction
+title: "[Award] "
+labels: []
+body:
+  - type: input
+    id: venue
+    attributes:
+      label: Venue and year
+      placeholder: "e.g. CVPR 2026"
+    validations:
+      required: true
+  - type: input
+    id: award
+    attributes:
+      label: Award
+      placeholder: "e.g. Best Paper"
+    validations:
+      required: true
+  - type: input
+    id: title
+    attributes:
+      label: Paper title
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Official award source
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: input
+    id: paper
+    attributes:
+      label: Paper URL
+      placeholder: "https://..."
+  - type: input
+    id: area
+    attributes:
+      label: Research area (optional)
+      description: Suggest one primary area from data/README.md.
+      placeholder: "e.g. Multimodal & Embodied AI"
+  - type: input
+    id: task
+    attributes:
+      label: Task category (optional)
+      description: Suggest one controlled task category from data/README.md.
+      placeholder: "e.g. Multimodal & Vision-Language"
+  - type: input
+    id: model_family
+    attributes:
+      label: Model / method family (optional)
+      description: Use semicolon-separated coarse tags when multiple families apply.
+      placeholder: "e.g. VLM; Transformer"
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Add any correction details, award-tier context, taxonomy ambiguity, or source caveats here.

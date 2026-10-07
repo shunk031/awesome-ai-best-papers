@@ -1,0 +1,10 @@
+venue,full_name,area,official_url,award_url,cadence,notes
+ACL,Annual Meeting of the Association for Computational Linguistics,Natural Language Processing,https://aclweb.org/,https://www.aclweb.org/aclwiki/Best_paper_awards,annual,ACL conference paper awards.
+AAAI,AAAI Conference on Artificial Intelligence,Artificial Intelligence,https://aaai.org/conference/aaai/,https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/,annual,AAAI conference paper awards.
+CVPR,IEEE/CVF Conference on Computer Vision and Pattern Recognition,Computer Vision,https://cvpr.thecvf.com/,https://www.thecvf.com/?page_id=413,annual,CVF best-paper archive.
+EMNLP,Conference on Empirical Methods in Natural Language Processing,Natural Language Processing,https://aclanthology.org/venues/emnlp/,https://www.aclweb.org/aclwiki/Best_paper_awards,annual,ACL-family conference paper awards.
+ICCV,IEEE/CVF International Conference on Computer Vision,Computer Vision,https://iccv.thecvf.com/,https://www.thecvf.com/?page_id=413,biennial,Marr Prize and related ICCV paper awards.
+ICLR,International Conference on Learning Representations,Machine Learning,https://iclr.cc/,https://blog.iclr.cc/,annual,Outstanding-paper awards; ICLR 2020 is intentionally absent because the program chairs decided not to give a paper award that year.
+ICML,International Conference on Machine Learning,Machine Learning,https://icml.cc/,https://blog.icml.cc/,annual,Outstanding-paper and honorable-mention awards.
+NAACL,Annual Conference of the Nations of the Americas Chapter of the ACL,Natural Language Processing,https://naacl.org/,https://naacl.org/policies/best-paper.html,periodic,NAACL paper awards; conference is not held every calendar year.
+NeurIPS,Conference on Neural Information Processing Systems,Machine Learning,https://neurips.cc/,https://blog.neurips.cc/,annual,Known historically as NIPS before the 2018 rename.
