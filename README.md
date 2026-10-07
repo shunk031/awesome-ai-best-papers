@@ -151,10 +151,10 @@ This section shows the latest completed award year for each venue. The full hist
 
 **IEEE/CVF International Conference on Computer Vision** · [Computer Vision](https://iccv.thecvf.com/)
 
-- **Marr Prize** — [Generating Physically Stable and Buildable Brick Structures from Text](https://www.thecvf.com/?page_id=413)<br>  **Area:** Computer Vision · **Task:** 3D Vision & Reconstruction · **Model:** Optimization
-- **Best Student Paper** — [FlowEdit: Inversion-Free Text-Based Editing Using Pre-Trained Flow Models](https://www.thecvf.com/?page_id=413) · `secondary`<br>  **Area:** Computer Vision · **Task:** Image & Video Generation · **Model:** Neural Model
-- **Marr Prize Paper Honorable Mention** — [RayZer: A Self-supervised Large View Synthesis Model](https://www.thecvf.com/?page_id=413) · `secondary`<br>  **Area:** Computer Vision · **Task:** 3D Vision & Reconstruction · **Model:** Neural Model
-- **Marr Prize Paper Honorable Mention** — [Spatially-Varying Autofocus](https://www.thecvf.com/?page_id=413) · `secondary`<br>  **Area:** Computer Vision · **Task:** 3D Vision & Reconstruction · **Model:** Classical / Optimization
+- **Marr Prize** — [Generating Physically Stable and Buildable Brick Structures from Text](https://openaccess.thecvf.com/content/ICCV2025/html/Pun_Generating_Physically_Stable_and_Buildable_Brick_Structures_from_Text_ICCV_2025_paper.html) · [award source](https://www.thecvf.com/?page_id=413)<br>  **Area:** Computer Vision · **Task:** 3D Vision & Reconstruction · **Model:** Optimization
+- **Best Student Paper** — [FlowEdit: Inversion-Free Text-Based Editing Using Pre-Trained Flow Models](https://openaccess.thecvf.com/content/ICCV2025/html/Kulikov_FlowEdit_Inversion-Free_Text-Based_Editing_Using_Pre-Trained_Flow_Models_ICCV_2025_paper.html) · [award source](https://www.thecvf.com/?page_id=413) · `secondary`<br>  **Area:** Computer Vision · **Task:** Image & Video Generation · **Model:** Neural Model
+- **Marr Prize Paper Honorable Mention** — [RayZer: A Self-supervised Large View Synthesis Model](https://openaccess.thecvf.com/content/ICCV2025/html/Jiang_RayZer_A_Self-supervised_Large_View_Synthesis_Model_ICCV_2025_paper.html) · [award source](https://www.thecvf.com/?page_id=413) · `secondary`<br>  **Area:** Computer Vision · **Task:** 3D Vision & Reconstruction · **Model:** Neural Model
+- **Marr Prize Paper Honorable Mention** — [Spatially-Varying Autofocus](https://openaccess.thecvf.com/content/ICCV2025/html/Qin_Spatially-Varying_Autofocus_ICCV_2025_paper.html) · [award source](https://www.thecvf.com/?page_id=413) · `secondary`<br>  **Area:** Computer Vision · **Task:** 3D Vision & Reconstruction · **Model:** Classical / Optimization
 
 ### ICLR · 2026
 
