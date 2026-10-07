@@ -209,9 +209,9 @@ AAAI,2018,Counterfactual Multi-Agent Policy Gradients,Reinforcement Learning & D
 AAAI,2018,Generalized Adjustment Under Confounding and Selection Biases,Scientific ML & Applications,Causal Learning,Theory / Analysis
 AAAI,2018,Memory-Augmented Monte Carlo Tree Search,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Search / Planning
 AAAI,2017,Label-Free Supervision of Neural Networks with Physics and Domain Knowledge,Scientific ML & Applications,Scientific Discovery & Simulation,Neural Model
-AAAI,2017,The Option-Critic Architecture.,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
+AAAI,2017,The Option-Critic Architecture,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
 AAAI,2016,Bidirectional Search That Is Guaranteed to Meet in the Middle,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Search / Planning
-AAAI,2016,Toward a Taxonomy and Computational Models of Abnormalities in Images.,Computer Vision,Visual Recognition & Representation,CNN
+AAAI,2016,Toward a Taxonomy and Computational Models of Abnormalities in Images,Computer Vision,Visual Recognition & Representation,CNN
 CVPR,2026,Efficiently Reconstructing Dynamic Scenes One D4RT at a Time,Computer Vision,3D Vision & Reconstruction,Transformer
 CVPR,2026,Native and Compact Structured Latents for 3D Generation,Computer Vision,Generative Modeling,Neural Model
 CVPR,2026,NitroGen: An Open Foundation Model for Generalist Gaming Agents,Multimodal & Embodied AI,Reinforcement Learning & Planning,Transformer; RL

@@ -303,12 +303,12 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Adapting a Kidney Exchange Algorithm to Align With Human Values](https://ojs.aaai.org/index.php/AAAI/article/view/11505) - **Award:** Student Paper Award Honorable Mention. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** Optimization.
 #### 2017
 
-- [Label-Free Supervision of Neural Networks with Physics and Domain Knowledge](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/) - **Award:** Outstanding Paper Award. **Area:** Scientific ML & Applications. **Task:** Scientific Discovery & Simulation. **Model:** Neural Model.
-- [The Option-Critic Architecture.](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/) - **Award:** Outstanding Student Paper Award. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
+- [Label-Free Supervision of Neural Networks with Physics and Domain Knowledge](https://ojs.aaai.org/index.php/AAAI/article/view/10934) - **Award:** Outstanding Paper Award. **Area:** Scientific ML & Applications. **Task:** Scientific Discovery & Simulation. **Model:** Neural Model.
+- [The Option-Critic Architecture](https://ojs.aaai.org/index.php/AAAI/article/view/10916) - **Award:** Outstanding Student Paper Award. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
 #### 2016
 
-- [Bidirectional Search That Is Guaranteed to Meet in the Middle](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/) - **Award:** Outstanding Paper Award. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** Search / Planning.
-- [Toward a Taxonomy and Computational Models of Abnormalities in Images.](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/) - **Award:** Outstanding Student Paper Award. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** CNN.
+- [Bidirectional Search That Is Guaranteed to Meet in the Middle](https://ojs.aaai.org/index.php/AAAI/article/view/10436) - **Award:** Outstanding Paper Award. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** Search / Planning.
+- [Toward a Taxonomy and Computational Models of Abnormalities in Images](https://ojs.aaai.org/index.php/AAAI/article/view/10468) - **Award:** Outstanding Student Paper Award. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** CNN.
 ### CVPR
 
 **IEEE/CVF Conference on Computer Vision and Pattern Recognition** · [conference](https://cvpr.thecvf.com/)
