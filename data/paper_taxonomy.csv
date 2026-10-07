@@ -362,7 +362,7 @@ ICCV,2017,Open Set Domain Adaptation,Computer Vision,Robustness & Domain Adaptat
 ICLR,2026,LLMs Get Lost In Multi-Turn Conversation,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
 ICLR,2026,Transformers are Inherently Succinct,ML Theory & Optimization,Optimization & Generalization,Transformer; Theory / Analysis
 ICLR,2026,The Polar Express: Optimal Matrix Sign Methods and their Application to the Muon Algorithm,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
-ICLR,2025,AlphaEdit: Null-Space Constrained Model Editing for Language Models,NLP & Language,Model Editing & Adaptation,LLM; Transformer
+ICLR,2025,AlphaEdit: Null-Space Constrained Knowledge Editing for Language Models,NLP & Language,Model Editing & Adaptation,LLM; Transformer
 ICLR,2025,Learning Dynamics of LLM Finetuning,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer; Representation Learning
 ICLR,2025,Safety Alignment Should be Made More Than Just a Few Tokens Deep,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
 ICLR,2025,Data Shapley in One Training Run,General ML & Representation Learning,Interpretability & Explainability,Theory / Analysis
