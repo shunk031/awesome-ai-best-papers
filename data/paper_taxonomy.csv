@@ -488,7 +488,7 @@ ICML,2017,Understanding Black-box Predictions via Influence Functions,Responsibl
 ICML,2016,Dueling Network Architectures for Deep Reinforcement Learning,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL
 ICML,2016,Ensuring Rapid Mixing and Low Bias for Asynchronous Gibbs Sampling,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian
 ICML,2016,Pixel Recurrent Neural Networks,Computer Vision,Image & Video Generation,Autoregressive; RNN
-NAACL,2025,The BiGGen Bench: A Principled Benchmark for Fine-grained Evaluation of Language Models with Language Models,NLP & Language,Language Modeling & Generation,LLM; Transformer
+NAACL,2025,The BiGGen Bench: A Principled Benchmark for Fine-grained Evaluation of Language Models with Language Models,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
 NAACL,2024,"A Pretrainer’s Guide to Training Data: Measuring the Effects of Data Age, Domain Coverage, Quality, & Toxicity",NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
 NAACL,2024,Defining and Detecting Vulnerability in Human Evaluation Guidelines: A Preliminary Study Towards Reliable NLG Evaluation,NLP & Language,Evaluation & Benchmarking,LLM; Transformer
 NAACL,2024,Evaluating the Deductive Competence of Large Language Models,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer

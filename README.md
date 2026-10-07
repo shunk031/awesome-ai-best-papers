@@ -69,21 +69,21 @@ The tables below summarize the **132 award records from 2024–2026 currently in
 | --- | ---: |
 | Safety, Fairness & Privacy | 14 |
 | 3D Vision & Reconstruction | 14 |
-| LLM Analysis & Evaluation | 12 |
+| LLM Analysis & Evaluation | 13 |
 | Optimization & Generalization | 11 |
 | Image & Video Generation | 8 |
 | Model Efficiency & Architecture | 7 |
 | Generative Modeling | 7 |
-| Language Modeling & Generation | 6 |
 | Multimodal & Vision-Language | 6 |
 | Reinforcement Learning & Planning | 6 |
 | Probabilistic Inference & Sampling | 6 |
+| Language Modeling & Generation | 5 |
 | Visual Recognition & Representation | 5 |
 
 ### Reading the recent slice
 
 - **Language-model work is the clearest cluster:** `NLP & Language` accounts for 34 recent award records, while `LLM` and `Transformer` appear in 41 and 57 records respectively.
-- **Evaluation, safety, and theory are prominent:** `LLM Analysis & Evaluation` has 12 records, `Safety, Fairness & Privacy` has 14, and `Optimization & Generalization` has 11.
+- **Evaluation, safety, and theory are prominent:** `LLM Analysis & Evaluation` has 13 records, `Safety, Fairness & Privacy` has 14, and `Optimization & Generalization` has 11.
 - **Generative and multimodal work remains broad rather than single-model:** `Diffusion` appears in 14 records, alongside `VLM` in 9, with recurring awards in image/video generation, 3D reconstruction, and multimodal vision-language tasks.
 - **RL and structured reasoning remain active:** `Reinforcement Learning & Planning` has 6 recent records, while graph / structured and neuro-symbolic work continues to appear across AAAI and ICLR.
 
@@ -180,7 +180,7 @@ This section shows the latest completed award year for each venue. The full hist
 
 **Annual Conference of the Nations of the Americas Chapter of the ACL** · [Natural Language Processing](https://naacl.org/)
 
-- **Best Paper** — [The BiGGen Bench: A Principled Benchmark for Fine-grained Evaluation of Language Models with Language Models](https://aclanthology.org/2025.naacl-long.303/) · [award source](https://2025.naacl.org/blog/best-papers/)<br>  **Area:** NLP & Language · **Task:** Language Modeling & Generation · **Model:** LLM / Transformer
+- **Best Paper** — [The BiGGen Bench: A Principled Benchmark for Fine-grained Evaluation of Language Models with Language Models](https://aclanthology.org/2025.naacl-long.303/) · [award source](https://2025.naacl.org/blog/best-papers/)<br>  **Area:** NLP & Language · **Task:** LLM Analysis & Evaluation · **Model:** LLM / Transformer
 
 ### NeurIPS · 2025
 
