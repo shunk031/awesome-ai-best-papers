@@ -1,0 +1,79 @@
+name: One-off AAAI 2020 canonical URL fill
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-aaai-2020-urls.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync
+      - name: Fill AAAI 2020 canonical paper URLs
+        run: |
+          uv run python - <<'PY'
+          import csv
+          from pathlib import Path
+          import subprocess, sys
+
+          path = Path('data/papers.csv')
+          urls = {
+              'WinoGrande: An Adversarial Winograd Schema Challenge at Scale': 'https://ojs.aaai.org/index.php/AAAI/article/view/6399',
+              'A Unifying View on Individual Bounds and Heuristic Inaccuracies in Bidirectional Search': 'https://ojs.aaai.org/index.php/AAAI/article/view/5611',
+              'Fair Division of Mixed Divisible and Indivisible Goods': 'https://ojs.aaai.org/index.php/AAAI/article/view/5548',
+              'Lifelong Learning with a Changing Action Set': 'https://ojs.aaai.org/index.php/AAAI/article/view/5739',
+              'A Distributed Multi-Sensor Machine Learning Approach to Earthquake Early Warning': 'https://ojs.aaai.org/index.php/AAAI/article/view/5376',
+              'The Unreasonable Effectiveness of Inverse Reinforcement Learning in Advancing Cancer Research': 'https://ojs.aaai.org/index.php/AAAI/article/view/5380',
+          }
+          folded = {k.casefold(): v for k, v in urls.items()}
+
+          with path.open(newline='', encoding='utf-8') as f:
+              rows = list(csv.DictReader(f))
+
+          found = set()
+          for row in rows:
+              if row['venue'] != 'AAAI' or row['year'] != '2020':
+                  continue
+              key = row['title'].casefold()
+              if key not in folded:
+                  continue
+              canonical = folded[key]
+              if row['paper_url'] not in ('', canonical):
+                  raise SystemExit(f'Unexpected existing URL for {row["title"]}: {row["paper_url"]}')
+              row['paper_url'] = canonical
+              row['checked_at'] = '2026-10-07'
+              found.add(key)
+
+          missing = set(folded) - found
+          if missing:
+              raise SystemExit(f'Missing target rows: {sorted(missing)}')
+
+          with path.open('w', newline='', encoding='utf-8') as f:
+              writer = csv.DictWriter(f, fieldnames=['venue','year','award','tier','title','paper_url','source_url','checked_at','notes'], lineterminator='\n')
+              writer.writeheader(); writer.writerows(rows)
+
+          subprocess.run([sys.executable, 'scripts/validate_catalog.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py', '--check'], check=True)
+          PY
+      - name: Commit canonical URLs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers.csv README.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Fill AAAI 2020 canonical paper URLs'
+            git push
+          fi
