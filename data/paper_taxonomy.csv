@@ -276,6 +276,9 @@ ICLR,2022,Expressiveness and Approximation Properties of Graph Neural Networks,M
 ICLR,2022,Hyperparameter Tuning with Renyi Differential Privacy,Responsible AI & Privacy,"Safety, Fairness & Privacy",Optimization; Probabilistic / Bayesian
 ICLR,2022,Learning Strides in Convolutional Neural Networks,General ML & Representation Learning,Model Efficiency & Architecture,CNN; Optimization
 ICLR,2022,Neural Collapse Under MSE Loss: Proximity to and Dynamics on the Central Path,ML Theory & Optimization,Optimization & Generalization,Theory / Analysis
+ICLR,2022,Understanding over-squashing and bottlenecks on graphs via curvature,Graphs & Structured Learning,Graph & Structured Learning,GNN; Theory / Analysis
+ICLR,2022,Efficiently Modeling Long Sequences with Structured State Spaces,General ML & Representation Learning,Model Efficiency & Architecture,Neural Model; Theory / Analysis
+ICLR,2022,PiCO: Contrastive Label Disambiguation for Partial Label Learning,General ML & Representation Learning,Representation Learning,Representation Learning; Neural Model
 ICLR,2021,Beyond Fully-Connected Layers with Quaternions: Parameterization of Hypercomplex Multiplications with 1/n Parameters,General ML & Representation Learning,Model Efficiency & Architecture,Neural Model
 ICLR,2021,Complex Query Answering with Neural Link Predictors,Graphs & Structured Learning,Graph & Structured Learning,Neural Model
 ICLR,2021,EigenGame: PCA as a Nash Equilibrium,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
