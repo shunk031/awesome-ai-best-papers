@@ -1,0 +1,50 @@
+name: One-off historical taxonomy report
+
+on:
+  push:
+    branches:
+      - refactor/venue-csv-catalog
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: refactor/venue-csv-catalog
+      - name: Report suspicious historical taxonomy rows
+        run: |
+          python - <<'PY'
+          import csv, re
+          from pathlib import Path
+
+          rows=[]
+          for p in sorted(Path('data/papers').glob('*.csv')):
+              with p.open(newline='', encoding='utf-8') as f:
+                  rows.extend(csv.DictReader(f))
+          rows=[r for r in rows if 2016 <= int(r['year']) <= 2023]
+
+          checks=[]
+          def add(kind, r):
+              checks.append((kind,r['venue'],r['year'],r['title'],r['area'],r['task'],r['model_family']))
+          for r in rows:
+              t=r['title'].casefold(); fam={x.strip() for x in r['model_family'].split(';')}
+              if 'RL' in fam and not re.search(r'reinforcement|\brl\b|policy|reward|mdp|pomdp|q-learning|game|control|bandit|decision', t): add('RL?',r)
+              if 'LLM' in fam and int(r['year']) <= 2020: add('LLM-pre2021?',r)
+              if 'Diffusion' in fam and int(r['year']) <= 2019: add('Diffusion-pre2020?',r)
+              if 'VLM' in fam and not re.search(r'vision|visual|image|video|multimodal|multi-modal|ground|scene|caption|clip|object|chart', t): add('VLM?',r)
+              if 'Neuro-Symbolic' in fam and not re.search(r'logic|symbol|reason|program|grammar|knowledge|rule|theorem|satisf|formal|compos', t): add('NeuroSymbolic?',r)
+              if 'Neural Model' in fam and len(fam) > 1: add('GenericNeural+specific?',r)
+              if r['task']=='Visual Recognition & Representation' and re.search(r'generation|generative|super-resolution|synthesis|render',t): add('VisionTask?',r)
+              if r['task']=='Language Modeling & Generation' and re.search(r'evaluat|benchmark|metric|analysis|detect|measure|bias|robust',t): add('LanguageTask?',r)
+              if r['task']=='Reinforcement Learning & Planning' and 'RL' not in fam and 'Search / Planning' not in fam and 'Theory / Analysis' not in fam: add('PlanningFamily?',r)
+
+          checks.sort(key=lambda x:(x[0],x[1],-int(x[2]),x[3]))
+          print(f'HISTORICAL_ROWS={len(rows)}')
+          print(f'CANDIDATES={len(checks)}')
+          for c in checks:
+              print('\t'.join(c))
+          PY
