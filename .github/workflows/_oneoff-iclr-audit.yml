@@ -1,0 +1,105 @@
+name: One-off ICLR award audit
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-iclr-audit.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply ICLR award corrections
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          import subprocess, sys
+
+          root = Path('.')
+          papers_path = root / 'data/papers.csv'
+          taxonomy_path = root / 'data/paper_taxonomy.csv'
+
+          def read(path):
+              with path.open(newline='', encoding='utf-8') as f:
+                  return list(csv.DictReader(f))
+
+          def write(path, rows, fields):
+              with path.open('w', newline='', encoding='utf-8') as f:
+                  w = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
+                  w.writeheader(); w.writerows(rows)
+
+          papers = read(papers_path)
+          tax = read(taxonomy_path)
+
+          # ICLR 2019 official page calls both recipients Best Paper winners.
+          for row in papers:
+              if row['venue'] == 'ICLR' and row['year'] == '2019':
+                  row['award'] = 'Best Paper'
+
+          source = 'https://blog.iclr.cc/2022/04/20/announcing-the-iclr-2022-outstanding-paper-award-recipients/'
+          new_papers = [
+              {
+                  'venue':'ICLR','year':'2022','award':'Outstanding Paper Honorable Mention','tier':'secondary',
+                  'title':'Understanding over-squashing and bottlenecks on graphs via curvature',
+                  'paper_url':'https://openreview.net/forum?id=7UmjRGzp-A','source_url':source,'checked_at':'2026-10-07','notes':''
+              },
+              {
+                  'venue':'ICLR','year':'2022','award':'Outstanding Paper Honorable Mention','tier':'secondary',
+                  'title':'Efficiently Modeling Long Sequences with Structured State Spaces',
+                  'paper_url':'https://openreview.net/forum?id=uYLFoz1vlAC','source_url':source,'checked_at':'2026-10-07','notes':''
+              },
+              {
+                  'venue':'ICLR','year':'2022','award':'Outstanding Paper Honorable Mention','tier':'secondary',
+                  'title':'PiCO: Contrastive Label Disambiguation for Partial Label Learning',
+                  'paper_url':'https://openreview.net/forum?id=EhYjZy6e1gJ','source_url':source,'checked_at':'2026-10-07','notes':''
+              },
+          ]
+          new_tax = [
+              {'venue':'ICLR','year':'2022','title':'Understanding over-squashing and bottlenecks on graphs via curvature','area':'Graphs & Structured Learning','task':'Graph & Structured Learning','model_family':'GNN; Theory / Analysis'},
+              {'venue':'ICLR','year':'2022','title':'Efficiently Modeling Long Sequences with Structured State Spaces','area':'General ML & Representation Learning','task':'Model Efficiency & Architecture','model_family':'Neural Model; Theory / Analysis'},
+              {'venue':'ICLR','year':'2022','title':'PiCO: Contrastive Label Disambiguation for Partial Label Learning','area':'General ML & Representation Learning','task':'Representation Learning','model_family':'Representation Learning; Neural Model'},
+          ]
+
+          existing = {(r['venue'], r['year'], r['title'].casefold()) for r in papers}
+          insert_at = max(i for i,r in enumerate(papers) if r['venue']=='ICLR' and r['year']=='2022') + 1
+          for row in new_papers:
+              key=(row['venue'],row['year'],row['title'].casefold())
+              if key not in existing:
+                  papers.insert(insert_at,row); insert_at += 1; existing.add(key)
+
+          existing_tax = {(r['venue'], r['year'], r['title'].casefold()) for r in tax}
+          tax_insert_at = max(i for i,r in enumerate(tax) if r['venue']=='ICLR' and r['year']=='2022') + 1
+          for row in new_tax:
+              key=(row['venue'],row['year'],row['title'].casefold())
+              if key not in existing_tax:
+                  tax.insert(tax_insert_at,row); tax_insert_at += 1; existing_tax.add(key)
+
+          write(papers_path, papers, ['venue','year','award','tier','title','paper_url','source_url','checked_at','notes'])
+          write(taxonomy_path, tax, ['venue','year','title','area','task','model_family'])
+          subprocess.run([sys.executable, 'scripts/validate_catalog.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py', '--check'], check=True)
+          PY
+      - name: Commit corrected catalog
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers.csv data/paper_taxonomy.csv README.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Correct ICLR historical awards'
+            git push
+          fi
