@@ -1,0 +1,121 @@
+name: One-off sync Stage 2 audits into refactor
+
+on:
+  push:
+    branches:
+      - refactor/venue-csv-catalog
+
+permissions:
+  contents: write
+
+jobs:
+  sync-stage2:
+    if: ${{ !contains(github.event.head_commit.message, 'Sync Stage 2 URL audits into venue CSVs') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: refactor/venue-csv-catalog
+          fetch-depth: 0
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Fetch audit branches
+        run: |
+          git fetch origin master \
+            audit/iclr-canonical-urls \
+            audit/icml-canonical-urls \
+            audit/neurips-canonical-urls
+
+      - name: Apply audited title and URL changes
+        run: |
+          python - <<'PY'
+          import csv
+          import io
+          import subprocess
+          from pathlib import Path
+
+          audits = {
+              'ICLR': ('audit/iclr-canonical-urls', Path('data/papers/iclr.csv')),
+              'ICML': ('audit/icml-canonical-urls', Path('data/papers/icml.csv')),
+              'NeurIPS': ('audit/neurips-canonical-urls', Path('data/papers/neurips.csv')),
+          }
+
+          def git_csv(ref: str, path: str):
+              text = subprocess.check_output(['git', 'show', f'origin/{ref}:{path}'], text=True)
+              return list(csv.DictReader(io.StringIO(text)))
+
+          base = git_csv('master', 'data/papers.csv')
+          changed_total = 0
+
+          for venue, (branch, out_path) in audits.items():
+              audited = git_csv(branch, 'data/papers.csv')
+              base_rows = [r for r in base if r['venue'] == venue]
+              audit_rows = [r for r in audited if r['venue'] == venue]
+              if len(base_rows) != len(audit_rows):
+                  raise RuntimeError(f'{venue}: row count changed in audit branch')
+
+              changes = {}
+              for old, new in zip(base_rows, audit_rows):
+                  if (old['year'], old['award']) != (new['year'], new['award']):
+                      raise RuntimeError(f'{venue}: row order mismatch around {old["title"]}')
+                  if old['title'] != new['title'] or old['paper_url'] != new['paper_url']:
+                      key = (old['year'], old['award'], old['title'])
+                      changes[key] = (new['title'], new['paper_url'])
+
+              with out_path.open(newline='', encoding='utf-8') as f:
+                  rows = list(csv.DictReader(f))
+                  fields = list(rows[0].keys())
+
+              applied = 0
+              for row in rows:
+                  key = (row['year'], row['award'], row['title'])
+                  if key in changes:
+                      row['title'], row['paper_url'] = changes[key]
+                      applied += 1
+
+              if applied != len(changes):
+                  missing = sorted(set(changes) - {
+                      (r['year'], r['award'], r['title']) for r in rows
+                  })
+                  raise RuntimeError(f'{venue}: applied {applied}/{len(changes)} changes; missing={missing[:3]}')
+
+              with out_path.open('w', newline='', encoding='utf-8') as f:
+                  writer = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
+                  writer.writeheader()
+                  writer.writerows(rows)
+
+              print(f'{venue}: applied {applied} audited row changes')
+              changed_total += applied
+
+          missing_urls = []
+          for path in sorted(Path('data/papers').glob('*.csv')):
+              with path.open(newline='', encoding='utf-8') as f:
+                  for row in csv.DictReader(f):
+                      if not row['paper_url'].strip():
+                          missing_urls.append((row['venue'], row['year'], row['title']))
+          if missing_urls:
+              raise RuntimeError(f'Missing paper_url remains: {len(missing_urls)}; first={missing_urls[:3]}')
+
+          print(f'Applied {changed_total} Stage 2 audited row changes; missing paper_url: 0')
+          PY
+
+      - name: Validate and regenerate
+        run: |
+          uv sync
+          uv run python scripts/validate_catalog.py
+          uv run python scripts/generate_readme.py
+          uv run python scripts/generate_readme.py --check
+          npx awesome-lint
+
+      - name: Commit synced audits
+        run: |
+          git diff --check
+          git status --short
+          test -n "$(git status --porcelain)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/papers README.md
+          git commit -m "Sync Stage 2 URL audits into venue CSVs"
+          git push origin HEAD:refactor/venue-csv-catalog
