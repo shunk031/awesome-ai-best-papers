@@ -1,0 +1,71 @@
+name: One-off final catalog audit
+
+on:
+  push:
+    branches:
+      - refactor/venue-csv-catalog
+
+permissions:
+  contents: read
+
+jobs:
+  final-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: refactor/venue-csv-catalog
+          fetch-depth: 0
+
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Verify catalog invariants
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+
+          files = sorted(Path('data/papers').glob('*.csv'))
+          if len(files) != 9:
+              raise RuntimeError(f'Expected 9 venue CSVs, found {len(files)}')
+
+          rows = []
+          for path in files:
+              with path.open(newline='', encoding='utf-8') as f:
+                  part = list(csv.DictReader(f))
+              rows.extend(part)
+
+          unique_papers = {(r['venue'], r['year'], r['title'].casefold()) for r in rows}
+          missing_urls = [r for r in rows if not r['paper_url'].strip()]
+          recent = [r for r in rows if int(r['year']) >= 2024]
+
+          if len(rows) != 567:
+              raise RuntimeError(f'Expected 567 award records, found {len(rows)}')
+          if len(unique_papers) != 566:
+              raise RuntimeError(f'Expected 566 unique papers, found {len(unique_papers)}')
+          if missing_urls:
+              raise RuntimeError(f'Missing paper_url: {len(missing_urls)}')
+          if len(recent) != 130:
+              raise RuntimeError(f'Expected 130 records in 2024-2026 slice, found {len(recent)}')
+
+          workflows = list(Path('.github/workflows').glob('_oneoff-*.yml'))
+          allowed = {Path('.github/workflows/_oneoff-final-catalog-audit.yml')}
+          unexpected = set(workflows) - allowed
+          if unexpected:
+              raise RuntimeError(f'Unexpected temporary workflows: {sorted(map(str, unexpected))}')
+
+          print('venue CSVs: 9')
+          print('award records: 567')
+          print('unique papers: 566')
+          print('recent 2024-2026 records: 130')
+          print('missing paper_url: 0')
+          print('unexpected temporary workflows: 0')
+          PY
+
+      - name: Validate generated catalog
+        run: |
+          uv sync
+          uv run python scripts/validate_catalog.py
+          uv run python scripts/generate_readme.py --check
+          npx awesome-lint
