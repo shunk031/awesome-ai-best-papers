@@ -1,0 +1,68 @@
+name: One-off CVPR 2019 canonical URL fill
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-cvpr-2019-urls.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync
+      - name: Fill CVPR 2019 canonical paper URLs
+        run: |
+          uv run python - <<'PY'
+          import csv
+          from pathlib import Path
+          import subprocess, sys
+
+          path = Path('data/papers.csv')
+          urls = {
+              'A Theory of Fermat Paths for Non-Line-of-Sight Shape Reconstruction': 'https://openaccess.thecvf.com/content_CVPR_2019/html/Xin_A_Theory_of_Fermat_Paths_for_Non-Line-Of-Sight_Shape_Reconstruction_CVPR_2019_paper.html',
+              'Reinforced Cross-Modal Matching and Self-Supervised Imitation Learning for Vision-Language Navigation': 'https://openaccess.thecvf.com/content_CVPR_2019/html/Wang_Reinforced_Cross-Modal_Matching_and_Self-Supervised_Imitation_Learning_for_Vision-Language_Navigation_CVPR_2019_paper.html',
+              'A Style-Based Generator Architecture for Generative Adversarial Networks': 'https://openaccess.thecvf.com/content_CVPR_2019/html/Karras_A_Style-Based_Generator_Architecture_for_Generative_Adversarial_Networks_CVPR_2019_paper.html',
+              'Learning the Depths of Moving People by Watching Frozen People': 'https://openaccess.thecvf.com/content_CVPR_2019/html/Li_Learning_the_Depths_of_Moving_People_by_Watching_Frozen_People_CVPR_2019_paper.html',
+          }
+          folded = {k.casefold(): v for k, v in urls.items()}
+          with path.open(newline='', encoding='utf-8') as f:
+              rows = list(csv.DictReader(f))
+          found = set()
+          for row in rows:
+              if row['venue'] != 'CVPR' or row['year'] != '2019':
+                  continue
+              key = row['title'].casefold()
+              if key not in folded:
+                  continue
+              row['paper_url'] = folded[key]
+              row['checked_at'] = '2026-10-07'
+              found.add(key)
+          if found != set(folded):
+              raise SystemExit(f'Missing targets: {sorted(set(folded)-found)}')
+          with path.open('w', newline='', encoding='utf-8') as f:
+              w = csv.DictWriter(f, fieldnames=['venue','year','award','tier','title','paper_url','source_url','checked_at','notes'], lineterminator='\n')
+              w.writeheader(); w.writerows(rows)
+          subprocess.run([sys.executable, 'scripts/validate_catalog.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py', '--check'], check=True)
+          PY
+      - name: Commit canonical URLs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers.csv README.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Fill CVPR 2019 canonical paper URLs'
+            git push
+          fi
