@@ -1,0 +1,71 @@
+name: One-off CVPR 2025 canonical URL fill
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-cvpr-2025-urls.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync
+      - name: Fill CVPR 2025 canonical paper URLs
+        run: |
+          uv run python - <<'PY'
+          import csv
+          from pathlib import Path
+          import subprocess, sys
+
+          path = Path('data/papers.csv')
+          urls = {
+              'VGGT: Visual Geometry Grounded Transformer': 'https://openaccess.thecvf.com/content/CVPR2025/html/Wang_VGGT_Visual_Geometry_Grounded_Transformer_CVPR_2025_paper.html',
+              'Neural Inverse Rendering from Propagating Light': 'https://openaccess.thecvf.com/content/CVPR2025/html/Malik_Neural_Inverse_Rendering_from_Propagating_Light_CVPR_2025_paper.html',
+              'MegaSaM: Accurate, Fast and Robust Structure and Motion from Casual Dynamic Videos': 'https://openaccess.thecvf.com/content/CVPR2025/html/Li_MegaSaM_Accurate_Fast_and_Robust_Structure_and_Motion_from_Casual_CVPR_2025_paper.html',
+              'Navigation World Models': 'https://openaccess.thecvf.com/content/CVPR2025/html/Bar_Navigation_World_Models_CVPR_2025_paper.html',
+              'Molmo and PixMo: Open Weights and Open Data for State-of-the-Art Vision-Language Models': 'https://openaccess.thecvf.com/content/CVPR2025/html/Deitke_Molmo_and_PixMo_Open_Weights_and_Open_Data_for_State-of-the-Art_CVPR_2025_paper.html',
+              '3D Student Splatting and Scooping': 'https://openaccess.thecvf.com/content/CVPR2025/html/Zhu_3D_Student_Splatting_and_Scooping_CVPR_2025_paper.html',
+              'Generative Multimodal Pretraining with Discrete Diffusion Timestep Tokens': 'https://openaccess.thecvf.com/content/CVPR2025/html/Pan_Generative_Multimodal_Pretraining_with_Discrete_Diffusion_Timestep_Tokens_CVPR_2025_paper.html',
+          }
+          folded = {k.casefold(): v for k,v in urls.items()}
+          with path.open(newline='', encoding='utf-8') as f:
+              rows = list(csv.DictReader(f))
+          found=set()
+          for row in rows:
+              if row['venue']!='CVPR' or row['year']!='2025':
+                  continue
+              key=row['title'].casefold()
+              if key not in folded:
+                  continue
+              row['paper_url']=folded[key]
+              row['checked_at']='2026-10-07'
+              found.add(key)
+          if found != set(folded):
+              raise SystemExit(f'Missing target rows: {sorted(set(folded)-found)}')
+          with path.open('w', newline='', encoding='utf-8') as f:
+              w=csv.DictWriter(f, fieldnames=['venue','year','award','tier','title','paper_url','source_url','checked_at','notes'], lineterminator='\n')
+              w.writeheader(); w.writerows(rows)
+          subprocess.run([sys.executable,'scripts/validate_catalog.py'],check=True)
+          subprocess.run([sys.executable,'scripts/generate_readme.py'],check=True)
+          subprocess.run([sys.executable,'scripts/generate_readme.py','--check'],check=True)
+          PY
+      - name: Commit canonical URLs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers.csv README.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Fill CVPR 2025 canonical paper URLs'
+            git push
+          fi
