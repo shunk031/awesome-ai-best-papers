@@ -1,0 +1,67 @@
+name: One-off AAAI 2023 and ProcTHOR taxonomy audit
+
+on:
+  push:
+    branches:
+      - refactor/venue-csv-catalog
+
+permissions:
+  contents: write
+
+jobs:
+  audit-taxonomy:
+    if: ${{ !contains(github.event.head_commit.message, 'Audit AAAI 2023 and ProcTHOR taxonomy') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: refactor/venue-csv-catalog
+          fetch-depth: 0
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+      - name: Apply curated corrections
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+
+          changes = {
+            Path('data/papers/aaai.csv'): {
+              ('2023','Neural Architecture Search for Wide Spectrum Adversarial Robustness'):{'model_family':'Optimization'},
+              ('2023','CowClip: Reducing CTR Prediction Model Training Time from 12 hours to 10 minutes on 1 GPU'):{'model_family':'Optimization'},
+            },
+            Path('data/papers/neurips.csv'): {
+              ('2022','ProcTHOR: Large-Scale Embodied AI Using Procedural Generation'):{
+                'task':'Evaluation & Benchmarking','model_family':'Neural Model'},
+            },
+          }
+
+          for path, edits in changes.items():
+            with path.open(newline='',encoding='utf-8') as f:
+              rows=list(csv.DictReader(f)); fields=list(rows[0])
+            seen=set()
+            for r in rows:
+              k=(r['year'],r['title'])
+              if k in edits:
+                for field,val in edits[k].items():
+                  print(f'{path} {k}: {field}: {r[field]} -> {val}'); r[field]=val
+                seen.add(k)
+            if seen != set(edits): raise RuntimeError(f'{path}: missing targets {set(edits)-seen}')
+            with path.open('w',newline='',encoding='utf-8') as f:
+              w=csv.DictWriter(f,fieldnames=fields,lineterminator='\n'); w.writeheader(); w.writerows(rows)
+          PY
+      - name: Validate and regenerate
+        run: |
+          uv sync
+          uv run python scripts/validate_catalog.py
+          uv run python scripts/generate_readme.py
+          uv run python scripts/generate_readme.py --check
+          npx awesome-lint
+      - name: Commit audit
+        run: |
+          git diff --check
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/papers/aaai.csv data/papers/neurips.csv README.md
+          git commit -m "Audit AAAI 2023 and ProcTHOR taxonomy"
+          git push origin HEAD:refactor/venue-csv-catalog
