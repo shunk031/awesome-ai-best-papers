@@ -1,0 +1,66 @@
+name: One-off CVPR 2026 canonical URLs
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-cvpr-2026-urls.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fill CVPR-26 Open Access URLs
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          import subprocess, sys
+
+          path = Path('data/papers.csv')
+          urls = {
+              'Efficiently Reconstructing Dynamic Scenes One D4RT at a Time': 'https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_Efficiently_Reconstructing_Dynamic_Scenes_One_D4RT_at_a_Time_CVPR_2026_paper.html',
+              'NitroGen: An Open Foundation Model for Generalist Gaming Agents': 'https://openaccess.thecvf.com/content/CVPR2026/html/Magne_NitroGen_An_Open_Foundation_Model_for_Generalist_Gaming_Agents_CVPR_2026_paper.html',
+              'SAM 3D: 3Dfy Anything in Images': 'https://openaccess.thecvf.com/content/CVPR2026/html/Chen_SAM_3D_3Dfy_Anything_in_Images_CVPR_2026_paper.html',
+              'Native and Compact Structured Latents for 3D Generation': 'https://openaccess.thecvf.com/content/CVPR2026/html/Xiang_Native_and_Compact_Structured_Latents_for_3D_Generation_CVPR_2026_paper.html',
+              'ChordEdit: One-Step Low-Energy Transport for Image Editing': 'https://openaccess.thecvf.com/content/CVPR2026/html/Lu_ChordEdit_One-Step_Low-Energy_Transport_for_Image_Editing_CVPR_2026_paper.html',
+          }
+          with path.open(newline='', encoding='utf-8') as f:
+              rows = list(csv.DictReader(f))
+          found = set()
+          for row in rows:
+              if row['venue']=='CVPR' and row['year']=='2026' and row['title'] in urls:
+                  row['paper_url'] = urls[row['title']]
+                  row['checked_at'] = '2026-10-07'
+                  found.add(row['title'])
+          missing = set(urls) - found
+          if missing:
+              raise SystemExit(f'Missing CVPR-26 rows: {sorted(missing)}')
+          with path.open('w', newline='', encoding='utf-8') as f:
+              w = csv.DictWriter(f, fieldnames=['venue','year','award','tier','title','paper_url','source_url','checked_at','notes'], lineterminator='\n')
+              w.writeheader(); w.writerows(rows)
+          subprocess.run([sys.executable, 'scripts/validate_catalog.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py', '--check'], check=True)
+          PY
+      - name: Commit canonical URLs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers.csv README.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Add CVPR 2026 canonical paper URLs'
+            git push
+          fi
