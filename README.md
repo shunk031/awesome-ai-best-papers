@@ -35,7 +35,7 @@ The **130 award records from 2024–2026** provide a compact view of the researc
 
 **Research areas:** `NLP & Language` (36), `Computer Vision` (30), `ML Theory & Optimization` (16), `Responsible AI & Privacy` (12), `Multimodal & Embodied AI` (11), `Scientific ML & Applications` (8), `General ML & Representation Learning` (8), `Graphs & Structured Learning` (4), `Reinforcement Learning & Decision Making` (4), `Speech & Audio` (1).
 
-**Model / method families:** `Transformer` (61), `LLM` (42), `Theory / Analysis` (30), `Diffusion` (19), `Neural Model` (16), `Optimization` (12), `VLM` (9), `Probabilistic / Bayesian` (9), `RL` (7), `Representation Learning` (5), `Autoregressive` (5), `GNN` (3), `CNN` (3), `Neuro-Symbolic` (2), `Classical / Optimization` (2), `VAE` (1), `Search / Planning` (1), `Meta-Learning` (1).
+**Model / method families:** `Transformer` (61), `LLM` (42), `Theory / Analysis` (30), `Diffusion` (19), `Neural Model` (16), `Optimization` (12), `VLM` (9), `Probabilistic / Bayesian` (9), `RL` (7), `Autoregressive` (5), `Representation Learning` (4), `GNN` (3), `CNN` (3), `Neuro-Symbolic` (2), `Classical / Optimization` (2), `VAE` (1), `Search / Planning` (1), `Meta-Learning` (1).
 
 **Frequently awarded tasks:** `LLM Analysis & Evaluation` (14), `3D Vision & Reconstruction` (14), `Optimization & Generalization` (12), `Safety, Fairness & Privacy` (11), `Image & Video Generation` (11), `Model Efficiency & Architecture` (7), `Multimodal & Vision-Language` (6), `Probabilistic Inference & Sampling` (6), `Reinforcement Learning & Planning` (5), `Generative Modeling` (5), `Scientific Discovery & Simulation` (4), `Visual Recognition & Representation` (4).
 
@@ -406,7 +406,7 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [An image speaks a thousand words, but can everyone listen? On image transcreation for cultural relevance](https://aclanthology.org/2024.emnlp-main.573/) - **Award:** Best Paper. **Area:** Multimodal & Embodied AI. **Task:** Multimodal & Vision-Language. **Model:** VLM.
 - [Backward Lens: Projecting Language Model Gradients into the Vocabulary Space](https://aclanthology.org/2024.emnlp-main.142/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Interpretability & Explainability. **Model:** LLM / Transformer / Optimization.
 - [CoGen: Learning from Feedback with Coupled Comprehension and Generation](https://aclanthology.org/2024.emnlp-main.721/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** LLM / Transformer.
-- [Pretraining Data Detection for Large Language Models: A Divergence-based Calibration Method](https://aclanthology.org/2024.emnlp-main.300/) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** LLM / Transformer / Representation Learning.
+- [Pretraining Data Detection for Large Language Models: A Divergence-based Calibration Method](https://aclanthology.org/2024.emnlp-main.300/) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** LLM / Transformer.
 - [Towards Robust Speech Representation Learning for Thousands of Languages](https://aclanthology.org/2024.emnlp-main.570/) - **Award:** Best Paper. **Area:** Speech & Audio. **Task:** Speech & Audio. **Model:** Representation Learning.
 #### 2023
 
