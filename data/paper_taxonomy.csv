@@ -354,11 +354,11 @@ ICCV,2019,SinGAN: Learning a Generative Model from a Single Natural Image,Comput
 ICCV,2019,PLMP – Point-Line Minimal Problems in Complete Multi-View Visibility,Computer Vision,3D Vision & Reconstruction,Theory / Analysis
 ICCV,2019,Asynchronous Single-Photon 3D Imaging,Computer Vision,3D Vision & Reconstruction,Classical / Optimization
 ICCV,2019,Specifying Object Attributes and Relations in Interactive Scene Generation,Computer Vision,Generative Modeling,Neural Model
-ICCV,2017,First Person Activity Forecasting with Online Inverse Reinforcement Learning.,Computer Vision,Visual Recognition & Representation,RL
-ICCV,2017,Focal Loss for Dense Object Detection.,Computer Vision,Visual Recognition & Representation,CNN
-ICCV,2017,Globally-Optimal Inlier Set Maximisation for Simultaneous Camera Pose and Feature Correspondence.,Computer Vision,3D Vision & Reconstruction,Optimization
+ICCV,2017,First-Person Activity Forecasting With Online Inverse Reinforcement Learning,Computer Vision,Visual Recognition & Representation,RL
+ICCV,2017,Focal Loss for Dense Object Detection,Computer Vision,Visual Recognition & Representation,CNN
+ICCV,2017,Globally-Optimal Inlier Set Maximisation for Simultaneous Camera Pose and Feature Correspondence,Computer Vision,3D Vision & Reconstruction,Optimization
 ICCV,2017,Mask R-CNN,Computer Vision,Visual Recognition & Representation,CNN
-ICCV,2017,Open Set Domain Adaptation.,Computer Vision,Robustness & Domain Adaptation,CNN
+ICCV,2017,Open Set Domain Adaptation,Computer Vision,Robustness & Domain Adaptation,CNN
 ICLR,2026,LLMs Get Lost In Multi-Turn Conversation,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
 ICLR,2026,Transformers are Inherently Succinct,ML Theory & Optimization,Optimization & Generalization,Transformer; Theory / Analysis
 ICLR,2026,The Polar Express: Optimal Matrix Sign Methods and their Application to the Muon Algorithm,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
