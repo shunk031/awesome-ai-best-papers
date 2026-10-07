@@ -9,11 +9,11 @@
 ![Venues](https://img.shields.io/badge/venues-9-informational)
 ![Taxonomy Annotated](https://img.shields.io/badge/taxonomy%20annotated-566-informational)
 
-<!-- This file is generated from data/*.csv by scripts/generate_readme.py. Do not edit it directly. -->
+<!-- This file is generated from data/venues.csv and data/papers/*.csv by scripts/generate_readme.py. Do not edit it directly. -->
 
 A curated, source-backed list of best, outstanding, honorable-mention, student, and venue-specific research-paper awards from major AI, machine learning, computer vision, and natural language processing conferences.
 
-Each paper is annotated with a maintainer-curated **research area**, **task**, and coarse **model / method family**. Award provenance lives in [`data/papers.csv`](data/papers.csv); research tags live separately in [`data/paper_taxonomy.csv`](data/paper_taxonomy.csv).
+Each paper is annotated with a maintainer-curated **research area**, **task**, and coarse **model / method family**. Award provenance and research tags live together in the venue-scoped CSV files under [`data/papers/`](data/papers/).
 
 ## Contents
 
@@ -35,9 +35,9 @@ The **130 award records from 2024–2026** provide a compact view of the researc
 
 **Research areas:** `NLP & Language` (34), `Computer Vision` (30), `ML Theory & Optimization` (17), `Responsible AI & Privacy` (13), `Multimodal & Embodied AI` (10), `Scientific ML & Applications` (8), `General ML & Representation Learning` (8), `Reinforcement Learning & Decision Making` (5), `Graphs & Structured Learning` (4), `Speech & Audio` (1).
 
-**Model / method families:** `Transformer` (57), `LLM` (41), `Theory / Analysis` (26), `Neural Model` (20), `Diffusion` (16), `Optimization` (12), `Probabilistic / Bayesian` (9), `VLM` (9), `RL` (8), `Representation Learning` (7), `Autoregressive` (6), `Neuro-Symbolic` (3), `GNN` (3), `CNN` (2), `Classical / Optimization` (2), `VAE` (1), `Meta-Learning` (1).
+**Model / method families:** `Transformer` (57), `LLM` (41), `Theory / Analysis` (26), `Neural Model` (20), `Diffusion` (16), `Optimization` (12), `VLM` (9), `Probabilistic / Bayesian` (9), `RL` (8), `Representation Learning` (7), `Autoregressive` (6), `GNN` (3), `Neuro-Symbolic` (3), `CNN` (2), `Classical / Optimization` (2), `VAE` (1), `Meta-Learning` (1).
 
-**Frequently awarded tasks:** `3D Vision & Reconstruction` (14), `LLM Analysis & Evaluation` (13), `Safety, Fairness & Privacy` (12), `Optimization & Generalization` (11), `Image & Video Generation` (8), `Model Efficiency & Architecture` (7), `Generative Modeling` (7), `Multimodal & Vision-Language` (6), `Reinforcement Learning & Planning` (6), `Probabilistic Inference & Sampling` (6), `Language Modeling & Generation` (5), `Visual Recognition & Representation` (5).
+**Frequently awarded tasks:** `3D Vision & Reconstruction` (14), `LLM Analysis & Evaluation` (13), `Safety, Fairness & Privacy` (12), `Optimization & Generalization` (11), `Image & Video Generation` (8), `Model Efficiency & Architecture` (7), `Generative Modeling` (7), `Multimodal & Vision-Language` (6), `Reinforcement Learning & Planning` (6), `Probabilistic Inference & Sampling` (6), `Visual Recognition & Representation` (5), `Language Modeling & Generation` (5).
 
 ## Papers
 
