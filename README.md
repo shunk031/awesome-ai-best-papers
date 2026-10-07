@@ -2,7 +2,7 @@
 
 [![Catalog Check](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml/badge.svg)](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml)
 
-![Award records](https://img.shields.io/badge/award%20records-491-informational)
+![Award records](https://img.shields.io/badge/award%20records-504-informational)
 ![Venues](https://img.shields.io/badge/venues-9-informational)
 ![Coverage](https://img.shields.io/badge/coverage-2016%E2%80%932026-informational)
 
@@ -24,14 +24,14 @@ The v2 catalog prioritizes official conference sources. The complete 2016–2018
 
 ## Research landscape
 
-The tables below summarize the **115 award records from 2024–2026 currently in this catalog**. They describe this curated award set, not publication volume or the field as a whole.
+The tables below summarize the **118 award records from 2024–2026 currently in this catalog**. They describe this curated award set, not publication volume or the field as a whole.
 
 ### Research areas
 
 | Label | Award records |
 | --- | ---: |
 | NLP & Language | 33 |
-| Computer Vision | 24 |
+| Computer Vision | 27 |
 | ML Theory & Optimization | 15 |
 | Responsible AI & Privacy | 12 |
 | Multimodal & Embodied AI | 10 |
@@ -48,7 +48,7 @@ The tables below summarize the **115 award records from 2024–2026 currently in
 | Transformer | 53 |
 | LLM | 38 |
 | Theory / Analysis | 23 |
-| Neural Model | 14 |
+| Neural Model | 16 |
 | Diffusion | 12 |
 | Optimization | 10 |
 | Probabilistic / Bayesian | 8 |
@@ -58,25 +58,25 @@ The tables below summarize the **115 award records from 2024–2026 currently in
 | Autoregressive | 6 |
 | Neuro-Symbolic | 3 |
 | GNN | 3 |
+| Classical / Optimization | 2 |
 | VAE | 1 |
 | CNN | 1 |
-| Classical / Optimization | 1 |
 | Meta-Learning | 1 |
 
 ### Frequently awarded tasks
 
 | Label | Award records |
 | --- | ---: |
-| 3D Vision & Reconstruction | 12 |
+| 3D Vision & Reconstruction | 14 |
 | LLM Analysis & Evaluation | 11 |
 | Safety, Fairness & Privacy | 11 |
 | Optimization & Generalization | 9 |
 | Model Efficiency & Architecture | 7 |
+| Image & Video Generation | 7 |
 | Language Modeling & Generation | 6 |
 | Multimodal & Vision-Language | 6 |
 | Reinforcement Learning & Planning | 6 |
 | Generative Modeling | 6 |
-| Image & Video Generation | 6 |
 | Probabilistic Inference & Sampling | 5 |
 | Visual Recognition & Representation | 4 |
 
@@ -97,7 +97,7 @@ These are descriptive signals from the curated award set; they should not be int
 | [AAAI](https://aaai.org/conference/aaai/) | Artificial Intelligence | 2016–2026 | 25 | [source](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/) |
 | [CVPR](https://cvpr.thecvf.com/) | Computer Vision | 2016–2026 | 40 | [source](https://www.thecvf.com/?page_id=413) |
 | [EMNLP](https://aclanthology.org/venues/emnlp/) | Natural Language Processing | 2016–2025 | 65 | [source](https://www.aclweb.org/aclwiki/Best_paper_awards) |
-| [ICCV](https://iccv.thecvf.com/) | Computer Vision | 2017, 2019, 2021, 2023, 2025 | 10 | [source](https://www.thecvf.com/?page_id=413) |
+| [ICCV](https://iccv.thecvf.com/) | Computer Vision | 2017, 2019, 2021, 2023, 2025 | 23 | [source](https://www.thecvf.com/?page_id=413) |
 | [ICLR](https://iclr.cc/) | Machine Learning | 2016–2026 | 72 | [source](https://blog.iclr.cc/) |
 | [ICML](https://icml.cc/) | Machine Learning | 2016–2026 | 62 | [source](https://blog.icml.cc/) |
 | [NAACL](https://naacl.org/) | Natural Language Processing | 2018–2019, 2021–2022, 2024–2025 | 35 | [source](https://naacl.org/policies/best-paper.html) |
@@ -148,6 +148,9 @@ This section shows the latest completed award year for each venue. The full hist
 **IEEE/CVF International Conference on Computer Vision** · [Computer Vision](https://iccv.thecvf.com/)
 
 - **Marr Prize** — [Generating Physically Stable and Buildable Brick Structures from Text](https://www.thecvf.com/?page_id=413)<br>  **Area:** Computer Vision · **Task:** 3D Vision & Reconstruction · **Model:** Optimization
+- **Best Student Paper** — [FlowEdit: Inversion-Free Text-Based Editing Using Pre-Trained Flow Models](https://www.thecvf.com/?page_id=413) · `secondary`<br>  **Area:** Computer Vision · **Task:** Image & Video Generation · **Model:** Neural Model
+- **Marr Prize Paper Honorable Mention** — [RayZer: A Self-supervised Large View Synthesis Model](https://www.thecvf.com/?page_id=413) · `secondary`<br>  **Area:** Computer Vision · **Task:** 3D Vision & Reconstruction · **Model:** Neural Model
+- **Marr Prize Paper Honorable Mention** — [Spatially-Varying Autofocus](https://www.thecvf.com/?page_id=413) · `secondary`<br>  **Area:** Computer Vision · **Task:** 3D Vision & Reconstruction · **Model:** Classical / Optimization
 
 ### ICLR · 2026
 

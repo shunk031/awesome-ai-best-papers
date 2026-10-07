@@ -267,10 +267,23 @@ EMNLP,2016,Learning a Lexicon and Translation Model from Phoneme Lattices.,Speec
 EMNLP,2016,Sequence-to-Sequence Learning as Beam-Search Optimization.,NLP & Language,Language Modeling & Generation,RNN; Optimization
 EMNLP,2016,Span-Based Constituency Parsing with a Structure-Label System and Provably Optimal Dynamic Oracles.,NLP & Language,Language Understanding & Linguistics,Neural Model
 ICCV,2025,Generating Physically Stable and Buildable Brick Structures from Text,Computer Vision,3D Vision & Reconstruction,Optimization
+ICCV,2025,FlowEdit: Inversion-Free Text-Based Editing Using Pre-Trained Flow Models,Computer Vision,Image & Video Generation,Neural Model
+ICCV,2025,Spatially-Varying Autofocus,Computer Vision,3D Vision & Reconstruction,Classical / Optimization
+ICCV,2025,RayZer: A Self-supervised Large View Synthesis Model,Computer Vision,3D Vision & Reconstruction,Neural Model
 ICCV,2023,Adding Conditional Control to Text-to-Image Diffusion Models,Computer Vision,Image & Video Generation,Diffusion
 ICCV,2023,Passive Ultra-Wideband Single-Photon Imaging,Computer Vision,3D Vision & Reconstruction,Neural Model
+ICCV,2023,Tracking Everything Everywhere All at Once,Computer Vision,Visual Recognition & Representation,Neural Model
+ICCV,2023,Segment Anything,Computer Vision,Visual Recognition & Representation,Transformer
 ICCV,2021,Swin Transformer: Hierarchical Vision Transformer using Shifted Windows,Computer Vision,Visual Recognition & Representation,Transformer
+ICCV,2021,Pixel-Perfect Structure-from-Motion with Featuremetric Refinement,Computer Vision,3D Vision & Reconstruction,Optimization; Neural Model
+ICCV,2021,Mip-NeRF: A Multiscale Representation for Anti-Aliasing Neural Radiance Fields,Computer Vision,3D Vision & Reconstruction,Neural Model
+ICCV,2021,OpenGAN: Open-Set Recognition via Open Data Generation,Computer Vision,Visual Recognition & Representation,GAN
+ICCV,2021,Viewing Graph Solvability via Cycle Consistency,Computer Vision,3D Vision & Reconstruction,Theory / Analysis
+ICCV,2021,Common Objects in 3D: LargeScale Learning and Evaluation of Real-life 3D Category Reconstruction,Computer Vision,3D Vision & Reconstruction,Neural Model
 ICCV,2019,SinGAN: Learning a Generative Model from a Single Natural Image,Computer Vision,Image & Video Generation,GAN
+ICCV,2019,PLMP – Point-Line Minimal Problems in Complete Multi-View Visibility,Computer Vision,3D Vision & Reconstruction,Theory / Analysis
+ICCV,2019,Asynchronous Single-Photon 3D Imaging,Computer Vision,3D Vision & Reconstruction,Classical / Optimization
+ICCV,2019,Specifying Object Attributes and Relations in Interactive Scene Generation,Computer Vision,Generative Modeling,Neural Model
 ICCV,2017,First Person Activity Forecasting with Online Inverse Reinforcement Learning.,Computer Vision,Visual Recognition & Representation,RL
 ICCV,2017,Focal Loss for Dense Object Detection.,Computer Vision,Visual Recognition & Representation,CNN
 ICCV,2017,Globally-Optimal Inlier Set Maximisation for Simultaneous Camera Pose and Feature Correspondence.,Computer Vision,3D Vision & Reconstruction,Optimization
