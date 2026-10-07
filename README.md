@@ -792,7 +792,7 @@ Papers are grouped by conference and award year. Title links use canonical paper
 
 - [Improved guarantees and a multiple-descent curve for Column Subset Selection and the Nystrom method](https://proceedings.neurips.cc/paper/2020/hash/342c472b95d00421be10e9512b532866-Abstract.html) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization.
 - [Language Models are Few-Shot Learners](https://proceedings.neurips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer.
-- [No-Regret Learning Dynamics for Extensive-Form Correlated Equilibrium](https://proceedings.neurips.cc/paper_files/paper/2020/hash/5763abe87ed1938799203fb6e8650025-Abstract.html) - **Award:** Outstanding Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL / Theory / Analysis.
+- [No-Regret Learning Dynamics for Extensive-Form Correlated Equilibrium](https://proceedings.neurips.cc/paper_files/paper/2020/hash/5763abe87ed1938799203fb6e8650025-Abstract.html) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization / Theory / Analysis.
 #### 2019
 
 - [Distribution-Independent PAC Learning of Halfspaces with Massart Noise](https://proceedings.neurips.cc/paper_files/paper/2019/hash/358aee4cc897452c00244351e4d91f69-Abstract.html) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
@@ -804,7 +804,7 @@ Papers are grouped by conference and award year. Title links use canonical paper
 #### 2018
 
 - [Nearly tight sample complexity bounds for learning mixtures of Gaussians via sample compression schemes](https://proceedings.neurips.cc/paper_files/paper/2018/hash/70ece1e1e0931919438fcfc6bd5f199c-Abstract.html) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian / Theory / Analysis.
-- [Neural Ordinary Differential Equations](https://proceedings.neurips.cc/paper/2018/hash/69386f6bb1dfed68692a24c8686939b9-Abstract.html) - **Award:** Best Paper. **Area:** General ML & Representation Learning. **Task:** Generative Modeling. **Model:** Neural Model / Probabilistic / Bayesian.
+- [Neural Ordinary Differential Equations](https://proceedings.neurips.cc/paper/2018/hash/69386f6bb1dfed68692a24c8686939b9-Abstract.html) - **Award:** Best Paper. **Area:** General ML & Representation Learning. **Task:** Model Efficiency & Architecture. **Model:** Neural Model.
 - [Non-delusional Q-learning and value-iteration](https://proceedings.neurips.cc/paper/2018/hash/5fd0245f6c9ddbdf3eff0f505975b6a7-Abstract.html) - **Award:** Best Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL / Search / Planning.
 - [Optimal Algorithms for Non-Smooth Distributed Optimization in Networks](https://proceedings.neurips.cc/paper_files/paper/2018/hash/8fb21ee7a2207526da55a679f0332de2-Abstract.html) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization / Theory / Analysis.
 #### 2017
