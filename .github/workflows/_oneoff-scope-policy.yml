@@ -1,0 +1,67 @@
+name: One-off scope policy clarification
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-scope-policy.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Clarify separate-track scope
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess, sys
+
+          gen = Path('scripts/generate_readme.py')
+          text = gen.read_text(encoding='utf-8')
+          old = 'The catalog tracks conference paper awards such as **Best Paper**, **Outstanding Paper**, **Marr Prize**, honorable mentions / runners-up, student-paper awards, and venue-specific paper-award categories. Award candidates, nominations, demos, workshops, dissertation awards, lifetime awards, and retrospective test-of-time awards are excluded by default.'
+          new = 'The catalog tracks research-paper awards such as **Best Paper**, **Outstanding Paper**, **Marr Prize**, honorable mentions / runners-up, student-paper awards, and venue-specific research-paper categories. Award candidates, nominations, demos, workshops, dissertations, lifetime awards, retrospective test-of-time awards, and separately reviewed **position-paper tracks** are excluded by default.'
+          if old not in text:
+              raise SystemExit('README scope text not found in generator')
+          gen.write_text(text.replace(old, new, 1), encoding='utf-8')
+
+          contributing = Path('CONTRIBUTING.md')
+          text = contributing.read_text(encoding='utf-8')
+          old = '- `special`: venue-specific paper awards such as theme, resource, social-impact, or track-specific awards.\n\nBy default, do not add award candidates / nominees, demos, workshop-only awards, dissertations, lifetime awards, or retrospective test-of-time awards.'
+          new = '- `special`: venue-specific research-paper awards such as theme, resource, social-impact, or research-track-specific awards.\n\nBy default, do not add award candidates / nominees, demos, workshop-only awards, dissertations, lifetime awards, retrospective test-of-time awards, or awards from separately reviewed **position-paper tracks**. The latter are argumentative position papers rather than the technical research-paper awards summarized by this catalog; for example, ICML Position Paper Track awards are intentionally out of scope.'
+          if old not in text:
+              raise SystemExit('CONTRIBUTING scope text not found')
+          contributing.write_text(text.replace(old, new, 1), encoding='utf-8')
+
+          data_readme = Path('data/README.md')
+          text = data_readme.read_text(encoding='utf-8')
+          anchor = '- `notes`: optional clarification\n\n## `paper_taxonomy.csv`'
+          replacement = '- `notes`: optional clarification\n\n### Scope convention\n\n`papers.csv` covers research-paper awards from the tracked venues. Separately reviewed position-paper tracks, award candidates / nominees, demos, workshop-only awards, dissertations, lifetime awards, and retrospective test-of-time awards are out of scope by default. Research-track-specific awards such as theme, resource, or social-impact paper awards remain in scope and use the `special` tier where appropriate.\n\n## `paper_taxonomy.csv`'
+          if anchor not in text:
+              raise SystemExit('data README insertion point not found')
+          data_readme.write_text(text.replace(anchor, replacement, 1), encoding='utf-8')
+
+          subprocess.run([sys.executable, 'scripts/validate_catalog.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py', '--check'], check=True)
+          PY
+      - name: Commit scope policy
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add scripts/generate_readme.py README.md CONTRIBUTING.md data/README.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Clarify research-paper award scope'
+            git push
+          fi
