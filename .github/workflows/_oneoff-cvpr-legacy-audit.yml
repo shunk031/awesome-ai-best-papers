@@ -1,0 +1,119 @@
+name: One-off CVPR legacy award audit
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-cvpr-legacy-audit.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Audit CVPR 2016-2022 awards
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          import subprocess, sys
+
+          papers_path = Path('data/papers.csv')
+          taxonomy_path = Path('data/paper_taxonomy.csv')
+          source = 'https://www.thecvf.com/?page_id=413'
+
+          def read(path):
+              with path.open(newline='', encoding='utf-8') as f:
+                  return list(csv.DictReader(f))
+
+          def write(path, rows, fields):
+              with path.open('w', newline='', encoding='utf-8') as f:
+                  w = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
+                  w.writeheader(); w.writerows(rows)
+
+          additions = [
+              ('2022','Best Student Paper','secondary','EPro-PnP: Generalized End-to-End Probabilistic Perspective-n-Points for Monocular Object Pose Estimation','Computer Vision','3D Vision & Reconstruction','Neural Model; Probabilistic / Bayesian'),
+              ('2022','Best Paper Honorable Mention','secondary','Dual-Shutter Optical Vibration Sensing','Computer Vision','Visual Recognition & Representation','Classical / Optimization'),
+              ('2022','Best Student Paper Honorable Mention','secondary','Ref-NeRF: Structured View-Dependent Appearance for Neural Radiance Fields','Computer Vision','3D Vision & Reconstruction','Neural Model; Representation Learning'),
+
+              ('2021','Best Student Paper','secondary','Task Programming: Learning Data Efficient Behavior Representations','Reinforcement Learning & Decision Making','Reinforcement Learning & Planning','Representation Learning; Neural Model'),
+              ('2021','Best Paper Honorable Mention','secondary','Exploring Simple Siamese Representation Learning','General ML & Representation Learning','Representation Learning','Representation Learning; Neural Model'),
+              ('2021','Best Paper Honorable Mention','secondary','Learning High Fidelity Depths of Dressed Humans by Watching Social Media Dance Videos','Computer Vision','3D Vision & Reconstruction','Neural Model'),
+              ('2021','Best Student Paper Honorable Mention','secondary','Less is More: ClipBERT for Video-and-Language Learning via Sparse Sampling','Multimodal & Embodied AI','Multimodal & Vision-Language','Transformer; VLM'),
+              ('2021','Best Student Paper Honorable Mention','secondary','Binary TTC: A Temporal Geofence for Autonomous Navigation','Multimodal & Embodied AI','Reinforcement Learning & Planning','Search / Planning; Neural Model'),
+              ('2021','Best Student Paper Honorable Mention','secondary','Real-Time High-Resolution Background Matting','Computer Vision','Visual Recognition & Representation','Neural Model'),
+
+              ('2020','Best Student Paper','secondary','BSP-Net: Generating Compact Meshes via Binary Space Partitioning','Computer Vision','3D Vision & Reconstruction','Neural Model'),
+              ('2020','Best Student Paper Honorable Mention','secondary','DeepCap: Monocular Human Performance Capture Using Weak Supervision','Computer Vision','3D Vision & Reconstruction','Neural Model'),
+
+              ('2019','Best Student Paper','secondary','Reinforced Cross-Modal Matching and Self-Supervised Imitation Learning for Vision-Language Navigation','Multimodal & Embodied AI','Reinforcement Learning & Planning','RL; Neural Model'),
+              ('2019','Best Paper Honorable Mention','secondary','A Style-Based Generator Architecture for Generative Adversarial Networks','Computer Vision','Image & Video Generation','GAN'),
+              ('2019','Best Paper Honorable Mention','secondary','Learning the Depths of Moving People by Watching Frozen People','Computer Vision','3D Vision & Reconstruction','Neural Model'),
+
+              ('2018','Best Student Paper','secondary','Total Capture: A 3D Deformation Model for Tracking Faces, Hands, and Bodies','Computer Vision','3D Vision & Reconstruction','Neural Model'),
+              ('2018','Best Paper Honorable Mention','secondary','Deep Learning of Graph Matching','Computer Vision','Graph & Structured Learning','Neural Model'),
+              ('2018','Best Paper Honorable Mention','secondary','SPLATNet: Sparse Lattice Networks for Point Cloud Processing','Computer Vision','3D Vision & Reconstruction','Neural Model'),
+              ('2018','Best Paper Honorable Mention','secondary','CodeSLAM — Learning a Compact, Optimisable Representation for Dense Visual SLAM','Computer Vision','3D Vision & Reconstruction','Neural Model; Representation Learning'),
+              ('2018','Best Paper Honorable Mention','secondary','Efficient Optimization for Rank-Based Loss Functions','ML Theory & Optimization','Optimization & Generalization','Optimization; Theory / Analysis'),
+          ]
+
+          papers = read(papers_path)
+          tax = read(taxonomy_path)
+
+          # Correct a historical mislabel confirmed by the CVF award archive.
+          corrected = False
+          for row in papers:
+              if row['venue'] == 'CVPR' and row['year'] == '2016' and row['title'].casefold() == 'Sublabel-Accurate Relaxation of Nonconvex Energies'.casefold():
+                  row['award'] = 'Best Paper Honorable Mention'
+                  row['tier'] = 'secondary'
+                  row['source_url'] = source
+                  row['checked_at'] = '2026-10-07'
+                  corrected = True
+                  break
+          if not corrected:
+              raise SystemExit('CVPR 2016 Sublabel-Accurate row not found')
+
+          paper_keys = {(r['venue'], r['year'], r['title'].casefold()) for r in papers}
+          tax_keys = {(r['venue'], r['year'], r['title'].casefold()) for r in tax}
+
+          for year, award, tier, title, area, task, family in additions:
+              key = ('CVPR', year, title.casefold())
+              if key not in paper_keys:
+                  row = {'venue':'CVPR','year':year,'award':award,'tier':tier,'title':title,'paper_url':'','source_url':source,'checked_at':'2026-10-07','notes':''}
+                  same = [i for i,r in enumerate(papers) if r['venue']=='CVPR' and r['year']==year]
+                  insert_at = max(same) + 1
+                  papers.insert(insert_at, row)
+                  paper_keys.add(key)
+              if key not in tax_keys:
+                  row = {'venue':'CVPR','year':year,'title':title,'area':area,'task':task,'model_family':family}
+                  same = [i for i,r in enumerate(tax) if r['venue']=='CVPR' and r['year']==year]
+                  insert_at = max(same) + 1
+                  tax.insert(insert_at, row)
+                  tax_keys.add(key)
+
+          write(papers_path, papers, ['venue','year','award','tier','title','paper_url','source_url','checked_at','notes'])
+          write(taxonomy_path, tax, ['venue','year','title','area','task','model_family'])
+          subprocess.run([sys.executable, 'scripts/validate_catalog.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py', '--check'], check=True)
+          PY
+      - name: Commit audited catalog
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers.csv data/paper_taxonomy.csv README.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Complete legacy CVPR award categories'
+            git push
+          fi
