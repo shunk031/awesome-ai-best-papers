@@ -1,0 +1,65 @@
+name: One-off EMNLP 2023 Outstanding URLs 02
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-emnlp-2023-outstanding-02.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync
+      - name: Fill EMNLP 2023 Outstanding canonical URLs batch 02
+        run: |
+          uv run python - <<'PY'
+          import csv
+          from pathlib import Path
+          import subprocess, sys
+
+          path = Path('data/papers.csv')
+          urls = {
+              'Homophone Disambiguation Reveals Patterns of Context Mixing in Speech Transformers': 'https://aclanthology.org/2023.emnlp-main.513/',
+              'IfQA: A Dataset for Open-domain Question Answering under Counterfactual Presuppositions': 'https://aclanthology.org/2023.emnlp-main.515/',
+              'Incorporating Worker Perspectives into MTurk Annotation Practices for NLP': 'https://aclanthology.org/2023.emnlp-main.64/',
+              'Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agents': 'https://aclanthology.org/2023.emnlp-main.923/',
+              'Joint Dialogue Topic Segmentation and Categorization: A Case Study on Clinical Spoken Conversations': 'https://aclanthology.org/2023.emnlp-industry.19/',
+          }
+
+          with path.open(newline='', encoding='utf-8') as f:
+              rows = list(csv.DictReader(f))
+          found = set()
+          for row in rows:
+              if row['venue'] == 'EMNLP' and row['year'] == '2023' and row['award'] == 'Outstanding Paper' and row['title'] in urls:
+                  row['paper_url'] = urls[row['title']]
+                  row['checked_at'] = '2026-10-07'
+                  found.add(row['title'])
+          if found != set(urls):
+              raise SystemExit(f'Missing targets: {sorted(set(urls)-found)}')
+          with path.open('w', newline='', encoding='utf-8') as f:
+              w = csv.DictWriter(f, fieldnames=['venue','year','award','tier','title','paper_url','source_url','checked_at','notes'], lineterminator='\n')
+              w.writeheader(); w.writerows(rows)
+          subprocess.run([sys.executable, 'scripts/validate_catalog.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py', '--check'], check=True)
+          PY
+      - name: Commit canonical URLs
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers.csv README.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Fill EMNLP 2023 Outstanding canonical URLs batch 02'
+            git push
+          fi
