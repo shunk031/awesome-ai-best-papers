@@ -160,8 +160,8 @@ This section shows the latest completed award year for each venue. The full hist
 
 **International Conference on Learning Representations** · [Machine Learning](https://iclr.cc/)
 
-- **Outstanding Paper** — [LLMs Get Lost In Multi-Turn Conversation](https://blog.iclr.cc/2026/04/23/announcing-the-iclr-2026-outstanding-papers/)<br>  **Area:** NLP & Language · **Task:** LLM Analysis & Evaluation · **Model:** LLM / Transformer
-- **Outstanding Paper** — [Transformers are Inherently Succinct](https://blog.iclr.cc/2026/04/23/announcing-the-iclr-2026-outstanding-papers/)<br>  **Area:** ML Theory & Optimization · **Task:** Optimization & Generalization · **Model:** Transformer / Theory / Analysis
+- **Outstanding Paper** — [LLMs Get Lost In Multi-Turn Conversation](https://openreview.net/forum?id=VKGTGGcwl6) · [award source](https://blog.iclr.cc/2026/04/23/announcing-the-iclr-2026-outstanding-papers/)<br>  **Area:** NLP & Language · **Task:** LLM Analysis & Evaluation · **Model:** LLM / Transformer
+- **Outstanding Paper** — [Transformers are Inherently Succinct](https://openreview.net/forum?id=Yxz92UuPLQ) · [award source](https://blog.iclr.cc/2026/04/23/announcing-the-iclr-2026-outstanding-papers/)<br>  **Area:** ML Theory & Optimization · **Task:** Optimization & Generalization · **Model:** Transformer / Theory / Analysis
 - **Outstanding Paper Honorable Mention** — [The Polar Express: Optimal Matrix Sign Methods and their Application to the Muon Algorithm](https://openreview.net/forum?id=yRtgZ1K8hO) · [award source](https://blog.iclr.cc/2026/04/23/announcing-the-iclr-2026-outstanding-papers/) · `secondary`<br>  **Area:** ML Theory & Optimization · **Task:** Optimization & Generalization · **Model:** Optimization / Theory / Analysis
 
 ### ICML · 2026
