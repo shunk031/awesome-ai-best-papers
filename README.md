@@ -403,11 +403,11 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Infini-gram mini: Exact n-gram Search at the Internet Scale with FM-Index](https://aclanthology.org/2025.emnlp-main.1268/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Retrieval & Search. **Model:** Classical / Optimization.
 #### 2024
 
-- [An image speaks a thousand words, but can everyone listen? On image transcreation for cultural relevance](https://2024.emnlp.org/program/best_papers/) - **Award:** Best Paper. **Area:** Multimodal & Embodied AI. **Task:** Multimodal & Vision-Language. **Model:** VLM.
-- [Backward Lens: Projecting Language Model Gradients into the Vocabulary Space](https://2024.emnlp.org/program/best_papers/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Interpretability & Explainability. **Model:** LLM / Transformer / Optimization.
-- [CoGen: Learning from Feedback with Coupled Comprehension and Generation](https://2024.emnlp.org/program/best_papers/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** LLM / Transformer.
-- [Pretraining Data Detection for Large Language Models: A Divergence-based Calibration Method](https://2024.emnlp.org/program/best_papers/) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** LLM / Transformer / Representation Learning.
-- [Towards Robust Speech Representation Learning for Thousands of Languages](https://2024.emnlp.org/program/best_papers/) - **Award:** Best Paper. **Area:** Speech & Audio. **Task:** Speech & Audio. **Model:** Representation Learning.
+- [An image speaks a thousand words, but can everyone listen? On image transcreation for cultural relevance](https://aclanthology.org/2024.emnlp-main.573/) - **Award:** Best Paper. **Area:** Multimodal & Embodied AI. **Task:** Multimodal & Vision-Language. **Model:** VLM.
+- [Backward Lens: Projecting Language Model Gradients into the Vocabulary Space](https://aclanthology.org/2024.emnlp-main.142/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Interpretability & Explainability. **Model:** LLM / Transformer / Optimization.
+- [CoGen: Learning from Feedback with Coupled Comprehension and Generation](https://aclanthology.org/2024.emnlp-main.721/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** LLM / Transformer.
+- [Pretraining Data Detection for Large Language Models: A Divergence-based Calibration Method](https://aclanthology.org/2024.emnlp-main.300/) - **Award:** Best Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** LLM / Transformer / Representation Learning.
+- [Towards Robust Speech Representation Learning for Thousands of Languages](https://aclanthology.org/2024.emnlp-main.570/) - **Award:** Best Paper. **Area:** Speech & Audio. **Task:** Speech & Audio. **Model:** Representation Learning.
 #### 2023
 
 - [Faster Minimum Bayes Risk Decoding with Confidence-based Pruning](https://2023.emnlp.org/program/best_papers/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** Transformer / Optimization.
