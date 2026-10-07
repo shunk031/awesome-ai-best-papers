@@ -7,7 +7,7 @@ import argparse
 import csv
 import re
 import sys
-from collections import Counter, defaultdict
+from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
@@ -43,26 +43,24 @@ def anchor(value: str) -> str:
     return re.sub(r"[\s-]+", "-", value).strip("-")
 
 
-def family_counts(rows: list[dict[str, str]]) -> Counter[str]:
-    counts: Counter[str] = Counter()
-    for row in rows:
-        counts.update(
-            value.strip()
-            for value in row["model_family"].split(";")
-            if value.strip()
-        )
-    return counts
-
-
-def count_rows(counter: Counter[str], limit: int | None = None) -> list[dict[str, Any]]:
-    return [
-        {"label": label, "count": count}
-        for label, count in counter.most_common(limit)
-    ]
-
-
-def count_summary(rows: list[dict[str, Any]]) -> str:
-    return ", ".join(f'`{row["label"]}` ({row["count"]})' for row in rows)
+def award_emoji(row: dict[str, Any]) -> str:
+    awards = " ".join(row["awards"]).casefold()
+    if "student" in awards:
+        return "🎓"
+    if "honorable mention" in awards or "runner-up" in awards or "runner up" in awards:
+        return "🥈"
+    if "outstanding" in awards or "distinguished" in awards:
+        return "⭐"
+    main_best_patterns = (
+        "best paper",
+        "best long paper",
+        "best short paper",
+        "best overall paper",
+        "marr prize",
+    )
+    if any(pattern in awards for pattern in main_best_patterns):
+        return "🏆"
+    return "🏅"
 
 
 def paper_entry(row: dict[str, Any]) -> str:
@@ -71,7 +69,7 @@ def paper_entry(row: dict[str, Any]) -> str:
     award_label = "Award" if len(row["awards"]) == 1 else "Awards"
     awards = " / ".join(row["awards"])
     line = (
-        f'- {title} - **{award_label}:** {awards}. '
+        f'- {award_emoji(row)} {title} - **{award_label}:** {awards}. '
         f'**Area:** {row["area"]}. **Task:** {row["task"]}. '
         f'**Model:** {row["model_family"].replace(";", " /")}.'
     )
@@ -135,12 +133,6 @@ def generate() -> str:
 
     years = [int(row["year"]) for row in award_rows]
     min_year, max_year = min(years), max(years)
-    recent_start = max_year - 2
-    recent = [row for row in award_rows if int(row["year"]) >= recent_start]
-
-    recent_areas = count_rows(Counter(row["area"] for row in recent))
-    recent_families = count_rows(family_counts(recent))
-    recent_tasks = count_rows(Counter(row["task"] for row in recent), limit=12)
 
     context = {
         "stats": {
@@ -150,14 +142,6 @@ def generate() -> str:
             "annotated_papers": len(unique_papers),
             "min_year": min_year,
             "max_year": max_year,
-        },
-        "recent": {
-            "start_year": recent_start,
-            "end_year": max_year,
-            "records": len(recent),
-            "areas_summary": count_summary(recent_areas),
-            "families_summary": count_summary(recent_families),
-            "tasks_summary": count_summary(recent_tasks),
         },
         "venue_sections": venue_sections,
     }

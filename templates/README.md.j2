@@ -17,25 +17,16 @@ Each paper is annotated with a maintainer-curated **research area**, **task**, a
 
 ## Contents
 
-- [Research Landscape](#research-landscape)
 - [Papers](#papers)
 {% for venue in venue_sections %}
   - [{{ venue.venue }}](#{{ venue.venue|anchor }})
 {% endfor %}
 
-## Research Landscape
-
-The **{{ recent.records }} award records from {{ recent.start_year }}–{{ recent.end_year }}** provide a compact view of the research themes represented in the recent award set. These counts describe this catalog, not publication volume or citation impact across the field.
-
-**Research areas:** {{ recent.areas_summary }}.
-
-**Model / method families:** {{ recent.families_summary }}.
-
-**Frequently awarded tasks:** {{ recent.tasks_summary }}.
-
 ## Papers
 
 Papers are grouped by conference and award year. Title links use canonical paper pages when available; award provenance remains in the structured data.
+
+**Award markers:** 🏆 top / best paper · 🎓 student paper · 🥈 honorable mention / runner-up · ⭐ outstanding / distinguished · 🏅 other special award.
 
 <!--lint disable double-link balanced-punctuation-->
 {% for venue in venue_sections %}
