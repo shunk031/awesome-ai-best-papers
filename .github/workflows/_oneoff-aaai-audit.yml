@@ -1,0 +1,138 @@
+name: One-off AAAI award audit
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-aaai-audit.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Add missing AAAI paper awards
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          import subprocess, sys
+
+          papers_path = Path('data/papers.csv')
+          taxonomy_path = Path('data/paper_taxonomy.csv')
+          source = 'https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/'
+
+          def read(path):
+              with path.open(newline='', encoding='utf-8') as f:
+                  return list(csv.DictReader(f))
+
+          def write(path, rows, fields):
+              with path.open('w', newline='', encoding='utf-8') as f:
+                  w = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
+                  w.writeheader(); w.writerows(rows)
+
+          # year, award, tier, title, area, task, model_family
+          additions = [
+              ('2026','Best Paper Award – AI Alignment Track','special','On the Alignment of Large Language Models with Global Human Opinion','Responsible AI & Privacy','Safety, Fairness & Privacy','LLM; Transformer'),
+              ('2026','Best Paper Award – AI for Social Impact Track','special','PlantTraitNet: An Uncertainty-Aware Multimodal Framework for Global-Scale Plant Trait Inference from Citizen Science Data','Scientific ML & Applications','Scientific Discovery & Simulation','VLM; Transformer'),
+              ('2026','Best Paper Award – AI for Social Impact Track','special','Generalizable Slum Detection from Satellite Imagery with Mixture-of-Experts','Scientific ML & Applications','Scientific Discovery & Simulation','Neural Model'),
+
+              ('2025','Outstanding Paper Award – AI for Social Alignment Track','special','DivShift: Exploring Domain-Specific Distribution Shifts in Large-Scale, Volunteer-Collected Biodiversity Datasets','Scientific ML & Applications','Robustness & Domain Adaptation','Neural Model'),
+
+              ('2024','Best Paper – AI for Social Impact Track','special','DISCount: Counting in Large Image Collections with Detector-Based Importance Sampling','Computer Vision','Visual Recognition & Representation','Neural Model'),
+              ('2024','AI for Social Impact Track Honorable Mention','secondary','Nowcasting Temporal Trends Using Indirect Surveys','Scientific ML & Applications','Probabilistic Inference & Sampling','Probabilistic / Bayesian'),
+              ('2024','Best Student Paper – AI for Social Impact Track','special','Scaling Up Pareto Optimization for Tree Structures with Affine Transformations: Evaluating Hybrid Floating Solar-Hydropower Systems in the Amazon','Scientific ML & Applications','Optimization & Generalization','Optimization'),
+              ('2024','AI for Social Impact Track Student Paper Honorable Mention','secondary','Is My Prediction Arbitrary? The Confounding Effects of Variance in Fair Classification Benchmarks','Responsible AI & Privacy','Safety, Fairness & Privacy','Theory / Analysis'),
+
+              ('2023','Distinguished Paper','special','DropMessage: Unifying Random Dropping for Graph Neural Networks','Graphs & Structured Learning','Graph & Structured Learning','GNN'),
+              ('2023','Distinguished Paper','special','Two Heads are Better than One: Image-Point Cloud Network for Depth-Based 3D Hand Pose Estimation','Computer Vision','3D Vision & Reconstruction','Neural Model'),
+              ('2023','Distinguished Paper','special','Neural Architecture Search for Wide Spectrum Adversarial Robustness','General ML & Representation Learning','Robustness & Domain Adaptation','Neural Model; Optimization'),
+              ('2023','Distinguished Paper','special','CowClip: Reducing CTR Prediction Model Training Time from 12 hours to 10 minutes on 1 GPU','General ML & Representation Learning','Model Efficiency & Architecture','Neural Model; Optimization'),
+              ('2023','Distinguished Paper','special','DICNet: Deep Instance-Level Contrastive Network for Double Incomplete Multi-View Multi-Label Classification','General ML & Representation Learning','Representation Learning','Neural Model'),
+              ('2023','Distinguished Paper','special','Exploring Tuning Characteristics of Ventral Stream’s Neurons for Few-Shot Image Classification','Computer Vision','Visual Recognition & Representation','Neural Model; Theory / Analysis'),
+              ('2023','Distinguished Paper','special','MaskBooster: End-to-End Self-Training for Sparsely Supervised Instance Segmentation','Computer Vision','Visual Recognition & Representation','Neural Model'),
+              ('2023','Distinguished Paper','special','SimFair: A Unified Framework for Fairness-Aware Multi-Label Classification','Responsible AI & Privacy','Safety, Fairness & Privacy','Neural Model'),
+              ('2023','Distinguished Paper','special','XRand: Differentially Private Defense against Explanation-Guided Attacks','Responsible AI & Privacy','Safety, Fairness & Privacy','Theory / Analysis'),
+              ('2023','Distinguished Paper','special','Clustering What Matters: Optimal Approximation for Clustering with Outliers','ML Theory & Optimization','Optimization & Generalization','Classical / Optimization; Theory / Analysis'),
+              ('2023','Distinguished Paper','special','Robust Average-Reward Markov Decision Processes','Reinforcement Learning & Decision Making','Reinforcement Learning & Planning','RL; Theory / Analysis'),
+              ('2023','Distinguished Paper','special','Efficient Answer Enumeration in Description Logics with Functional Roles','Graphs & Structured Learning','Reasoning & Knowledge','Neuro-Symbolic; Theory / Analysis'),
+              ('2023','Outstanding Student Paper','secondary','Decorate the Newcomers: Visual Domain Prompt for Continual Test Time Adaptation','General ML & Representation Learning','Robustness & Domain Adaptation','Neural Model'),
+
+              ('2022','Outstanding Paper Honorable Mention','secondary','Bayesian Persuasion in Sequential Decision-Making','Reinforcement Learning & Decision Making','Reinforcement Learning & Planning','Search / Planning; Theory / Analysis'),
+              ('2022','Outstanding Paper Honorable Mention','secondary','Operator-Potential Heuristics for Symbolic Search','Reinforcement Learning & Decision Making','Reinforcement Learning & Planning','Search / Planning; Theory / Analysis'),
+              ('2022','Distinguished Paper','special','AlphaHoldem: High-Performance Artificial Intelligence for Heads-Up No-Limit Poker via End-to-End Reinforcement Learning','Reinforcement Learning & Decision Making','Reinforcement Learning & Planning','RL'),
+              ('2022','Distinguished Paper','special','Certified Symmetry and Dominance Breaking for Combinatorial Optimisation','ML Theory & Optimization','Optimization & Generalization','Classical / Optimization; Theory / Analysis'),
+              ('2022','Distinguished Paper','special','Online Elicitation of Necessarily Optimal Matchings','ML Theory & Optimization','Optimization & Generalization','Theory / Analysis'),
+              ('2022','Distinguished Paper','special','Sampling-Based Robust Control of Autonomous Systems with Non-Gaussian Noise','Reinforcement Learning & Decision Making','Reinforcement Learning & Planning','Probabilistic / Bayesian; Search / Planning'),
+              ('2022','Distinguished Paper','special','Subset approximation of Pareto Regions with Bi-objective A*','ML Theory & Optimization','Optimization & Generalization','Search / Planning; Optimization'),
+              ('2022','Distinguished Paper','special','The SoftCumulative Constraint with Quadratic Penalty','ML Theory & Optimization','Optimization & Generalization','Classical / Optimization'),
+              ('2022','Outstanding Student Paper','secondary','InfoLM: A New Metric to Evaluate Summarization & Data2Text Generation','NLP & Language','LLM Analysis & Evaluation','Theory / Analysis'),
+              ('2022','Outstanding Student Paper Honorable Mention','secondary','Compilation of Aggregates in ASP Systems','Graphs & Structured Learning','Reasoning & Knowledge','Neuro-Symbolic'),
+              ('2022','Outstanding Student Paper Honorable Mention','secondary','Entropy estimation via normalizing flow','ML Theory & Optimization','Probabilistic Inference & Sampling','Probabilistic / Bayesian; Neural Model'),
+
+              ('2021','Outstanding Paper Honorable Mention','secondary','Learning from eXtreme Bandit Feedback','Reinforcement Learning & Decision Making','Reinforcement Learning & Planning','RL; Theory / Analysis'),
+              ('2021','Outstanding Paper Honorable Mention','secondary','Self-Attention Attribution: Interpreting Information Interactions Inside Transformer','NLP & Language','Interpretability & Explainability','Transformer'),
+              ('2021','Outstanding Paper Award – Special Track on AI for Social Impact','special','Mitigating Political Bias in Language Models through Reinforced Calibration','Responsible AI & Privacy','Safety, Fairness & Privacy','Transformer'),
+              ('2021','AI for Social Impact Track Honorable Mention','secondary','Dual-Mandate Patrols: Multi-Armed Bandits for Green Security','Reinforcement Learning & Decision Making','Reinforcement Learning & Planning','RL'),
+              ('2021','Distinguished Paper','special','IQ – Incremental Learning for Solving QSAT','Graphs & Structured Learning','Reasoning & Knowledge','Neuro-Symbolic; Search / Planning'),
+              ('2021','Distinguished Paper','special','Ethically Compliant Sequential Decision Making','Responsible AI & Privacy','Safety, Fairness & Privacy','Search / Planning; Theory / Analysis'),
+              ('2021','Distinguished Paper','special','On the Tractability of SHAP Explanations','Responsible AI & Privacy','Interpretability & Explainability','Theory / Analysis'),
+              ('2021','Distinguished Paper','special','Expected Eligibility Traces','Reinforcement Learning & Decision Making','Reinforcement Learning & Planning','RL; Theory / Analysis'),
+              ('2021','Distinguished Paper','special','Polynomial-Time Algorithms for Counting and Sampling Markov Equivalent DAGs','Graphs & Structured Learning','Causal Learning','Probabilistic / Bayesian; Theory / Analysis'),
+              ('2021','Distinguished Paper','special','Self-Supervised Multi-View Stereo via Effective Co-Segmentation and Data-Augmentation','Computer Vision','3D Vision & Reconstruction','Neural Model; Representation Learning'),
+
+              ('2020','Outstanding Paper Honorable Mention','secondary','A Unifying View on Individual Bounds and Heuristic Inaccuracies in Bidirectional Search','ML Theory & Optimization','Reinforcement Learning & Planning','Search / Planning; Theory / Analysis'),
+              ('2020','Outstanding Student Paper','secondary','Fair Division of Mixed Divisible and Indivisible Goods','ML Theory & Optimization','Optimization & Generalization','Theory / Analysis'),
+              ('2020','Outstanding Student Paper Honorable Mention','secondary','Lifelong Learning with a Changing Action Set','Reinforcement Learning & Decision Making','Reinforcement Learning & Planning','RL'),
+              ('2020','Outstanding Paper Award – Special Track on AI for Social Impact','special','A Distributed Multi-Sensor Machine Learning Approach to Earthquake Early Warning','Scientific ML & Applications','Scientific Discovery & Simulation','Neural Model'),
+              ('2020','AI for Social Impact Track Honorable Mention','secondary','The Unreasonable Effectiveness of Inverse Reinforcement Learning in Advancing Cancer Research','Scientific ML & Applications','Scientific Discovery & Simulation','RL; Theory / Analysis'),
+
+              ('2019','Outstanding Paper Honorable Mention','secondary','Solving Imperfect-Information Games with Discounted Counterfactual Regret Minimization','Reinforcement Learning & Decision Making','Reinforcement Learning & Planning','RL; Search / Planning'),
+              ('2019','Outstanding Student Paper','secondary','Zero Shot Learning for Code Education: Rubric Sampling with Deep Learning Inference','General ML & Representation Learning','Meta-Learning & Adaptation','Neural Model'),
+              ('2019','Outstanding Student Paper Honorable Mention','secondary','Learning to Teach in Cooperative Multiagent Reinforcement Learning','Reinforcement Learning & Decision Making','Reinforcement Learning & Planning','RL; Meta-Learning'),
+          ]
+
+          papers = read(papers_path)
+          tax = read(taxonomy_path)
+          paper_keys = {(r['venue'], r['year'], r['title'].casefold()) for r in papers}
+          tax_keys = {(r['venue'], r['year'], r['title'].casefold()) for r in tax}
+
+          for year, award, tier, title, area, task, family in additions:
+              key = ('AAAI', year, title.casefold())
+              if key not in paper_keys:
+                  row = {'venue':'AAAI','year':year,'award':award,'tier':tier,'title':title,'paper_url':'','source_url':source,'checked_at':'2026-10-07','notes':''}
+                  insert_at = max(i for i,r in enumerate(papers) if r['venue']=='AAAI' and r['year']==year) + 1
+                  papers.insert(insert_at, row)
+                  paper_keys.add(key)
+              if key not in tax_keys:
+                  row = {'venue':'AAAI','year':year,'title':title,'area':area,'task':task,'model_family':family}
+                  insert_at = max(i for i,r in enumerate(tax) if r['venue']=='AAAI' and r['year']==year) + 1
+                  tax.insert(insert_at, row)
+                  tax_keys.add(key)
+
+          write(papers_path, papers, ['venue','year','award','tier','title','paper_url','source_url','checked_at','notes'])
+          write(taxonomy_path, tax, ['venue','year','title','area','task','model_family'])
+          subprocess.run([sys.executable, 'scripts/validate_catalog.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py', '--check'], check=True)
+          PY
+      - name: Commit audited catalog
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers.csv data/paper_taxonomy.csv README.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Complete AAAI paper award categories'
+            git push
+          fi
