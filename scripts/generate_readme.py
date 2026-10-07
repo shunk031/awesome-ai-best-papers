@@ -139,7 +139,7 @@ def render() -> str:
 
     lines.extend([
         "",
-        "> **Coverage note:** year ranges list the conference years currently represented in the catalog. Gaps are explicit; a displayed span should not be interpreted as complete coverage of every intervening year.",
+        "> **Coverage note:** year ranges list conference years with in-scope awards in the catalog. Gaps are explicit and can reflect a non-conference year or a confirmed no-award year; **ICLR 2020 is intentionally absent because no paper award was given that year.**",
         "",
         "## Latest awards",
         "",

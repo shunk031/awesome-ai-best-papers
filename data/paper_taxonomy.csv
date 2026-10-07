@@ -411,16 +411,6 @@ ICLR,2021,Neural Synthesis of Binaural Speech from Mono Audio,Speech & Audio,Spe
 ICLR,2021,Optimal Rates for Averaged Stochastic Gradient Descent under Neural Tangent Kernel Regime,ML Theory & Optimization,Optimization & Generalization,Kernel / NTK; Optimization
 ICLR,2021,Rethinking Architecture Selection in Differentiable NAS,General ML & Representation Learning,Model Efficiency & Architecture,Optimization
 ICLR,2021,Score-Based Generative Modeling through Stochastic Differential Equations,General ML & Representation Learning,Generative Modeling,Diffusion; Probabilistic / Bayesian
-ICLR,2020,ALBERT: A Lite BERT for Self-supervised Learning of Language Representations,NLP & Language,Representation Learning,LLM; Transformer; Representation Learning
-ICLR,2020,Generalization through Memorization: Nearest Neighbor Language Models,NLP & Language,Retrieval & Search,LLM; Transformer
-ICLR,2020,Meta-Learning without Memorization,General ML & Representation Learning,Meta-Learning & Adaptation,Meta-Learning
-ICLR,2020,Neural Tangents: Fast and Easy Infinite Neural Networks in Python,ML Theory & Optimization,Optimization & Generalization,Kernel / NTK; Theory / Analysis
-ICLR,2020,On Identifiability in Transformers,ML Theory & Optimization,Optimization & Generalization,Transformer
-ICLR,2020,Playing the Lottery with Rewards and Multiple Languages: Lottery Tickets in RL and NLP,General ML & Representation Learning,Model Efficiency & Architecture,Optimization
-ICLR,2020,Plug and Play Language Models: A Simple Approach to Controlled Text Generation,NLP & Language,Language Modeling & Generation,LLM; Transformer
-ICLR,2020,Rapid Learning or Feature Reuse? Towards Understanding the Effectiveness of MAML,General ML & Representation Learning,Meta-Learning & Adaptation,Meta-Learning; Theory / Analysis
-ICLR,2020,Reformer: The Efficient Transformer,NLP & Language,Model Efficiency & Architecture,Transformer
-ICLR,2020,Your Classifier is Secretly an Energy Based Model and You Should Treat it Like One,General ML & Representation Learning,Representation Learning,Energy-Based
 ICLR,2019,Ordered Neurons: Integrating Tree Structures into Recurrent Neural Networks,NLP & Language,Language Modeling & Generation,RNN
 ICLR,2019,"The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks",General ML & Representation Learning,Model Efficiency & Architecture,Optimization
 ICLR,2018,Continuous Adaptation via Meta-Learning in Nonstationary and Competitive Environments,General ML & Representation Learning,Meta-Learning & Adaptation,Meta-Learning
