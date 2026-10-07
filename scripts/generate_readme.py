@@ -38,21 +38,21 @@ def render_count_table(lines: list[str], header: str, counts: Counter[str], limi
     lines.append("")
 
 
-
 def compact_years(years: list[int]) -> str:
     if not years:
         return "—"
-    unique=sorted(set(years))
-    groups=[]
-    start=prev=unique[0]
+    unique = sorted(set(years))
+    groups = []
+    start = prev = unique[0]
     for year in unique[1:]:
         if year == prev + 1:
-            prev=year
+            prev = year
             continue
-        groups.append((start,prev))
-        start=prev=year
-    groups.append((start,prev))
-    return ", ".join(str(a) if a == b else f"{a}–{b}" for a,b in groups)
+        groups.append((start, prev))
+        start = prev = year
+    groups.append((start, prev))
+    return ", ".join(str(a) if a == b else f"{a}–{b}" for a, b in groups)
+
 
 def render() -> str:
     venues = load_csv(VENUES_PATH)
@@ -138,6 +138,8 @@ def render() -> str:
         )
 
     lines.extend([
+        "",
+        "> **Coverage note:** year ranges list the conference years currently represented in the catalog. Gaps are explicit; a displayed span should not be interpreted as complete coverage of every intervening year.",
         "",
         "## Latest awards",
         "",
