@@ -132,7 +132,7 @@ Papers are grouped by conference and award year. Title links use canonical paper
 #### 2021
 
 - [Vocabulary Learning via Optimal Transport for Neural Machine Translation](https://aclanthology.org/2021.acl-long.571/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** Transformer / Optimization.
-- [All That’s ‘Human’ Is Not Gold: Evaluating Human Evaluation of Generated Text](https://aclanthology.org/2021.acl-long.565/) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Evaluation & Benchmarking. **Model:** LLM / Transformer.
+- [All That’s ‘Human’ Is Not Gold: Evaluating Human Evaluation of Generated Text](https://aclanthology.org/2021.acl-long.565/) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Evaluation & Benchmarking. **Model:** Theory / Analysis.
 - [Intrinsic Dimensionality Explains the Effectiveness of Language Model Fine-Tuning](https://aclanthology.org/2021.acl-long.568/) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Transformer / Theory / Analysis.
 - [Mind Your Outliers! Investigating the Negative Impact of Outliers on Active Learning for Visual Question Answering](https://aclanthology.org/2021.acl-long.564/) - **Award:** Outstanding Paper. **Area:** Multimodal & Embodied AI. **Task:** Evaluation & Benchmarking. **Model:** Theory / Analysis.
 - [Neural Machine Translation with Monolingual Translation Memory](https://aclanthology.org/2021.acl-long.567/) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** Transformer.
@@ -141,7 +141,7 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Including Signed Languages in Natural Language Processing](https://aclanthology.org/2021.acl-long.570/) - **Award:** Best Theme Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Theory / Analysis.
 #### 2020
 
-- [Beyond Accuracy: Behavioral Testing of NLP Models with CheckList](https://aclanthology.org/2020.acl-main.442/) - **Award:** Best Overall Paper. **Area:** NLP & Language. **Task:** Evaluation & Benchmarking. **Model:** Transformer.
+- [Beyond Accuracy: Behavioral Testing of NLP Models with CheckList](https://aclanthology.org/2020.acl-main.442/) - **Award:** Best Overall Paper. **Area:** NLP & Language. **Task:** Evaluation & Benchmarking. **Model:** Theory / Analysis.
 - [Don’t Stop Pretraining: Adapt Language Models to Domains and Tasks](https://aclanthology.org/2020.acl-main.740/) - **Award:** Honorable Mention for Best Overall Paper. **Area:** NLP & Language. **Task:** Model Editing & Adaptation. **Model:** Transformer / Representation Learning.
 - [Tangled up in BLEU: Reevaluating the Evaluation of Automatic Machine Translation Evaluation Metrics](https://aclanthology.org/2020.acl-main.448/) - **Award:** Honorable Mention for Best Overall Paper. **Area:** NLP & Language. **Task:** Evaluation & Benchmarking. **Model:** Theory / Analysis.
 - [How Can We Accelerate Progress Towards Human-like Linguistic Generalization?](https://aclanthology.org/2020.acl-main.465/) - **Award:** Honorable Mention for Best Theme Paper. **Area:** NLP & Language. **Task:** Evaluation & Benchmarking. **Model:** Theory / Analysis.
