@@ -17,21 +17,10 @@ Each paper is annotated with a maintainer-curated **research area**, **task**, a
 
 ## Contents
 
-- [Research Landscape](#research-landscape)
 - [Papers](#papers)
 {% for venue in venue_sections %}
   - [{{ venue.venue }}](#{{ venue.venue|anchor }})
 {% endfor %}
-
-## Research Landscape
-
-The **{{ recent.records }} award records from {{ recent.start_year }}–{{ recent.end_year }}** provide a compact view of the research themes represented in the recent award set. These counts describe this catalog, not publication volume or citation impact across the field.
-
-**Research areas:** {{ recent.areas_summary }}.
-
-**Model / method families:** {{ recent.families_summary }}.
-
-**Frequently awarded tasks:** {{ recent.tasks_summary }}.
 
 ## Papers
 
