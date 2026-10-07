@@ -743,10 +743,10 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [What’s in a Name? Reducing Bias in Bios Without Access to Protected Attributes](https://aclanthology.org/N19-1424/) - **Award:** Best Thematic Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Representation Learning.
 #### 2018
 
-- [Deep Contextualized Word Representations.](https://naacl2018.wordpress.com/2018/04/11/outstanding-papers/) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Representation Learning. **Model:** RNN / Representation Learning.
-- [Learning to Map Context-Dependent Sentences to Executable Formal Queries.](https://naacl2018.wordpress.com/2018/04/11/outstanding-papers/) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Reasoning & Knowledge. **Model:** Neural Model.
-- [Neural Text Generation in Stories using Entity Representations as Context.](https://naacl2018.wordpress.com/2018/04/11/outstanding-papers/) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** RNN.
-- [Recurrent Neural Networks as Weighted Language Recognizers.](https://naacl2018.wordpress.com/2018/04/11/outstanding-papers/) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** RNN / Theory / Analysis.
+- [Deep Contextualized Word Representations.](https://aclanthology.org/N18-1202/) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Representation Learning. **Model:** RNN / Representation Learning.
+- [Learning to Map Context-Dependent Sentences to Executable Formal Queries.](https://aclanthology.org/N18-1203/) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Reasoning & Knowledge. **Model:** Neural Model.
+- [Neural Text Generation in Stories using Entity Representations as Context.](https://aclanthology.org/N18-1204/) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** RNN.
+- [Recurrent Neural Networks as Weighted Language Recognizers.](https://aclanthology.org/N18-1205/) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** RNN / Theory / Analysis.
 ### NeurIPS
 
 **Conference on Neural Information Processing Systems** · [conference](https://neurips.cc/)
