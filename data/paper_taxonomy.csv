@@ -257,18 +257,38 @@ ICCV,2017,Mask R-CNN,Computer Vision,Visual Recognition & Representation,CNN
 ICCV,2017,Open Set Domain Adaptation.,Computer Vision,Robustness & Domain Adaptation,CNN
 ICLR,2026,LLMs Get Lost In Multi-Turn Conversation,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer
 ICLR,2026,Transformers are Inherently Succinct,ML Theory & Optimization,Optimization & Generalization,Transformer; Theory / Analysis
+ICLR,2026,The Polar Express: Optimal Matrix Sign Methods and their Application to the Muon Algorithm,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
 ICLR,2025,AlphaEdit: Null-Space Constrained Model Editing for Language Models,NLP & Language,Model Editing & Adaptation,LLM; Transformer
 ICLR,2025,Learning Dynamics of LLM Finetuning,NLP & Language,LLM Analysis & Evaluation,LLM; Transformer; Representation Learning
 ICLR,2025,Safety Alignment Should be Made More Than Just a Few Tokens Deep,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
+ICLR,2025,Data Shapley in One Training Run,General ML & Representation Learning,Interpretability & Explainability,Theory / Analysis
+ICLR,2025,SAM 2: Segment Anything in Images and Videos,Computer Vision,Visual Recognition & Representation,Transformer
+ICLR,2025,Faster Cascades via Speculative Decoding,NLP & Language,Model Efficiency & Architecture,LLM; Transformer; Autoregressive
 ICLR,2024,Generalization in diffusion models arises from geometry-adaptive harmonic representations,ML Theory & Optimization,Optimization & Generalization,Diffusion
 ICLR,2024,Learning Interactive Real-World Simulators,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Neural Model; RL
 ICLR,2024,Never Train from Scratch: Fair Comparison of Long-Sequence Models Requires Data-Driven Priors,General ML & Representation Learning,Representation Learning,Neural Model; Representation Learning
 ICLR,2024,Protein Discovery with Discrete Walk-Jump Sampling,Scientific ML & Applications,Scientific Discovery & Simulation,Probabilistic / Bayesian
 ICLR,2024,Vision Transformers Need Registers,Computer Vision,Visual Recognition & Representation,Transformer
+ICLR,2024,Amortizing intractable inference in large language models,NLP & Language,Probabilistic Inference & Sampling,LLM; Probabilistic / Bayesian
+ICLR,2024,Approximating Nash Equilibria in Normal-Form Games via Stochastic Optimization,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
+ICLR,2024,Beyond Weisfeiler-Lehman: A Quantitative Framework for GNN Expressiveness,Graphs & Structured Learning,Graph & Structured Learning,GNN; Theory / Analysis
+ICLR,2024,Flow Matching on General Geometries,General ML & Representation Learning,Generative Modeling,Neural Model; Theory / Analysis
+ICLR,2024,Is ImageNet worth 1 video? Learning strong image encoders from 1 long unlabelled video,Computer Vision,Representation Learning,Representation Learning
+ICLR,2024,Meta Continual Learning Revisited: Implicitly Enhancing Online Hessian Approximation via Variance Reduction,General ML & Representation Learning,Meta-Learning & Adaptation,Meta-Learning; Optimization
+ICLR,2024,Model Tells You What to Discard: Adaptive KV Cache Compression for LLMs,NLP & Language,Model Efficiency & Architecture,LLM; Transformer
+ICLR,2024,Proving Test Set Contamination in Black-Box Language Models,NLP & Language,LLM Analysis & Evaluation,LLM; Theory / Analysis
+ICLR,2024,Robust agents learn causal world models,Reinforcement Learning & Decision Making,Causal Learning,RL; Theory / Analysis
+ICLR,2024,The mechanistic basis of data dependence and abrupt learning in an in-context classification task,General ML & Representation Learning,Interpretability & Explainability,Theory / Analysis
+ICLR,2024,Towards a statistical theory of data selection under weak supervision,ML Theory & Optimization,Optimization & Generalization,Theory / Analysis
 ICLR,2023,DreamFusion: Text-to-3D using 2D Diffusion,Computer Vision,3D Vision & Reconstruction,Diffusion
 ICLR,2023,Emergence of Maps in the Memories of Blind Navigation Agents,Multimodal & Embodied AI,Multimodal & Vision-Language,Neural Model
 ICLR,2023,Rethinking the Expressive Power of GNNs via Graph Biconnectivity,Graphs & Structured Learning,Graph & Structured Learning,GNN
 ICLR,2023,Universal Few-shot Learning of Dense Prediction Tasks with Visual Token Matching,Computer Vision,Visual Recognition & Representation,VLM; CNN
+ICLR,2023,"Towards Understanding Ensemble, Knowledge Distillation and Self-Distillation in Deep Learning",General ML & Representation Learning,Model Efficiency & Architecture,Neural Model; Theory / Analysis
+ICLR,2023,Mastering the Game of No-Press Diplomacy via Human-Regularized Reinforcement Learning and Planning,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL; Search / Planning
+ICLR,2023,On the duality between contrastive and non-contrastive self-supervised learning,General ML & Representation Learning,Representation Learning,Representation Learning; Theory / Analysis
+ICLR,2023,Conditional Antibody Design as 3D Equivariant Graph Translation,Scientific ML & Applications,Scientific Discovery & Simulation,GNN; Neural Model
+ICLR,2023,Disentanglement with Biological Constraints: A Theory of Functional Cell Types,Scientific ML & Applications,Representation Learning,Neural Model; Theory / Analysis
 ICLR,2022,Analytic-DPM: an Analytic Estimate of the Optimal Reverse Variance in Diffusion Probabilistic Models,ML Theory & Optimization,Probabilistic Inference & Sampling,Diffusion; Probabilistic / Bayesian; Theory / Analysis
 ICLR,2022,Bootstrapped Meta-Learning,General ML & Representation Learning,Meta-Learning & Adaptation,Meta-Learning
 ICLR,2022,Comparing Distributions by Measuring Differences that Affect Decision Making,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian

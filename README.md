@@ -2,7 +2,7 @@
 
 [![Catalog Check](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml/badge.svg)](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml)
 
-![Award records](https://img.shields.io/badge/award%20records-450-informational)
+![Award records](https://img.shields.io/badge/award%20records-470-informational)
 ![Venues](https://img.shields.io/badge/venues-9-informational)
 ![Coverage](https://img.shields.io/badge/coverage-2016%E2%80%932026-informational)
 
@@ -24,64 +24,65 @@ The v2 catalog prioritizes official conference sources. The complete 2016–2018
 
 ## Research landscape
 
-The tables below summarize the **82 award records from 2024–2026 currently in this catalog**. They describe this curated award set, not publication volume or the field as a whole.
+The tables below summarize the **97 award records from 2024–2026 currently in this catalog**. They describe this curated award set, not publication volume or the field as a whole.
 
 ### Research areas
 
 | Label | Award records |
 | --- | ---: |
-| NLP & Language | 29 |
-| ML Theory & Optimization | 12 |
+| NLP & Language | 33 |
+| ML Theory & Optimization | 15 |
 | Responsible AI & Privacy | 12 |
-| Computer Vision | 8 |
+| Computer Vision | 10 |
+| General ML & Representation Learning | 8 |
 | Multimodal & Embodied AI | 6 |
-| Reinforcement Learning & Decision Making | 4 |
-| General ML & Representation Learning | 4 |
+| Reinforcement Learning & Decision Making | 5 |
+| Graphs & Structured Learning | 4 |
 | Scientific ML & Applications | 3 |
-| Graphs & Structured Learning | 3 |
 | Speech & Audio | 1 |
 
 ### Model / method families
 
 | Label | Award records |
 | --- | ---: |
-| Transformer | 44 |
-| LLM | 34 |
-| Theory / Analysis | 13 |
+| Transformer | 47 |
+| LLM | 38 |
+| Theory / Analysis | 22 |
 | Diffusion | 11 |
-| Probabilistic / Bayesian | 6 |
-| Representation Learning | 6 |
+| Optimization | 8 |
+| Probabilistic / Bayesian | 7 |
+| Representation Learning | 7 |
+| Autoregressive | 6 |
+| Neural Model | 5 |
 | VLM | 5 |
-| Optimization | 5 |
-| Autoregressive | 5 |
-| Neural Model | 4 |
-| RL | 4 |
+| RL | 5 |
 | Neuro-Symbolic | 3 |
-| GNN | 1 |
+| GNN | 2 |
 | VAE | 1 |
 | Classical / Optimization | 1 |
+| Meta-Learning | 1 |
 
 ### Frequently awarded tasks
 
 | Label | Award records |
 | --- | ---: |
+| LLM Analysis & Evaluation | 11 |
 | Safety, Fairness & Privacy | 11 |
-| LLM Analysis & Evaluation | 10 |
+| Optimization & Generalization | 9 |
+| Model Efficiency & Architecture | 7 |
 | Language Modeling & Generation | 6 |
-| Optimization & Generalization | 6 |
-| Model Efficiency & Architecture | 5 |
 | Image & Video Generation | 5 |
+| Probabilistic Inference & Sampling | 5 |
+| Generative Modeling | 5 |
 | Multimodal & Vision-Language | 4 |
 | Reinforcement Learning & Planning | 4 |
-| Probabilistic Inference & Sampling | 4 |
-| Generative Modeling | 4 |
 | Language Understanding & Linguistics | 3 |
-| 3D Vision & Reconstruction | 3 |
+| Graph & Structured Learning | 3 |
 
 ### Reading the recent slice
 
-- **Language-model work is the clearest cluster:** `NLP & Language` accounts for 29 recent award records, while `LLM` and `Transformer` appear in 34 and 44 records respectively.
-- **Evaluation, safety, and theory are prominent:** `LLM Analysis & Evaluation` has 10 records, `Safety, Fairness & Privacy` has 11, and `Optimization & Generalization` has 6.
+- **Language-model work is the clearest cluster:** `NLP & Language` accounts for 33 recent award records, while `LLM` and `Transformer` appear in 38 and 47 records respectively.
+- **Evaluation, safety, and theory are prominent:** `LLM Analysis & Evaluation` has 11 records, `Safety, Fairness & Privacy` has 11, and `Optimization & Generalization` has 9.
 - **Generative and multimodal work remains broad rather than single-model:** `Diffusion` appears in 11 records, alongside `VLM` in 5, with recurring awards in image/video generation, 3D reconstruction, and multimodal vision-language tasks.
 - **RL and structured reasoning remain active:** `Reinforcement Learning & Planning` has 4 recent records, while graph / structured and neuro-symbolic work continues to appear across AAAI and ICLR.
 
@@ -96,7 +97,7 @@ These are descriptive signals from the curated award set; they should not be int
 | [CVPR](https://cvpr.thecvf.com/) | Computer Vision | 2016–2026 | 19 | [source](https://www.thecvf.com/?page_id=413) |
 | [EMNLP](https://aclanthology.org/venues/emnlp/) | Natural Language Processing | 2016–2025 | 65 | [source](https://www.aclweb.org/aclwiki/Best_paper_awards) |
 | [ICCV](https://iccv.thecvf.com/) | Computer Vision | 2017, 2019, 2021, 2023, 2025 | 10 | [source](https://www.thecvf.com/?page_id=413) |
-| [ICLR](https://iclr.cc/) | Machine Learning | 2016–2026 | 52 | [source](https://blog.iclr.cc/) |
+| [ICLR](https://iclr.cc/) | Machine Learning | 2016–2026 | 72 | [source](https://blog.iclr.cc/) |
 | [ICML](https://icml.cc/) | Machine Learning | 2016–2026 | 62 | [source](https://blog.icml.cc/) |
 | [NAACL](https://naacl.org/) | Natural Language Processing | 2018–2019, 2021–2022, 2024–2025 | 35 | [source](https://naacl.org/policies/best-paper.html) |
 | [NeurIPS](https://neurips.cc/) | Machine Learning | 2016–2025 | 45 | [source](https://blog.neurips.cc/) |
@@ -149,6 +150,7 @@ This section shows the latest completed award year for each venue. The full hist
 
 - **Outstanding Paper** — [LLMs Get Lost In Multi-Turn Conversation](https://blog.iclr.cc/2026/04/23/announcing-the-iclr-2026-outstanding-papers/)<br>  **Area:** NLP & Language · **Task:** LLM Analysis & Evaluation · **Model:** LLM / Transformer
 - **Outstanding Paper** — [Transformers are Inherently Succinct](https://blog.iclr.cc/2026/04/23/announcing-the-iclr-2026-outstanding-papers/)<br>  **Area:** ML Theory & Optimization · **Task:** Optimization & Generalization · **Model:** Transformer / Theory / Analysis
+- **Outstanding Paper Honorable Mention** — [The Polar Express: Optimal Matrix Sign Methods and their Application to the Muon Algorithm](https://openreview.net/forum?id=yRtgZ1K8hO) · [award source](https://blog.iclr.cc/2026/04/23/announcing-the-iclr-2026-outstanding-papers/) · `secondary`<br>  **Area:** ML Theory & Optimization · **Task:** Optimization & Generalization · **Model:** Optimization / Theory / Analysis
 
 ### ICML · 2026
 
