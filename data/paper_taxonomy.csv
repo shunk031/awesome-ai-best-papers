@@ -139,7 +139,7 @@ ACL,2016,Transition-based dependency parsing with topological fields.,NLP & Lang
 AAAI,2026,Causal Structure Learning for Dynamical Systems with Theoretical Score Analysis,Scientific ML & Applications,Causal Learning,Theory / Analysis
 AAAI,2026,High-Pass Matters: Theoretical Insights and Sheaflet-Based Design for Hypergraph Neural Networks,Graphs & Structured Learning,Graph & Structured Learning,GNN
 AAAI,2026,LLM2CLIP: Powerful Language Model Unlocks Richer Cross-Modality Representation,Multimodal & Embodied AI,Multimodal & Vision-Language,LLM; Transformer; VLM
-AAAI,2026,Model Change for Description Logic Concepts,Graphs & Structured Learning,Graph & Structured Learning,Neuro-Symbolic
+AAAI,2026,Model Change for Description Logic Concepts,Graphs & Structured Learning,Reasoning & Knowledge,Neuro-Symbolic
 AAAI,2026,ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver,Multimodal & Embodied AI,Multimodal & Vision-Language,VLM; Transformer
 AAAI,2026,On the Alignment of Large Language Models with Global Human Opinion,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
 AAAI,2026,PlantTraitNet: An Uncertainty-Aware Multimodal Framework for Global-Scale Plant Trait Inference from Citizen Science Data,Scientific ML & Applications,Scientific Discovery & Simulation,VLM; Transformer
@@ -216,7 +216,7 @@ CVPR,2026,Efficiently Reconstructing Dynamic Scenes One D4RT at a Time,Computer 
 CVPR,2026,Native and Compact Structured Latents for 3D Generation,Computer Vision,Generative Modeling,Neural Model
 CVPR,2026,NitroGen: An Open Foundation Model for Generalist Gaming Agents,Multimodal & Embodied AI,Reinforcement Learning & Planning,Transformer; RL
 CVPR,2026,SAM 3D: 3Dfy Anything in Images,Computer Vision,3D Vision & Reconstruction,Transformer; Neural Model
-CVPR,2026,ChordEdit: One-Step Low-Energy Transport for Image Editing,Computer Vision,Image & Video Generation,Optimization
+CVPR,2026,ChordEdit: One-Step Low-Energy Transport for Image Editing,Computer Vision,Image & Video Generation,Diffusion; Optimization
 CVPR,2025,VGGT: Visual Geometry Grounded Transformer,Computer Vision,3D Vision & Reconstruction,Transformer
 CVPR,2025,Neural Inverse Rendering from Propagating Light,Computer Vision,3D Vision & Reconstruction,Neural Model
 CVPR,2025,"MegaSaM: Accurate, Fast and Robust Structure and Motion from Casual Dynamic Videos",Computer Vision,3D Vision & Reconstruction,Neural Model
@@ -337,7 +337,7 @@ EMNLP,2016,Learning a Lexicon and Translation Model from Phoneme Lattices.,Speec
 EMNLP,2016,Sequence-to-Sequence Learning as Beam-Search Optimization.,NLP & Language,Language Modeling & Generation,RNN; Optimization
 EMNLP,2016,Span-Based Constituency Parsing with a Structure-Label System and Provably Optimal Dynamic Oracles.,NLP & Language,Language Understanding & Linguistics,Neural Model
 ICCV,2025,Generating Physically Stable and Buildable Brick Structures from Text,Computer Vision,3D Vision & Reconstruction,Optimization
-ICCV,2025,FlowEdit: Inversion-Free Text-Based Editing Using Pre-Trained Flow Models,Computer Vision,Image & Video Generation,Neural Model
+ICCV,2025,FlowEdit: Inversion-Free Text-Based Editing Using Pre-Trained Flow Models,Computer Vision,Image & Video Generation,Diffusion; Neural Model
 ICCV,2025,Spatially-Varying Autofocus,Computer Vision,3D Vision & Reconstruction,Classical / Optimization
 ICCV,2025,RayZer: A Self-supervised Large View Synthesis Model,Computer Vision,3D Vision & Reconstruction,Neural Model
 ICCV,2023,Adding Conditional Control to Text-to-Image Diffusion Models,Computer Vision,Image & Video Generation,Diffusion
