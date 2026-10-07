@@ -144,6 +144,7 @@ AAAI,2026,ReconVLA: Reconstructive Vision-Language-Action Model as Effective Rob
 AAAI,2026,On the Alignment of Large Language Models with Global Human Opinion,Responsible AI & Privacy,"Safety, Fairness & Privacy",LLM; Transformer
 AAAI,2026,PlantTraitNet: An Uncertainty-Aware Multimodal Framework for Global-Scale Plant Trait Inference from Citizen Science Data,Scientific ML & Applications,Scientific Discovery & Simulation,VLM; Transformer
 AAAI,2026,Generalizable Slum Detection from Satellite Imagery with Mixture-of-Experts,Scientific ML & Applications,Scientific Discovery & Simulation,Neural Model
+AAAI,2026,"Fractured Glass, Failing Cameras: Simulating Physics-Based Adversarial Samples for Autonomous Driving Systems",Computer Vision,Robustness & Domain Adaptation,CNN; Transformer
 AAAI,2025,Efficient Rectification of Neuro-Symbolic Reasoning Inconsistencies by Abductive Reflection,Graphs & Structured Learning,Reasoning & Knowledge,Optimization; Neuro-Symbolic
 AAAI,2025,Every Bit Helps: Achieving the Optimal Distortion with a Few Queries,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis
 AAAI,2025,Revelations: A Decidable Class of POMDPs with Omega-Regular Objectives,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL

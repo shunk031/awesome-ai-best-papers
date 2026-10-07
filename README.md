@@ -2,7 +2,7 @@
 
 [![Catalog Check](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml/badge.svg)](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml)
 
-![Award records](https://img.shields.io/badge/award%20records-573-informational)
+![Award records](https://img.shields.io/badge/award%20records-574-informational)
 ![Venues](https://img.shields.io/badge/venues-9-informational)
 ![Coverage](https://img.shields.io/badge/coverage-2016%E2%80%932026-informational)
 
@@ -24,14 +24,14 @@ The v2 catalog prioritizes official conference sources. The complete 2016–2018
 
 ## Research landscape
 
-The tables below summarize the **126 award records from 2024–2026 currently in this catalog**. They describe this curated award set, not publication volume or the field as a whole.
+The tables below summarize the **127 award records from 2024–2026 currently in this catalog**. They describe this curated award set, not publication volume or the field as a whole.
 
 ### Research areas
 
 | Label | Award records |
 | --- | ---: |
 | NLP & Language | 33 |
-| Computer Vision | 28 |
+| Computer Vision | 29 |
 | ML Theory & Optimization | 15 |
 | Responsible AI & Privacy | 14 |
 | Multimodal & Embodied AI | 10 |
@@ -45,7 +45,7 @@ The tables below summarize the **126 award records from 2024–2026 currently in
 
 | Label | Award records |
 | --- | ---: |
-| Transformer | 55 |
+| Transformer | 56 |
 | LLM | 39 |
 | Theory / Analysis | 24 |
 | Neural Model | 19 |
@@ -58,9 +58,9 @@ The tables below summarize the **126 award records from 2024–2026 currently in
 | Autoregressive | 6 |
 | Neuro-Symbolic | 3 |
 | GNN | 3 |
+| CNN | 2 |
 | Classical / Optimization | 2 |
 | VAE | 1 |
-| CNN | 1 |
 | Meta-Learning | 1 |
 
 ### Frequently awarded tasks
@@ -82,7 +82,7 @@ The tables below summarize the **126 award records from 2024–2026 currently in
 
 ### Reading the recent slice
 
-- **Language-model work is the clearest cluster:** `NLP & Language` accounts for 33 recent award records, while `LLM` and `Transformer` appear in 39 and 55 records respectively.
+- **Language-model work is the clearest cluster:** `NLP & Language` accounts for 33 recent award records, while `LLM` and `Transformer` appear in 39 and 56 records respectively.
 - **Evaluation, safety, and theory are prominent:** `LLM Analysis & Evaluation` has 11 records, `Safety, Fairness & Privacy` has 13, and `Optimization & Generalization` has 10.
 - **Generative and multimodal work remains broad rather than single-model:** `Diffusion` appears in 12 records, alongside `VLM` in 9, with recurring awards in image/video generation, 3D reconstruction, and multimodal vision-language tasks.
 - **RL and structured reasoning remain active:** `Reinforcement Learning & Planning` has 6 recent records, while graph / structured and neuro-symbolic work continues to appear across AAAI and ICLR.
@@ -94,7 +94,7 @@ These are descriptive signals from the curated award set; they should not be int
 | Venue | Area | Years in catalog | Records | Official awards |
 | --- | --- | ---: | ---: | --- |
 | [ACL](https://aclweb.org/) | Natural Language Processing | 2016–2026 | 137 | [source](https://www.aclweb.org/aclwiki/Best_paper_awards) |
-| [AAAI](https://aaai.org/conference/aaai/) | Artificial Intelligence | 2016–2026 | 75 | [source](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/) |
+| [AAAI](https://aaai.org/conference/aaai/) | Artificial Intelligence | 2016–2026 | 76 | [source](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/) |
 | [CVPR](https://cvpr.thecvf.com/) | Computer Vision | 2016–2026 | 59 | [source](https://www.thecvf.com/?page_id=413) |
 | [EMNLP](https://aclanthology.org/venues/emnlp/) | Natural Language Processing | 2016–2025 | 65 | [source](https://www.aclweb.org/aclwiki/Best_paper_awards) |
 | [ICCV](https://iccv.thecvf.com/) | Computer Vision | 2017, 2019, 2021, 2023, 2025 | 23 | [source](https://www.thecvf.com/?page_id=413) |
@@ -127,6 +127,7 @@ This section shows the latest completed award year for each venue. The full hist
 - **Outstanding Paper Award** — [Model Change for Description Logic Concepts](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/)<br>  **Area:** Graphs & Structured Learning · **Task:** Graph & Structured Learning · **Model:** Neuro-Symbolic
 - **Outstanding Paper Award** — [ReconVLA: Reconstructive Vision-Language-Action Model as Effective Robot Perceiver](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/)<br>  **Area:** Multimodal & Embodied AI · **Task:** Multimodal & Vision-Language · **Model:** VLM / Transformer
 - **Best Paper Award – AI Alignment Track** — [On the Alignment of Large Language Models with Global Human Opinion](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/) · `special`<br>  **Area:** Responsible AI & Privacy · **Task:** Safety, Fairness & Privacy · **Model:** LLM / Transformer
+- **Best Paper Award – AI for Social Impact Track** — [Fractured Glass, Failing Cameras: Simulating Physics-Based Adversarial Samples for Autonomous Driving Systems](https://ojs.aaai.org/index.php/AAAI/article/view/37792) · [award source](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/) · `special`<br>  **Area:** Computer Vision · **Task:** Robustness & Domain Adaptation · **Model:** CNN / Transformer
 - **Best Paper Award – AI for Social Impact Track** — [Generalizable Slum Detection from Satellite Imagery with Mixture-of-Experts](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/) · `special`<br>  **Area:** Scientific ML & Applications · **Task:** Scientific Discovery & Simulation · **Model:** Neural Model
 - **Best Paper Award – AI for Social Impact Track** — [PlantTraitNet: An Uncertainty-Aware Multimodal Framework for Global-Scale Plant Trait Inference from Citizen Science Data](https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/) · `special`<br>  **Area:** Scientific ML & Applications · **Task:** Scientific Discovery & Simulation · **Model:** VLM / Transformer
 
