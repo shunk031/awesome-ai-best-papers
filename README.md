@@ -509,10 +509,10 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Viewing Graph Solvability via Cycle Consistency](https://www.thecvf.com/?page_id=413) - **Award:** Marr Prize Paper Honorable Mention. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Theory / Analysis.
 #### 2019
 
-- [SinGAN: Learning a Generative Model from a Single Natural Image](https://www.thecvf.com/?page_id=413) - **Award:** Marr Prize. **Area:** Computer Vision. **Task:** Image & Video Generation. **Model:** GAN.
-- [PLMP – Point-Line Minimal Problems in Complete Multi-View Visibility](https://www.thecvf.com/?page_id=413) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Theory / Analysis.
-- [Asynchronous Single-Photon 3D Imaging](https://www.thecvf.com/?page_id=413) - **Award:** Marr Prize Paper Honorable Mention. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Classical / Optimization.
-- [Specifying Object Attributes and Relations in Interactive Scene Generation](https://www.thecvf.com/?page_id=413) - **Award:** Marr Prize Paper Honorable Mention. **Area:** Computer Vision. **Task:** Generative Modeling. **Model:** Neural Model.
+- [SinGAN: Learning a Generative Model From a Single Natural Image](https://openaccess.thecvf.com/content_ICCV_2019/html/Shaham_SinGAN_Learning_a_Generative_Model_From_a_Single_Natural_Image_ICCV_2019_paper.html) - **Award:** Marr Prize. **Area:** Computer Vision. **Task:** Image & Video Generation. **Model:** GAN.
+- [PLMP - Point-Line Minimal Problems in Complete Multi-View Visibility](https://openaccess.thecvf.com/content_ICCV_2019/papers/Duff_PLMP_-_Point-Line_Minimal_Problems_in_Complete_Multi-View_Visibility_ICCV_2019_paper.pdf) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Theory / Analysis.
+- [Asynchronous Single-Photon 3D Imaging](https://openaccess.thecvf.com/content_ICCV_2019/html/Gupta_Asynchronous_Single-Photon_3D_Imaging_ICCV_2019_paper.html) - **Award:** Marr Prize Paper Honorable Mention. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Classical / Optimization.
+- [Specifying Object Attributes and Relations in Interactive Scene Generation](https://openaccess.thecvf.com/content_ICCV_2019/html/Ashual_Specifying_Object_Attributes_and_Relations_in_Interactive_Scene_Generation_ICCV_2019_paper.html) - **Award:** Marr Prize Paper Honorable Mention. **Area:** Computer Vision. **Task:** Generative Modeling. **Model:** Neural Model.
 #### 2017
 
 - [Mask R-CNN](https://openaccess.thecvf.com/content_iccv_2017/html/He_Mask_R-CNN_ICCV_2017_paper.html) - **Award:** Marr Prize. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** CNN.
