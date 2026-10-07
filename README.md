@@ -495,10 +495,10 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Spatially-Varying Autofocus](https://openaccess.thecvf.com/content/ICCV2025/html/Qin_Spatially-Varying_Autofocus_ICCV_2025_paper.html) - **Award:** Marr Prize Paper Honorable Mention. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Classical / Optimization.
 #### 2023
 
-- [Adding Conditional Control to Text-to-Image Diffusion Models](https://www.thecvf.com/?page_id=413) - **Award:** Marr Prize. **Area:** Computer Vision. **Task:** Image & Video Generation. **Model:** Diffusion.
-- [Passive Ultra-Wideband Single-Photon Imaging](https://www.thecvf.com/?page_id=413) - **Award:** Marr Prize. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Neural Model.
-- [Tracking Everything Everywhere All at Once](https://www.thecvf.com/?page_id=413) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Neural Model.
-- [Segment Anything](https://www.thecvf.com/?page_id=413) - **Award:** Marr Prize Paper Honorable Mention. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Transformer.
+- [Adding Conditional Control to Text-to-Image Diffusion Models](https://openaccess.thecvf.com/content/ICCV2023/html/Zhang_Adding_Conditional_Control_to_Text-to-Image_Diffusion_Models_ICCV_2023_paper.html) - **Award:** Marr Prize. **Area:** Computer Vision. **Task:** Image & Video Generation. **Model:** Diffusion.
+- [Passive Ultra-Wideband Single-Photon Imaging](https://openaccess.thecvf.com/content/ICCV2023/html/Wei_Passive_Ultra-Wideband_Single-Photon_Imaging_ICCV_2023_paper.html) - **Award:** Marr Prize. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Neural Model.
+- [Tracking Everything Everywhere All at Once](https://openaccess.thecvf.com/content/ICCV2023/html/Wang_Tracking_Everything_Everywhere_All_at_Once_ICCV_2023_paper.html) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Neural Model.
+- [Segment Anything](https://openaccess.thecvf.com/content/ICCV2023/html/Kirillov_Segment_Anything_ICCV_2023_paper.html) - **Award:** Marr Prize Paper Honorable Mention. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Transformer.
 #### 2021
 
 - [Swin Transformer: Hierarchical Vision Transformer Using Shifted Windows](https://openaccess.thecvf.com/content/ICCV2021/html/Liu_Swin_Transformer_Hierarchical_Vision_Transformer_Using_Shifted_Windows_ICCV_2021_paper.html) - **Award:** Marr Prize. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Transformer.
