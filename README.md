@@ -365,9 +365,9 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Real-Time High-Resolution Background Matting](https://openaccess.thecvf.com/content/CVPR2021/html/Lin_Real-Time_High-Resolution_Background_Matting_CVPR_2021_paper.html) - **Award:** Best Student Paper Honorable Mention. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Neural Model.
 #### 2020
 
-- [Unsupervised Learning of Probably Symmetric Deformable 3D Objects from Images in the Wild](https://www.thecvf.com/?page_id=413) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Neural Model.
-- [BSP-Net: Generating Compact Meshes via Binary Space Partitioning](https://www.thecvf.com/?page_id=413) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Neural Model.
-- [DeepCap: Monocular Human Performance Capture Using Weak Supervision](https://www.thecvf.com/?page_id=413) - **Award:** Best Student Paper Honorable Mention. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Neural Model.
+- [Unsupervised Learning of Probably Symmetric Deformable 3D Objects From Images in the Wild](https://openaccess.thecvf.com/content_CVPR_2020/papers/Wu_Unsupervised_Learning_of_Probably_Symmetric_Deformable_3D_Objects_From_Images_in_CVPR_2020_paper.pdf) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Neural Model.
+- [BSP-Net: Generating Compact Meshes via Binary Space Partitioning](https://openaccess.thecvf.com/content_CVPR_2020/html/Chen_BSP-Net_Generating_Compact_Meshes_via_Binary_Space_Partitioning_CVPR_2020_paper.html) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Neural Model.
+- [DeepCap: Monocular Human Performance Capture Using Weak Supervision](https://openaccess.thecvf.com/content_CVPR_2020/papers/Habermann_DeepCap_Monocular_Human_Performance_Capture_Using_Weak_Supervision_CVPR_2020_paper.pdf) - **Award:** Best Student Paper Honorable Mention. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Neural Model.
 #### 2019
 
 - [A Theory of Fermat Paths for Non-Line-of-Sight Shape Reconstruction](https://www.thecvf.com/?page_id=413) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Theory / Analysis.
