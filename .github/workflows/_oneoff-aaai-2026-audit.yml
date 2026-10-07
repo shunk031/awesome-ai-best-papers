@@ -1,0 +1,85 @@
+name: One-off AAAI 2026 completeness audit
+
+on:
+  push:
+    branches:
+      - revamp/data-driven-catalog
+    paths:
+      - .github/workflows/_oneoff-aaai-2026-audit.yml
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: revamp/data-driven-catalog
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Add missing AAAI-26 paper award
+        run: |
+          python - <<'PY'
+          import csv
+          from pathlib import Path
+          import subprocess, sys
+
+          papers_path = Path('data/papers.csv')
+          taxonomy_path = Path('data/paper_taxonomy.csv')
+          title = 'Fractured Glass, Failing Cameras: Simulating Physics-Based Adversarial Samples for Autonomous Driving Systems'
+          source = 'https://aaai.org/about-aaai/aaai-awards/aaai-conference-paper-awards-and-recognition/'
+          paper_url = 'https://ojs.aaai.org/index.php/AAAI/article/view/37792'
+
+          def read(path):
+              with path.open(newline='', encoding='utf-8') as f:
+                  return list(csv.DictReader(f))
+
+          def write(path, rows, fields):
+              with path.open('w', newline='', encoding='utf-8') as f:
+                  w = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
+                  w.writeheader(); w.writerows(rows)
+
+          papers = read(papers_path)
+          tax = read(taxonomy_path)
+          key = ('AAAI', '2026', title.casefold())
+          paper_keys = {(r['venue'], r['year'], r['title'].casefold()) for r in papers}
+          tax_keys = {(r['venue'], r['year'], r['title'].casefold()) for r in tax}
+
+          if key not in paper_keys:
+              row = {
+                  'venue':'AAAI', 'year':'2026',
+                  'award':'Best Paper Award – AI for Social Impact Track', 'tier':'special',
+                  'title':title, 'paper_url':paper_url, 'source_url':source,
+                  'checked_at':'2026-10-07', 'notes':''
+              }
+              same = [i for i,r in enumerate(papers) if r['venue']=='AAAI' and r['year']=='2026']
+              papers.insert(max(same) + 1, row)
+          if key not in tax_keys:
+              row = {
+                  'venue':'AAAI', 'year':'2026', 'title':title,
+                  'area':'Computer Vision', 'task':'Robustness & Domain Adaptation',
+                  'model_family':'CNN; Transformer'
+              }
+              same = [i for i,r in enumerate(tax) if r['venue']=='AAAI' and r['year']=='2026']
+              tax.insert(max(same) + 1, row)
+
+          write(papers_path, papers, ['venue','year','award','tier','title','paper_url','source_url','checked_at','notes'])
+          write(taxonomy_path, tax, ['venue','year','title','area','task','model_family'])
+          subprocess.run([sys.executable, 'scripts/validate_catalog.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py'], check=True)
+          subprocess.run([sys.executable, 'scripts/generate_readme.py', '--check'], check=True)
+          PY
+      - name: Commit audited catalog
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers.csv data/paper_taxonomy.csv README.md
+          if git diff --cached --quiet; then
+            echo 'No changes to commit'
+          else
+            git commit -m 'Complete AAAI 2026 paper awards'
+            git push
+          fi
