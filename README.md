@@ -759,12 +759,12 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Why Diffusion Models Don’t Memorize: The Role of Implicit Dynamical Regularization in Training](https://proceedings.neurips.cc/paper_files/paper/2025/hash/ceb7f3cc876a6dcb15130a645b5a4507-Abstract-Conference.html) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Generative Modeling. **Model:** Diffusion / Theory / Analysis.
 #### 2024
 
-- [Stochastic Taylor Derivative Estimator: Efficient amortization for arbitrary differential operators](https://neurips.cc/Conferences/2024/Awards) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
-- [Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction](https://neurips.cc/Conferences/2024/Awards) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** Image & Video Generation. **Model:** Autoregressive / Transformer.
+- [Stochastic Taylor Derivative Estimator: Efficient amortization for arbitrary differential operators](https://proceedings.neurips.cc/paper_files/paper/2024/hash/dd2eb5250696753ea37141bbd89bb569-Abstract-Conference.html) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
+- [Visual Autoregressive Modeling: Scalable Image Generation via Next-Scale Prediction](https://proceedings.neurips.cc/paper_files/paper/2024/hash/9a24e284b187f662681440ba15c416fb-Abstract-Conference.html) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** Image & Video Generation. **Model:** Autoregressive / Transformer.
 #### 2023
 
-- [Are Emergent Abilities of Large Language Models a Mirage?](https://neurips.cc/Conferences/2023/Awards) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer.
-- [Privacy Auditing with One (1) Training Run](https://neurips.cc/Conferences/2023/Awards) - **Award:** Outstanding Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Theory / Analysis.
+- [Are Emergent Abilities of Large Language Models a Mirage?](https://proceedings.neurips.cc/paper_files/paper/2023/hash/adc98a266f45005c403b8311ca7e8bd7-Abstract-Conference.html) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer.
+- [Privacy Auditing with One (1) Training Run](https://proceedings.neurips.cc/paper_files/paper/2023/hash/9a6f6e0d6781d1cb8689192408946d73-Abstract-Conference.html) - **Award:** Outstanding Paper. **Area:** Responsible AI & Privacy. **Task:** Safety, Fairness & Privacy. **Model:** Theory / Analysis.
 #### 2022
 
 - [A Neural Corpus Indexer for Document Retrieval](https://openreview.net/forum?id=fSfcEYQP_qc) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Retrieval & Search. **Model:** Transformer.
@@ -790,9 +790,9 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [On the Expressivity of Markov Reward](https://proceedings.neurips.cc/paper_files/paper/2021/hash/4079016d940210b4ae9ae7d41c4a2065-Abstract.html) - **Award:** Outstanding Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL / Theory / Analysis.
 #### 2020
 
-- [Improved Guarantees and a Multiple-Descent Curve for Column Subset Selection and the Nyström Method](https://neurips.cc/Conferences/2020/Awards) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization.
-- [Language Models are Few-Shot Learners](https://neurips.cc/Conferences/2020/Awards) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer.
-- [No-Regret Learning Dynamics for Extensive-Form Correlated Equilibrium](https://neurips.cc/Conferences/2020/Awards) - **Award:** Outstanding Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL / Theory / Analysis.
+- [Improved guarantees and a multiple-descent curve for Column Subset Selection and the Nystrom method](https://proceedings.neurips.cc/paper/2020/hash/342c472b95d00421be10e9512b532866-Abstract.html) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization.
+- [Language Models are Few-Shot Learners](https://proceedings.neurips.cc/paper/2020/hash/1457c0d6bfcb4967418bfb8ac142f64a-Abstract.html) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** LLM Analysis & Evaluation. **Model:** LLM / Transformer.
+- [No-Regret Learning Dynamics for Extensive-Form Correlated Equilibrium](https://proceedings.neurips.cc/paper_files/paper/2020/hash/5763abe87ed1938799203fb6e8650025-Abstract.html) - **Award:** Outstanding Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL / Theory / Analysis.
 #### 2019
 
 - [Distribution-Independent PAC Learning of Halfspaces with Massart Noise](https://proceedings.neurips.cc/paper_files/paper/2019/hash/358aee4cc897452c00244351e4d91f69-Abstract.html) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
@@ -809,13 +809,13 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - [Optimal Algorithms for Non-Smooth Distributed Optimization in Networks](https://proceedings.neurips.cc/paper_files/paper/2018/hash/8fb21ee7a2207526da55a679f0332de2-Abstract.html) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization / Theory / Analysis.
 #### 2017
 
-- [A Linear-Time Kernel Goodness-of-Fit Test](https://neurips.cc/Conferences/2017/Awards) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Kernel / NTK.
-- [Safe and Nested Subgame Solving for Imperfect-Information Games](https://neurips.cc/Conferences/2017/Awards) - **Award:** Best Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
-- [Variance-based Regularization with Convex Objectives](https://neurips.cc/Conferences/2017/Awards) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization / Theory / Analysis.
+- [A Linear-Time Kernel Goodness-of-Fit Test](https://proceedings.neurips.cc/paper/2017/hash/979d472a84804b9f647bc185a877a8b5-Abstract.html) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Kernel / NTK.
+- [Safe and Nested Subgame Solving for Imperfect-Information Games](https://proceedings.neurips.cc/paper_files/paper/2017/hash/7fe1f8abaad094e0b5cb1b01d712f708-Abstract.html) - **Award:** Best Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
+- [Variance-based Regularization with Convex Objectives](https://proceedings.neurips.cc/paper_files/paper/2017/hash/5a142a55461d5fef016acfb927fee0bd-Abstract.html) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization / Theory / Analysis.
 #### 2016
 
-- [Value Iteration Networks](https://neurips.cc/Conferences/2016/Awards) - **Award:** Best Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
-- [Matrix Completion has No Spurious Local Minimum](https://neurips.cc/Conferences/2016/Awards) - **Award:** Best Student Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
+- [Value Iteration Networks](https://proceedings.neurips.cc/paper/2016/hash/c21002f464c5fc5bee3b98ced83963b8-Abstract.html) - **Award:** Best Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
+- [Matrix Completion has No Spurious Local Minimum](https://proceedings.neurips.cc/paper_files/paper/2016/hash/7fb8ceb3bd59c7956b1df66729296a4c-Abstract.html) - **Award:** Best Student Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
 <!--lint enable double-link balanced-punctuation-->
 
 ## Contributing
