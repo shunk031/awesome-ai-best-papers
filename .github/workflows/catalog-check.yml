@@ -29,5 +29,11 @@ jobs:
       - name: Validate catalog
         run: uv run python scripts/validate_catalog.py
 
+      - name: Generate README for inspection
+        run: uv run python scripts/generate_readme.py
+
+      - name: Print generated README
+        run: cat README.md
+
       - name: Check generated README
         run: uv run python scripts/generate_readme.py --check
