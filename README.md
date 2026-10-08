@@ -4,10 +4,10 @@
 [![Catalog Check](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml/badge.svg)](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml)
 [![Awesome Lint](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/awesome-lint.yml/badge.svg)](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/awesome-lint.yml)
 
-![Award Records](https://img.shields.io/badge/award%20records-567-informational)
-![Papers](https://img.shields.io/badge/papers-566-informational)
+![Award Records](https://img.shields.io/badge/award%20records-609-informational)
+![Papers](https://img.shields.io/badge/papers-607-informational)
 ![Venues](https://img.shields.io/badge/venues-9-informational)
-![Taxonomy Annotated](https://img.shields.io/badge/taxonomy%20annotated-566-informational)
+![Taxonomy Annotated](https://img.shields.io/badge/taxonomy%20annotated-607-informational)
 
 <!-- This file is generated from data/venues.csv and data/papers/*.csv by scripts/generate_readme.py. Do not edit it directly. -->
 
@@ -198,6 +198,31 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - ⭐ [Multimodal Pivots for Image Caption Translation](https://aclanthology.org/P16-1227/) - **Award:** Outstanding Long Paper. **Area:** Multimodal & Embodied AI. **Task:** Multimodal & Vision-Language. **Model:** Neural Model.
 - ⭐ [Integrating Distributional Lexical Contrast into Word Embeddings for Antonym-Synonym Distinction](https://aclanthology.org/P16-2074/) - **Award:** Outstanding Short Paper. **Area:** NLP & Language. **Task:** Representation Learning. **Model:** Representation Learning.
 - ⭐ [Transition-based dependency parsing with topological fields](https://aclanthology.org/P16-2001/) - **Award:** Outstanding Short Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Classical / Optimization.
+#### 2015
+
+- 🏆 [Improving Evaluation of Machine Translation Quality Estimation](https://aclanthology.org/P15-1174/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Evaluation & Benchmarking. **Model:** Theory / Analysis.
+- 🎓 [AutoExtend: Extending Word Embeddings to Embeddings for Synsets and Lexemes](https://aclanthology.org/P15-1173/) - **Award:** Best Student Paper. **Area:** NLP & Language. **Task:** Representation Learning. **Model:** Representation Learning.
+- ⭐ [Learning Dynamic Feature Selection for Fast Sequential Prediction](https://aclanthology.org/P15-1015/) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Model Efficiency & Architecture. **Model:** Classical / Optimization.
+#### 2014
+
+- 🏆 [Fast and Robust Neural Network Joint Models for Statistical Machine Translation](https://aclanthology.org/P14-1129/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** Neural Model.
+- 🏆 [Improving sparse word similarity models with asymmetric measures](https://aclanthology.org/P14-2049/) - **Award:** Best Short Paper. **Area:** NLP & Language. **Task:** Representation Learning. **Model:** Classical / Optimization.
+- 🎓 [Low-Rank Tensors for Scoring Dependency Structures](https://aclanthology.org/P14-1130/) - **Award:** Best Student Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Optimization.
+#### 2013
+
+- 🏆 [Grounded Language Learning from Video Described with Sentences](https://aclanthology.org/P13-1006/) - **Award:** Best Paper. **Area:** Multimodal & Embodied AI. **Task:** Multimodal & Vision-Language. **Model:** Probabilistic / Bayesian.
+#### 2012
+
+- 🏆 [Bayesian Symbol-Refined Tree Substitution Grammars for Syntactic Parsing](https://aclanthology.org/P12-1046/) - **Award:** Best Long Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Probabilistic / Bayesian.
+- 🎓 [String Re-writing Kernel](https://aclanthology.org/P12-1047/) - **Award:** Best Student Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Kernel / NTK.
+#### 2011
+
+- 🏆 [Unsupervised Part-of-Speech Tagging with Bilingual Graph-Based Projections](https://aclanthology.org/P11-1061/) - **Award:** Best Long Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Classical / Optimization.
+#### 2010
+
+- 🏆 [Beyond NomBank: A Study of Implicit Arguments for Nominal Predicates](https://aclanthology.org/P10-1160/) - **Award:** Best Long Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Classical / Optimization.
+- 🏆 [SVD and Clustering for Unsupervised POS Tagging](https://aclanthology.org/P10-2040/) - **Award:** Best Short Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Classical / Optimization.
+- 🎓 [Extracting Social Networks from Literary Fiction](https://aclanthology.org/P10-1015/) - **Award:** Best Student Paper. **Area:** Graphs & Structured Learning. **Task:** Graph & Structured Learning. **Model:** Classical / Optimization.
 ### AAAI
 
 **AAAI Conference on Artificial Intelligence** · [conference](https://aaai.org/conference/aaai/)
@@ -474,6 +499,36 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - 🏆 [Learning a Lexicon and Translation Model from Phoneme Lattices](https://aclanthology.org/D16-1263/) - **Award:** Best Short Paper. **Area:** Speech & Audio. **Task:** Speech & Audio. **Model:** Probabilistic / Bayesian.
 - 🥈 [Sequence-to-Sequence Learning as Beam-Search Optimization](https://aclanthology.org/D16-1137/) - **Award:** Best Paper Honorable Mention. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** RNN / Optimization.
 - 🥈 [Span-Based Constituency Parsing with a Structure-Label System and Provably Optimal Dynamic Oracles](https://aclanthology.org/D16-1001/) - **Award:** Best Paper Honorable Mention. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Neural Model.
+#### 2015
+
+- 🏆 [Broad-coverage CCG Semantic Parsing with AMR](https://aclanthology.org/D15-1198/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Reasoning & Knowledge. **Model:** Classical / Optimization.
+- 🎓 [Semantically Conditioned LSTM-based Natural Language Generation for Spoken Dialogue Systems](https://aclanthology.org/D15-1199/) - **Awards:** Best Paper / Best Student Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** RNN.
+- 🥈 [Building a shared world: mapping distributional to model-theoretic semantic spaces](https://aclanthology.org/D15-1003/) - **Award:** Honorable Mention for Best Paper. **Area:** NLP & Language. **Task:** Representation Learning. **Model:** Representation Learning.
+- 🥈 [Language Understanding for Text-based Games using Deep Reinforcement Learning](https://aclanthology.org/D15-1001/) - **Award:** Honorable Mention for Best Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL / Neural Model.
+- 🥈 [Traversing Knowledge Graphs in Vector Space](https://aclanthology.org/D15-1038/) - **Award:** Honorable Mention for Best Paper. **Area:** Graphs & Structured Learning. **Task:** Graph & Structured Learning. **Model:** Representation Learning.
+- 🥈 [Joint Lemmatization and Morphological Tagging with Lemming](https://aclanthology.org/D15-1272/) - **Award:** Honorable Mention for Best Short Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Classical / Optimization.
+- 🥈 [Semi-Supervised Bootstrapping of Relationship Extractors with Distributional Semantics](https://aclanthology.org/D15-1056/) - **Award:** Honorable Mention for Best Short Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Representation Learning.
+- 🏅 [A large annotated corpus for learning natural language inference](https://aclanthology.org/D15-1075/) - **Award:** Best Data Set or Resource. **Area:** NLP & Language. **Task:** Evaluation & Benchmarking. **Model:** Theory / Analysis.
+- 🏅 [Modeling Reportable Events as Turning Points in Narrative](https://aclanthology.org/D15-1257/) - **Award:** Notable Data Set or Resource. **Area:** NLP & Language. **Task:** Evaluation & Benchmarking. **Model:** Classical / Optimization.
+- 🏅 [That’s So Annoying!!!: A Lexical and Frame-Semantic Embedding Based Data Augmentation Approach to Automatic Categorization of Annoying Behaviors using #petpeeve Tweets](https://aclanthology.org/D15-1306/) - **Award:** Notable Data Set or Resource. **Area:** NLP & Language. **Task:** Evaluation & Benchmarking. **Model:** Representation Learning.
+#### 2014
+
+- 🏆 [Modeling Biological Processes for Reading Comprehension](https://aclanthology.org/D14-1159/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Reasoning & Knowledge. **Model:** Classical / Optimization.
+- 🥈 [Language Modeling with Power Low Rank Ensembles](https://aclanthology.org/D14-1158/) - **Award:** Best Paper Runner-Up. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** Probabilistic / Bayesian.
+#### 2013
+
+- 🏆 [Breaking Out of Local Optima with Count Transforms and Model Recombination: A Study in Grammar Induction](https://aclanthology.org/D13-1204/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Optimization.
+#### 2012
+
+- 🏆 [A Coherence Model Based on Syntactic Patterns](https://aclanthology.org/D12-1106/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Classical / Optimization.
+- 🥈 [PATTY: A Taxonomy of Relational Patterns with Semantic Types](https://aclanthology.org/D12-1104/) - **Award:** Best Paper Runner-Up. **Area:** NLP & Language. **Task:** Reasoning & Knowledge. **Model:** Classical / Optimization.
+- ⭐ [Training Factored PCFGs with Expectation Propagation](https://aclanthology.org/D12-1105/) - **Award:** Distinguished Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Probabilistic / Bayesian.
+#### 2011
+
+- 🏆 [A Probabilistic Forest-to-String Model for Language Generation from Typed Lambda Calculus Expressions](https://aclanthology.org/D11-1149/) - **Award:** Best Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** Probabilistic / Bayesian.
+#### 2010
+
+- 🏆 [Dual Decomposition for Parsing with Non-Projective Head Automata](https://aclanthology.org/D10-1125/) - **Award:** Fred Jelinek Best Paper Award. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Optimization.
 ### ICCV
 
 **IEEE/CVF International Conference on Computer Vision** · [conference](https://iccv.thecvf.com/)
@@ -738,6 +793,24 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - ⭐ [Learning to Map Context-Dependent Sentences to Executable Formal Queries](https://aclanthology.org/N18-1203/) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Reasoning & Knowledge. **Model:** Neural Model.
 - ⭐ [Neural Text Generation in Stories Using Entity Representations as Context](https://aclanthology.org/N18-1204/) - **Award:** Outstanding Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** RNN.
 - ⭐ [Recurrent Neural Networks as Weighted Language Recognizers](https://aclanthology.org/N18-1205/) - **Award:** Outstanding Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** RNN / Theory / Analysis.
+#### 2015
+
+- 🏆 [Unsupervised Morphology Induction Using Word Embeddings](https://aclanthology.org/N15-1186/) - **Award:** Best Long Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Representation Learning.
+- 🎓 [Retrofitting Word Vectors to Semantic Lexicons](https://aclanthology.org/N15-1184/) - **Award:** Best Student Paper. **Area:** NLP & Language. **Task:** Representation Learning. **Model:** Representation Learning.
+- 🎓 [“You’re Mr. Lebowski, I’m the Dude”: Inducing Address Term Formality in Signed Social Networks](https://aclanthology.org/N15-1185/) - **Award:** Best Student Paper. **Area:** Graphs & Structured Learning. **Task:** Graph & Structured Learning. **Model:** Probabilistic / Bayesian.
+#### 2013
+
+- 🏆 [The Life and Death of Discourse Entities: Identifying Singleton Mentions](https://aclanthology.org/N13-1071/) - **Award:** Best Short Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Classical / Optimization.
+- 🎓 [Automatic Generation of English Respellings](https://aclanthology.org/N13-1072/) - **Award:** Best Student Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Classical / Optimization.
+#### 2012
+
+- 🏅 [Vine Pruning for Efficient Multi-Pass Dependency Parsing](https://aclanthology.org/N12-1054/) - **Award:** Best Full Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Search / Planning.
+- 🏆 [Trait-Based Hypothesis Selection for Machine Translation](https://aclanthology.org/N12-1059/) - **Award:** Best Short Paper. **Area:** NLP & Language. **Task:** Language Modeling & Generation. **Model:** Classical / Optimization.
+- 🎓 [Cross-lingual Word Clusters for Direct Transfer of Linguistic Structure](https://aclanthology.org/N12-1052/) - **Award:** Best Student Paper. **Area:** NLP & Language. **Task:** Representation Learning. **Model:** Representation Learning.
+#### 2010
+
+- 🏆 [Coreference Resolution in a Modular, Entity-Centered Model](https://aclanthology.org/N10-1061/) - **Award:** Best Long Paper. **Area:** NLP & Language. **Task:** Language Understanding & Linguistics. **Model:** Probabilistic / Bayesian.
+- 🏆 [“cba to check the spelling”: Investigating Parser Performance on Discussion Forum Posts](https://aclanthology.org/N10-1060/) - **Award:** Best Short Paper. **Area:** NLP & Language. **Task:** Robustness & Domain Adaptation. **Model:** Classical / Optimization.
 ### NeurIPS
 
 **Conference on Neural Information Processing Systems** · [conference](https://neurips.cc/)
