@@ -9,7 +9,7 @@ on:
       - master
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   catalog-check:
@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v5
+        with:
+          ref: ${{ github.head_ref }}
 
       - name: Set up uv
         uses: astral-sh/setup-uv@v6
@@ -29,11 +31,18 @@ jobs:
       - name: Validate catalog
         run: uv run python scripts/validate_catalog.py
 
-      - name: Generate README for inspection
+      - name: Generate README
         run: uv run python scripts/generate_readme.py
-
-      - name: Print generated README
-        run: cat README.md
 
       - name: Check generated README
         run: uv run python scripts/generate_readme.py --check
+
+      - name: Commit generated README
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          if ! git diff --cached --quiet; then
+            git commit -m "Regenerate README from catalog"
+            git push origin HEAD:${{ github.head_ref }}
+          fi
