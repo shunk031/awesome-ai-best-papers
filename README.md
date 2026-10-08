@@ -4,10 +4,10 @@
 [![Catalog Check](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml/badge.svg)](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/catalog-check.yml)
 [![Awesome Lint](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/awesome-lint.yml/badge.svg)](https://github.com/shunk031/awesome-ai-best-papers/actions/workflows/awesome-lint.yml)
 
-![Award Records](https://img.shields.io/badge/award%20records-609-informational)
-![Papers](https://img.shields.io/badge/papers-607-informational)
+![Award Records](https://img.shields.io/badge/award%20records-636-informational)
+![Papers](https://img.shields.io/badge/papers-634-informational)
 ![Venues](https://img.shields.io/badge/venues-9-informational)
-![Taxonomy Annotated](https://img.shields.io/badge/taxonomy%20annotated-607-informational)
+![Taxonomy Annotated](https://img.shields.io/badge/taxonomy%20annotated-634-informational)
 
 <!-- This file is generated from data/venues.csv and data/papers/*.csv by scripts/generate_readme.py. Do not edit it directly. -->
 
@@ -410,6 +410,38 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - 🏆 [Deep Residual Learning for Image Recognition](https://openaccess.thecvf.com/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** CNN.
 - 🥈 [Sublabel-Accurate Relaxation of Nonconvex Energies](https://openaccess.thecvf.com/content_cvpr_2016/html/Mollenhoff_Sublabel-Accurate_Relaxation_of_CVPR_2016_paper.html) - **Award:** Best Paper Honorable Mention. **Area:** Computer Vision. **Task:** Optimization & Generalization. **Model:** Optimization.
 - 🎓 [Structural-RNN: Deep Learning on Spatio-Temporal Graphs](https://openaccess.thecvf.com/content_cvpr_2016/papers/Jain_Structural-RNN_Deep_Learning_CVPR_2016_paper.pdf) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** Graph & Structured Learning. **Model:** RNN.
+#### 2015
+
+- 🏆 [DynamicFusion: Reconstruction and Tracking of Non-Rigid Scenes in Real-Time](https://openaccess.thecvf.com/content_cvpr_2015/html/Newcombe_DynamicFusion_Reconstruction_and_2015_CVPR_paper.html) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Classical / Optimization.
+- 🥈 [Efficient Globally Optimal Consensus Maximisation With Tree Search](https://openaccess.thecvf.com/content_cvpr_2015/html/Chin_Efficient_Globally_Optimal_2015_CVPR_paper.html) - **Award:** Best Paper Honorable Mention. **Area:** Computer Vision. **Task:** Optimization & Generalization. **Model:** Search / Planning / Optimization.
+- 🥈 [Fully Convolutional Networks for Semantic Segmentation](https://openaccess.thecvf.com/content_cvpr_2015/html/Long_Fully_Convolutional_Networks_2015_CVPR_paper.html) - **Award:** Best Paper Honorable Mention. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** CNN.
+- 🥈 [Picture: A Probabilistic Programming Language for Scene Perception](https://openaccess.thecvf.com/content_cvpr_2015/papers/Kulkarni_Picture_A_Probabilistic_2015_CVPR_paper.pdf) - **Award:** Best Paper Honorable Mention. **Area:** Computer Vision. **Task:** Probabilistic Inference & Sampling. **Model:** Probabilistic / Bayesian.
+- 🎓 [Category-Specific Object Reconstruction from a Single Image](https://openaccess.thecvf.com/content_cvpr_2015/papers/Kar_Category-Specific_Object_Reconstruction_2015_CVPR_paper.pdf) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Classical / Optimization.
+#### 2014
+
+- 🏆 [What Camera Motion Reveals About Shape With Unknown BRDF](https://openaccess.thecvf.com/content_cvpr_2014/papers/Chandraker_What_Camera_Motion_2014_CVPR_paper.pdf) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Theory / Analysis.
+- 🥈 [3D Shape and Indirect Appearance by Structured Light Transport](https://openaccess.thecvf.com/content_cvpr_2014/html/OToole_3D_Shape_and_2014_CVPR_paper.html) - **Award:** Best Paper Honorable Mention. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Classical / Optimization.
+- 🎓 [Partial Optimality by Pruning for MAP-inference with General Graphical Models](https://openaccess.thecvf.com/content_cvpr_2014/papers/Swoboda_Partial_Optimality_by_2014_CVPR_paper.pdf) - **Award:** Best Student Paper. **Area:** Graphs & Structured Learning. **Task:** Graph & Structured Learning. **Model:** Optimization.
+#### 2013
+
+- 🏆 [Fast, Accurate Detection of 100,000 Object Classes on a Single Machine](https://openaccess.thecvf.com/content_cvpr_2013/html/Dean_Fast_Accurate_Detection_2013_CVPR_paper.html) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Classical / Optimization.
+- 🥈 [Lost! Leveraging the Crowd for Probabilistic Visual Self-Localization](https://openaccess.thecvf.com/content_cvpr_2013/html/Brubaker_Lost_Leveraging_the_2013_CVPR_paper.html) - **Award:** Best Paper Runner-Up. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Probabilistic / Bayesian.
+- 🎓 [Discriminative Non-blind Deblurring](https://openaccess.thecvf.com/content_cvpr_2013/html/Schmidt_Discriminative_Non-blind_Deblurring_2013_CVPR_paper.html) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** Image & Video Generation. **Model:** Probabilistic / Bayesian.
+#### 2012
+
+- 🏆 [A Simple Prior-free Method for Non-Rigid Structure-from-Motion Factorization](https://doi.org/10.1109/CVPR.2012.6247905) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Optimization.
+- 🎓 [Max-Margin Early Event Detectors](https://doi.org/10.1109/CVPR.2012.6248012) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Classical / Optimization.
+#### 2011
+
+- 🏆 [Real-time Human Pose Recognition in Parts from Single Depth Images](https://doi.org/10.1109/CVPR.2011.5995316) - **Award:** Best Paper. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Classical / Optimization.
+- 🥈 [Discrete-Continuous Optimization for Large-scale Structure from Motion](https://doi.org/10.1109/CVPR.2011.5995626) - **Award:** Best Paper Honorable Mention. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Optimization.
+- 🎓 [Recognition Using Visual Phrases](https://doi.org/10.1109/CVPR.2011.5995711) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Classical / Optimization.
+- 🎓 [Separating Reflective and Fluorescent Components of An Image](https://doi.org/10.1109/CVPR.2011.5995704) - **Award:** Best Student Paper Honorable Mention. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Classical / Optimization.
+#### 2010
+
+- 🏆 [Efficient Computation of Robust Low-Rank Matrix Approximations in the Presence of Missing Data using the L1 Norm](https://doi.org/10.1109/CVPR.2010.5540139) - **Award:** Best Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Optimization.
+- 🎓 [Visual Event Recognition in Videos by Learning from Web Data](https://doi.org/10.1109/CVPR.2010.5539870) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Kernel / NTK.
+- 🎓 [Modeling Mutual Context of Object and Human Pose in Human-Object Interaction Activities](https://doi.org/10.1109/CVPR.2010.5540235) - **Award:** Best Student Paper Honorable Mention. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Classical / Optimization.
 ### EMNLP
 
 **Conference on Empirical Methods in Natural Language Processing** · [conference](https://aclanthology.org/venues/emnlp/)
@@ -566,6 +598,19 @@ Papers are grouped by conference and award year. Title links use canonical paper
 - 🥈 [First-Person Activity Forecasting With Online Inverse Reinforcement Learning](https://openaccess.thecvf.com/content_ICCV_2017/papers/Rhinehart_First-Person_Activity_Forecasting_ICCV_2017_paper.pdf) - **Award:** Marr Prize Paper Honorable Mention. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL.
 - 🥈 [Globally-Optimal Inlier Set Maximisation for Simultaneous Camera Pose and Feature Correspondence](https://openaccess.thecvf.com/content_ICCV_2017/papers/Campbell_Globally-Optimal_Inlier_Set_ICCV_2017_paper.pdf) - **Award:** Marr Prize Paper Honorable Mention. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Optimization.
 - 🥈 [Open Set Domain Adaptation](https://openaccess.thecvf.com/content_iccv_2017/html/Busto_Open_Set_Domain_ICCV_2017_paper.html) - **Award:** Marr Prize Paper Honorable Mention. **Area:** Computer Vision. **Task:** Robustness & Domain Adaptation. **Model:** CNN.
+#### 2015
+
+- 🏆 [Deep Neural Decision Forests](https://openaccess.thecvf.com/content_iccv_2015/html/Kontschieder_Deep_Neural_Decision_ICCV_2015_paper.html) - **Award:** Marr Prize. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** CNN.
+- 🥈 [Holistically-Nested Edge Detection](https://openaccess.thecvf.com/content_iccv_2015/html/Xie_Holistically-Nested_Edge_Detection_ICCV_2015_paper.html) - **Award:** Marr Prize Paper Honorable Mention. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** CNN.
+#### 2013
+
+- 🏆 [From Large Scale Image Categorization to Entry-Level Categories](https://openaccess.thecvf.com/content_iccv_2013/html/Ordonez_From_Large_Scale_2013_ICCV_paper.html) - **Award:** Marr Prize. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Classical / Optimization.
+- 🥈 [Hierarchical Data-Driven Descent for Efficient Optimal Deformation Estimation](https://openaccess.thecvf.com/content_iccv_2013/html/Tian_Hierarchical_Data-Driven_Descent_2013_ICCV_paper.html) - **Award:** Marr Prize Paper Honorable Mention. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Classical / Optimization.
+- 🥈 [Piecewise Rigid Scene Flow](https://openaccess.thecvf.com/content_iccv_2013/html/Vogel_Piecewise_Rigid_Scene_2013_ICCV_paper.html) - **Award:** Marr Prize Paper Honorable Mention. **Area:** Computer Vision. **Task:** 3D Vision & Reconstruction. **Model:** Optimization.
+#### 2011
+
+- 🏆 [Relative Attributes](https://doi.org/10.1109/ICCV.2011.6126281) - **Award:** Marr Prize. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Classical / Optimization.
+- 🎓 [Close the Loop: Joint Blind Image Restoration and Recognition with Sparse Representation Prior](https://doi.org/10.1109/ICCV.2011.6126315) - **Award:** Best Student Paper. **Area:** Computer Vision. **Task:** Visual Recognition & Representation. **Model:** Classical / Optimization.
 ### ICLR
 
 **International Conference on Learning Representations** · [conference](https://iclr.cc/)
