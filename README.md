@@ -34,7 +34,7 @@ Papers are grouped by conference and award year. Title links use canonical paper
 
 **Award markers:** 🏆 top / best paper · 🎓 student paper · 🥈 honorable mention / runner-up · ⭐ outstanding / distinguished · 🏅 other special award.
 
-<!--lint disable double-link balanced-punctuation-->
+<!--lint disable double-link balanced-punctuation no-repeat-punctuation-->
 ### ACL
 
 **Annual Meeting of the Association for Computational Linguistics** · [conference](https://aclweb.org/)
@@ -880,7 +880,7 @@ Papers are grouped by conference and award year. Title links use canonical paper
 
 - 🏆 [Value Iteration Networks](https://proceedings.neurips.cc/paper/2016/hash/c21002f464c5fc5bee3b98ced83963b8-Abstract.html) - **Award:** Best Paper. **Area:** Reinforcement Learning & Decision Making. **Task:** Reinforcement Learning & Planning. **Model:** RL / CNN / Search / Planning.
 - 🎓 [Matrix Completion has No Spurious Local Minimum](https://proceedings.neurips.cc/paper_files/paper/2016/hash/7fb8ceb3bd59c7956b1df66729296a4c-Abstract.html) - **Award:** Best Student Paper. **Area:** ML Theory & Optimization. **Task:** Optimization & Generalization. **Model:** Theory / Analysis.
-<!--lint enable double-link balanced-punctuation-->
+<!--lint enable double-link balanced-punctuation no-repeat-punctuation-->
 
 ## Contributing
 
