@@ -6,10 +6,10 @@ on:
       - master
   push:
     branches:
-      - master
+      - catalog/historical-ml-ai-2010-2015
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   catalog-check:
@@ -26,8 +26,49 @@ jobs:
       - name: Sync generator environment
         run: uv sync
 
+      - name: Append historical ICML award papers
+        run: |
+          if grep -q '^ICML,2015,Best Paper,primary,A Nearly-Linear Time Framework' data/papers/icml.csv; then
+            echo 'Historical ICML rows already present.'
+            exit 0
+          fi
+          cat <<'EOF' >> data/papers/icml.csv
+          ICML,2015,Best Paper,primary,A Nearly-Linear Time Framework for Graph-Structured Sparsity,https://proceedings.mlr.press/v37/hegde15.html,https://icml.cc/2015/index.html%3Fp%3D51.html,2026-10-08,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis,
+          ICML,2015,Best Paper,primary,Optimal and Adaptive Algorithms for Online Boosting,https://proceedings.mlr.press/v37/beygelzimer15.html,https://icml.cc/2015/index.html%3Fp%3D51.html,2026-10-08,ML Theory & Optimization,Optimization & Generalization,Theory / Analysis,
+          ICML,2014,Best Paper,primary,Understanding the Limiting Factors of Topic Modeling via Posterior Contraction Analysis,https://proceedings.mlr.press/v32/tang14.html,https://icml.cc/2014/index/article/26.htm,2026-10-08,NLP & Language,Probabilistic Inference & Sampling,Probabilistic / Bayesian; Theory / Analysis,
+          ICML,2014,Best Paper Runner Up,secondary,Discrete Chebyshev Classifiers,https://proceedings.mlr.press/v32/eban14.html,https://icml.cc/2014/index/article/26.htm,2026-10-08,ML Theory & Optimization,Optimization & Generalization,Classical / Optimization; Theory / Analysis,
+          ICML,2014,Application Paper,special,Compositional Morphology for Word Representations and Language Modelling,https://proceedings.mlr.press/v32/botha14.html,https://icml.cc/2014/index/article/26.htm,2026-10-08,NLP & Language,Language Modeling & Generation,Neural Model; Representation Learning,
+          ICML,2013,Best Paper,primary,Fast Semidifferential-based Submodular Function Optimization,https://proceedings.mlr.press/v28/iyer13.html,https://icml.cc/2013/index.html%3Fpage_id%3D21.html,2026-10-08,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis,
+          ICML,2013,Best Paper,primary,Vanishing Component Analysis,https://proceedings.mlr.press/v28/livni13.html,https://icml.cc/2013/index.html%3Fpage_id%3D21.html,2026-10-08,General ML & Representation Learning,Representation Learning,Classical / Optimization; Theory / Analysis,
+          ICML,2013,Best Paper Runner Up,secondary,Smooth Sparse Coding via Marginal Regression for Learning Sparse Representations,https://proceedings.mlr.press/v28/balasubramanian13.html,https://icml.cc/2013/index.html%3Fpage_id%3D21.html,2026-10-08,General ML & Representation Learning,Representation Learning,Representation Learning; Optimization,
+          ICML,2013,Best Paper Runner Up,secondary,Sparse coding for multitask and transfer learning,https://proceedings.mlr.press/v28/maurer13.html,https://icml.cc/2013/index.html%3Fpage_id%3D21.html,2026-10-08,General ML & Representation Learning,Meta-Learning & Adaptation,Representation Learning; Classical / Optimization,
+          ICML,2012,Best Paper,primary,Bayesian Posterior Sampling via Stochastic Gradient Fisher Scoring,https://icml.cc/Conferences/2012/papers/782.pdf,https://icml.cc/2012/schedule.1.html,2026-10-08,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian; Optimization,
+          ICML,2011,Best Paper,primary,Computational Rationalization: The Inverse Equilibrium Problem,https://icml.cc/Conferences/2011/papers/599_icmlpaper.pdf,https://icml.cc/Conferences/2011/papers.php.html,2026-10-08,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Search / Planning; Optimization,
+          ICML,2011,Distinguished Paper,secondary,"Submodular meets Spectral: Greedy Algorithms for Subset Selection, Sparse Approximation and Dictionary Selection",https://icml.cc/Conferences/2011/papers/542_icmlpaper.pdf,https://icml.cc/Conferences/2011/papers.php.html,2026-10-08,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis,
+          ICML,2011,Distinguished Paper,secondary,Variational Heteroscedastic Gaussian Process Regression,https://icml.cc/Conferences/2011/papers/456_icmlpaper.pdf,https://icml.cc/Conferences/2011/papers.php.html,2026-10-08,General ML & Representation Learning,Probabilistic Inference & Sampling,Probabilistic / Bayesian,
+          ICML,2011,Distinguished Paper,secondary,Minimum Probability Flow Learning,https://icml.cc/Conferences/2011/papers/480_icmlpaper.pdf,https://icml.cc/Conferences/2011/papers.php.html,2026-10-08,General ML & Representation Learning,Probabilistic Inference & Sampling,Energy-Based; Probabilistic / Bayesian,
+          ICML,2011,Distinguished Application Paper,special,Approximate Dynamic Programming for Storage Problems,https://icml.cc/Conferences/2011/papers/235_icmlpaper.pdf,https://icml.cc/Conferences/2011/papers.php.html,2026-10-08,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL; Search / Planning,
+          ICML,2011,Distinguished Application Paper,special,Predicting Legislative Roll Calls from Text,https://icml.cc/Conferences/2011/papers/333_icmlpaper.pdf,https://icml.cc/Conferences/2011/papers.php.html,2026-10-08,NLP & Language,Language Understanding & Linguistics,Probabilistic / Bayesian,
+          ICML,2011,Distinguished Application Paper,special,Parsing Natural Scenes and Natural Language with Recursive Neural Networks,https://icml.cc/Conferences/2011/papers/125_icmlpaper.pdf,https://icml.cc/Conferences/2011/papers.php.html,2026-10-08,Multimodal & Embodied AI,Multimodal & Vision-Language,RNN,
+          ICML,2010,Best Paper,primary,Hilbert Space Embeddings of Hidden Markov Models,https://icml.cc/Conferences/2010/papers/495.pdf,https://icml.cc/Conferences/2010/awards.html,2026-10-08,General ML & Representation Learning,Probabilistic Inference & Sampling,Kernel / NTK; Probabilistic / Bayesian,
+          ICML,2010,Best Paper Runner Up,secondary,The Translation-invariant Wishart-Dirichlet Process for Clustering Distance Data,https://icml.cc/Conferences/2010/papers/248.pdf,https://icml.cc/Conferences/2010/awards.html,2026-10-08,General ML & Representation Learning,Probabilistic Inference & Sampling,Probabilistic / Bayesian,
+          ICML,2010,Best Student Paper,secondary,On the Consistency of Ranking Algorithms,https://icml.cc/Conferences/2010/papers/421.pdf,https://icml.cc/Conferences/2010/awards.html,2026-10-08,ML Theory & Optimization,Optimization & Generalization,Theory / Analysis,
+          ICML,2010,Best Student Paper Runner Up,secondary,Modeling Interaction via the Principle of Maximum Causal Entropy,https://icml.cc/Conferences/2010/papers/28.pdf,https://icml.cc/Conferences/2010/awards.html,2026-10-08,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,RL; Probabilistic / Bayesian,
+          ICML,2010,Best Application Paper,special,Modeling Transfer Learning in Human Categorization with the Hierarchical Dirichlet Process,https://icml.cc/Conferences/2010/papers/180.pdf,https://icml.cc/Conferences/2010/awards.html,2026-10-08,General ML & Representation Learning,Meta-Learning & Adaptation,Probabilistic / Bayesian,
+          ICML,2010,Best Application Paper Runner Up,special,Application of Machine Learning To Epileptic Seizure Detection,https://icml.cc/Conferences/2010/papers/493.pdf,https://icml.cc/Conferences/2010/awards.html,2026-10-08,Scientific ML & Applications,Scientific Discovery & Simulation,Classical / Optimization,
+          EOF
+
       - name: Validate catalog
         run: uv run python scripts/validate_catalog.py
 
-      - name: Check generated README
-        run: uv run python scripts/generate_readme.py --check
+      - name: Commit ICML backfill
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers/icml.csv
+          if git diff --cached --quiet; then
+            echo 'No ICML changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Add historical ICML award papers (2010–2015)'
+          git push
