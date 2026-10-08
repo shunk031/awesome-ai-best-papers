@@ -6,10 +6,10 @@ on:
       - master
   push:
     branches:
-      - master
+      - catalog/historical-ml-ai-2010-2015
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   catalog-check:
@@ -26,8 +26,46 @@ jobs:
       - name: Sync generator environment
         run: uv sync
 
+      - name: Append historical NeurIPS award papers
+        run: |
+          if grep -q '^NeurIPS,2015,Best Paper,primary,Competitive Distribution Estimation' data/papers/neurips.csv; then
+            echo 'Historical NeurIPS rows already present.'
+            exit 0
+          fi
+          cat <<'EOF' >> data/papers/neurips.csv
+          NeurIPS,2015,Best Paper,primary,Competitive Distribution Estimation: Why is Good-Turing Good,https://proceedings.neurips.cc/paper/2015/hash/d759175de8ea5b1d9a2660e45554894f-Abstract.html,https://neurips.cc/archive/2015/Awards.html,2026-10-08,ML Theory & Optimization,Probabilistic Inference & Sampling,Probabilistic / Bayesian; Theory / Analysis,
+          NeurIPS,2015,Best Paper,primary,Fast Convergence of Regularized Learning in Games,https://proceedings.neurips.cc/paper/2015/hash/7fea637fd6d02b8f0adf6f7dc36aed93-Abstract.html,https://neurips.cc/archive/2015/Awards.html,2026-10-08,Reinforcement Learning & Decision Making,Reinforcement Learning & Planning,Optimization; Theory / Analysis,
+          NeurIPS,2014,Outstanding Paper,primary,Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search (MIPS),https://proceedings.neurips.cc/paper_files/paper/2014/hash/c98e7c4b8f20d384e3ad857d0ee226cc-Abstract.html,https://neurips.cc/Conferences/2014/Awards,2026-10-08,General ML & Representation Learning,Retrieval & Search,Classical / Optimization; Theory / Analysis,
+          NeurIPS,2014,Outstanding Paper,primary,A* Sampling,https://proceedings.neurips.cc/paper_files/paper/2014/hash/937debc749f041eb5700df7211ac795c-Abstract.html,https://neurips.cc/Conferences/2014/Awards,2026-10-08,ML Theory & Optimization,Probabilistic Inference & Sampling,Search / Planning; Probabilistic / Bayesian,
+          NeurIPS,2013,Outstanding Paper,primary,A memory frontier for complex synapses,https://proceedings.neurips.cc/paper/2013/hash/7f24d240521d99071c93af3917215ef7-Abstract.html,https://neurips.cc/archive/2013/Awards.html,2026-10-08,Scientific ML & Applications,Scientific Discovery & Simulation,Theory / Analysis,
+          NeurIPS,2013,Outstanding Paper,primary,Submodular Optimization with Submodular Cover and Submodular Knapsack Constraints,https://proceedings.neurips.cc/paper/2013/hash/a1d50185e7426cbb0acad1e6ca74b9aa-Abstract.html,https://neurips.cc/archive/2013/Awards.html,2026-10-08,ML Theory & Optimization,Optimization & Generalization,Optimization; Theory / Analysis,
+          NeurIPS,2013,Outstanding Paper,primary,Scalable Influence Estimation in Continuous-Time Diffusion Networks,https://proceedings.neurips.cc/paper_files/paper/2013/hash/8fb21ee7a2207526da55a679f0332de2-Abstract.html,https://neurips.cc/archive/2013/Awards.html,2026-10-08,Graphs & Structured Learning,Graph & Structured Learning,Classical / Optimization; Theory / Analysis,
+          NeurIPS,2012,Outstanding Student Paper,secondary,Structure estimation for discrete graphical models: Generalized covariance matrices and their inverses,https://proceedings.neurips.cc/paper_files/paper/2012/hash/6ba1085b788407963fe0e89c699a7396-Abstract.html,https://neurips.cc/Conferences/2012/Awards,2026-10-08,Graphs & Structured Learning,Graph & Structured Learning,Probabilistic / Bayesian; Theory / Analysis,Award page title: No voodoo here! Learning discrete graphical models via inverse covariance estimation
+          NeurIPS,2012,Outstanding Student Paper,secondary,Discriminative Learning of Sum-Product Networks,https://proceedings.neurips.cc/paper_files/paper/2012/hash/573f7f25b7b1eb79a4ec6ba896debefd-Abstract.html,https://neurips.cc/Conferences/2012/Awards,2026-10-08,General ML & Representation Learning,Probabilistic Inference & Sampling,Neural Model; Probabilistic / Bayesian,
+          NeurIPS,2012,Honorable Mention,secondary,On the (Non-)existence of Convex, Calibrated Surrogate Losses for Ranking,https://proceedings.neurips.cc/paper_files/paper/2012/hash/50f3f8c42b998a48057e9d33f4144b8b-Abstract.html,https://neurips.cc/Conferences/2012/Awards,2026-10-08,ML Theory & Optimization,Optimization & Generalization,Theory / Analysis,
+          NeurIPS,2012,Honorable Mention,secondary,Spectral Learning of General Weighted Automata via Constrained Matrix Completion,https://proceedings.neurips.cc/paper_files/paper/2012/hash/700fdb2ba62d4554dc268c65add4b16e-Abstract.html,https://neurips.cc/Conferences/2012/Awards,2026-10-08,NLP & Language,Language Modeling & Generation,Classical / Optimization; Theory / Analysis,
+          NeurIPS,2011,Outstanding Student Paper,secondary,Efficient Inference in Fully Connected CRFs with Gaussian Edge Potentials,https://proceedings.neurips.cc/paper_files/paper/2011/hash/beda24c1e1b46055dff2c39c98fd6fc1-Abstract.html,https://neurips.cc/archive/2011/Awards.html,2026-10-08,Computer Vision,Visual Recognition & Representation,Probabilistic / Bayesian; Classical / Optimization,
+          NeurIPS,2011,Outstanding Student Paper,secondary,Priors over Recurrent Continuous Time Processes,https://proceedings.neurips.cc/paper/2011/file/043ab21fc5a1607b381ac3896176dac6-Paper.pdf,https://neurips.cc/archive/2011/Awards.html,2026-10-08,General ML & Representation Learning,Probabilistic Inference & Sampling,Probabilistic / Bayesian,
+          NeurIPS,2011,Outstanding Student Paper,secondary,Fast and Accurate k-means For Large Datasets,https://proceedings.neurips.cc/paper_files/paper/2011/hash/52c670999cdef4b09eb656850da777c4-Abstract.html,https://neurips.cc/archive/2011/Awards.html,2026-10-08,General ML & Representation Learning,Representation Learning,Classical / Optimization,
+          NeurIPS,2011,Honorable Mention,secondary,Learning Sparse Representations of High Dimensional Data on Large Scale Dictionaries,https://proceedings.neurips.cc/paper_files/paper/2011/hash/3ce3bd7d63a2c9c81983cc8e9bd02ae5-Abstract.html,https://neurips.cc/archive/2011/Awards.html,2026-10-08,General ML & Representation Learning,Representation Learning,Representation Learning; Optimization,
+          NeurIPS,2011,Honorable Mention,secondary,The Manifold Tangent Classifier,https://proceedings.neurips.cc/paper/2011/hash/d1f44e2f09dc172978a4d3151d11d63e-Abstract.html,https://neurips.cc/archive/2011/Awards.html,2026-10-08,General ML & Representation Learning,Representation Learning,Representation Learning; Neural Model,
+          NeurIPS,2010,Outstanding Student Paper,secondary,Construction of Dependent Dirichlet Processes based on Poisson Processes,https://proceedings.neurips.cc/paper_files/paper/2010/file/9f60ab2b55468f104055b16df8f69e81-Paper.pdf,https://neurips.cc/archive/2010/Awards.html,2026-10-08,General ML & Representation Learning,Probabilistic Inference & Sampling,Probabilistic / Bayesian,
+          NeurIPS,2010,Outstanding Student Paper,secondary,A Theory of Multiclass Boosting,https://proceedings.neurips.cc/paper_files/paper/2010/file/46fc943ecd56441056a560ba37d0b9e8-Paper.pdf,https://neurips.cc/archive/2010/Awards.html,2026-10-08,ML Theory & Optimization,Optimization & Generalization,Classical / Optimization; Theory / Analysis,
+          NeurIPS,2010,Honorable Mention,secondary,MAP estimation in Binary MRFs via Bipartite Multi-cuts,https://proceedings.neurips.cc/paper_files/paper/2010/hash/adc8ca1b15e20915c3ea6008fc2f52ed-Abstract.html,https://neurips.cc/archive/2010/Awards.html,2026-10-08,Graphs & Structured Learning,Graph & Structured Learning,Probabilistic / Bayesian; Optimization,
+          NeurIPS,2010,Honorable Mention,secondary,The Multidimensional Wisdom of Crowds,https://proceedings.neurips.cc/paper_files/paper/2010/hash/0f9cafd014db7a619ddb4276af0d692c-Abstract.html,https://neurips.cc/archive/2010/Awards.html,2026-10-08,General ML & Representation Learning,Probabilistic Inference & Sampling,Probabilistic / Bayesian,
+          EOF
+
       - name: Validate catalog
         run: uv run python scripts/validate_catalog.py
 
-      - name: Check generated README
-        run: uv run python scripts/generate_readme.py --check
+      - name: Commit NeurIPS backfill
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/papers/neurips.csv
+          if git diff --cached --quiet; then
+            echo 'No NeurIPS changes to commit.'
+            exit 0
+          fi
+          git commit -m 'Add historical NeurIPS award papers (2010–2015)'
+          git push
